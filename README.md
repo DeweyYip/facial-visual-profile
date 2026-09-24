@@ -16,3 +16,27 @@ Local setup:
     python -m pip install -r requirements-local.txt
 
 Attribute order: configs/attributes.yaml
+
+
+# Facial Visual Profile
+
+## Research Question
+
+## Motivation
+
+## Method
+
+Architecture:
+- RGB Branch
+- Landmark Branch
+- Fusion Module
+
+## Dataset
+
+## Experiments
+
+## Results
+
+## Demo
+
+## Future Work
