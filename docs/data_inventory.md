@@ -18,5 +18,3 @@ Checks completed:
 - First image (000001.jpg) opens as RGB, size 178 × 218.
 - First image matches its attribute, landmark and split records.
 - Git ignores files under data/.
-
-Next: implement Dataset/DataLoader and visually inspect images with GT landmarks.
