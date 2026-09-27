@@ -34,3 +34,27 @@
 - Drive run directory: `FacialVisualProfile/runs/day4_r18_20260927T115428425737Z/`.
 - No validation or test evaluation was performed.
 - This checkpoint is a training benchmark result, not a selected final model.
+
+## MTCNN clean-image detection and quality assessment
+
+- Detector: facenet-pytorch 2.6.0 MTCNN; Tesla T4.
+- Environment: Python 3.13.15, PyTorch 2.11.0+cu128, torchvision 0.26.0+cu128.
+- Installed with --no-deps outside the declared dependency range; sampled and full-dataset inference completed.
+- Settings: min_face_size=20, thresholds=[0.6, 0.7, 0.7], factor=0.709, keep_all=True.
+- Face selection: highest probability, without GT-based selection.
+- Output: original-image pixel coordinates, ordered as left eye, right eye, nose, left mouth, right mouth.
+- Visually inspected 50 sampled training images and the multiple-face example.
+- Cached 202,599 images: 202,306 valid outputs and 293 no-face results.
+- Multiple-face images: 3,754. Target-face selection is not guaranteed for every image.
+- Full cache run: 79.7 minutes; persistent backup saved to Drive.
+- NME: mean five-point Euclidean error divided by GT inter-eye distance, evaluated on successful detections only.
+- Train: 162,770 images; 249 no-face results; 2,979 multiple-face images.
+- Train NME: mean 6.41%, median 5.40%, 95th percentile 11.34%.
+- Validation: 19,867 images; 32 no-face results; 355 multiple-face images.
+- Validation NME: mean 6.21%, median 5.37%, 95th percentile 10.78%.
+- Invalid GT count: zero in training and validation.
+- Test predictions cached; test NME not evaluated.
+- Drive cache: `FacialVisualProfile/cache/mtcnn_clean.sqlite`.
+- Drive report: `FacialVisualProfile/cache/mtcnn_clean_quality.json`.
+- Augmented-image handling and geometry-branch detection-failure handling remain to be implemented.
+- GT must not replace missing predictions.
