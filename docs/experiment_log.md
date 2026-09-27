@@ -13,3 +13,24 @@
 - Visually inspected 50 randomly selected training images with GT landmark overlays.
 - All 50 overlays appeared correctly placed; no sampled landmarks fell outside the image.
 - No training was run. Review preprocessing again before the full training runs.
+
+## Day 4: ResNet18 baseline and GPU benchmark
+
+- Model: ImageNet-pretrained ResNet18 with 24 output logits.
+- Loss function: BCEWithLogitsLoss.
+- CPU forward check: passed.
+- Eight-sample overfit check: passed at step 20.
+- Overfit evaluation loss: 0.003705.
+- Overfit exact match: 100% on the same eight training samples.
+- GPU: Tesla T4.
+- PyTorch: 2.11.0+cu128.
+- Full training benchmark: one epoch, 162,770 samples.
+- Configuration: FP32, Adam, learning rate 0.0001, batch size 64.
+- Mean training loss: 0.213719.
+- Epoch time: 9.00 minutes.
+- Throughput: 301.3 images/second.
+- Peak allocated GPU memory: 1.64 GiB.
+- Checkpoint and JSON report: saved to Google Drive and checked for existence and nonzero size; JSON parsed successfully.
+- Drive run directory: `FacialVisualProfile/runs/day4_r18_20260927T115428425737Z/`.
+- No validation or test evaluation was performed.
+- This checkpoint is a training benchmark result, not a selected final model.
