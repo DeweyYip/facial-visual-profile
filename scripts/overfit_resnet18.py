@@ -1,4 +1,6 @@
 """Check whether ResNet18 can memorize eight training images."""
+"""A Little test on 8 images to see if there's any issue"""
+
 import json
 import random
 import time
@@ -9,7 +11,6 @@ from torch import nn
 
 from datasets.celeba import CelebAAttributes
 from models.resnet18 import ResNet18Attributes
-
 
 def main():
     seed = 42
@@ -23,7 +24,9 @@ def main():
     targets = torch.stack([sample[1] for sample in samples])
     names = [sample[3] for sample in samples]
 
+    # To create an instance 
     model = ResNet18Attributes(len(dataset.attribute_names), pretrained=True)
+    # Set loss function and optimizer
     criterion = nn.BCEWithLogitsLoss()
     optimizer = torch.optim.Adam(model.parameters(), lr=0.001)
 
@@ -44,6 +47,7 @@ def main():
     print("Samples:", names, flush=True)
     print(f"Initial eval loss: {initial_loss:.6f}", flush=True)
 
+    # We train it for 101 epochs
     for step in range(1, 101):
         model.train()
         optimizer.zero_grad(set_to_none=True)
@@ -69,7 +73,10 @@ def main():
 
         optimizer.step()
 
+        # Track the process in every 10 epochs
         if step == 1 or step % 10 == 0:
+
+            # Evaluation 
             eval_loss, exact = evaluate()
             history.append({
                 "step": step,
@@ -82,6 +89,7 @@ def main():
                 f"eval loss {eval_loss:.6f} | exact match {exact:.1%}",
                 flush=True,
             )
+            # This is the stopping criterion (24 attributes for 8 images are correct)
             if eval_loss < 0.05 and exact == 1.0:
                 passed = True
                 break
@@ -101,6 +109,8 @@ def main():
         "passed": passed,
         "elapsed_seconds": time.perf_counter() - started,
     }
+
+    # Save the transcript of this test to overfit.json
     path = Path("outputs/logs/resnet18_overfit.json")
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8")

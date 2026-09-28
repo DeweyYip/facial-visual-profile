@@ -1,4 +1,13 @@
 """Cache MTCNN results with resumable SQLite storage."""
+"""
+Run MTCNN over the dataset and cache face boxes and estimated landmarks
+in a resumable SQLite database.
+by using the detector defined in mtcnn.py 
+"""
+
+"""
+This code is ran on Colab for saving time 
+"""
 
 import argparse
 import hashlib
@@ -12,14 +21,17 @@ import torch
 from PIL import Image
 from tqdm import tqdm
 
+# the real geer 
 from detectors.mtcnn import MTCNNDetector
 
-
+# assign a number to each image to better recognize them later on
 def sha256(path):
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
 def main():
+
+    # Read the related data
     parser = argparse.ArgumentParser()
     parser.add_argument("--root", type=Path, default=Path("data/raw"))
     parser.add_argument("--output", type=Path, required=True)
@@ -40,6 +52,7 @@ def main():
     if args.limit:
         rows = rows[:args.limit]
 
+    # The official MTCNNDetecor instance
     detector = MTCNNDetector(device=args.device)
     package_root = Path(__import__("facenet_pytorch").__file__).parent
     weights = {
@@ -47,6 +60,7 @@ def main():
         for name in ("pnet.pt", "rnet.pt", "onet.pt")
     }
 
+    # Use Config for reproducibility in the future
     config = {
         "schema_version": 1,
         "detector": "facenet-pytorch MTCNN",
@@ -66,13 +80,16 @@ def main():
     }
     encoded_config = json.dumps(config, sort_keys=True)
 
+    # a SQLite instance
     args.output.parent.mkdir(parents=True, exist_ok=True)
     connection = sqlite3.connect(args.output)
     try:
+        # Create a table for metadata
         connection.execute(
             "CREATE TABLE IF NOT EXISTS metadata "
             "(key TEXT PRIMARY KEY, value TEXT NOT NULL)"
         )
+        # Create a table for MTCNN of each image 
         connection.execute(
             "CREATE TABLE IF NOT EXISTS detections "
             "(name TEXT PRIMARY KEY, split TEXT NOT NULL, "
@@ -82,6 +99,7 @@ def main():
             "SELECT value FROM metadata WHERE key = 'config'"
         ).fetchone()
 
+        # Just in case we mix up the experienments
         if existing is not None and existing[0] != encoded_config:
             raise ValueError(
                 "Cache configuration mismatch; use a new output file."
@@ -93,6 +111,7 @@ def main():
             )
         connection.commit()
 
+        # For continuity - enabling our model to keep going under disconnection
         completed = {
             row[0] for row in connection.execute("SELECT name FROM detections")
         }
@@ -111,6 +130,22 @@ def main():
                     result = detector.detect(image)
                 result["image_sha256"] = sha256(image_path)
 
+                """ Format:
+                    status = "ok"
+                    face_count = 1
+                    box =
+                    [x1, y1, x2, y2]
+                    landmarks =
+                    [
+                    [left_eye_x, left_eye_y],
+                    [right_eye_x, right_eye_y],
+                    [nose_x, nose_y],
+                    [left_mouth_x, left_mouth_y],
+                    [right_mouth_x, right_mouth_y]
+                    ]
+                """
+
+                # Put the result into SQLite
                 connection.execute(
                     "INSERT INTO detections VALUES (?, ?, ?)",
                     (name, split, json.dumps(result, allow_nan=False)),
