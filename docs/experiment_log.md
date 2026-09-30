@@ -58,3 +58,19 @@
 - Drive report: `FacialVisualProfile/cache/mtcnn_clean_quality.json`.
 - Augmented-image handling and geometry-branch detection-failure handling remain to be implemented.
 - GT must not replace missing predictions.
+
+## ResNet18 seed-0 training and validation
+
+- Model: ImageNet-pretrained ResNet18 with 24 attribute logits.
+- Official split: 162,770 training images and 19,867 validation images.
+- Seed: 0. Trained for 10 epochs with batch size 64, FP32, Adam, and learning rate 0.0001.
+- Preprocessing: shared 224 × 224 pipeline; no random augmentation in this run.
+- Validation macro-F1 used a fixed probability threshold of 0.5.
+- Validation mAP is the mean of per-attribute average precision scores.
+- Checkpoint selection rule: highest validation mAP.
+- Selected checkpoint: `epoch_03.pt`; validation mAP 0.8177, macro-F1 0.7273, validation BCE loss 0.1907.
+- Epoch 10: training BCE loss 0.0416, validation BCE loss 0.3669, validation mAP 0.7698.
+- Training loss fell while validation loss rose after epoch 3, indicating overfitting.
+- Checkpoints, config, history, best.json, epoch_metrics.csv, and training_curves.png are stored in Drive under `FacialVisualProfile/runs/r18_seed0/`.
+- Training source commit: `43e51ca99bf98743ba2d7c4e2481e2b7751e97f7`.
+- The test split was not evaluated.
