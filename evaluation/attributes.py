@@ -1,4 +1,5 @@
 """Validation metrics for multi-label facial attributes."""
+"""Applies to R18, R50, Predicted Geometry, and Oracle Geometry to make sure everything's fair"""
 
 import numpy as np
 from sklearn.metrics import average_precision_score, f1_score

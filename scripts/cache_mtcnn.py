@@ -7,6 +7,7 @@ by using the detector defined in mtcnn.py
 
 """
 This code is ran on Colab for saving time 
+The report is stored in Google cloud
 """
 
 import argparse
