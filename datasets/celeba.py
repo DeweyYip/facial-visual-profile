@@ -25,7 +25,7 @@ class CelebAAttributes(Dataset):
     # and root tell us the place
 
     """
-    The initialization about celebA dataset is about:
+    The initialization of celebA dataset is about:
     reading the three txt files from CelebA
     and build a image -> label / landmark relationship
     self below represents all the image int the data set; not a single image
@@ -149,4 +149,5 @@ class CelebAAttributes(Dataset):
         with Image.open(self.root / "img_align_celeba" / name) as image:
             image_tensor, points = prepare(image, self.landmarks[name])
 
+        # What it returns
         return image_tensor, self.targets[name], points, name
