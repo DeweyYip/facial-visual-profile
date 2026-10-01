@@ -1,0 +1,136 @@
+{
+  "checkpoint_sha256": "b82aa1c9aa1d27ce17abcb09671cbf0831ee70c35e07a24f9312f32cbed8682a",
+  "split": "valid",
+  "sampling_seed": 7,
+  "selection_rule": "four_lowest_tuned_F1_attributes",
+  "samples": [
+    {
+      "attribute": "Big_Lips",
+      "filename": "181558.jpg",
+      "error_type": "FP",
+      "target": 0,
+      "probability": 0.4662366715613783,
+      "threshold": 0.3
+    },
+    {
+      "attribute": "Big_Lips",
+      "filename": "175218.jpg",
+      "error_type": "FP",
+      "target": 0,
+      "probability": 0.4488640831808592,
+      "threshold": 0.3
+    },
+    {
+      "attribute": "Big_Lips",
+      "filename": "180454.jpg",
+      "error_type": "FN",
+      "target": 1,
+      "probability": 0.19296009251904983,
+      "threshold": 0.3
+    },
+    {
+      "attribute": "Big_Lips",
+      "filename": "174270.jpg",
+      "error_type": "FN",
+      "target": 1,
+      "probability": 0.1662419164552516,
+      "threshold": 0.3
+    },
+    {
+      "attribute": "Oval_Face",
+      "filename": "167211.jpg",
+      "error_type": "FP",
+      "target": 0,
+      "probability": 0.8447901353138776,
+      "threshold": 0.39
+    },
+    {
+      "attribute": "Oval_Face",
+      "filename": "179350.jpg",
+      "error_type": "FP",
+      "target": 0,
+      "probability": 0.6557691652696955,
+      "threshold": 0.39
+    },
+    {
+      "attribute": "Oval_Face",
+      "filename": "168647.jpg",
+      "error_type": "FN",
+      "target": 1,
+      "probability": 0.11600606438432606,
+      "threshold": 0.39
+    },
+    {
+      "attribute": "Oval_Face",
+      "filename": "168443.jpg",
+      "error_type": "FN",
+      "target": 1,
+      "probability": 0.11061741055101568,
+      "threshold": 0.39
+    },
+    {
+      "attribute": "Receding_Hairline",
+      "filename": "162861.jpg",
+      "error_type": "FP",
+      "target": 0,
+      "probability": 0.3642924504241192,
+      "threshold": 0.31
+    },
+    {
+      "attribute": "Receding_Hairline",
+      "filename": "180640.jpg",
+      "error_type": "FP",
+      "target": 0,
+      "probability": 0.4647938309888604,
+      "threshold": 0.31
+    },
+    {
+      "attribute": "Receding_Hairline",
+      "filename": "178622.jpg",
+      "error_type": "FN",
+      "target": 1,
+      "probability": 0.024276876762621566,
+      "threshold": 0.31
+    },
+    {
+      "attribute": "Receding_Hairline",
+      "filename": "165256.jpg",
+      "error_type": "FN",
+      "target": 1,
+      "probability": 0.057148158148519604,
+      "threshold": 0.31
+    },
+    {
+      "attribute": "Bags_Under_Eyes",
+      "filename": "165247.jpg",
+      "error_type": "FP",
+      "target": 0,
+      "probability": 0.7495539109176014,
+      "threshold": 0.25
+    },
+    {
+      "attribute": "Bags_Under_Eyes",
+      "filename": "172065.jpg",
+      "error_type": "FP",
+      "target": 0,
+      "probability": 0.3259733109502485,
+      "threshold": 0.25
+    },
+    {
+      "attribute": "Bags_Under_Eyes",
+      "filename": "169174.jpg",
+      "error_type": "FN",
+      "target": 1,
+      "probability": 0.1054634232680809,
+      "threshold": 0.25
+    },
+    {
+      "attribute": "Bags_Under_Eyes",
+      "filename": "168204.jpg",
+      "error_type": "FN",
+      "target": 1,
+      "probability": 0.05730865560213286,
+      "threshold": 0.25
+    }
+  ]
+}

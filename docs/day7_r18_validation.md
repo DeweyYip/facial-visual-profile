@@ -1,0 +1,23 @@
+# Day 7: ResNet18 validation and threshold selection
+
+- Model: ResNet18, seed 0, selected checkpoint `epoch_03.pt`.
+- Validation samples: 19,867, using the official CelebA split.
+- Training source files were verified against their saved SHA-256 hashes.
+- Checkpoint loading and attribute-order checks passed.
+- Validation BCE loss: 0.190717.
+- Macro F1 at threshold 0.5: 0.727259.
+- Validation mAP: 0.817737.
+- Reproduced BCE loss, macro F1, and mAP matched the original epoch-3 records exactly.
+- Selected one threshold per attribute by maximizing validation F1.
+- Search grid: 0.05 to 0.95 inclusive, in steps of 0.01.
+- Tie rule: closest to 0.5, then the lower threshold.
+- Tuned validation macro F1: 0.762372.
+- Thresholds were fitted and scored on the same validation split; this is not a held-out estimate of improvement.
+- Model weights and mAP were unchanged by threshold selection.
+- Computed per-attribute TP, FP, FN, TN, precision, recall, and F1.
+- Sampled FP/FN examples for the four lowest tuned-F1 attributes using seed 7.
+- Two Bags_Under_Eyes examples raised visual interpretation questions; annotation errors were not confirmed.
+- Bags_Under_Eyes refers to eye bags, not dark circles.
+- Official labels were retained.
+- The test split was not evaluated.
+- Full prediction arrays and the error-example figure remain in Drive under `FacialVisualProfile/runs/r18_seed0/day7/`.
