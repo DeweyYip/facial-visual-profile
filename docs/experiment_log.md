@@ -200,3 +200,21 @@ Mac synthetic-data smoke check:
 
 Pending: real Dataset/DataLoader/model integration check.
 No formal geometry-model training has started.
+
+### Day 10 — Real integration completed and archived
+
+Date: 2026-10-03
+Verified source: 41d36c4de3ea61e3e2f0fe8e93cc5fb72eebeff7.
+
+- Sampled baseline/predicted Dataset images and labels matched.
+- Train and validation batches passed with two DataLoader workers.
+- Logits: (3, 24); finite outputs and BCE.
+- Untrained eval-mode BCE: train 0.766356; validation 0.942679.
+- Real no_face sample 000199.jpg raised LandmarkUnavailableError.
+- No optimizer updates or formal training were performed.
+- Drive archive: runs/m3_preparation/day10/integration_report.json,
+  sampled_landmark_alignment.png, and source/.
+- Notebook: notebooks/day10_predicted_geometry_integration.ipynb.
+- Temporary Colab raw data contains only seven images.
+- Next: failure policy, baseline source compatibility, full-data
+  preparation, and small-sample training checks.

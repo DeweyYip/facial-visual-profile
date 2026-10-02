@@ -1,6 +1,6 @@
 # Facial Visual Profile — Current State v1
 
-Updated: 2026-10-02 (Asia/Shanghai). Handoff after Day 8.
+Updated: 2026-10-03 (Asia/Shanghai). Handoff after Day 10.
 
 Evidence: code and execution results shared in the development conversation. The Mac repository and Google Drive were not directly inspected when preparing this document. Paths and completion claims below refer to those reported results. This workspace contains the handoff document, not a checkout of the project.
 
@@ -10,17 +10,22 @@ Build a reproducible system for predicting 24 facial attributes from CelebA imag
 
 The working research question is whether detected facial geometry improves attribute prediction and, in later experiments, robustness to image corruption. The baselines are established; geometry and robustness experiments are not yet implemented or validated. This project supports a master's application, so fair comparisons, provenance, and reproducible results matter more than isolated headline scores.
 
-## 2. Model Design: Implemented vs. Planned
+## 2. Model Design: Implemented vs. Trained
 
 | Model | Design | Current status |
 |---|---|---|
-| R18 baseline | ImageNet-pretrained ResNet18; replace FC with `Linear(512, 24)` | Implemented; seed-0 training and validation analysis complete |
-| R50 baseline | ImageNet-pretrained ResNet50; replace FC with `Linear(2048, 24)` | Implemented; seed-0 training complete |
-| Geometry model | R18 image features (512) + MLP embedding of five points (32); concatenate to 544 features and predict 24 logits | Planned Day 9; not implemented |
+| R18 baseline | ImageNet-pretrained ResNet18; FC 512 -> 24 | Seed-0 training and validation analysis complete |
+| R50 baseline | ImageNet-pretrained ResNet50; FC 2048 -> 24 | Seed-0 training complete |
+| Geometry model (M3) | R18 features (512) + geometry MLP 10 -> 32 -> 32 with ReLU; concat (544); Linear(544, 24) | Implemented and integration-checked; no formal training |
 
-The geometry model is referred to as M3 in the schedule. Its required interface is `[B, 544] -> [B, 24]`. MLP hidden layers, activation choices, and the classification head remain to be settled in code. Do not present these as finalized architecture details.
+Geometry class: ResNet18GeometryAttributes in models/resnet18_geometry.py.
+Backbone FC: Identity. Outputs: logits. Parameters: 11,191,000.
+Day 9 shape and backward checks passed with pretrained=False.
+Both branches and the classifier received finite, nonzero gradients.
 
-MTCNN is a separate pretrained detector that supplies coordinates; the baseline models do not consume those coordinates. Detector joint training has not been implemented.
+MTCNN is a separate fixed pretrained detector, not jointly trained.
+The predicted Dataset currently raises LandmarkUnavailableError on failed
+detections. The final training-time failure policy remains pending.
 
 ## 3. Dataset and Attribute Order
 
@@ -90,6 +95,8 @@ Large datasets, weights, and caches belong outside Git. `/data/` is ignored. Cle
 | 6 | R18 seed-0 training for 10 epochs; validation F1/mAP; checkpoint selection |
 | 7 | Reproduced selected R18 validation results; fitted thresholds; inspected attribute errors |
 | 8 | R50 seed-0 training for 10 epochs, including checkpoint/optimizer recovery; archived results |
+| 9 | Geometry model implemented; shape, gradient, and parameter checks passed |
+| 10 | Predicted cache/Dataset implemented; sampled real integration checks passed |
 
 ## 6. Successful Verification
 
@@ -143,17 +150,63 @@ Persistent Drive root: `/content/drive/MyDrive/FacialVisualProfile/`.
 
 ## 9. Unfinished Work
 
-Geometry MLP and concat model; coordinate/cache reader integration; detector-failure handling; M3 smoke/overfit checks and formal training; additional seeds; corruption evaluation; final test evaluation; reusable training-script extraction if needed.
+Final detection-failure policy; full-data preparation for M3;
+comparison with saved baseline source snapshots before training;
+small-sample overfit checks; M3 seed-0 training; additional seeds;
+corruption evaluation; final test evaluation; reusable trainer if needed.
+R50 independent validation reproduction and threshold tuning remain pending.
+No geometric augmentation has been implemented or checked.
 
-MTCNN cache: 202,599 records; 202,306 `ok`, 293 `no_face` (0.14%); 3,754 multiple-face images. Train NME mean/median/95th percentile: 6.41% / 5.40% / 11.34%; validation: 6.21% / 5.37% / 10.78%. NME is normalized by GT eye distance and excludes failed detections. Test detections were cached, but test landmark quality was not evaluated.
+MTCNN cache: 202,599 records; 202,306 ok; 293 no_face.
+Train: 162,521 ok / 249 no_face.
+Validation: 19,835 ok / 32 no_face.
+Test: 19,950 ok / 12 no_face.
+
+Earlier quality assessment reported 3,754 multiple-face images.
+Train NME mean/median/95th percentile: 6.41% / 5.40% / 11.34%.
+Validation: 6.21% / 5.37% / 10.78%.
+NME uses GT eye distance and excludes failed detections.
+Test landmark quality and attribute performance remain unevaluated.
 
 ## 10. Next Development Order
 
-1. Day 9: inspect existing sources on Mac; implement the geometry MLP and R18 concat model; verify shapes, gradients in both branches, and parameter count. No full training yet.
-2. Day 10: inspect the actual SQLite schema and wrapper; integrate predicted coordinates; verify point order, normalization, augmentation consistency, and missing/invalid records.
-3. Day 11: specify failure handling and run M3 small-batch checks before seed-0 training.
-4. Complete M3 and compare clean validation results under the established checkpoint-selection rule. R50 training is already finished.
-5. Reproduce R50 validation if required; then plan additional seeds and corruption experiments. Reserve test evaluation for a fixed protocol.
+Day 9 and Day 10 implementation and integration checks are complete.
+
+1. Day 11: implement an explicit detection-failure policy without GT
+   substitution or silently removing samples.
+2. Compare shared preprocessing and labels against saved baseline sources.
+3. Prepare full local data and run small-batch/overfit checks.
+4. Train M3 seed 0; select the checkpoint by validation mAP.
+5. Reproduce results; plan additional seeds and corruption experiments.
+   Reserve test evaluation for a fixed protocol.
+
+New files:
+- models/resnet18_geometry.py: geometry fusion model.
+- datasets/landmark_cache.py: split-specific cache reader.
+- datasets/celeba_predicted.py: predicted-coordinate Dataset.
+- notebooks/day10_predicted_geometry_integration.ipynb: Colab checks.
+
+Verified:
+- Reader checks passed for all train and validation cache records.
+- Six sampled image hashes, sizes, and coordinate mappings passed.
+- Visual inspection found no obvious misalignment in those six images.
+- Current baseline/predicted Dataset images and labels matched on samples.
+- Real batches passed with two workers; logits (3, 24), finite BCE.
+- Real no_face sample 000199.jpg raised LandmarkUnavailableError.
+- No formal geometry training or performance evaluation was performed.
+
+Verified integration source:
+41d36c4de3ea61e3e2f0fe8e93cc5fb72eebeff7.
+
+Drive archive:
+ /content/drive/MyDrive/FacialVisualProfile/runs/m3_preparation/day10/
+contains integration_report.json, sampled_landmark_alignment.png,
+and source/; source hashes are recorded in the report.
+
+Colab workspace: /content/day10_geometry_workspace.
+Temporary raw data: /content/day10_geometry_data/raw.
+Only seven images were extracted there; do not use it for full training.
+The archived notebook was run from a fresh Day 10 workspace.
 
 ## 11. Most Important Files to Read First
 
@@ -161,7 +214,7 @@ Read `docs/experiment_log.md`, `configs/attributes.yaml`, `datasets/preprocessin
 
 ## 12. New Chatbox Handoff Notes
 
-Mac repository: `/Users/deweye/Desktop/Facial Visual Profile`; GitHub: `DeweyYip/facial-visual-profile`. Latest confirmed commit: `e91dc65`, synchronized with `origin/main`.
+Mac repository: `/Users/deweye/Desktop/Facial Visual Profile`; GitHub: `DeweyYip/facial-visual-profile`. Latest confirmed code commit: `41d36c4`, synchronized with `origin/main`.
 
 The worktree is not clean: modified `models/resnet50.py` and untracked `notebooks/day8_resnet50_seed0(upper_half).ipynb` were deliberately excluded from the results commit. Inspect and preserve them; do not overwrite or delete automatically.
 
