@@ -129,3 +129,40 @@ Scope:
 
 Next: inspect SQLite cache schema and integrate predicted coordinates,
 checking point order, shared preprocessing, and missing/invalid records.
+
+## Day 10 — Predicted landmark cache reader
+
+Date: 2026-10-03
+
+Inspected the persistent MTCNN cache in Colab:
+- Schema version: 1.
+- Coordinates: original RGB image pixels.
+- Point order: lefteye, righteye, nose, leftmouth, rightmouth.
+- Train: 162,521 ok; 249 no_face.
+- Validation: 19,835 ok; 32 no_face.
+- Test: 19,950 ok; 12 no_face.
+- Total: 202,599 records.
+
+Implemented `datasets/landmark_cache.py`:
+- Loads one official split into memory using read-only SQLite.
+- Checks schema, coordinate system, point order, partition hash,
+  and exact split membership.
+- Returns float32 original-image coordinates with shape (5, 2).
+- Returns None and the failure status for unsuccessful detections.
+- Never substitutes GT coordinates.
+
+Mac smoke check using a temporary synthetic database:
+- Official split selection: PASS.
+- Original coordinates preserved: PASS.
+- Detection failure remains explicit: PASS.
+- Missing record rejection: PASS.
+- Image-size mismatch rejection: PASS.
+- Invalid coordinate shape rejection: PASS.
+- Non-finite coordinate rejection: PASS.
+- Incomplete split rejection: PASS.
+- Partition hash mismatch rejection: PASS.
+
+Pending:
+- Real-cache reader verification and image/coordinate preprocessing checks.
+- Dataset integration and explicit training-time failure policy.
+- No formal geometry-model training has started.
