@@ -95,3 +95,37 @@
 - Small result files and training curves: `docs/results/r50_seed0/`.
 - The test split was not evaluated.
 - This is a single-seed clean-validation result; robustness has not been evaluated.
+
+## Day 9 — Geometry model implementation
+
+Date: 2026-10-02
+
+Implemented `models/resnet18_geometry.py` with
+`ResNet18GeometryAttributes`.
+
+Architecture:
+- Image branch: ResNet18 with its FC replaced by Identity; 512 features.
+- Geometry branch: Linear(10, 32), ReLU, Linear(32, 32), ReLU.
+- Fusion: concatenate image and geometry features; 544 features.
+- Classifier: Linear(544, 24), returning logits.
+
+Mac CPU smoke check:
+- Seed: 0; batch size: 2; pretrained=False.
+- Random images, normalized random coordinates, and binary labels.
+- Image features: (2, 512).
+- Geometry features: (2, 32).
+- Combined features: (2, 544).
+- Logits: (2, 24).
+- BCEWithLogitsLoss: 0.684515.
+- All trainable parameters received finite gradients.
+- Each branch and the classifier had a nonzero gradient absolute sum.
+- Total parameters: 11,191,000.
+- Result: PASS.
+
+Scope:
+- This checks model wiring and gradient propagation only.
+- No formal training or attribute-performance evaluation was performed.
+- No MTCNN cache or real-coordinate integration was performed.
+
+Next: inspect SQLite cache schema and integrate predicted coordinates,
+checking point order, shared preprocessing, and missing/invalid records.
