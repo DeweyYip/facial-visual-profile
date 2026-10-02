@@ -166,3 +166,37 @@ Pending:
 - Real-cache reader verification and image/coordinate preprocessing checks.
 - Dataset integration and explicit training-time failure policy.
 - No formal geometry-model training has started.
+
+### Day 10 — Coordinate alignment and predicted Dataset
+
+Date: 2026-10-03
+
+Colab checks using source commit c4fd5b6:
+- Real-cache reader passed for all 162,770 training and 19,867
+  validation records, including explicit no_face results.
+- Sampled 3 training and 3 validation images with seed 0:
+  101140.jpg, 110412.jpg, 010626.jpg,
+  171267.jpg, 179547.jpg, 178715.jpg.
+- All six image hashes and image sizes matched cache records.
+- Image tensors were unchanged by the coordinate input.
+- Maximum coordinate mapping error was approximately 0.00000763 pixels.
+- Visual inspection found no obvious landmark misalignment in these
+  six samples. This is a sampled check, not a full-dataset guarantee.
+
+Implemented `datasets/celeba_predicted.py`:
+- Reuses official splits, labels, attribute order, and shared preprocessing.
+- Returns image, labels, normalized predicted points, and filename.
+- Raises LandmarkUnavailableError for failed detections.
+- Inherited GT annotations are loaded but are not used by __getitem__.
+- Final training-time failure handling remains pending.
+
+Mac synthetic-data smoke check:
+- Sample membership and order: PASS.
+- Baseline image and label equality: PASS.
+- Predicted coordinates used instead of GT: PASS.
+- Output independent of inherited GT: PASS.
+- Explicit failed-detection handling: PASS.
+- Successful-sample DataLoader shapes: PASS.
+
+Pending: real Dataset/DataLoader/model integration check.
+No formal geometry-model training has started.
