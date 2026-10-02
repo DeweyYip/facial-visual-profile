@@ -74,3 +74,24 @@
 - Checkpoints, config, history, best.json, epoch_metrics.csv, and training_curves.png are stored in Drive under `FacialVisualProfile/runs/r18_seed0/`.
 - Training source commit: `43e51ca99bf98743ba2d7c4e2481e2b7751e97f7`.
 - The test split was not evaluated.
+
+## Day 8: ResNet50 seed-0 training
+
+- Model: ImageNet-pretrained ResNet50 with 24 output logits.
+- Parameters: 23,557,208.
+- Official split: 162,770 training images and 19,867 validation images.
+- Configuration: seed 0, 10 epochs, batch size 64, Adam, learning rate 0.0001, FP32.
+- Shared preprocessing, attribute order, and metric source were restored from the R18 source snapshot.
+- R50 model source commit: `f601fb6c140c790a35ff9b5564ad0d7a0eb562d5`.
+- GPU: Tesla T4.
+- Model and Adam restoration checks passed; resumed after epoch 8 and completed epochs 9 and 10.
+- Selected checkpoint: `epoch_03.pt`, using validation mAP.
+- Selected validation mAP: 0.818835.
+- Selected macro-F1 at threshold 0.5: 0.731168.
+- Selected validation BCE loss: 0.190218.
+- Validation loss increased and mAP declined after epoch 3, indicating overfitting.
+- All 10 epochs and saved run artifacts were checked.
+- Checkpoints and source snapshot remain in Drive: `FacialVisualProfile/runs/r50_seed0/`.
+- Small result files and training curves: `docs/results/r50_seed0/`.
+- The test split was not evaluated.
+- This is a single-seed clean-validation result; robustness has not been evaluated.

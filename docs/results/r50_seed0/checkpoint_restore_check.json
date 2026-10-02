@@ -1,0 +1,6 @@
+{
+  "checkpoint": "epoch_01.pt",
+  "model_reload_passed": true,
+  "optimizer_reload_passed": true,
+  "optimizer_steps": 2544
+}
