@@ -1,0 +1,59 @@
+{
+  "source_commit": "a6722d6453e6106fdf07c871b5ea9ea02743018b",
+  "sampling_seed": 0,
+  "split": "train",
+  "samples": [
+    {
+      "name": "101140.jpg",
+      "status": "ok",
+      "image_sha256": "3968bbea4c41f8daadddb228c2208c13ca6b4a38807d2323c058ace0474e85ff"
+    },
+    {
+      "name": "110412.jpg",
+      "status": "ok",
+      "image_sha256": "f7249456289fe6ab294d8d289b015ca38ef2a948c80937f48ecc1effc6a6c4c5"
+    },
+    {
+      "name": "010626.jpg",
+      "status": "ok",
+      "image_sha256": "37f0ed68044e482838ca8ac51b275e2e3155ff09363b221d9c89a537c6bf5c0a"
+    },
+    {
+      "name": "067987.jpg",
+      "status": "ok",
+      "image_sha256": "2d295ae905a99940d9a1dd3ee5d97b95cb63c1892e2cc38c9b14913e03e31388"
+    },
+    {
+      "name": "134232.jpg",
+      "status": "ok",
+      "image_sha256": "2961f9efe8dff3c7062d56f4166d3e6436db145f1984db2c417baaf9ad833806"
+    },
+    {
+      "name": "127574.jpg",
+      "status": "ok",
+      "image_sha256": "74fad51bfeff49bd5ce3bc9b414e46472168d1c7fa67e9b20b4d86deb4bb188f"
+    },
+    {
+      "name": "106307.jpg",
+      "status": "ok",
+      "image_sha256": "5e48e4151fc37bd10054c9878c71928e26086295f398bc259bfdf6f15b24a7cf"
+    },
+    {
+      "name": "000199.jpg",
+      "status": "no_face",
+      "image_sha256": "974b57604861d2e7bf529e74cc9882b52637831ecfc103b660dca2bbb456c228"
+    }
+  ],
+  "geometry_valid": [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    false
+  ],
+  "dataloader_workers": 2,
+  "baseline_image_and_label_equality": "PASS"
+}

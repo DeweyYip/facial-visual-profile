@@ -1,5 +1,13 @@
 # Facial Visual Profile — Current State v1
 
+## Latest verified status — Day 11
+
+As of 2026-10-03, failure masking and small-sample training checks passed.
+M3 formal seed-0 training has NOT started. Day 11 remains in progress.
+This update supersedes older statements that failure handling is pending.
+See Section 10 for the current next steps.
+
+
 Updated: 2026-10-03 (Asia/Shanghai). Handoff after Day 10.
 
 Evidence: code and execution results shared in the development conversation. The Mac repository and Google Drive were not directly inspected when preparing this document. Paths and completion claims below refer to those reported results. This workspace contains the handoff document, not a checkout of the project.
@@ -170,43 +178,35 @@ Test landmark quality and attribute performance remain unevaluated.
 
 ## 10. Next Development Order
 
-Day 9 and Day 10 implementation and integration checks are complete.
+Day 11 is in progress. Failure masking, source compatibility, and the
+eight-image overfit check passed. Formal M3 seed-0 training is pending.
 
-1. Day 11: implement an explicit detection-failure policy without GT
-   substitution or silently removing samples.
-2. Compare shared preprocessing and labels against saved baseline sources.
-3. Prepare full local data and run small-batch/overfit checks.
-4. Train M3 seed 0; select the checkpoint by validation mAP.
-5. Reproduce results; plan additional seeds and corruption experiments.
-   Reserve test evaluation for a fixed protocol.
+1. Continue Day 11: prepare the complete local image dataset and check
+   official split membership, cache coverage, and masked batches.
+2. Initialize a fresh ImageNet-pretrained M3; never reuse overfit weights.
+3. Train seed 0 using the established baseline protocol: 10 epochs,
+   batch 64, Adam, learning rate 0.0001, weight decay 0, FP32,
+   two workers, no augmentation, and all backbone parameters trainable.
+4. Record source hashes and environment; save optimizer state and history.
+   Select by highest validation mAP, keeping the earliest epoch on ties.
+5. Reproduce selected-checkpoint validation results and compare baselines.
+   Additional seeds, corruption checks, and final test evaluation follow.
 
-New files:
-- models/resnet18_geometry.py: geometry fusion model.
-- datasets/landmark_cache.py: split-specific cache reader.
-- datasets/celeba_predicted.py: predicted-coordinate Dataset.
-- notebooks/day10_predicted_geometry_integration.ipynb: Colab checks.
+Training/inference Dataset mode: failure_policy="mask".
+Returns image, labels, points, filename, geometry_valid.
+Pass geometry_valid to the model. Failed detections are retained;
+their geometry features are zeroed after the MLP. No GT substitution.
+Default failure_policy="error" remains available for strict checks.
 
-Verified:
-- Reader checks passed for all train and validation cache records.
-- Six sampled image hashes, sizes, and coordinate mappings passed.
-- Visual inspection found no obvious misalignment in those six images.
-- Current baseline/predicted Dataset images and labels matched on samples.
-- Real batches passed with two workers; logits (3, 24), finite BCE.
-- Real no_face sample 000199.jpg raised LandmarkUnavailableError.
-- No formal geometry training or performance evaluation was performed.
+Verified preparation source: a6722d6.
+Notebook: notebooks/day11_geometry_failure_and_overfit.ipynb.
+Local reports: docs/results/m3_preparation/day11/.
+Drive archive: runs/m3_preparation/day11/, including source/ and
+overfit_smoke.pt. The overfit checkpoint is only a smoke-check artifact.
 
-Verified integration source:
-41d36c4de3ea61e3e2f0fe8e93cc5fb72eebeff7.
-
-Drive archive:
- /content/drive/MyDrive/FacialVisualProfile/runs/m3_preparation/day10/
-contains integration_report.json, sampled_landmark_alignment.png,
-and source/; source hashes are recorded in the report.
-
-Colab workspace: /content/day10_geometry_workspace.
-Temporary raw data: /content/day10_geometry_data/raw.
-Only seven images were extracted there; do not use it for full training.
-The archived notebook was run from a fresh Day 10 workspace.
+Colab workspace: /content/day11_geometry_workspace.
+Temporary raw data: /content/day11_geometry_data/raw.
+Only eight images were extracted there; full training requires full data.
 
 ## 11. Most Important Files to Read First
 

@@ -1,0 +1,60 @@
+{
+  "source_commit": "a6722d6453e6106fdf07c871b5ea9ea02743018b",
+  "files": [
+    {
+      "file": "configs/attributes.yaml",
+      "r18_sha256": "33acae803c307686d45b6fd2c5d64749074de8e81481c533f20fede416d0528b",
+      "r50_sha256": "33acae803c307686d45b6fd2c5d64749074de8e81481c533f20fede416d0528b",
+      "current_sha256": "33acae803c307686d45b6fd2c5d64749074de8e81481c533f20fede416d0528b",
+      "baselines_equal": true,
+      "current_equals_r18": true,
+      "computational_equivalence": true
+    },
+    {
+      "file": "datasets/preprocessing.py",
+      "r18_sha256": "895e3e93641878068072043ff1dfd16a5fb32adcd270617a2890694962fd966f",
+      "r50_sha256": "895e3e93641878068072043ff1dfd16a5fb32adcd270617a2890694962fd966f",
+      "current_sha256": "895e3e93641878068072043ff1dfd16a5fb32adcd270617a2890694962fd966f",
+      "baselines_equal": true,
+      "current_equals_r18": true,
+      "computational_equivalence": true
+    },
+    {
+      "file": "datasets/celeba.py",
+      "r18_sha256": "a21524acf5cacf8802fb9a68508c1df43c64aa0a06cde009a7d6f87986075a70",
+      "r50_sha256": "a21524acf5cacf8802fb9a68508c1df43c64aa0a06cde009a7d6f87986075a70",
+      "current_sha256": "1d599c0e074a75f8a9bae645989681e7f93a3a3c8f8566b9530f8a69c34ddb02",
+      "baselines_equal": true,
+      "current_equals_r18": false,
+      "computational_equivalence": true
+    },
+    {
+      "file": "evaluation/attributes.py",
+      "r18_sha256": "88b801b7770bb1372fa9862a9250203e4a75cf330214b2dd3b48b1c7eca841d7",
+      "r50_sha256": "88b801b7770bb1372fa9862a9250203e4a75cf330214b2dd3b48b1c7eca841d7",
+      "current_sha256": "d45ebd6e28b94dad0af46547f8da04130f0f193289f4684b1c8540e46f1026bd",
+      "baselines_equal": true,
+      "current_equals_r18": false,
+      "computational_equivalence": true
+    }
+  ],
+  "saved_baseline_source_hashes_verified": true,
+  "attribute_order_verified": true,
+  "shared_baseline_settings": {
+    "seed": 0,
+    "epochs": 10,
+    "batch_size": 64,
+    "num_workers": 2,
+    "optimizer": "Adam",
+    "learning_rate": 0.0001,
+    "weight_decay": 0.0,
+    "precision": "FP32",
+    "augmentation": "None; use existing shared preprocessing",
+    "f1_threshold": 0.5,
+    "selection_metric": "validation_mAP",
+    "epoch_seed_rule": "seed + epoch; epochs start at 1",
+    "cudnn_deterministic": true,
+    "cudnn_benchmark": false
+  },
+  "scope": "Shared source computation and baseline configurations checked; M3 training and GPU environment have not yet been checked."
+}

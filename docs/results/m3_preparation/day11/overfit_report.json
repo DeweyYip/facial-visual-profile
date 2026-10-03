@@ -1,0 +1,94 @@
+{
+  "result": "PASS",
+  "experiment_type": "eight-training-image overfit smoke check",
+  "source_commit": "a6722d6453e6106fdf07c871b5ea9ea02743018b",
+  "source_sha256": {
+    "configs/attributes.yaml": "33acae803c307686d45b6fd2c5d64749074de8e81481c533f20fede416d0528b",
+    "datasets/celeba.py": "1d599c0e074a75f8a9bae645989681e7f93a3a3c8f8566b9530f8a69c34ddb02",
+    "datasets/preprocessing.py": "895e3e93641878068072043ff1dfd16a5fb32adcd270617a2890694962fd966f",
+    "datasets/landmark_cache.py": "9e8ed836c4ace3e84970d1e3e67baaf740b919553f656640d7a9b90e7eae6968",
+    "datasets/celeba_predicted.py": "9a86a9a35da1faf90dd8516b9f60e171b62f0a92de8de8dce21dbed48c8e2a02",
+    "evaluation/attributes.py": "d45ebd6e28b94dad0af46547f8da04130f0f193289f4684b1c8540e46f1026bd",
+    "models/resnet18_geometry.py": "14786dc26945214a856495a367c7adab45eb4dd9ff486fd8a12720fec0fb501b"
+  },
+  "seed": 0,
+  "sample_names": [
+    "101140.jpg",
+    "110412.jpg",
+    "010626.jpg",
+    "067987.jpg",
+    "134232.jpg",
+    "127574.jpg",
+    "106307.jpg",
+    "000199.jpg"
+  ],
+  "geometry_valid": [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    false
+  ],
+  "initial_weights": "ResNet18_Weights.IMAGENET1K_V1",
+  "optimizer": "Adam",
+  "learning_rate": 0.001,
+  "weight_decay": 0.0,
+  "precision": "FP32",
+  "augmentation": "None",
+  "max_steps": 200,
+  "completed_steps": 10,
+  "pass_criteria": {
+    "exact_match": 1.0,
+    "eval_bce_max": 0.02
+  },
+  "first_backward_gradient_sums": {
+    "image_encoder": 1999.3771738372743,
+    "geometry_encoder": 0.1435410575941205,
+    "classifier": 140.02193981409073
+  },
+  "final": {
+    "step": 10,
+    "eval_bce": 0.017194435000419617,
+    "attribute_accuracy": 1.0,
+    "exact_match": 1.0,
+    "failed_sample_exact": true
+  },
+  "history": [
+    {
+      "step": 0,
+      "eval_bce": 0.7120954394340515,
+      "attribute_accuracy": 0.5729166865348816,
+      "exact_match": 0.0,
+      "failed_sample_exact": false
+    },
+    {
+      "step": 1,
+      "eval_bce": 0.4290218949317932,
+      "attribute_accuracy": 0.8333333730697632,
+      "exact_match": 0.0,
+      "failed_sample_exact": false
+    },
+    {
+      "step": 10,
+      "eval_bce": 0.017194435000419617,
+      "attribute_accuracy": 1.0,
+      "exact_match": 1.0,
+      "failed_sample_exact": true
+    }
+  ],
+  "elapsed_seconds": 3.4735597800000733,
+  "peak_allocated_gpu_gib": 0.3715801239013672,
+  "environment": {
+    "torch": "2.11.0+cu130",
+    "cuda_runtime": "13.0",
+    "gpu": "Tesla T4",
+    "torchvision": "0.26.0+cu130",
+    "numpy": "2.1.3",
+    "Pillow": "11.3.0",
+    "scikit-learn": "1.6.1"
+  },
+  "scope": "Training-pipeline check on the same eight training images; not a generalization or baseline-comparison result."
+}

@@ -256,3 +256,24 @@ Mac synthetic Dataset checks:
 No optimizer updates or formal training were performed.
 Pending: baseline source compatibility, real mixed-sample checks,
 and small-sample overfit training in Colab.
+
+### Day 11 — Overfit passed; formal seed-0 training pending
+
+Date: 2026-10-03
+Verified source: a6722d6453e6106fdf07c871b5ea9ea02743018b.
+
+- Baseline saved-source hashes verified.
+- Shared computational source and attribute order matched baselines.
+- Eight real training images: seven successful detections, one no_face.
+- ImageNet-pretrained M3; Adam; smoke learning rate 0.001; FP32.
+- Completed updates: 10.
+- Final eval BCE: 0.017194.
+- Exact match: 100%; failed sample exact match: True.
+- This is an overfit check on training samples, not generalization.
+- Reports: docs/results/m3_preparation/day11/.
+- Drive artifacts: runs/m3_preparation/day11/.
+- overfit_smoke.pt must not initialize the formal experiment.
+- Day 11 remains in progress: full-data preparation and formal M3
+  seed-0 training have not started.
+- Formal training must restart from ImageNet weights, using the
+  established baseline settings, including learning rate 0.0001.
