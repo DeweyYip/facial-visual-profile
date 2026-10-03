@@ -218,3 +218,41 @@ Verified source: 41d36c4de3ea61e3e2f0fe8e93cc5fb72eebeff7.
 - Temporary Colab raw data contains only seven images.
 - Next: failure policy, baseline source compatibility, full-data
   preparation, and small-sample training checks.
+
+## Day 11 — Geometry failure masking
+
+Date: 2026-10-03
+
+Implemented explicit missing-geometry handling:
+- Dataset failure_policy="error" preserves the Day 10 four-item
+  interface and raises on failed detections.
+- Dataset failure_policy="mask" retains all samples and returns
+  image, labels, normalized points, filename, geometry_valid.
+- Failed detections use zero normalized coordinate placeholders
+  and geometry_valid=False. No GT substitution is performed.
+- Model accepts an optional boolean geometry_valid tensor [B].
+- Invalid coordinates are replaced with zeros before the MLP.
+- Invalid geometry features are zeroed after the MLP, including biases.
+- Missing mask means all geometry is valid.
+- Parameter count remains 11,191,000.
+- Cache integrity errors remain errors.
+
+Mac model checks:
+- Mixed valid/invalid geometry features: PASS.
+- Invalid-coordinate changes and NaN isolation: PASS.
+- Omitted mask equals all-valid mask: PASS.
+- Mixed-batch geometry gradients: PASS.
+- All-invalid geometry gradients: zero.
+- All-invalid image/classifier gradients: finite and nonzero.
+
+Mac synthetic Dataset checks:
+- Default strict behavior preserved: PASS.
+- Failed sample retained with zero placeholders: PASS.
+- Both samples preserve baseline images and labels: PASS.
+- Successful and failed geometry independent of GT: PASS.
+- DataLoader boolean validity mask [True, False]: PASS.
+- Mixed Dataset batch to model: PASS.
+
+No optimizer updates or formal training were performed.
+Pending: baseline source compatibility, real mixed-sample checks,
+and small-sample overfit training in Colab.

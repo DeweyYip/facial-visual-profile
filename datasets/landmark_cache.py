@@ -8,6 +8,13 @@ from pathlib import Path
 import torch
 
 
+# the Python reader that reads our stored predicted lanmarks in SQLite
+"""
+it goes to SQLite and does stuff like:
+SELECT name, result
+FROM detections
+WHERE split = 0
+"""
 class MTCNNLandmarkCache:
     """Load one official split and return original-image coordinates."""
 
