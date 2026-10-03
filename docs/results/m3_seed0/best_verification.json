@@ -1,0 +1,22 @@
+{
+  "checkpoint": "epoch_02.pt",
+  "epoch": 2,
+  "source_commit": "44e8ac21946d1db1146d1efdbdba36482b3ecfad",
+  "validation_images": 19867,
+  "missing_geometry": 32,
+  "f1_threshold": 0.5,
+  "recomputed": {
+    "validation_bce": 0.1881912535008375,
+    "validation_macro_f1": 0.7439260119349894,
+    "validation_mAP": 0.8185643813256119
+  },
+  "absolute_differences": {
+    "validation_bce": 0.0,
+    "validation_macro_f1": 0.0,
+    "validation_mAP": 0.0
+  },
+  "tolerance": 1e-06,
+  "passed": true,
+  "num_workers": 0,
+  "test_evaluated": false
+}

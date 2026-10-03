@@ -277,3 +277,38 @@ Verified source: a6722d6453e6106fdf07c871b5ea9ea02743018b.
   seed-0 training have not started.
 - Formal training must restart from ImageNet weights, using the
   established baseline settings, including learning rate 0.0001.
+
+## Day 11 — M3 seed-0 formal training and verification
+
+- Source commit: 44e8ac21946d1db1146d1efdbdba36482b3ecfad.
+- Model: ResNet18 with predicted five-point geometry.
+- Completed all 10 formal training epochs with seed 0.
+- Training samples per epoch: 162,770.
+- Validation samples per epoch: 19,867.
+- Missing geometry retained through feature masking:
+  249 training samples and 32 validation samples.
+- Best checkpoint selected by validation mAP: epoch_02.pt.
+- Best validation BCE: 0.1881912535008375.
+- Best validation macro-F1: 0.7439260119349894.
+- Best validation mAP: 0.8185643813256119.
+- F1 threshold: 0.5.
+- Fresh-model checkpoint verification with num_workers=0: PASS.
+- Recomputed BCE, macro-F1, and mAP exactly matched saved values.
+- Later epochs showed decreasing training BCE and worsening validation
+  performance; the epoch-2 checkpoint remains selected.
+- Multiprocessing DataLoader cleanup exceptions appeared during epoch 4.
+  Subsequent epochs completed, and independent verification passed.
+- This is a single-seed result, not evidence of a stable geometry benefit.
+- No test evaluation was performed.
+
+Artifacts:
+- Drive: runs/m3_seed0/, including checkpoints, source snapshot,
+  configuration, history, best selection, verification report,
+  and validation_predictions.npz.
+- Git reports: docs/results/m3_seed0/.
+- Notebook: notebooks/day11_m3_seed0.ipynb.
+
+Next:
+- Per-attribute validation comparison with the RGB baselines.
+- Oracle geometry and planned control/multiple-seed experiments.
+- Keep the test split untouched until the evaluation protocol is finalized.

@@ -1,16 +1,25 @@
 # Facial Visual Profile — Current State v1
 
-## Latest verified status — Day 11
+## Latest verified status — Day 11 formal training
 
-As of 2026-10-03, failure masking and small-sample training checks passed.
-M3 formal seed-0 training has NOT started. Day 11 remains in progress.
-This update supersedes older statements that failure handling is pending.
-See Section 10 for the current next steps.
+M3 seed-0 formal training and best-checkpoint verification are complete.
+This status supersedes earlier statements that formal M3 training
+had not started.
 
-
-Updated: 2026-10-03 (Asia/Shanghai). Handoff after Day 10.
-
-Evidence: code and execution results shared in the development conversation. The Mac repository and Google Drive were not directly inspected when preparing this document. Paths and completion claims below refer to those reported results. This workspace contains the handoff document, not a checkout of the project.
+- Completed epochs: 10.
+- Source commit: 44e8ac21946d1db1146d1efdbdba36482b3ecfad.
+- Best checkpoint: runs/m3_seed0/epoch_02.pt on Google Drive.
+- Selection metric: validation mAP; selected epoch: 2.
+- Validation BCE: 0.1881912535008375.
+- Validation macro-F1 at threshold 0.5: 0.7439260119349894.
+- Validation mAP: 0.8185643813256119.
+- Full validation set: 19,867 images, including 32 masked failures.
+- Independent checkpoint verification: PASS; all metric differences zero.
+- Test evaluation: not performed.
+- Local reports: docs/results/m3_seed0/.
+- Notebook: notebooks/day11_m3_seed0.ipynb.
+- Next: per-attribute comparisons and planned oracle/control experiments.
+- Stable geometry gains remain unproven; multiple seeds are pending.
 
 ## 1. Project Goal / Research Question
 

@@ -1,0 +1,20 @@
+{
+  "source_commit": "44e8ac21946d1db1146d1efdbdba36482b3ecfad",
+  "images_verified": 202599,
+  "verification": "ZIP CRC and cached SHA-256 for every image",
+  "official_split_counts": {
+    "0": 162770,
+    "1": 19867,
+    "2": 19962
+  },
+  "cache_counts": {
+    "0/no_face": 249,
+    "0/ok": 162521,
+    "1/no_face": 32,
+    "1/ok": 19835,
+    "2/no_face": 12,
+    "2/ok": 19950
+  },
+  "result": "PASS",
+  "scope": "Data integrity preparation; no training or test evaluation."
+}
