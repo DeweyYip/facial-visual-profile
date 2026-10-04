@@ -1,0 +1,471 @@
+{
+  "source_commit": "44e8ac21946d1db1146d1efdbdba36482b3ecfad",
+  "initial_checkpoint": "epoch_00.pt",
+  "trained_checkpoint": "epoch_02.pt",
+  "trained_epoch": 2,
+  "method": "Compare learned weights and biases; exclude running buffers.",
+  "groups": {
+    "image_encoder": {
+      "parameter_tensors": 60,
+      "changed_parameter_tensors": 60,
+      "parameter_elements": 11176512,
+      "changed_parameter_elements": 11170712,
+      "delta_l2": 22.816660205196232,
+      "relative_delta_l2": 0.2680127358418498,
+      "parameters": [
+        {
+          "name": "image_encoder.bn1.bias",
+          "elements": 64,
+          "changed_elements": 56,
+          "max_absolute_change": 0.024137377738952637
+        },
+        {
+          "name": "image_encoder.bn1.weight",
+          "elements": 64,
+          "changed_elements": 56,
+          "max_absolute_change": 0.039416611194610596
+        },
+        {
+          "name": "image_encoder.conv1.weight",
+          "elements": 9408,
+          "changed_elements": 8232,
+          "max_absolute_change": 0.029334932565689087
+        },
+        {
+          "name": "image_encoder.layer1.0.bn1.bias",
+          "elements": 64,
+          "changed_elements": 64,
+          "max_absolute_change": 0.033652111887931824
+        },
+        {
+          "name": "image_encoder.layer1.0.bn1.weight",
+          "elements": 64,
+          "changed_elements": 64,
+          "max_absolute_change": 0.023991480469703674
+        },
+        {
+          "name": "image_encoder.layer1.0.bn2.bias",
+          "elements": 64,
+          "changed_elements": 64,
+          "max_absolute_change": 0.01988331973552704
+        },
+        {
+          "name": "image_encoder.layer1.0.bn2.weight",
+          "elements": 64,
+          "changed_elements": 64,
+          "max_absolute_change": 0.019735276699066162
+        },
+        {
+          "name": "image_encoder.layer1.0.conv1.weight",
+          "elements": 36864,
+          "changed_elements": 32256,
+          "max_absolute_change": 0.06681032478809357
+        },
+        {
+          "name": "image_encoder.layer1.0.conv2.weight",
+          "elements": 36864,
+          "changed_elements": 36864,
+          "max_absolute_change": 0.0374168511480093
+        },
+        {
+          "name": "image_encoder.layer1.1.bn1.bias",
+          "elements": 64,
+          "changed_elements": 64,
+          "max_absolute_change": 0.033923521637916565
+        },
+        {
+          "name": "image_encoder.layer1.1.bn1.weight",
+          "elements": 64,
+          "changed_elements": 64,
+          "max_absolute_change": 0.022507846355438232
+        },
+        {
+          "name": "image_encoder.layer1.1.bn2.bias",
+          "elements": 64,
+          "changed_elements": 64,
+          "max_absolute_change": 0.021780788898468018
+        },
+        {
+          "name": "image_encoder.layer1.1.bn2.weight",
+          "elements": 64,
+          "changed_elements": 64,
+          "max_absolute_change": 0.03996926546096802
+        },
+        {
+          "name": "image_encoder.layer1.1.conv1.weight",
+          "elements": 36864,
+          "changed_elements": 36864,
+          "max_absolute_change": 0.035371964797377586
+        },
+        {
+          "name": "image_encoder.layer1.1.conv2.weight",
+          "elements": 36864,
+          "changed_elements": 36864,
+          "max_absolute_change": 0.03576303459703922
+        },
+        {
+          "name": "image_encoder.layer2.0.bn1.bias",
+          "elements": 128,
+          "changed_elements": 128,
+          "max_absolute_change": 0.016883809119462967
+        },
+        {
+          "name": "image_encoder.layer2.0.bn1.weight",
+          "elements": 128,
+          "changed_elements": 128,
+          "max_absolute_change": 0.018039047718048096
+        },
+        {
+          "name": "image_encoder.layer2.0.bn2.bias",
+          "elements": 128,
+          "changed_elements": 128,
+          "max_absolute_change": 0.01972460001707077
+        },
+        {
+          "name": "image_encoder.layer2.0.bn2.weight",
+          "elements": 128,
+          "changed_elements": 128,
+          "max_absolute_change": 0.021148324012756348
+        },
+        {
+          "name": "image_encoder.layer2.0.conv1.weight",
+          "elements": 73728,
+          "changed_elements": 73728,
+          "max_absolute_change": 0.0327925318852067
+        },
+        {
+          "name": "image_encoder.layer2.0.conv2.weight",
+          "elements": 147456,
+          "changed_elements": 147456,
+          "max_absolute_change": 0.03457757434807718
+        },
+        {
+          "name": "image_encoder.layer2.0.downsample.0.weight",
+          "elements": 8192,
+          "changed_elements": 8192,
+          "max_absolute_change": 0.027803733944892883
+        },
+        {
+          "name": "image_encoder.layer2.0.downsample.1.bias",
+          "elements": 128,
+          "changed_elements": 128,
+          "max_absolute_change": 0.01972460001707077
+        },
+        {
+          "name": "image_encoder.layer2.0.downsample.1.weight",
+          "elements": 128,
+          "changed_elements": 128,
+          "max_absolute_change": 0.018705904483795166
+        },
+        {
+          "name": "image_encoder.layer2.1.bn1.bias",
+          "elements": 128,
+          "changed_elements": 128,
+          "max_absolute_change": 0.015969842672348022
+        },
+        {
+          "name": "image_encoder.layer2.1.bn1.weight",
+          "elements": 128,
+          "changed_elements": 128,
+          "max_absolute_change": 0.013638228178024292
+        },
+        {
+          "name": "image_encoder.layer2.1.bn2.bias",
+          "elements": 128,
+          "changed_elements": 128,
+          "max_absolute_change": 0.019339025020599365
+        },
+        {
+          "name": "image_encoder.layer2.1.bn2.weight",
+          "elements": 128,
+          "changed_elements": 128,
+          "max_absolute_change": 0.01934492588043213
+        },
+        {
+          "name": "image_encoder.layer2.1.conv1.weight",
+          "elements": 147456,
+          "changed_elements": 147456,
+          "max_absolute_change": 0.037980955094099045
+        },
+        {
+          "name": "image_encoder.layer2.1.conv2.weight",
+          "elements": 147456,
+          "changed_elements": 147456,
+          "max_absolute_change": 0.036382921040058136
+        },
+        {
+          "name": "image_encoder.layer3.0.bn1.bias",
+          "elements": 256,
+          "changed_elements": 256,
+          "max_absolute_change": 0.01817336305975914
+        },
+        {
+          "name": "image_encoder.layer3.0.bn1.weight",
+          "elements": 256,
+          "changed_elements": 256,
+          "max_absolute_change": 0.01804816722869873
+        },
+        {
+          "name": "image_encoder.layer3.0.bn2.bias",
+          "elements": 256,
+          "changed_elements": 256,
+          "max_absolute_change": 0.02281349152326584
+        },
+        {
+          "name": "image_encoder.layer3.0.bn2.weight",
+          "elements": 256,
+          "changed_elements": 256,
+          "max_absolute_change": 0.019400298595428467
+        },
+        {
+          "name": "image_encoder.layer3.0.conv1.weight",
+          "elements": 294912,
+          "changed_elements": 294912,
+          "max_absolute_change": 0.038448404520750046
+        },
+        {
+          "name": "image_encoder.layer3.0.conv2.weight",
+          "elements": 589824,
+          "changed_elements": 589824,
+          "max_absolute_change": 0.041579990880563855
+        },
+        {
+          "name": "image_encoder.layer3.0.downsample.0.weight",
+          "elements": 32768,
+          "changed_elements": 32768,
+          "max_absolute_change": 0.031966108828783035
+        },
+        {
+          "name": "image_encoder.layer3.0.downsample.1.bias",
+          "elements": 256,
+          "changed_elements": 256,
+          "max_absolute_change": 0.02281349152326584
+        },
+        {
+          "name": "image_encoder.layer3.0.downsample.1.weight",
+          "elements": 256,
+          "changed_elements": 256,
+          "max_absolute_change": 0.024501387029886246
+        },
+        {
+          "name": "image_encoder.layer3.1.bn1.bias",
+          "elements": 256,
+          "changed_elements": 256,
+          "max_absolute_change": 0.018070310354232788
+        },
+        {
+          "name": "image_encoder.layer3.1.bn1.weight",
+          "elements": 256,
+          "changed_elements": 256,
+          "max_absolute_change": 0.023366928100585938
+        },
+        {
+          "name": "image_encoder.layer3.1.bn2.bias",
+          "elements": 256,
+          "changed_elements": 256,
+          "max_absolute_change": 0.02012618025764823
+        },
+        {
+          "name": "image_encoder.layer3.1.bn2.weight",
+          "elements": 256,
+          "changed_elements": 256,
+          "max_absolute_change": 0.019718706607818604
+        },
+        {
+          "name": "image_encoder.layer3.1.conv1.weight",
+          "elements": 589824,
+          "changed_elements": 589824,
+          "max_absolute_change": 0.037877476308494806
+        },
+        {
+          "name": "image_encoder.layer3.1.conv2.weight",
+          "elements": 589824,
+          "changed_elements": 589824,
+          "max_absolute_change": 0.032916439697146416
+        },
+        {
+          "name": "image_encoder.layer4.0.bn1.bias",
+          "elements": 512,
+          "changed_elements": 512,
+          "max_absolute_change": 0.01805320382118225
+        },
+        {
+          "name": "image_encoder.layer4.0.bn1.weight",
+          "elements": 512,
+          "changed_elements": 512,
+          "max_absolute_change": 0.020191669464111328
+        },
+        {
+          "name": "image_encoder.layer4.0.bn2.bias",
+          "elements": 512,
+          "changed_elements": 512,
+          "max_absolute_change": 0.024349108338356018
+        },
+        {
+          "name": "image_encoder.layer4.0.bn2.weight",
+          "elements": 512,
+          "changed_elements": 512,
+          "max_absolute_change": 0.035745978355407715
+        },
+        {
+          "name": "image_encoder.layer4.0.conv1.weight",
+          "elements": 1179648,
+          "changed_elements": 1179648,
+          "max_absolute_change": 0.037346283439546824
+        },
+        {
+          "name": "image_encoder.layer4.0.conv2.weight",
+          "elements": 2359296,
+          "changed_elements": 2359296,
+          "max_absolute_change": 0.04142619471531361
+        },
+        {
+          "name": "image_encoder.layer4.0.downsample.0.weight",
+          "elements": 131072,
+          "changed_elements": 131072,
+          "max_absolute_change": 0.03727284213528037
+        },
+        {
+          "name": "image_encoder.layer4.0.downsample.1.bias",
+          "elements": 512,
+          "changed_elements": 512,
+          "max_absolute_change": 0.024349108338356018
+        },
+        {
+          "name": "image_encoder.layer4.0.downsample.1.weight",
+          "elements": 512,
+          "changed_elements": 512,
+          "max_absolute_change": 0.021999269723892212
+        },
+        {
+          "name": "image_encoder.layer4.1.bn1.bias",
+          "elements": 512,
+          "changed_elements": 512,
+          "max_absolute_change": 0.01848546415567398
+        },
+        {
+          "name": "image_encoder.layer4.1.bn1.weight",
+          "elements": 512,
+          "changed_elements": 512,
+          "max_absolute_change": 0.01898948848247528
+        },
+        {
+          "name": "image_encoder.layer4.1.bn2.bias",
+          "elements": 512,
+          "changed_elements": 512,
+          "max_absolute_change": 0.04191109538078308
+        },
+        {
+          "name": "image_encoder.layer4.1.bn2.weight",
+          "elements": 512,
+          "changed_elements": 512,
+          "max_absolute_change": 0.05803942680358887
+        },
+        {
+          "name": "image_encoder.layer4.1.conv1.weight",
+          "elements": 2359296,
+          "changed_elements": 2359296,
+          "max_absolute_change": 0.03802494332194328
+        },
+        {
+          "name": "image_encoder.layer4.1.conv2.weight",
+          "elements": 2359296,
+          "changed_elements": 2359296,
+          "max_absolute_change": 0.045475397258996964
+        }
+      ]
+    },
+    "geometry_encoder": {
+      "parameter_tensors": 4,
+      "changed_parameter_tensors": 4,
+      "parameter_elements": 1408,
+      "changed_parameter_elements": 1229,
+      "delta_l2": 0.40613279905379385,
+      "relative_delta_l2": 0.08508932691634845,
+      "parameters": [
+        {
+          "name": "geometry_encoder.0.bias",
+          "elements": 32,
+          "changed_elements": 32,
+          "max_absolute_change": 0.027361243963241577
+        },
+        {
+          "name": "geometry_encoder.0.weight",
+          "elements": 320,
+          "changed_elements": 320,
+          "max_absolute_change": 0.03151589632034302
+        },
+        {
+          "name": "geometry_encoder.2.bias",
+          "elements": 32,
+          "changed_elements": 28,
+          "max_absolute_change": 0.021649613976478577
+        },
+        {
+          "name": "geometry_encoder.2.weight",
+          "elements": 1024,
+          "changed_elements": 849,
+          "max_absolute_change": 0.04347686469554901
+        }
+      ]
+    },
+    "classifier": {
+      "parameter_tensors": 2,
+      "changed_parameter_tensors": 2,
+      "parameter_elements": 13080,
+      "changed_parameter_elements": 12984,
+      "delta_l2": 1.5916704413163925,
+      "relative_delta_l2": 0.5598060241996003,
+      "parameters": [
+        {
+          "name": "classifier.bias",
+          "elements": 24,
+          "changed_elements": 24,
+          "max_absolute_change": 0.015724241529824212
+        },
+        {
+          "name": "classifier.weight",
+          "elements": 13056,
+          "changed_elements": 12960,
+          "max_absolute_change": 0.06680851429700851
+        }
+      ]
+    },
+    "classifier_image_columns": {
+      "parameter_tensors": 1,
+      "changed_parameter_tensors": 1,
+      "parameter_elements": 12288,
+      "changed_parameter_elements": 12288,
+      "delta_l2": 1.5606289988396846,
+      "relative_delta_l2": 0.5658391163468937,
+      "parameters": [
+        {
+          "name": "classifier.weight",
+          "elements": 12288,
+          "changed_elements": 12288,
+          "max_absolute_change": 0.06680851429700851
+        }
+      ]
+    },
+    "classifier_geometry_columns": {
+      "parameter_tensors": 1,
+      "changed_parameter_tensors": 1,
+      "parameter_elements": 768,
+      "changed_parameter_elements": 672,
+      "delta_l2": 0.30957287650773196,
+      "relative_delta_l2": 0.45734513131703697,
+      "parameters": [
+        {
+          "name": "classifier.weight",
+          "elements": 768,
+          "changed_elements": 672,
+          "max_absolute_change": 0.05476177856326103
+        }
+      ]
+    }
+  },
+  "passed": true,
+  "interpretation": "Parameter changes confirm training updates in both branches and classifier connections. They do not establish a causal performance benefit from geometry.",
+  "optimizer_updates_performed_by_this_check": false,
+  "test_evaluated": false
+}

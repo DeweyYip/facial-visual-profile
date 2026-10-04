@@ -1,0 +1,34 @@
+{
+  "model": "ResNet50Attributes",
+  "checkpoint": "epoch_03.pt",
+  "epoch": 3,
+  "source_commit": "f601fb6c140c790a35ff9b5564ad0d7a0eb562d5",
+  "saved_source_hashes_verified": true,
+  "validation_image_hashes_verified": 19867,
+  "sample_label_attribute_alignment_with_m3": true,
+  "validation_images": 19867,
+  "f1_threshold": 0.5,
+  "recomputed": {
+    "validation_bce": 0.19021799930518962,
+    "validation_macro_f1": 0.7311676785314263,
+    "validation_mAP": 0.8188346721785944
+  },
+  "expected": {
+    "validation_bce": 0.19021799704905165,
+    "validation_macro_f1": 0.7311676785314263,
+    "validation_mAP": 0.8188346601549794
+  },
+  "absolute_differences": {
+    "validation_bce": 2.256137970890748e-09,
+    "validation_macro_f1": 0.0,
+    "validation_mAP": 1.202361499252902e-08
+  },
+  "tolerance": 1e-06,
+  "passed": true,
+  "num_workers": 0,
+  "environment": {
+    "torch": "2.11.0+cu130",
+    "gpu": "Tesla T4"
+  },
+  "test_evaluated": false
+}

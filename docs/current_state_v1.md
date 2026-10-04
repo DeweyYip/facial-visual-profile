@@ -1,25 +1,28 @@
 # Facial Visual Profile — Current State v1
 
-## Latest verified status — Day 11 formal training
+## Latest verified status — Day 12
 
-M3 seed-0 formal training and best-checkpoint verification are complete.
-This status supersedes earlier statements that formal M3 training
-had not started.
+Three-model clean-validation comparison and M3 branch update checks
+are complete.
 
-- Completed epochs: 10.
-- Source commit: 44e8ac21946d1db1146d1efdbdba36482b3ecfad.
-- Best checkpoint: runs/m3_seed0/epoch_02.pt on Google Drive.
-- Selection metric: validation mAP; selected epoch: 2.
-- Validation BCE: 0.1881912535008375.
-- Validation macro-F1 at threshold 0.5: 0.7439260119349894.
-- Validation mAP: 0.8185643813256119.
-- Full validation set: 19,867 images, including 32 masked failures.
-- Independent checkpoint verification: PASS; all metric differences zero.
-- Test evaluation: not performed.
-- Local reports: docs/results/m3_seed0/.
-- Notebook: notebooks/day11_m3_seed0.ipynb.
-- Next: per-attribute comparisons and planned oracle/control experiments.
-- Stable geometry gains remain unproven; multiple seeds are pending.
+| Model | BCE | Macro-F1 at 0.5 | mAP |
+|---|---:|---:|---:|
+| R18 | 0.190717 | 0.727259 | 0.817737 |
+| R50 | 0.190218 | 0.731168 | 0.818835 |
+| M3 | 0.188191 | 0.743926 | 0.818564 |
+
+- Best epochs: R18=3, R50=3, M3=2.
+- All models evaluated on the same 19,867 official validation samples.
+- R50 best-checkpoint verification: PASS.
+- M3 best-checkpoint verification: PASS, completed during Day 11.
+- Both M3 branches and classifier connections received parameter updates.
+- All 24 per-attribute AP/F1 comparisons archived.
+- M3's overall mAP is close to both RGB baselines.
+- Stable or causal geometry benefits have not been established.
+- Test evaluation remains pending.
+- Reports: docs/results/comparisons/day12/.
+- Notebook: notebooks/day12_clean_validation_comparison.ipynb.
+- Next: oracle geometry and planned control/multiple-seed experiments.
 
 ## 1. Project Goal / Research Question
 

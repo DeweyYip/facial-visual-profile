@@ -1,0 +1,85 @@
+{
+  "split": "official validation",
+  "validation_images": 19867,
+  "attributes": [
+    "Smiling",
+    "Mouth_Slightly_Open",
+    "Eyeglasses",
+    "Bangs",
+    "Wearing_Hat",
+    "Mustache",
+    "No_Beard",
+    "Black_Hair",
+    "Bushy_Eyebrows",
+    "Arched_Eyebrows",
+    "High_Cheekbones",
+    "Bags_Under_Eyes",
+    "Big_Lips",
+    "Big_Nose",
+    "Double_Chin",
+    "Oval_Face",
+    "Receding_Hairline",
+    "Blond_Hair",
+    "Brown_Hair",
+    "Gray_Hair",
+    "Bald",
+    "Straight_Hair",
+    "Wavy_Hair",
+    "Sideburns"
+  ],
+  "sample_label_attribute_alignment": true,
+  "shared_training_protocol_checked": [
+    "seed",
+    "epochs",
+    "batch_size",
+    "optimizer",
+    "learning_rate",
+    "weight_decay",
+    "precision",
+    "augmentation",
+    "f1_threshold",
+    "selection_metric",
+    "epoch_seed_rule",
+    "cudnn_deterministic",
+    "cudnn_benchmark"
+  ],
+  "f1_threshold": 0.5,
+  "metrics": {
+    "R18": {
+      "mAP": 0.8177365539937546,
+      "macro_F1": 0.7272589169021056,
+      "BCE": 0.1907173457064173
+    },
+    "R50": {
+      "mAP": 0.8188346721785944,
+      "macro_F1": 0.7311676785314263,
+      "BCE": 0.1902179933136416
+    },
+    "M3": {
+      "mAP": 0.8185643813256119,
+      "macro_F1": 0.7439260119349894,
+      "BCE": 0.1881912464138801
+    }
+  },
+  "prediction_files": {
+    "R18": {
+      "path": "runs/r18_seed0/day7/validation_predictions.npz",
+      "sha256": "6d61e2d60c5306ccac34db924967ae6200bdcc24558561f2127177f765067f23"
+    },
+    "R50": {
+      "path": "runs/r50_seed0/day12/validation_predictions.npz",
+      "sha256": "d067f478f8950f85a9a0f1fa72c2324347e28fee41ac57963c38c19264843ff8"
+    },
+    "M3": {
+      "path": "runs/m3_seed0/validation_predictions.npz",
+      "sha256": "76c9e2df720dcc72022ff2c71d439733fa8dd15a8f72f6cc9cc3fe57f42c8a9c"
+    }
+  },
+  "source_commits": {
+    "R18": "43e51ca99bf98743ba2d7c4e2481e2b7751e97f7",
+    "R50": "f601fb6c140c790a35ff9b5564ad0d7a0eb562d5",
+    "M3": "44e8ac21946d1db1146d1efdbdba36482b3ecfad"
+  },
+  "scope": "Single-seed clean-validation comparison of checkpoints selected by validation mAP. No significance or causal benefit established.",
+  "test_evaluated": false
+}

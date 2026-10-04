@@ -312,3 +312,39 @@ Next:
 - Per-attribute validation comparison with the RGB baselines.
 - Oracle geometry and planned control/multiple-seed experiments.
 - Keep the test split untouched until the evaluation protocol is finalized.
+
+## Day 12 — Clean validation comparison and branch checks
+
+- R50 epoch_03.pt reloaded using hash-verified training source.
+- All 19,867 validation image hashes verified against the cache.
+- R50 checkpoint verification: PASS within tolerance 1e-6.
+- M3 epoch_00.pt versus epoch_02.pt parameter comparison: PASS.
+- Image encoder, geometry encoder, classifier, and classifier connections
+  to both branches have parameter updates.
+- Parameter updates alone do not prove a geometry performance benefit.
+- R18, R50, and M3 predictions have identical official validation
+  filenames, targets, and attribute order.
+- Shared training protocol fields checked.
+- Full validation set retained; F1 threshold fixed at 0.5.
+
+| Model | BCE | Macro-F1 | mAP |
+|---|---:|---:|---:|
+| R18 | 0.190717 | 0.727259 | 0.817737 |
+| R50 | 0.190218 | 0.731168 | 0.818835 |
+| M3 | 0.188191 | 0.743926 | 0.818564 |
+
+- M3 minus R18 mAP: +0.082783 percentage points.
+- M3 minus R50 mAP: -0.027029 percentage points.
+- Per-attribute AP and F1 comparisons saved for all 24 attributes.
+- Improvements are mixed across attributes.
+- Higher fixed-threshold F1 does not necessarily imply higher AP.
+- Single-seed, validation-only findings; stable gains remain unproven.
+- No training updates or test evaluation performed during Day 12.
+
+Artifacts:
+- Drive comparison reports: runs/comparisons/day12/.
+- R50 predictions and verification: runs/r50_seed0/day12/.
+- Git reports: docs/results/comparisons/day12/.
+- Notebook: notebooks/day12_clean_validation_comparison.ipynb.
+
+Next: oracle geometry and planned control/multiple-seed experiments.
