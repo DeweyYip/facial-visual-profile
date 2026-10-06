@@ -348,3 +348,20 @@ Artifacts:
 - Notebook: notebooks/day12_clean_validation_comparison.ipynb.
 
 Next: oracle geometry and planned control/multiple-seed experiments.
+
+## Day 13 — Training protocol and three-model reload audit
+
+- Shared seed-0 training configurations: identical for audited fields.
+- All three runs completed 10 epochs.
+- Saved checkpoint selection matches maximum validation mAP.
+- Selected epochs: R18=3, R50=3, M3=2.
+- No maximum-score ties occurred.
+- Fresh-model strict loading from hash-verified saved source: PASS.
+- Four real validation images used, including one failed detection.
+- Identical image tensors across the three models: PASS.
+- Reload logits matched saved predictions within recorded tolerances.
+- No optimizer updates, new full-validation run, or test evaluation.
+- Rules documented in docs/training_protocol_v1.md.
+- Reports: docs/results/protocol_audit/day13/.
+- Notebook: notebooks/day13_training_protocol_and_reload_audit.ipynb.
+- Drive reports: runs/protocol_audit/day13/.

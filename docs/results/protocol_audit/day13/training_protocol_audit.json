@@ -1,0 +1,234 @@
+{
+  "shared_protocol": {
+    "seed": 0,
+    "epochs": 10,
+    "batch_size": 64,
+    "num_workers": 2,
+    "optimizer": "Adam",
+    "learning_rate": 0.0001,
+    "weight_decay": 0.0,
+    "precision": "FP32",
+    "augmentation": "None; use existing shared preprocessing",
+    "f1_threshold": 0.5,
+    "selection_metric": "validation_mAP",
+    "epoch_seed_rule": "seed + epoch; epochs start at 1",
+    "cudnn_deterministic": true,
+    "cudnn_benchmark": false,
+    "attribute_names": [
+      "Smiling",
+      "Mouth_Slightly_Open",
+      "Eyeglasses",
+      "Bangs",
+      "Wearing_Hat",
+      "Mustache",
+      "No_Beard",
+      "Black_Hair",
+      "Bushy_Eyebrows",
+      "Arched_Eyebrows",
+      "High_Cheekbones",
+      "Bags_Under_Eyes",
+      "Big_Lips",
+      "Big_Nose",
+      "Double_Chin",
+      "Oval_Face",
+      "Receding_Hairline",
+      "Blond_Hair",
+      "Brown_Hair",
+      "Gray_Hair",
+      "Bald",
+      "Straight_Hair",
+      "Wavy_Hair",
+      "Sideburns"
+    ]
+  },
+  "checkpoint_selection": {
+    "metric": "validation_mAP",
+    "direction": "maximize",
+    "tie_rule": "earliest epoch among exactly equal maximum scores",
+    "f1_used_for_selection": false
+  },
+  "runs": {
+    "r18_seed0": {
+      "epochs_completed": 10,
+      "selected_epoch": 3,
+      "selected_checkpoint": "epoch_03.pt",
+      "highest_validation_mAP": 0.8177365539937546,
+      "epochs_tied_for_highest_mAP": [
+        3
+      ],
+      "selection_matches_policy": true,
+      "source_commit": "43e51ca99bf98743ba2d7c4e2481e2b7751e97f7",
+      "initial_weights": "ResNet18_Weights.IMAGENET1K_V1",
+      "epoch_validation_mAP": [
+        {
+          "epoch": 1,
+          "mAP": 0.8137615471096159
+        },
+        {
+          "epoch": 2,
+          "mAP": 0.8166405784016589
+        },
+        {
+          "epoch": 3,
+          "mAP": 0.8177365539937546
+        },
+        {
+          "epoch": 4,
+          "mAP": 0.8145135553134807
+        },
+        {
+          "epoch": 5,
+          "mAP": 0.8051614784557897
+        },
+        {
+          "epoch": 6,
+          "mAP": 0.7961202024115974
+        },
+        {
+          "epoch": 7,
+          "mAP": 0.7854003088380175
+        },
+        {
+          "epoch": 8,
+          "mAP": 0.7803558057298913
+        },
+        {
+          "epoch": 9,
+          "mAP": 0.7747870895826235
+        },
+        {
+          "epoch": 10,
+          "mAP": 0.7697957568485646
+        }
+      ],
+      "record_sha256": {
+        "config.json": "d391bb4aec395de5d6e479218e793b86a4df8a0524bef2291c1a02507629d3ea",
+        "best.json": "47a37dc3bcea1132cda330d7adfb3b8ad3bda6ad26450e8fd9beedce9f67b779",
+        "history.json": "e4e6b41e2589edfe0ac4d16b1d32ee481fc7f69e650343991bbb5bed6c942435"
+      }
+    },
+    "r50_seed0": {
+      "epochs_completed": 10,
+      "selected_epoch": 3,
+      "selected_checkpoint": "epoch_03.pt",
+      "highest_validation_mAP": 0.8188346601549794,
+      "epochs_tied_for_highest_mAP": [
+        3
+      ],
+      "selection_matches_policy": true,
+      "source_commit": "f601fb6c140c790a35ff9b5564ad0d7a0eb562d5",
+      "initial_weights": "ResNet50_Weights.IMAGENET1K_V1",
+      "epoch_validation_mAP": [
+        {
+          "epoch": 1,
+          "mAP": 0.8145059030850453
+        },
+        {
+          "epoch": 2,
+          "mAP": 0.8172251484998679
+        },
+        {
+          "epoch": 3,
+          "mAP": 0.8188346601549794
+        },
+        {
+          "epoch": 4,
+          "mAP": 0.8139128316505616
+        },
+        {
+          "epoch": 5,
+          "mAP": 0.8040576896442881
+        },
+        {
+          "epoch": 6,
+          "mAP": 0.7951611304898014
+        },
+        {
+          "epoch": 7,
+          "mAP": 0.7884659448000205
+        },
+        {
+          "epoch": 8,
+          "mAP": 0.7839446851673176
+        },
+        {
+          "epoch": 9,
+          "mAP": 0.7774666692071087
+        },
+        {
+          "epoch": 10,
+          "mAP": 0.7776751730594779
+        }
+      ],
+      "record_sha256": {
+        "config.json": "9ea57e9b4f3c03e012c21158ba91cf417822787e2ecefc8b55f96c08fd7236b7",
+        "best.json": "6c377691cdaf5face99a7ac8c060cee0890a2acb8c4a42861653b2273c3ee22b",
+        "history.json": "a54694c3bf59cba4b95053108370ab070e7adbad10703ef63ea9f3f7ef6c3ea6"
+      }
+    },
+    "m3_seed0": {
+      "epochs_completed": 10,
+      "selected_epoch": 2,
+      "selected_checkpoint": "epoch_02.pt",
+      "highest_validation_mAP": 0.8185643813256119,
+      "epochs_tied_for_highest_mAP": [
+        2
+      ],
+      "selection_matches_policy": true,
+      "source_commit": "44e8ac21946d1db1146d1efdbdba36482b3ecfad",
+      "initial_weights": "ResNet18_Weights.IMAGENET1K_V1",
+      "epoch_validation_mAP": [
+        {
+          "epoch": 1,
+          "mAP": 0.8114526604166162
+        },
+        {
+          "epoch": 2,
+          "mAP": 0.8185643813256119
+        },
+        {
+          "epoch": 3,
+          "mAP": 0.8163596151525229
+        },
+        {
+          "epoch": 4,
+          "mAP": 0.8156825942094518
+        },
+        {
+          "epoch": 5,
+          "mAP": 0.8062462266568513
+        },
+        {
+          "epoch": 6,
+          "mAP": 0.7942795829363122
+        },
+        {
+          "epoch": 7,
+          "mAP": 0.7840651227245793
+        },
+        {
+          "epoch": 8,
+          "mAP": 0.7795278297277779
+        },
+        {
+          "epoch": 9,
+          "mAP": 0.7734482614827675
+        },
+        {
+          "epoch": 10,
+          "mAP": 0.7713148375781967
+        }
+      ],
+      "record_sha256": {
+        "config.json": "d397bd54d4e785a254e9d06134fdd4503941bf880e9e902931185f7d8875cf81",
+        "best.json": "cc5764f6b48200b991ece1b6f3caf5178e8286ef8842d4e64582b112510746f0",
+        "history.json": "3d2c3ccf1d31b536da464f00b57aad33b32534d3d04640301e300e8d3eb6c0ab"
+      }
+    }
+  },
+  "scope": "Audits saved configurations and all ten epoch records. Agreement with the tie policy does not demonstrate historical tie-handling execution when no tie occurred.",
+  "fresh_inference_check_in_this_notebook": "passed",
+  "test_evaluated": false,
+  "passed": true,
+  "fresh_inference_report": "three_model_reload_report.json"
+}

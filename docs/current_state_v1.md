@@ -1,28 +1,21 @@
 # Facial Visual Profile — Current State v1
 
-## Latest verified status — Day 12
+## Latest verified status — Day 13
 
-Three-model clean-validation comparison and M3 branch update checks
-are complete.
+Shared training settings and checkpoint selection rules are documented
+in docs/training_protocol_v1.md.
 
-| Model | BCE | Macro-F1 at 0.5 | mAP |
-|---|---:|---:|---:|
-| R18 | 0.190717 | 0.727259 | 0.817737 |
-| R50 | 0.190218 | 0.731168 | 0.818835 |
-| M3 | 0.188191 | 0.743926 | 0.818564 |
-
-- Best epochs: R18=3, R50=3, M3=2.
-- All models evaluated on the same 19,867 official validation samples.
-- R50 best-checkpoint verification: PASS.
-- M3 best-checkpoint verification: PASS, completed during Day 11.
-- Both M3 branches and classifier connections received parameter updates.
-- All 24 per-attribute AP/F1 comparisons archived.
-- M3's overall mAP is close to both RGB baselines.
-- Stable or causal geometry benefits have not been established.
+- R18, R50, and M3 seed-0 runs each completed 10 epochs.
+- Best epochs by validation mAP: R18=3, R50=3, M3=2.
+- Day 12 full clean-validation comparison remains the current comparison.
+- Day 13 fresh-model reload checks passed for all three models.
+- Four identical validation images included one failed MTCNN detection.
+- Reload logits matched archived predictions within recorded tolerances.
+- Reports: docs/results/protocol_audit/day13/.
+- Notebook: notebooks/day13_training_protocol_and_reload_audit.ipynb.
 - Test evaluation remains pending.
-- Reports: docs/results/comparisons/day12/.
-- Notebook: notebooks/day12_clean_validation_comparison.ipynb.
-- Next: oracle geometry and planned control/multiple-seed experiments.
+- Oracle geometry, control experiments, and multiple seeds remain pending.
+- Stable geometry performance gains have not been established.
 
 ## 1. Project Goal / Research Question
 

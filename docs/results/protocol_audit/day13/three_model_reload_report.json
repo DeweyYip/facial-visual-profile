@@ -1,0 +1,61 @@
+{
+  "sample_filenames": [
+    "162771.jpg",
+    "162772.jpg",
+    "162773.jpg",
+    "162871.jpg"
+  ],
+  "geometry_valid": [
+    true,
+    true,
+    true,
+    false
+  ],
+  "image_hashes_verified": true,
+  "image_tensors_equal_across_models": true,
+  "device": "cpu",
+  "torch": "2.11.0+cpu",
+  "absolute_tolerance": 0.0001,
+  "relative_tolerance": 0.0001,
+  "models": {
+    "r18_seed0": {
+      "checkpoint": "epoch_03.pt",
+      "source_commit": "43e51ca99bf98743ba2d7c4e2481e2b7751e97f7",
+      "saved_source_hashes_verified": true,
+      "strict_state_loading": true,
+      "logits_shape": [
+        4,
+        24
+      ],
+      "maximum_absolute_logit_difference": 8.58306884765625e-06,
+      "matches_saved_predictions": true
+    },
+    "r50_seed0": {
+      "checkpoint": "epoch_03.pt",
+      "source_commit": "f601fb6c140c790a35ff9b5564ad0d7a0eb562d5",
+      "saved_source_hashes_verified": true,
+      "strict_state_loading": true,
+      "logits_shape": [
+        4,
+        24
+      ],
+      "maximum_absolute_logit_difference": 5.7220458984375e-06,
+      "matches_saved_predictions": true
+    },
+    "m3_seed0": {
+      "checkpoint": "epoch_02.pt",
+      "source_commit": "44e8ac21946d1db1146d1efdbdba36482b3ecfad",
+      "saved_source_hashes_verified": true,
+      "strict_state_loading": true,
+      "logits_shape": [
+        4,
+        24
+      ],
+      "maximum_absolute_logit_difference": 8.106231689453125e-06,
+      "matches_saved_predictions": true
+    }
+  },
+  "scope": "Four-sample fresh-model reload check against saved validation logits, including one failed detection. Not a new full-validation evaluation or a training run.",
+  "test_evaluated": false,
+  "passed": true
+}
