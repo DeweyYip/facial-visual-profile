@@ -1,0 +1,688 @@
+{
+  "scope": "synthetic CPU smoke checks; not real-validation preview or test evaluation",
+  "implementation_version": "day14_draft_v1",
+  "draft_not_frozen": true,
+  "pillow": "10.4.0",
+  "libjpeg": "6.2",
+  "numpy": "1.26.4",
+  "torch": "2.2.2",
+  "clean_equivalence_exact": true,
+  "rotation_marker_max_error_px": 0.013779800971175406,
+  "synthetic_records": {
+    "blur": [
+      {
+        "implementation_version": "day14_draft_v1",
+        "sample_id": "synthetic.jpg",
+        "seed": 0,
+        "kind": "blur",
+        "severity": 0,
+        "parameters": {},
+        "input_rgb_sha256": "0bf6672c6d4663a7960e2e4936798f0834dab66c520d053e5834bf8df30d37e4",
+        "output_rgb_sha256": "0bf6672c6d4663a7960e2e4936798f0834dab66c520d053e5834bf8df30d37e4",
+        "gt_in_frame": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "implementation_version": "day14_draft_v1",
+        "sample_id": "synthetic.jpg",
+        "seed": 0,
+        "kind": "blur",
+        "severity": 1,
+        "parameters": {
+          "sigma_pixels": 1.0,
+          "implementation": "Pillow.GaussianBlur"
+        },
+        "input_rgb_sha256": "0bf6672c6d4663a7960e2e4936798f0834dab66c520d053e5834bf8df30d37e4",
+        "output_rgb_sha256": "5d3fa0da9d249b543947d130a25fba394891089226ccf2495e99080531b5c260",
+        "gt_in_frame": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "implementation_version": "day14_draft_v1",
+        "sample_id": "synthetic.jpg",
+        "seed": 0,
+        "kind": "blur",
+        "severity": 2,
+        "parameters": {
+          "sigma_pixels": 2.0,
+          "implementation": "Pillow.GaussianBlur"
+        },
+        "input_rgb_sha256": "0bf6672c6d4663a7960e2e4936798f0834dab66c520d053e5834bf8df30d37e4",
+        "output_rgb_sha256": "524a463ab218aee4d3e52ac829628211403f74719bf45f93f45435f201a83279",
+        "gt_in_frame": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "implementation_version": "day14_draft_v1",
+        "sample_id": "synthetic.jpg",
+        "seed": 0,
+        "kind": "blur",
+        "severity": 3,
+        "parameters": {
+          "sigma_pixels": 3.0,
+          "implementation": "Pillow.GaussianBlur"
+        },
+        "input_rgb_sha256": "0bf6672c6d4663a7960e2e4936798f0834dab66c520d053e5834bf8df30d37e4",
+        "output_rgb_sha256": "e2385cc2b9a09bbe07f0fe9e3439a7b6cdb367c8e244b92d55e462d6e6523e7d",
+        "gt_in_frame": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "implementation_version": "day14_draft_v1",
+        "sample_id": "synthetic.jpg",
+        "seed": 0,
+        "kind": "blur",
+        "severity": 4,
+        "parameters": {
+          "sigma_pixels": 4.0,
+          "implementation": "Pillow.GaussianBlur"
+        },
+        "input_rgb_sha256": "0bf6672c6d4663a7960e2e4936798f0834dab66c520d053e5834bf8df30d37e4",
+        "output_rgb_sha256": "ed9c14ce67ba6a296ee8b9be1fefc138e56f331b9b832c1303eb0b345ee57f18",
+        "gt_in_frame": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ]
+      }
+    ],
+    "brightness": [
+      {
+        "implementation_version": "day14_draft_v1",
+        "sample_id": "synthetic.jpg",
+        "seed": 0,
+        "kind": "brightness",
+        "severity": 0,
+        "parameters": {},
+        "input_rgb_sha256": "0bf6672c6d4663a7960e2e4936798f0834dab66c520d053e5834bf8df30d37e4",
+        "output_rgb_sha256": "0bf6672c6d4663a7960e2e4936798f0834dab66c520d053e5834bf8df30d37e4",
+        "gt_in_frame": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "implementation_version": "day14_draft_v1",
+        "sample_id": "synthetic.jpg",
+        "seed": 0,
+        "kind": "brightness",
+        "severity": 1,
+        "parameters": {
+          "factor": 0.8
+        },
+        "input_rgb_sha256": "0bf6672c6d4663a7960e2e4936798f0834dab66c520d053e5834bf8df30d37e4",
+        "output_rgb_sha256": "d59be38752e3af619c56952e528621b1603871a975231bb268ffed32135f6971",
+        "gt_in_frame": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "implementation_version": "day14_draft_v1",
+        "sample_id": "synthetic.jpg",
+        "seed": 0,
+        "kind": "brightness",
+        "severity": 2,
+        "parameters": {
+          "factor": 0.6
+        },
+        "input_rgb_sha256": "0bf6672c6d4663a7960e2e4936798f0834dab66c520d053e5834bf8df30d37e4",
+        "output_rgb_sha256": "4f3aef2c731cc0560ba7aa6306868e4fd9a201acd8942c68a8c5f4e345b75610",
+        "gt_in_frame": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "implementation_version": "day14_draft_v1",
+        "sample_id": "synthetic.jpg",
+        "seed": 0,
+        "kind": "brightness",
+        "severity": 3,
+        "parameters": {
+          "factor": 0.4
+        },
+        "input_rgb_sha256": "0bf6672c6d4663a7960e2e4936798f0834dab66c520d053e5834bf8df30d37e4",
+        "output_rgb_sha256": "a945aa9153cb99e259b574b8ad05ddaa4c686a89feedd6200b9a8304aaf33c52",
+        "gt_in_frame": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "implementation_version": "day14_draft_v1",
+        "sample_id": "synthetic.jpg",
+        "seed": 0,
+        "kind": "brightness",
+        "severity": 4,
+        "parameters": {
+          "factor": 0.2
+        },
+        "input_rgb_sha256": "0bf6672c6d4663a7960e2e4936798f0834dab66c520d053e5834bf8df30d37e4",
+        "output_rgb_sha256": "4c9f56843fa095e471d3308ff401ec3f32eca07f4e5e9d5e0803e2cc12f8b8a9",
+        "gt_in_frame": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ]
+      }
+    ],
+    "rotation": [
+      {
+        "implementation_version": "day14_draft_v1",
+        "sample_id": "synthetic.jpg",
+        "seed": 0,
+        "kind": "rotation",
+        "severity": 0,
+        "parameters": {},
+        "input_rgb_sha256": "0bf6672c6d4663a7960e2e4936798f0834dab66c520d053e5834bf8df30d37e4",
+        "output_rgb_sha256": "0bf6672c6d4663a7960e2e4936798f0834dab66c520d053e5834bf8df30d37e4",
+        "gt_in_frame": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "implementation_version": "day14_draft_v1",
+        "sample_id": "synthetic.jpg",
+        "seed": 0,
+        "kind": "rotation",
+        "severity": 1,
+        "parameters": {
+          "angle_degrees_ccw": -5.0,
+          "pillow_center_edge_coordinates": [
+            112.0,
+            112.0
+          ],
+          "gt_center_pixel_coordinates": [
+            111.5,
+            111.5
+          ],
+          "forward_matrix_pixel_coordinates": [
+            [
+              0.9961946980917455,
+              -0.08715574274765817,
+              10.142156479134258
+            ],
+            [
+              0.08715574274765817,
+              0.9961946980917455,
+              -9.29357415359351
+            ]
+          ],
+          "resampling": "BILINEAR",
+          "expand": false,
+          "fill_rgb": [
+            0,
+            0,
+            0
+          ],
+          "direction_sha256": "e6cff8dead422e7adad805174bcec7787eebb9147884c82166e07bb5d8eb226c"
+        },
+        "input_rgb_sha256": "0bf6672c6d4663a7960e2e4936798f0834dab66c520d053e5834bf8df30d37e4",
+        "output_rgb_sha256": "ddfd39500b191159c835c193c510aeddbf7979c0f227d3e6accaa278a68674d9",
+        "gt_in_frame": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "implementation_version": "day14_draft_v1",
+        "sample_id": "synthetic.jpg",
+        "seed": 0,
+        "kind": "rotation",
+        "severity": 2,
+        "parameters": {
+          "angle_degrees_ccw": -10.0,
+          "pillow_center_edge_coordinates": [
+            112.0,
+            112.0
+          ],
+          "gt_center_pixel_coordinates": [
+            111.5,
+            111.5
+          ],
+          "forward_matrix_pixel_coordinates": [
+            [
+              0.984807753012208,
+              -0.17364817766693033,
+              21.055707349001537
+            ],
+            [
+              0.17364817766693033,
+              0.984807753012208,
+              -17.66783627072391
+            ]
+          ],
+          "resampling": "BILINEAR",
+          "expand": false,
+          "fill_rgb": [
+            0,
+            0,
+            0
+          ],
+          "direction_sha256": "e6cff8dead422e7adad805174bcec7787eebb9147884c82166e07bb5d8eb226c"
+        },
+        "input_rgb_sha256": "0bf6672c6d4663a7960e2e4936798f0834dab66c520d053e5834bf8df30d37e4",
+        "output_rgb_sha256": "517fd7298fd7ec559662512ddd4e49002a7011e0af338867a6fe57f61791381e",
+        "gt_in_frame": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "implementation_version": "day14_draft_v1",
+        "sample_id": "synthetic.jpg",
+        "seed": 0,
+        "kind": "rotation",
+        "severity": 3,
+        "parameters": {
+          "angle_degrees_ccw": -15.0,
+          "pillow_center_edge_coordinates": [
+            112.0,
+            112.0
+          ],
+          "gt_center_pixel_coordinates": [
+            111.5,
+            111.5
+          ],
+          "forward_matrix_pixel_coordinates": [
+            [
+              0.9659258262890683,
+              -0.25881904510252074,
+              32.657593897699954
+            ],
+            [
+              0.25881904510252074,
+              0.9659258262890683,
+              -25.059053160162165
+            ]
+          ],
+          "resampling": "BILINEAR",
+          "expand": false,
+          "fill_rgb": [
+            0,
+            0,
+            0
+          ],
+          "direction_sha256": "e6cff8dead422e7adad805174bcec7787eebb9147884c82166e07bb5d8eb226c"
+        },
+        "input_rgb_sha256": "0bf6672c6d4663a7960e2e4936798f0834dab66c520d053e5834bf8df30d37e4",
+        "output_rgb_sha256": "58d3647620f8562716e70574ee5698b4f42d72f2c1ae444adb2af74b05f920ee",
+        "gt_in_frame": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "implementation_version": "day14_draft_v1",
+        "sample_id": "synthetic.jpg",
+        "seed": 0,
+        "kind": "rotation",
+        "severity": 4,
+        "parameters": {
+          "angle_degrees_ccw": -20.0,
+          "pillow_center_edge_coordinates": [
+            112.0,
+            112.0
+          ],
+          "gt_center_pixel_coordinates": [
+            111.5,
+            111.5
+          ],
+          "forward_matrix_pixel_coordinates": [
+            [
+              0.9396926207859084,
+              -0.3420201433256687,
+              44.859518763183274
+            ],
+            [
+              0.3420201433256687,
+              0.9396926207859084,
+              -31.410973198440843
+            ]
+          ],
+          "resampling": "BILINEAR",
+          "expand": false,
+          "fill_rgb": [
+            0,
+            0,
+            0
+          ],
+          "direction_sha256": "e6cff8dead422e7adad805174bcec7787eebb9147884c82166e07bb5d8eb226c"
+        },
+        "input_rgb_sha256": "0bf6672c6d4663a7960e2e4936798f0834dab66c520d053e5834bf8df30d37e4",
+        "output_rgb_sha256": "9b67ee5967663cda4961b7272c2f236080ea28f5af527abe5dccd87abea53f60",
+        "gt_in_frame": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ]
+      }
+    ],
+    "occlusion": [
+      {
+        "implementation_version": "day14_draft_v1",
+        "sample_id": "synthetic.jpg",
+        "seed": 0,
+        "kind": "occlusion",
+        "severity": 0,
+        "parameters": {},
+        "input_rgb_sha256": "0bf6672c6d4663a7960e2e4936798f0834dab66c520d053e5834bf8df30d37e4",
+        "output_rgb_sha256": "0bf6672c6d4663a7960e2e4936798f0834dab66c520d053e5834bf8df30d37e4",
+        "gt_in_frame": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "implementation_version": "day14_draft_v1",
+        "sample_id": "synthetic.jpg",
+        "seed": 0,
+        "kind": "occlusion",
+        "severity": 1,
+        "parameters": {
+          "width_fraction": 0.1,
+          "side_pixels": 22,
+          "nominal_center_edge_coordinates": [
+            112,
+            168
+          ],
+          "box_xyxy_exclusive": [
+            101,
+            157,
+            123,
+            179
+          ],
+          "fill_rgb": [
+            0,
+            0,
+            0
+          ]
+        },
+        "input_rgb_sha256": "0bf6672c6d4663a7960e2e4936798f0834dab66c520d053e5834bf8df30d37e4",
+        "output_rgb_sha256": "f5f55a1f08bf565dc05b94783cec1bc45349246108c9c7907bfd439439b20b48",
+        "gt_in_frame": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "implementation_version": "day14_draft_v1",
+        "sample_id": "synthetic.jpg",
+        "seed": 0,
+        "kind": "occlusion",
+        "severity": 2,
+        "parameters": {
+          "width_fraction": 0.2,
+          "side_pixels": 45,
+          "nominal_center_edge_coordinates": [
+            112,
+            168
+          ],
+          "box_xyxy_exclusive": [
+            90,
+            146,
+            135,
+            191
+          ],
+          "fill_rgb": [
+            0,
+            0,
+            0
+          ]
+        },
+        "input_rgb_sha256": "0bf6672c6d4663a7960e2e4936798f0834dab66c520d053e5834bf8df30d37e4",
+        "output_rgb_sha256": "6ef2363fb20c676ed9b5401bb5fd3c13c620778b8a25939765eff298dcb09130",
+        "gt_in_frame": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "implementation_version": "day14_draft_v1",
+        "sample_id": "synthetic.jpg",
+        "seed": 0,
+        "kind": "occlusion",
+        "severity": 3,
+        "parameters": {
+          "width_fraction": 0.3,
+          "side_pixels": 67,
+          "nominal_center_edge_coordinates": [
+            112,
+            168
+          ],
+          "box_xyxy_exclusive": [
+            79,
+            135,
+            146,
+            202
+          ],
+          "fill_rgb": [
+            0,
+            0,
+            0
+          ]
+        },
+        "input_rgb_sha256": "0bf6672c6d4663a7960e2e4936798f0834dab66c520d053e5834bf8df30d37e4",
+        "output_rgb_sha256": "da02cd24102b40e11adc44925917a4d1d423271ee8848365a0dbb1695aac3f38",
+        "gt_in_frame": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "implementation_version": "day14_draft_v1",
+        "sample_id": "synthetic.jpg",
+        "seed": 0,
+        "kind": "occlusion",
+        "severity": 4,
+        "parameters": {
+          "width_fraction": 0.4,
+          "side_pixels": 90,
+          "nominal_center_edge_coordinates": [
+            112,
+            168
+          ],
+          "box_xyxy_exclusive": [
+            67,
+            123,
+            157,
+            213
+          ],
+          "fill_rgb": [
+            0,
+            0,
+            0
+          ]
+        },
+        "input_rgb_sha256": "0bf6672c6d4663a7960e2e4936798f0834dab66c520d053e5834bf8df30d37e4",
+        "output_rgb_sha256": "10f93a3f7cd20952ca0cc6f455575a996f7a8f0654949ab01e21616a7d0d36a1",
+        "gt_in_frame": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ]
+      }
+    ],
+    "jpeg": [
+      {
+        "implementation_version": "day14_draft_v1",
+        "sample_id": "synthetic.jpg",
+        "seed": 0,
+        "kind": "jpeg",
+        "severity": 0,
+        "parameters": {},
+        "input_rgb_sha256": "0bf6672c6d4663a7960e2e4936798f0834dab66c520d053e5834bf8df30d37e4",
+        "output_rgb_sha256": "0bf6672c6d4663a7960e2e4936798f0834dab66c520d053e5834bf8df30d37e4",
+        "gt_in_frame": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "implementation_version": "day14_draft_v1",
+        "sample_id": "synthetic.jpg",
+        "seed": 0,
+        "kind": "jpeg",
+        "severity": 1,
+        "parameters": {
+          "quality": 75,
+          "subsampling": 2,
+          "optimize": false,
+          "progressive": false
+        },
+        "input_rgb_sha256": "0bf6672c6d4663a7960e2e4936798f0834dab66c520d053e5834bf8df30d37e4",
+        "output_rgb_sha256": "bc1e0db95b7c08acfc884f631baa67c28758c858152bbbd14191c9261c4431d0",
+        "gt_in_frame": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "implementation_version": "day14_draft_v1",
+        "sample_id": "synthetic.jpg",
+        "seed": 0,
+        "kind": "jpeg",
+        "severity": 2,
+        "parameters": {
+          "quality": 50,
+          "subsampling": 2,
+          "optimize": false,
+          "progressive": false
+        },
+        "input_rgb_sha256": "0bf6672c6d4663a7960e2e4936798f0834dab66c520d053e5834bf8df30d37e4",
+        "output_rgb_sha256": "29c51a4ec358816b237c66447c7ddd6214cf35885cdfe1f4755743a77f1260cd",
+        "gt_in_frame": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "implementation_version": "day14_draft_v1",
+        "sample_id": "synthetic.jpg",
+        "seed": 0,
+        "kind": "jpeg",
+        "severity": 3,
+        "parameters": {
+          "quality": 25,
+          "subsampling": 2,
+          "optimize": false,
+          "progressive": false
+        },
+        "input_rgb_sha256": "0bf6672c6d4663a7960e2e4936798f0834dab66c520d053e5834bf8df30d37e4",
+        "output_rgb_sha256": "e5b40b74ca61cd73b33e706c96b3368b148ae83b21cdedd4893949b0540cd720",
+        "gt_in_frame": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "implementation_version": "day14_draft_v1",
+        "sample_id": "synthetic.jpg",
+        "seed": 0,
+        "kind": "jpeg",
+        "severity": 4,
+        "parameters": {
+          "quality": 10,
+          "subsampling": 2,
+          "optimize": false,
+          "progressive": false
+        },
+        "input_rgb_sha256": "0bf6672c6d4663a7960e2e4936798f0834dab66c520d053e5834bf8df30d37e4",
+        "output_rgb_sha256": "5a83aca2199f07da72832ad373260a740ed375b4d388dedda194b7638bd7a60b",
+        "gt_in_frame": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ]
+      }
+    ]
+  },
+  "source_sha256": {
+    "datasets/preprocessing.py": "895e3e93641878068072043ff1dfd16a5fb32adcd270617a2890694962fd966f",
+    "datasets/benchmark_preprocessing.py": "1cf6454a1564bcff95a36f9b937fd23d1b5125e193ce9f78d79cf99569ac1af1",
+    "datasets/corruptions.py": "33c851b758b2c5267b44fa858d72b61b0c4c09801037dd0db1f309dfbda98452",
+    "configs/corruptions_draft_v1.json": "4ac13c47696d39bb78f982e5e01ea7ccd462415b7764cb6df8863984d9541183"
+  },
+  "test_evaluated": false,
+  "passed": true
+}

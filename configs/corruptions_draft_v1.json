@@ -1,0 +1,23 @@
+{
+  "status": "validation_preview_draft_not_frozen",
+  "implementation_version": "day14_draft_v1",
+  "corruption_seed": 0,
+  "preview_split": "validation",
+  "test_access": false,
+  "order": ["shared_letterbox_224", "one_corruption", "detector_on_final_RGB", "image_normalization"],
+  "severity_zero": "clean",
+  "levels": {
+    "blur": [1.0, 2.0, 3.0, 4.0],
+    "brightness": [0.8, 0.6, 0.4, 0.2],
+    "rotation": [5.0, 10.0, 15.0, 20.0],
+    "occlusion": [0.1, 0.2, 0.3, 0.4],
+    "jpeg": [75, 50, 25, 10]
+  },
+  "runtime_parameter_source": "datasets.corruptions.LEVELS; audit checks equality with this record",
+  "rotation": {"direction": "SHA256 of version, seed, sample_id, rotation; same sign across severity", "resampling": "BILINEAR", "expand": false, "fill_rgb": [0, 0, 0]},
+  "occlusion": {"nominal_center_edge_coordinates": [112, 168], "fill_rgb": [0, 0, 0], "rounding": "floor(224*fraction+0.5)"},
+  "jpeg": {"subsampling": 2, "optimize": false, "progressive": false},
+  "failure_policy": "retain samples; mask geometry embedding; no GT substitution",
+  "official_test_manifest": "pending_day17_freeze",
+  "note": "Severity values are proposal candidates. All implementation choices remain draft until validation review. No detector cache or evaluation is produced by this package."
+}

@@ -1,20 +1,21 @@
 # Facial Visual Profile — Current State v1
 
-## Latest verified status — Day 13
+## Latest verified status — Day 14
 
-Shared training settings and checkpoint selection rules are documented
-in docs/training_protocol_v1.md.
-
-- R18, R50, and M3 seed-0 runs each completed 10 epochs.
-- Best epochs by validation mAP: R18=3, R50=3, M3=2.
-- Day 12 full clean-validation comparison remains the current comparison.
-- Day 13 fresh-model reload checks passed for all three models.
-- Four identical validation images included one failed MTCNN detection.
-- Reload logits matched archived predictions within recorded tolerances.
-- Reports: docs/results/protocol_audit/day13/.
-- Notebook: notebooks/day13_training_protocol_and_reload_audit.ipynb.
-- Test evaluation remains pending.
-- Oracle geometry, control experiments, and multiple seeds remain pending.
+- Day 13 training-protocol and three-model reload audits passed.
+- R18/R50/M3 seed-0 runs completed 10 epochs; best epochs: 3/3/2.
+- Day 12 remains the latest full clean-validation comparison.
+- Five corruptions implemented with four candidate severity levels each.
+- Existing preprocessing preserved; exact clean tensor/coordinate equality passed.
+- Synthetic checks and real-validation generation checks passed.
+- Four fixed validation samples produced 80 corrupted images.
+- Two preview montages reviewed; no obvious visual implementation issues.
+- Corruption settings remain draft, pending benchmark freeze.
+- Reports: docs/results/corruption_preparation/day14/.
+- Rules: docs/day14_implementation_draft.md.
+- Next: Day 15 real-face GT overlays, especially rotation alignment.
+- Corrupted-image MTCNN integration and model evaluation remain pending.
+- Test evaluation, Oracle training, and additional seeds remain pending.
 - Stable geometry performance gains have not been established.
 
 ## 1. Project Goal / Research Question

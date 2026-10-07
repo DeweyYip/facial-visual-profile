@@ -365,3 +365,19 @@ Next: oracle geometry and planned control/multiple-seed experiments.
 - Reports: docs/results/protocol_audit/day13/.
 - Notebook: notebooks/day13_training_protocol_and_reload_audit.ipynb.
 - Drive reports: runs/protocol_audit/day13/.
+
+## Day 14 — Corruption implementation and validation previews
+
+- Implemented blur, brightness, rotation, occlusion, and JPEG corruption.
+- Four candidate severity levels per corruption; configuration remains draft.
+- Preserved existing preprocessing; clean tensor and coordinate equality: PASS.
+- Synthetic deterministic generation and rotation marker alignment: PASS.
+- Generated 80 corrupted images from four fixed official validation samples.
+- Real-sample clean equivalence, repeatability, and saved PNG pixel checks: PASS.
+- Two uploaded montages reviewed; no obvious visual implementation issues.
+- Shared generation is ready; actual multi-model corrupted inference is pending.
+- Real-face GT overlays and corrupted-image MTCNN integration remain pending.
+- No training, model evaluation, or test-image evaluation performed.
+- Reports: docs/results/corruption_preparation/day14/.
+- Implementation notes: docs/day14_implementation_draft.md.
+- Local preview images remain under runs/; do not add CelebA images to Git.
