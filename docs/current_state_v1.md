@@ -233,3 +233,19 @@ Colab `/content` files are temporary. Restore from Drive source snapshots and da
 Working style: explain each code block in Chinese before giving it, including Mac/Colab location, purpose, outputs, expected duration, and whether training starts. Code, comments, logs, and project documents use English. Proceed one logical step at a time and inspect results. Avoid bare shell comments in pasted Mac zsh commands; use Python comments inside heredocs. Use `python3` or the active virtual environment.
 
 Do not infer implementation from schedules, confuse cached detection with model training, claim checkpoint existence proves evaluation, or compare validation-tuned F1 against fixed-threshold F1 without labeling the difference.
+
+<!-- day16-pipeline-smoke -->
+## Day 16 status update
+
+Detector and M3 pipeline smoke passed on 84 inputs from four fixed
+validation images. MTCNN returned 82 valid results and two no_face results,
+with zero runtime errors. M3 epoch 2 produced finite [84, 24] logits;
+both failed samples were retained with zero geometry features.
+Invalid-coordinate invariance checks had maximum error 0.0.
+
+Evidence: docs/results/corruption_preparation/day16/ and
+notebooks/day16_detector_quality_and_pipeline_smoke.ipynb.
+
+Next: Day 17 benchmark protocol freeze, including condition manifest,
+metrics, failure handling, threshold policy, and test isolation.
+Attribute performance evaluation and Oracle training remain pending.

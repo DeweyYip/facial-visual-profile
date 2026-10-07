@@ -398,3 +398,25 @@ Next: oracle geometry and planned control/multiple-seed experiments.
 - Overlay images remain under runs/.
 - No detector execution, model inference, training, or test evaluation.
 - Next: Day 16 detector status, NME, coverage, and small end-to-end checks.
+
+<!-- day16-pipeline-smoke -->
+## Day 16 — Detector quality and M3 pipeline smoke
+
+- Used four fixed official-validation images: 162771.jpg, 169393.jpg,
+  176015.jpg, and 182637.jpg.
+- Checked 84 unique inputs: four clean inputs and 80 corrupted inputs.
+- Verified input image hashes and packaged source hashes.
+- Ran fresh MTCNN detection on each final 224x224 RGB canvas.
+- Detection: 82 valid, two no_face, zero runtime errors.
+  Both failures were 182637.jpg under occlusion severity 3 and 4.
+- Clean mean NME: 4.42%; NME uses successful detections only.
+- Strictly loaded M3 epoch_02.pt with its verified training source.
+- All 84 inputs produced finite logits with shape [84, 24].
+- Retained both failed samples; their geometry features were exactly zero.
+- Changing invalid coordinates to large finite values or NaN changed
+  logits by 0.0.
+- Reports: docs/results/corruption_preparation/day16/.
+- Notebook: notebooks/day16_detector_quality_and_pipeline_smoke.ipynb.
+- This is a four-image validation pipeline smoke, not an attribute
+  performance evaluation. Benchmark remains unfrozen; test not evaluated.
+- CelebA images and the input-image ZIP remain under runs/ outside Git.
