@@ -381,3 +381,20 @@ Next: oracle geometry and planned control/multiple-seed experiments.
 - Reports: docs/results/corruption_preparation/day14/.
 - Implementation notes: docs/day14_implementation_draft.md.
 - Local preview images remain under runs/; do not add CelebA images to Git.
+
+## Day 15 — Real-image GT overlays and rotation audit
+
+- Checked 100 conditions across four fixed validation images.
+- Saved image reconstruction and independent GT transformation checks: PASS.
+- Coordinate-formula difference below 1e-8 pixels; no GT points out of frame.
+- Two real-image montages visually reviewed, covering both rotation directions.
+- No obvious transform-induced landmark misalignment in reviewed images.
+- GT remains available beneath occlusion; this is privileged Oracle information.
+- User comments preserved in benchmark_preprocessing.py and corruptions.py.
+- Documentation differences accepted only after matching the Day 14 source
+  hashes and comparing computational ASTs; current hashes recorded.
+- Report: docs/results/corruption_preparation/day15/gt_overlay_audit.json.
+- Script: scripts/day15_gt_overlay_audit.py.
+- Overlay images remain under runs/.
+- No detector execution, model inference, training, or test evaluation.
+- Next: Day 16 detector status, NME, coverage, and small end-to-end checks.

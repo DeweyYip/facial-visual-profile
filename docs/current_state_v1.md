@@ -1,6 +1,6 @@
 # Facial Visual Profile — Current State v1
 
-## Latest verified status — Day 14
+## Latest verified status — Day 15
 
 - Day 13 training-protocol and three-model reload audits passed.
 - R18/R50/M3 seed-0 runs completed 10 epochs; best epochs: 3/3/2.
@@ -13,7 +13,11 @@
 - Corruption settings remain draft, pending benchmark freeze.
 - Reports: docs/results/corruption_preparation/day14/.
 - Rules: docs/day14_implementation_draft.md.
-- Next: Day 15 real-face GT overlays, especially rotation alignment.
+- Day 15 numeric GT audit passed across 100 conditions.
+- Two real-face overlays reviewed; both rotation directions aligned.
+- User comments preserved; computational AST equivalence verified.
+- Report: docs/results/corruption_preparation/day15/gt_overlay_audit.json.
+- Next: Day 16 detector status, NME, coverage, and end-to-end checks.
 - Corrupted-image MTCNN integration and model evaluation remain pending.
 - Test evaluation, Oracle training, and additional seeds remain pending.
 - Stable geometry performance gains have not been established.

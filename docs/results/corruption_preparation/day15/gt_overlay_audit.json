@@ -1,0 +1,1460 @@
+{
+  "split": "validation",
+  "sample_filenames": [
+    "162771.jpg",
+    "169393.jpg",
+    "176015.jpg",
+    "182637.jpg"
+  ],
+  "conditions_checked": 100,
+  "maximum_coordinate_error_px": 2.842170943040401e-14,
+  "rotation_directions_present": [
+    -1,
+    1
+  ],
+  "out_of_frame_point_occurrences": 0,
+  "checks": [
+    {
+      "sample_id": "162771.jpg",
+      "kind": "blur",
+      "severity": 0,
+      "maximum_coordinate_error_px": 0.0,
+      "gt_in_frame": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "saved_image_recreated_exactly": true
+    },
+    {
+      "sample_id": "162771.jpg",
+      "kind": "blur",
+      "severity": 1,
+      "maximum_coordinate_error_px": 0.0,
+      "gt_in_frame": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "saved_image_recreated_exactly": true
+    },
+    {
+      "sample_id": "162771.jpg",
+      "kind": "blur",
+      "severity": 2,
+      "maximum_coordinate_error_px": 0.0,
+      "gt_in_frame": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "saved_image_recreated_exactly": true
+    },
+    {
+      "sample_id": "162771.jpg",
+      "kind": "blur",
+      "severity": 3,
+      "maximum_coordinate_error_px": 0.0,
+      "gt_in_frame": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "saved_image_recreated_exactly": true
+    },
+    {
+      "sample_id": "162771.jpg",
+      "kind": "blur",
+      "severity": 4,
+      "maximum_coordinate_error_px": 0.0,
+      "gt_in_frame": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "saved_image_recreated_exactly": true
+    },
+    {
+      "sample_id": "162771.jpg",
+      "kind": "brightness",
+      "severity": 0,
+      "maximum_coordinate_error_px": 0.0,
+      "gt_in_frame": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "saved_image_recreated_exactly": true
+    },
+    {
+      "sample_id": "162771.jpg",
+      "kind": "brightness",
+      "severity": 1,
+      "maximum_coordinate_error_px": 0.0,
+      "gt_in_frame": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "saved_image_recreated_exactly": true
+    },
+    {
+      "sample_id": "162771.jpg",
+      "kind": "brightness",
+      "severity": 2,
+      "maximum_coordinate_error_px": 0.0,
+      "gt_in_frame": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "saved_image_recreated_exactly": true
+    },
+    {
+      "sample_id": "162771.jpg",
+      "kind": "brightness",
+      "severity": 3,
+      "maximum_coordinate_error_px": 0.0,
+      "gt_in_frame": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "saved_image_recreated_exactly": true
+    },
+    {
+      "sample_id": "162771.jpg",
+      "kind": "brightness",
+      "severity": 4,
+      "maximum_coordinate_error_px": 0.0,
+      "gt_in_frame": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "saved_image_recreated_exactly": true
+    },
+    {
+      "sample_id": "162771.jpg",
+      "kind": "rotation",
+      "severity": 0,
+      "maximum_coordinate_error_px": 0.0,
+      "gt_in_frame": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "saved_image_recreated_exactly": true
+    },
+    {
+      "sample_id": "162771.jpg",
+      "kind": "rotation",
+      "severity": 1,
+      "maximum_coordinate_error_px": 2.842170943040401e-14,
+      "gt_in_frame": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "saved_image_recreated_exactly": true
+    },
+    {
+      "sample_id": "162771.jpg",
+      "kind": "rotation",
+      "severity": 2,
+      "maximum_coordinate_error_px": 2.842170943040401e-14,
+      "gt_in_frame": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "saved_image_recreated_exactly": true
+    },
+    {
+      "sample_id": "162771.jpg",
+      "kind": "rotation",
+      "severity": 3,
+      "maximum_coordinate_error_px": 2.842170943040401e-14,
+      "gt_in_frame": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "saved_image_recreated_exactly": true
+    },
+    {
+      "sample_id": "162771.jpg",
+      "kind": "rotation",
+      "severity": 4,
+      "maximum_coordinate_error_px": 2.842170943040401e-14,
+      "gt_in_frame": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "saved_image_recreated_exactly": true
+    },
+    {
+      "sample_id": "162771.jpg",
+      "kind": "occlusion",
+      "severity": 0,
+      "maximum_coordinate_error_px": 0.0,
+      "gt_in_frame": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "saved_image_recreated_exactly": true
+    },
+    {
+      "sample_id": "162771.jpg",
+      "kind": "occlusion",
+      "severity": 1,
+      "maximum_coordinate_error_px": 0.0,
+      "gt_in_frame": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "saved_image_recreated_exactly": true
+    },
+    {
+      "sample_id": "162771.jpg",
+      "kind": "occlusion",
+      "severity": 2,
+      "maximum_coordinate_error_px": 0.0,
+      "gt_in_frame": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "saved_image_recreated_exactly": true
+    },
+    {
+      "sample_id": "162771.jpg",
+      "kind": "occlusion",
+      "severity": 3,
+      "maximum_coordinate_error_px": 0.0,
+      "gt_in_frame": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "saved_image_recreated_exactly": true
+    },
+    {
+      "sample_id": "162771.jpg",
+      "kind": "occlusion",
+      "severity": 4,
+      "maximum_coordinate_error_px": 0.0,
+      "gt_in_frame": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "saved_image_recreated_exactly": true
+    },
+    {
+      "sample_id": "162771.jpg",
+      "kind": "jpeg",
+      "severity": 0,
+      "maximum_coordinate_error_px": 0.0,
+      "gt_in_frame": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "saved_image_recreated_exactly": true
+    },
+    {
+      "sample_id": "162771.jpg",
+      "kind": "jpeg",
+      "severity": 1,
+      "maximum_coordinate_error_px": 0.0,
+      "gt_in_frame": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "saved_image_recreated_exactly": true
+    },
+    {
+      "sample_id": "162771.jpg",
+      "kind": "jpeg",
+      "severity": 2,
+      "maximum_coordinate_error_px": 0.0,
+      "gt_in_frame": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "saved_image_recreated_exactly": true
+    },
+    {
+      "sample_id": "162771.jpg",
+      "kind": "jpeg",
+      "severity": 3,
+      "maximum_coordinate_error_px": 0.0,
+      "gt_in_frame": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "saved_image_recreated_exactly": true
+    },
+    {
+      "sample_id": "162771.jpg",
+      "kind": "jpeg",
+      "severity": 4,
+      "maximum_coordinate_error_px": 0.0,
+      "gt_in_frame": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "saved_image_recreated_exactly": true
+    },
+    {
+      "sample_id": "169393.jpg",
+      "kind": "blur",
+      "severity": 0,
+      "maximum_coordinate_error_px": 0.0,
+      "gt_in_frame": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "saved_image_recreated_exactly": true
+    },
+    {
+      "sample_id": "169393.jpg",
+      "kind": "blur",
+      "severity": 1,
+      "maximum_coordinate_error_px": 0.0,
+      "gt_in_frame": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "saved_image_recreated_exactly": true
+    },
+    {
+      "sample_id": "169393.jpg",
+      "kind": "blur",
+      "severity": 2,
+      "maximum_coordinate_error_px": 0.0,
+      "gt_in_frame": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "saved_image_recreated_exactly": true
+    },
+    {
+      "sample_id": "169393.jpg",
+      "kind": "blur",
+      "severity": 3,
+      "maximum_coordinate_error_px": 0.0,
+      "gt_in_frame": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "saved_image_recreated_exactly": true
+    },
+    {
+      "sample_id": "169393.jpg",
+      "kind": "blur",
+      "severity": 4,
+      "maximum_coordinate_error_px": 0.0,
+      "gt_in_frame": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "saved_image_recreated_exactly": true
+    },
+    {
+      "sample_id": "169393.jpg",
+      "kind": "brightness",
+      "severity": 0,
+      "maximum_coordinate_error_px": 0.0,
+      "gt_in_frame": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "saved_image_recreated_exactly": true
+    },
+    {
+      "sample_id": "169393.jpg",
+      "kind": "brightness",
+      "severity": 1,
+      "maximum_coordinate_error_px": 0.0,
+      "gt_in_frame": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "saved_image_recreated_exactly": true
+    },
+    {
+      "sample_id": "169393.jpg",
+      "kind": "brightness",
+      "severity": 2,
+      "maximum_coordinate_error_px": 0.0,
+      "gt_in_frame": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "saved_image_recreated_exactly": true
+    },
+    {
+      "sample_id": "169393.jpg",
+      "kind": "brightness",
+      "severity": 3,
+      "maximum_coordinate_error_px": 0.0,
+      "gt_in_frame": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "saved_image_recreated_exactly": true
+    },
+    {
+      "sample_id": "169393.jpg",
+      "kind": "brightness",
+      "severity": 4,
+      "maximum_coordinate_error_px": 0.0,
+      "gt_in_frame": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "saved_image_recreated_exactly": true
+    },
+    {
+      "sample_id": "169393.jpg",
+      "kind": "rotation",
+      "severity": 0,
+      "maximum_coordinate_error_px": 0.0,
+      "gt_in_frame": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "saved_image_recreated_exactly": true
+    },
+    {
+      "sample_id": "169393.jpg",
+      "kind": "rotation",
+      "severity": 1,
+      "maximum_coordinate_error_px": 2.842170943040401e-14,
+      "gt_in_frame": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "saved_image_recreated_exactly": true
+    },
+    {
+      "sample_id": "169393.jpg",
+      "kind": "rotation",
+      "severity": 2,
+      "maximum_coordinate_error_px": 2.842170943040401e-14,
+      "gt_in_frame": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "saved_image_recreated_exactly": true
+    },
+    {
+      "sample_id": "169393.jpg",
+      "kind": "rotation",
+      "severity": 3,
+      "maximum_coordinate_error_px": 2.842170943040401e-14,
+      "gt_in_frame": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "saved_image_recreated_exactly": true
+    },
+    {
+      "sample_id": "169393.jpg",
+      "kind": "rotation",
+      "severity": 4,
+      "maximum_coordinate_error_px": 2.842170943040401e-14,
+      "gt_in_frame": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "saved_image_recreated_exactly": true
+    },
+    {
+      "sample_id": "169393.jpg",
+      "kind": "occlusion",
+      "severity": 0,
+      "maximum_coordinate_error_px": 0.0,
+      "gt_in_frame": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "saved_image_recreated_exactly": true
+    },
+    {
+      "sample_id": "169393.jpg",
+      "kind": "occlusion",
+      "severity": 1,
+      "maximum_coordinate_error_px": 0.0,
+      "gt_in_frame": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "saved_image_recreated_exactly": true
+    },
+    {
+      "sample_id": "169393.jpg",
+      "kind": "occlusion",
+      "severity": 2,
+      "maximum_coordinate_error_px": 0.0,
+      "gt_in_frame": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "saved_image_recreated_exactly": true
+    },
+    {
+      "sample_id": "169393.jpg",
+      "kind": "occlusion",
+      "severity": 3,
+      "maximum_coordinate_error_px": 0.0,
+      "gt_in_frame": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "saved_image_recreated_exactly": true
+    },
+    {
+      "sample_id": "169393.jpg",
+      "kind": "occlusion",
+      "severity": 4,
+      "maximum_coordinate_error_px": 0.0,
+      "gt_in_frame": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "saved_image_recreated_exactly": true
+    },
+    {
+      "sample_id": "169393.jpg",
+      "kind": "jpeg",
+      "severity": 0,
+      "maximum_coordinate_error_px": 0.0,
+      "gt_in_frame": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "saved_image_recreated_exactly": true
+    },
+    {
+      "sample_id": "169393.jpg",
+      "kind": "jpeg",
+      "severity": 1,
+      "maximum_coordinate_error_px": 0.0,
+      "gt_in_frame": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "saved_image_recreated_exactly": true
+    },
+    {
+      "sample_id": "169393.jpg",
+      "kind": "jpeg",
+      "severity": 2,
+      "maximum_coordinate_error_px": 0.0,
+      "gt_in_frame": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "saved_image_recreated_exactly": true
+    },
+    {
+      "sample_id": "169393.jpg",
+      "kind": "jpeg",
+      "severity": 3,
+      "maximum_coordinate_error_px": 0.0,
+      "gt_in_frame": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "saved_image_recreated_exactly": true
+    },
+    {
+      "sample_id": "169393.jpg",
+      "kind": "jpeg",
+      "severity": 4,
+      "maximum_coordinate_error_px": 0.0,
+      "gt_in_frame": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "saved_image_recreated_exactly": true
+    },
+    {
+      "sample_id": "176015.jpg",
+      "kind": "blur",
+      "severity": 0,
+      "maximum_coordinate_error_px": 0.0,
+      "gt_in_frame": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "saved_image_recreated_exactly": true
+    },
+    {
+      "sample_id": "176015.jpg",
+      "kind": "blur",
+      "severity": 1,
+      "maximum_coordinate_error_px": 0.0,
+      "gt_in_frame": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "saved_image_recreated_exactly": true
+    },
+    {
+      "sample_id": "176015.jpg",
+      "kind": "blur",
+      "severity": 2,
+      "maximum_coordinate_error_px": 0.0,
+      "gt_in_frame": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "saved_image_recreated_exactly": true
+    },
+    {
+      "sample_id": "176015.jpg",
+      "kind": "blur",
+      "severity": 3,
+      "maximum_coordinate_error_px": 0.0,
+      "gt_in_frame": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "saved_image_recreated_exactly": true
+    },
+    {
+      "sample_id": "176015.jpg",
+      "kind": "blur",
+      "severity": 4,
+      "maximum_coordinate_error_px": 0.0,
+      "gt_in_frame": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "saved_image_recreated_exactly": true
+    },
+    {
+      "sample_id": "176015.jpg",
+      "kind": "brightness",
+      "severity": 0,
+      "maximum_coordinate_error_px": 0.0,
+      "gt_in_frame": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "saved_image_recreated_exactly": true
+    },
+    {
+      "sample_id": "176015.jpg",
+      "kind": "brightness",
+      "severity": 1,
+      "maximum_coordinate_error_px": 0.0,
+      "gt_in_frame": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "saved_image_recreated_exactly": true
+    },
+    {
+      "sample_id": "176015.jpg",
+      "kind": "brightness",
+      "severity": 2,
+      "maximum_coordinate_error_px": 0.0,
+      "gt_in_frame": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "saved_image_recreated_exactly": true
+    },
+    {
+      "sample_id": "176015.jpg",
+      "kind": "brightness",
+      "severity": 3,
+      "maximum_coordinate_error_px": 0.0,
+      "gt_in_frame": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "saved_image_recreated_exactly": true
+    },
+    {
+      "sample_id": "176015.jpg",
+      "kind": "brightness",
+      "severity": 4,
+      "maximum_coordinate_error_px": 0.0,
+      "gt_in_frame": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "saved_image_recreated_exactly": true
+    },
+    {
+      "sample_id": "176015.jpg",
+      "kind": "rotation",
+      "severity": 0,
+      "maximum_coordinate_error_px": 0.0,
+      "gt_in_frame": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "saved_image_recreated_exactly": true
+    },
+    {
+      "sample_id": "176015.jpg",
+      "kind": "rotation",
+      "severity": 1,
+      "maximum_coordinate_error_px": 2.842170943040401e-14,
+      "gt_in_frame": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "saved_image_recreated_exactly": true
+    },
+    {
+      "sample_id": "176015.jpg",
+      "kind": "rotation",
+      "severity": 2,
+      "maximum_coordinate_error_px": 2.842170943040401e-14,
+      "gt_in_frame": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "saved_image_recreated_exactly": true
+    },
+    {
+      "sample_id": "176015.jpg",
+      "kind": "rotation",
+      "severity": 3,
+      "maximum_coordinate_error_px": 2.842170943040401e-14,
+      "gt_in_frame": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "saved_image_recreated_exactly": true
+    },
+    {
+      "sample_id": "176015.jpg",
+      "kind": "rotation",
+      "severity": 4,
+      "maximum_coordinate_error_px": 2.842170943040401e-14,
+      "gt_in_frame": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "saved_image_recreated_exactly": true
+    },
+    {
+      "sample_id": "176015.jpg",
+      "kind": "occlusion",
+      "severity": 0,
+      "maximum_coordinate_error_px": 0.0,
+      "gt_in_frame": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "saved_image_recreated_exactly": true
+    },
+    {
+      "sample_id": "176015.jpg",
+      "kind": "occlusion",
+      "severity": 1,
+      "maximum_coordinate_error_px": 0.0,
+      "gt_in_frame": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "saved_image_recreated_exactly": true
+    },
+    {
+      "sample_id": "176015.jpg",
+      "kind": "occlusion",
+      "severity": 2,
+      "maximum_coordinate_error_px": 0.0,
+      "gt_in_frame": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "saved_image_recreated_exactly": true
+    },
+    {
+      "sample_id": "176015.jpg",
+      "kind": "occlusion",
+      "severity": 3,
+      "maximum_coordinate_error_px": 0.0,
+      "gt_in_frame": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "saved_image_recreated_exactly": true
+    },
+    {
+      "sample_id": "176015.jpg",
+      "kind": "occlusion",
+      "severity": 4,
+      "maximum_coordinate_error_px": 0.0,
+      "gt_in_frame": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "saved_image_recreated_exactly": true
+    },
+    {
+      "sample_id": "176015.jpg",
+      "kind": "jpeg",
+      "severity": 0,
+      "maximum_coordinate_error_px": 0.0,
+      "gt_in_frame": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "saved_image_recreated_exactly": true
+    },
+    {
+      "sample_id": "176015.jpg",
+      "kind": "jpeg",
+      "severity": 1,
+      "maximum_coordinate_error_px": 0.0,
+      "gt_in_frame": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "saved_image_recreated_exactly": true
+    },
+    {
+      "sample_id": "176015.jpg",
+      "kind": "jpeg",
+      "severity": 2,
+      "maximum_coordinate_error_px": 0.0,
+      "gt_in_frame": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "saved_image_recreated_exactly": true
+    },
+    {
+      "sample_id": "176015.jpg",
+      "kind": "jpeg",
+      "severity": 3,
+      "maximum_coordinate_error_px": 0.0,
+      "gt_in_frame": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "saved_image_recreated_exactly": true
+    },
+    {
+      "sample_id": "176015.jpg",
+      "kind": "jpeg",
+      "severity": 4,
+      "maximum_coordinate_error_px": 0.0,
+      "gt_in_frame": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "saved_image_recreated_exactly": true
+    },
+    {
+      "sample_id": "182637.jpg",
+      "kind": "blur",
+      "severity": 0,
+      "maximum_coordinate_error_px": 0.0,
+      "gt_in_frame": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "saved_image_recreated_exactly": true
+    },
+    {
+      "sample_id": "182637.jpg",
+      "kind": "blur",
+      "severity": 1,
+      "maximum_coordinate_error_px": 0.0,
+      "gt_in_frame": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "saved_image_recreated_exactly": true
+    },
+    {
+      "sample_id": "182637.jpg",
+      "kind": "blur",
+      "severity": 2,
+      "maximum_coordinate_error_px": 0.0,
+      "gt_in_frame": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "saved_image_recreated_exactly": true
+    },
+    {
+      "sample_id": "182637.jpg",
+      "kind": "blur",
+      "severity": 3,
+      "maximum_coordinate_error_px": 0.0,
+      "gt_in_frame": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "saved_image_recreated_exactly": true
+    },
+    {
+      "sample_id": "182637.jpg",
+      "kind": "blur",
+      "severity": 4,
+      "maximum_coordinate_error_px": 0.0,
+      "gt_in_frame": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "saved_image_recreated_exactly": true
+    },
+    {
+      "sample_id": "182637.jpg",
+      "kind": "brightness",
+      "severity": 0,
+      "maximum_coordinate_error_px": 0.0,
+      "gt_in_frame": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "saved_image_recreated_exactly": true
+    },
+    {
+      "sample_id": "182637.jpg",
+      "kind": "brightness",
+      "severity": 1,
+      "maximum_coordinate_error_px": 0.0,
+      "gt_in_frame": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "saved_image_recreated_exactly": true
+    },
+    {
+      "sample_id": "182637.jpg",
+      "kind": "brightness",
+      "severity": 2,
+      "maximum_coordinate_error_px": 0.0,
+      "gt_in_frame": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "saved_image_recreated_exactly": true
+    },
+    {
+      "sample_id": "182637.jpg",
+      "kind": "brightness",
+      "severity": 3,
+      "maximum_coordinate_error_px": 0.0,
+      "gt_in_frame": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "saved_image_recreated_exactly": true
+    },
+    {
+      "sample_id": "182637.jpg",
+      "kind": "brightness",
+      "severity": 4,
+      "maximum_coordinate_error_px": 0.0,
+      "gt_in_frame": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "saved_image_recreated_exactly": true
+    },
+    {
+      "sample_id": "182637.jpg",
+      "kind": "rotation",
+      "severity": 0,
+      "maximum_coordinate_error_px": 0.0,
+      "gt_in_frame": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "saved_image_recreated_exactly": true
+    },
+    {
+      "sample_id": "182637.jpg",
+      "kind": "rotation",
+      "severity": 1,
+      "maximum_coordinate_error_px": 2.842170943040401e-14,
+      "gt_in_frame": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "saved_image_recreated_exactly": true
+    },
+    {
+      "sample_id": "182637.jpg",
+      "kind": "rotation",
+      "severity": 2,
+      "maximum_coordinate_error_px": 2.842170943040401e-14,
+      "gt_in_frame": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "saved_image_recreated_exactly": true
+    },
+    {
+      "sample_id": "182637.jpg",
+      "kind": "rotation",
+      "severity": 3,
+      "maximum_coordinate_error_px": 2.842170943040401e-14,
+      "gt_in_frame": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "saved_image_recreated_exactly": true
+    },
+    {
+      "sample_id": "182637.jpg",
+      "kind": "rotation",
+      "severity": 4,
+      "maximum_coordinate_error_px": 2.842170943040401e-14,
+      "gt_in_frame": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "saved_image_recreated_exactly": true
+    },
+    {
+      "sample_id": "182637.jpg",
+      "kind": "occlusion",
+      "severity": 0,
+      "maximum_coordinate_error_px": 0.0,
+      "gt_in_frame": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "saved_image_recreated_exactly": true
+    },
+    {
+      "sample_id": "182637.jpg",
+      "kind": "occlusion",
+      "severity": 1,
+      "maximum_coordinate_error_px": 0.0,
+      "gt_in_frame": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "saved_image_recreated_exactly": true
+    },
+    {
+      "sample_id": "182637.jpg",
+      "kind": "occlusion",
+      "severity": 2,
+      "maximum_coordinate_error_px": 0.0,
+      "gt_in_frame": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "saved_image_recreated_exactly": true
+    },
+    {
+      "sample_id": "182637.jpg",
+      "kind": "occlusion",
+      "severity": 3,
+      "maximum_coordinate_error_px": 0.0,
+      "gt_in_frame": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "saved_image_recreated_exactly": true
+    },
+    {
+      "sample_id": "182637.jpg",
+      "kind": "occlusion",
+      "severity": 4,
+      "maximum_coordinate_error_px": 0.0,
+      "gt_in_frame": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "saved_image_recreated_exactly": true
+    },
+    {
+      "sample_id": "182637.jpg",
+      "kind": "jpeg",
+      "severity": 0,
+      "maximum_coordinate_error_px": 0.0,
+      "gt_in_frame": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "saved_image_recreated_exactly": true
+    },
+    {
+      "sample_id": "182637.jpg",
+      "kind": "jpeg",
+      "severity": 1,
+      "maximum_coordinate_error_px": 0.0,
+      "gt_in_frame": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "saved_image_recreated_exactly": true
+    },
+    {
+      "sample_id": "182637.jpg",
+      "kind": "jpeg",
+      "severity": 2,
+      "maximum_coordinate_error_px": 0.0,
+      "gt_in_frame": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "saved_image_recreated_exactly": true
+    },
+    {
+      "sample_id": "182637.jpg",
+      "kind": "jpeg",
+      "severity": 3,
+      "maximum_coordinate_error_px": 0.0,
+      "gt_in_frame": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "saved_image_recreated_exactly": true
+    },
+    {
+      "sample_id": "182637.jpg",
+      "kind": "jpeg",
+      "severity": 4,
+      "maximum_coordinate_error_px": 0.0,
+      "gt_in_frame": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "saved_image_recreated_exactly": true
+    }
+  ],
+  "day14_report_sha256": "f826c9a63197604fe63db7940bc843b27484c20b15a19a3040c1d5fcc5c07a8e",
+  "script_sha256": "61d7045b947f79e363a36ceb7db669cebdb61412057118684c65af1c23b7b77f",
+  "source_verification": {
+    "datasets/preprocessing.py": {
+      "day14_recorded_sha256": "895e3e93641878068072043ff1dfd16a5fb32adcd270617a2890694962fd966f",
+      "current_sha256": "895e3e93641878068072043ff1dfd16a5fb32adcd270617a2890694962fd966f",
+      "verification": "exact_hash_match"
+    },
+    "datasets/benchmark_preprocessing.py": {
+      "day14_recorded_sha256": "1cf6454a1564bcff95a36f9b937fd23d1b5125e193ce9f78d79cf99569ac1af1",
+      "current_sha256": "d1bc4ef99fde74b8b4525948a8c85d40314399a4187cf7ea4512988a73f2920a",
+      "verification": "documentation_only_difference"
+    },
+    "datasets/corruptions.py": {
+      "day14_recorded_sha256": "33c851b758b2c5267b44fa858d72b61b0c4c09801037dd0db1f309dfbda98452",
+      "current_sha256": "84ce9404f2843d4ed6c29bc4b3bf2ad0cd2cb4cacc861a7e6be94554a361a520",
+      "verification": "documentation_only_difference"
+    },
+    "configs/corruptions_draft_v1.json": {
+      "day14_recorded_sha256": "4ac13c47696d39bb78f982e5e01ea7ccd462415b7764cb6df8863984d9541183",
+      "current_sha256": "4ac13c47696d39bb78f982e5e01ea7ccd462415b7764cb6df8863984d9541183",
+      "verification": "exact_hash_match"
+    }
+  },
+  "visual_review": {
+    "status": "passed_for_two_uploaded_montages",
+    "sample_filenames": [
+      "162771.jpg",
+      "169393.jpg"
+    ],
+    "rotation_directions_reviewed": [
+      -1,
+      1
+    ],
+    "finding": "No obvious transform-induced GT misalignment in reviewed images. Occluded GT points remain available by design.",
+    "all_four_montages_reviewed_by_assistant": false
+  },
+  "scope": "Numeric transform/reconstruction checks and real-image GT overlays. Visual anatomical alignment requires manual review. GT points remain available under occlusion.",
+  "detector_run": false,
+  "model_inference_run": false,
+  "test_evaluated": false,
+  "passed": true
+}
