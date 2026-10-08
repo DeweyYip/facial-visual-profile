@@ -1,0 +1,16 @@
+{
+  "run_name": "oracle_seed0",
+  "selected_checkpoint": "epoch_03.pt",
+  "checkpoint_sha256": "7552cb135a10d0ae72ee6faab7a5feb31c86ff9933165f96006f699656a06ab8",
+  "prediction_sha256": "96c3e0481fb674389a8d154ac32ea8effc19cc0f12a5f129c9a6134fd109fb5c",
+  "payload_sha256": {
+    "docs/results/oracle_training/day18/config.json": "84574f8204d6b8a2439c3f42d55b580e0143dfa86fad823933358b0934409e4d",
+    "docs/results/oracle_training/day18/history.json": "c0ef5cf211e04af0e577b22274e87a052be33677c6f630cd5d00d0ee95a73e33",
+    "docs/results/oracle_training/day18/best.json": "9488075fed26152a2353ba02b46bd9ba9fdbd03db423bf0c167dd69fb568ca12",
+    "docs/results/oracle_training/day18/validation_metrics.json": "68386503f9a02ab4eaf3427c4bf66159e46bc9f39ccabdb91cebf7ee23a75cd8",
+    "docs/results/benchmark_preparation/day18/oracle_seed0.json": "71d7caed02170ac5a02ac0faf846748c465107ea2decb3faabdfe16922647ad3",
+    "configs/thresholds/oracle_seed0.json": "71d7caed02170ac5a02ac0faf846748c465107ea2decb3faabdfe16922647ad3"
+  },
+  "test_evaluated": false,
+  "note": "JSON archive only. Checkpoints and validation predictions remain in Drive. Day 17 benchmark freeze is not modified."
+}

@@ -438,3 +438,23 @@ Next: oracle geometry and planned control/multiple-seed experiments.
 - Rules: docs/benchmark_protocol_v1.md; configs/benchmark_v1.json.
 - Next: independent Oracle training/validation thresholds, final-canvas landmark
   caches, then evaluation under the frozen protocol.
+
+<!-- day18-oracle-training -->
+## Day 18 — Oracle seed-0 training and thresholds archived
+
+- Same architecture and recorded training settings as M3; independent ImageNet
+  initialization, seed 0, 10 epochs, batch 64, Adam lr 1e-4, FP32.
+- Geometry uses aligned GT mapped by shared preprocessing; all samples valid.
+- Selected epoch_03.pt by full clean-validation mAP; strict reload passed.
+- Validation BCE: 0.194167410.
+- F1 at 0.5: 0.741068208; tuned F1: 0.764026762;
+  mAP: 0.818460254.
+- Threshold grid 0.05..0.95; per-attribute F1; ties closest to 0.5 then lower.
+  Tuned F1 is an in-sample validation fitting result.
+- All 19,867 validation IDs/targets/attribute order checked against R18.
+- Evidence: docs/results/oracle_training/day18/ and
+  docs/results/benchmark_preparation/day18/oracle_seed0.json.
+- Configuration: configs/thresholds/oracle_seed0.json.
+- Notebook: notebooks/day18_oracle_seed0.ipynb.
+- Checkpoints and prediction NPZ remain in Drive; no test evaluation performed.
+- Original Day 17 benchmark freeze preserved; Oracle binding remains pending.

@@ -2,11 +2,11 @@
 
 ## Latest verified state
 
-Day 16 completed and pushed as 09b41c51d43ddd63d76db10cdfea8bd604029030.
-Day 17 historical clean-validation thresholds were reproduced/fitted and
-archived locally. Benchmark protocol/manifest freeze is the next execution
-step; it is not complete merely because this document has been installed.
-Use the Day 17 freeze audit to confirm completion after running the script.
+Day 17 benchmark protocol/manifest freeze passed; archived audit verified.
+Day 18 Oracle seed-0 training, selected-checkpoint validation, clean-validation
+threshold fitting and local archive verification passed.
+Oracle benchmark binding and final-canvas detector caches remain pending.
+Git commit/push status must be checked separately from execution status.
 
 ## Goal and models
 
@@ -20,7 +20,7 @@ geometry gains. Demo/language features remain later work.
 | R18 | ImageNet ResNet18; 512 -> 24 | 10 epochs complete; epoch 3 selected |
 | R50 | ImageNet ResNet50; 2048 -> 24 | 10 epochs complete; epoch 3 selected |
 | M3 Predicted Geometry | R18 512 + MLP 10 -> 32 -> 32; concat 544 -> 24 | 10 epochs complete; epoch 2 selected |
-| Oracle Geometry | Same fusion design, independently trained using GT | Pending |
+| Oracle Geometry | Same fusion design, independently trained using GT | 10 epochs complete; epoch 3 selected |
 
 Outputs are logits; BCEWithLogitsLoss trains all model parameters.
 MTCNN is a fixed pretrained detector, not jointly trained with M3.
@@ -63,14 +63,16 @@ validation mAP; exact ties choose earliest epoch. No checkpoint reselection.
 | R18 | 0.190717 | 0.727259 | 0.762372 | 0.817737 |
 | R50 | 0.190218 | 0.731168 | 0.763569 | 0.818835 |
 | M3 | 0.188191 | 0.743926 | 0.764527 | 0.818564 |
+| Oracle | 0.194167 | 0.741068 | 0.764027 | 0.818460 |
 
-All three have complete, verified clean-validation predictions on identical
-filenames, targets and attribute order. M3 retains 32 validation failures.
+All four have complete clean-validation predictions. Historical R18/R50/M3
+alignment passed; Oracle filenames, targets and attribute order were checked
+against R18. M3 retains 32 validation failures; Oracle uses GT for all samples.
 Fitted F1 uses the same validation data for fitting and scoring; it is not an
 independent estimate. One seed and small score differences do not establish
 stable gains. Do not compare tuned F1 with fixed-0.5 F1 without labeling.
 
-Thresholds: configs/thresholds/{r18_seed0,r50_seed0,m3_seed0}.json.
+Thresholds: configs/thresholds/{r18_seed0,r50_seed0,m3_seed0,oracle_seed0}.json.
 Grid 0.05..0.95, step 0.01, maximize per-attribute F1; ties closest to 0.5,
 then lower. R18 existing thresholds and checkpoint SHA reproduced exactly;
 R50/M3 fitted from saved clean logits. Do not rerun threshold fitting merely
@@ -81,6 +83,8 @@ Drive root: /content/drive/MyDrive/FacialVisualProfile.
 - runs/r50_seed0/epoch_03.pt; day12/validation_predictions.npz.
 - runs/m3_seed0/epoch_02.pt; validation_predictions.npz.
 - runs/benchmark_preparation/day17/: threshold reproduction and new JSONs.
+- runs/oracle_seed0/epoch_03.pt; validation_predictions.npz; source snapshot.
+- runs/benchmark_preparation/day18/oracle_seed0.json: Oracle thresholds.
 - Historical clean cache: cache/mtcnn_clean.sqlite.
 
 ## Verified development milestones
@@ -103,8 +107,11 @@ Drive root: /content/drive/MyDrive/FacialVisualProfile.
 - Day 16: 84 inputs from four validation images, 82 valid detections and two
   no_face, zero runtime errors; all M3 outputs finite [84,24]; failed geometry
   features exactly zero; invalid coordinate changes affected logits by 0.0.
-- Day 17: historical clean thresholds reproduced/added and archived; rule
-  freeze execution follows installation of the corrected bundle.
+- Day 17: historical clean thresholds reproduced/added and archived;
+  benchmark rule/manifest freeze executed and passed.
+- Day 18: independently trained Oracle with GT for 10 epochs; epoch 3 selected
+  by clean-validation mAP; strict reload/full validation passed; thresholds
+  fitted on clean validation and JSON/notebook archives verified locally.
 
 ## Corruption benchmark and pipeline distinction
 
@@ -149,12 +156,13 @@ Do not claim test images were never accessed. Do not tune using test scores.
 - scripts/day17_freeze_benchmark.py: bind metadata, thresholds and source hashes.
 - docs/results/: small provenance artifacts; experiment_log.md: chronology.
 
-Next: run corrected Day 17 freeze; verify audit and commit explicit files.
-Then independently train/select Oracle and fit its clean-validation thresholds;
-prepare final-canvas clean/corrupted detector caches and RGB provenance;
-evaluate selected models under frozen rules; additional seeds/controls follow.
-No full corrupted attribute evaluation, Oracle training or stable-gain claim
-has been completed in the currently verified record.
+Next: review current Day 17 script changes and archive explicit Day 18 files.
+Bind the selected Oracle checkpoint and thresholds in a separate, traceable
+benchmark update while preserving the original Day 17 freeze evidence.
+Prepare final-canvas clean/corrupted detector caches and RGB provenance;
+then evaluate selected models under frozen rules. Additional seeds/controls follow.
+Full corrupted attribute evaluation remains pending. Clean seed-0 results
+do not establish stable geometry gains. Do not repeat completed Oracle training.
 
 ## Handoff discipline
 
@@ -186,5 +194,25 @@ before replacing old state; do not infer execution from schedules or filenames.
   exists; test attribute evaluation remains pending.
 - Evidence: docs/results/benchmark_freeze/day17/freeze_audit.json.
 - Rules: docs/benchmark_protocol_v1.md; configs/benchmark_v1.json.
-- Next: independent Oracle training/validation thresholds, final-canvas landmark
-  caches, then evaluation under the frozen protocol.
+- Original next steps included Oracle training/thresholds; these passed on Day 18.
+- Remaining: Oracle benchmark binding, final-canvas landmark caches and evaluation.
+
+<!-- day18-oracle-training -->
+## Day 18 — Oracle seed-0 training and thresholds archived
+
+- Same architecture and recorded training settings as M3; independent ImageNet
+  initialization, seed 0, 10 epochs, batch 64, Adam lr 1e-4, FP32.
+- Geometry uses aligned GT mapped by shared preprocessing; all samples valid.
+- Selected epoch_03.pt by full clean-validation mAP; strict reload passed.
+- Validation BCE: 0.194167410.
+- F1 at 0.5: 0.741068208; tuned F1: 0.764026762;
+  mAP: 0.818460254.
+- Threshold grid 0.05..0.95; per-attribute F1; ties closest to 0.5 then lower.
+  Tuned F1 is an in-sample validation fitting result.
+- All 19,867 validation IDs/targets/attribute order checked against R18.
+- Evidence: docs/results/oracle_training/day18/ and
+  docs/results/benchmark_preparation/day18/oracle_seed0.json.
+- Configuration: configs/thresholds/oracle_seed0.json.
+- Notebook: notebooks/day18_oracle_seed0.ipynb.
+- Checkpoints and prediction NPZ remain in Drive; no test evaluation performed.
+- Original Day 17 benchmark freeze preserved; Oracle binding remains pending.
