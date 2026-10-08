@@ -1,0 +1,540 @@
+{
+  "status": "sample_condition_and_metric_rules_frozen",
+  "implementation_version": "day14_draft_v1",
+  "corruption_seed": 0,
+  "preview_split": "validation",
+  "test_access": "partition_metadata_only_during_freeze",
+  "order": [
+    "shared_letterbox_224",
+    "one_corruption",
+    "detector_on_final_RGB",
+    "image_normalization"
+  ],
+  "severity_zero": "clean",
+  "levels": {
+    "blur": [
+      1.0,
+      2.0,
+      3.0,
+      4.0
+    ],
+    "brightness": [
+      0.8,
+      0.6,
+      0.4,
+      0.2
+    ],
+    "rotation": [
+      5.0,
+      10.0,
+      15.0,
+      20.0
+    ],
+    "occlusion": [
+      0.1,
+      0.2,
+      0.3,
+      0.4
+    ],
+    "jpeg": [
+      75,
+      50,
+      25,
+      10
+    ]
+  },
+  "runtime_parameter_source": "datasets.corruptions.LEVELS; audit checks equality with this record",
+  "rotation": {
+    "direction": "SHA256 of version, seed, sample_id, rotation; same sign across severity",
+    "resampling": "BILINEAR",
+    "expand": false,
+    "fill_rgb": [
+      0,
+      0,
+      0
+    ]
+  },
+  "occlusion": {
+    "nominal_center_edge_coordinates": [
+      112,
+      168
+    ],
+    "fill_rgb": [
+      0,
+      0,
+      0
+    ],
+    "rounding": "floor(224*fraction+0.5)"
+  },
+  "jpeg": {
+    "subsampling": 2,
+    "optimize": false,
+    "progressive": false
+  },
+  "failure_policy": "retain samples; mask geometry embedding; no GT substitution",
+  "official_test_manifest": "docs/results/benchmark_freeze/day17/test_samples.csv",
+  "note": "Rules frozen after Day 14-16 validation checks. Preserve implementation version because it determines rotation signs. Reuse three saved threshold files. Oracle training/thresholds and actual benchmark caches remain pending.",
+  "protocol_id": "benchmark_v1",
+  "manifest_format": "sample CSV crossed with ordered conditions",
+  "test_sample_count": 19962,
+  "conditions": [
+    {
+      "condition": "clean",
+      "severity": 0,
+      "implementation_kind": "blur",
+      "level": null
+    },
+    {
+      "condition": "blur",
+      "severity": 1,
+      "implementation_kind": "blur",
+      "level": 1.0
+    },
+    {
+      "condition": "blur",
+      "severity": 2,
+      "implementation_kind": "blur",
+      "level": 2.0
+    },
+    {
+      "condition": "blur",
+      "severity": 3,
+      "implementation_kind": "blur",
+      "level": 3.0
+    },
+    {
+      "condition": "blur",
+      "severity": 4,
+      "implementation_kind": "blur",
+      "level": 4.0
+    },
+    {
+      "condition": "brightness",
+      "severity": 1,
+      "implementation_kind": "brightness",
+      "level": 0.8
+    },
+    {
+      "condition": "brightness",
+      "severity": 2,
+      "implementation_kind": "brightness",
+      "level": 0.6
+    },
+    {
+      "condition": "brightness",
+      "severity": 3,
+      "implementation_kind": "brightness",
+      "level": 0.4
+    },
+    {
+      "condition": "brightness",
+      "severity": 4,
+      "implementation_kind": "brightness",
+      "level": 0.2
+    },
+    {
+      "condition": "rotation",
+      "severity": 1,
+      "implementation_kind": "rotation",
+      "level": 5.0
+    },
+    {
+      "condition": "rotation",
+      "severity": 2,
+      "implementation_kind": "rotation",
+      "level": 10.0
+    },
+    {
+      "condition": "rotation",
+      "severity": 3,
+      "implementation_kind": "rotation",
+      "level": 15.0
+    },
+    {
+      "condition": "rotation",
+      "severity": 4,
+      "implementation_kind": "rotation",
+      "level": 20.0
+    },
+    {
+      "condition": "occlusion",
+      "severity": 1,
+      "implementation_kind": "occlusion",
+      "level": 0.1
+    },
+    {
+      "condition": "occlusion",
+      "severity": 2,
+      "implementation_kind": "occlusion",
+      "level": 0.2
+    },
+    {
+      "condition": "occlusion",
+      "severity": 3,
+      "implementation_kind": "occlusion",
+      "level": 0.3
+    },
+    {
+      "condition": "occlusion",
+      "severity": 4,
+      "implementation_kind": "occlusion",
+      "level": 0.4
+    },
+    {
+      "condition": "jpeg",
+      "severity": 1,
+      "implementation_kind": "jpeg",
+      "level": 75
+    },
+    {
+      "condition": "jpeg",
+      "severity": 2,
+      "implementation_kind": "jpeg",
+      "level": 50
+    },
+    {
+      "condition": "jpeg",
+      "severity": 3,
+      "implementation_kind": "jpeg",
+      "level": 25
+    },
+    {
+      "condition": "jpeg",
+      "severity": 4,
+      "implementation_kind": "jpeg",
+      "level": 10
+    }
+  ],
+  "planned_input_count": 419202,
+  "sample_manifest_sha256": "b24fcfcae297e81dad15cd30fb40e7156c0c7c2672695ebc8f1e6513f1363e22",
+  "attribute_names": [
+    "Smiling",
+    "Mouth_Slightly_Open",
+    "Eyeglasses",
+    "Bangs",
+    "Wearing_Hat",
+    "Mustache",
+    "No_Beard",
+    "Black_Hair",
+    "Bushy_Eyebrows",
+    "Arched_Eyebrows",
+    "High_Cheekbones",
+    "Bags_Under_Eyes",
+    "Big_Lips",
+    "Big_Nose",
+    "Double_Chin",
+    "Oval_Face",
+    "Receding_Hairline",
+    "Blond_Hair",
+    "Brown_Hair",
+    "Gray_Hair",
+    "Bald",
+    "Straight_Hair",
+    "Wavy_Hair",
+    "Sideburns"
+  ],
+  "detector_config": {
+    "keep_all": true,
+    "min_face_size": 20,
+    "thresholds": [
+      0.6,
+      0.7,
+      0.7
+    ],
+    "factor": 0.709,
+    "selection": "highest_probability"
+  },
+  "point_order": [
+    "lefteye",
+    "righteye",
+    "nose",
+    "leftmouth",
+    "rightmouth"
+  ],
+  "tested_detector_provenance": {
+    "split": "validation",
+    "sample_filenames": [
+      "162771.jpg",
+      "169393.jpg",
+      "176015.jpg",
+      "182637.jpg"
+    ],
+    "unique_inputs": 84,
+    "input_package_sha256": "54ca34f3ea21adc4db8d9832f94c424170379da72a6a03314792ae3e96a04e2c",
+    "source_sha256": {
+      "detectors/mtcnn.py": "7297a11539212d622c368972029ba8738eea77ae54518bc4189b686b1c0d4119",
+      "datasets/preprocessing.py": "895e3e93641878068072043ff1dfd16a5fb32adcd270617a2890694962fd966f",
+      "datasets/benchmark_preprocessing.py": "d1bc4ef99fde74b8b4525948a8c85d40314399a4187cf7ea4512988a73f2920a",
+      "datasets/corruptions.py": "84ce9404f2843d4ed6c29bc4b3bf2ad0cd2cb4cacc861a7e6be94554a361a520",
+      "configs/corruptions_draft_v1.json": "4ac13c47696d39bb78f982e5e01ea7ccd462415b7764cb6df8863984d9541183"
+    },
+    "detector_config": {
+      "keep_all": true,
+      "min_face_size": 20,
+      "thresholds": [
+        0.6,
+        0.7,
+        0.7
+      ],
+      "factor": 0.709,
+      "selection": "highest_probability"
+    },
+    "point_order": [
+      "lefteye",
+      "righteye",
+      "nose",
+      "leftmouth",
+      "rightmouth"
+    ],
+    "detector_weights_sha256": "e9c982616b8d07b3674643a76ce2facd79a2d64fb02b316a827163af2a63d8c0",
+    "environment": {
+      "torch": "2.11.0+cpu",
+      "torchvision": "0.26.0+cpu",
+      "facenet-pytorch": "2.6.0",
+      "Pillow": "11.3.0",
+      "numpy": "2.1.3"
+    },
+    "device": "cpu",
+    "torch_threads": 2,
+    "elapsed_seconds": 5.529599597000015,
+    "nme_definition": "mean five-point Euclidean error / GT eye distance",
+    "nme_unit": "ratio; printed as percent",
+    "failure_policy": "retain sample; zero geometry input with validity mask",
+    "runtime_errors": 0,
+    "model_inference_run": false,
+    "test_evaluated": false,
+    "benchmark_frozen": false,
+    "scope": "Four-sample detector pipeline check per condition, not a benchmark performance estimate. Runtime errors are reported separately from detector failures. Actual M3 mask inference remains pending.",
+    "passed": true
+  },
+  "tested_detector_environment": {
+    "torch": "2.11.0+cpu",
+    "torchvision": "0.26.0+cpu",
+    "facenet-pytorch": "2.6.0",
+    "Pillow": "11.3.0",
+    "numpy": "2.1.3"
+  },
+  "tested_detector_device": "cpu",
+  "checkpoint_selection": "clean validation mAP; earliest epoch on exact tie",
+  "selected_seed0_checkpoints": {
+    "r18": "runs/r18_seed0/epoch_03.pt",
+    "r50": "runs/r50_seed0/epoch_03.pt",
+    "m3": "runs/m3_seed0/epoch_02.pt"
+  },
+  "oracle": "independent clean training and validation selection pending",
+  "threshold_rule": {
+    "id": "reuse_verified_historical_validation_thresholds",
+    "split": "validation",
+    "sample_count": 19867,
+    "condition": "historical clean validation",
+    "grid_integer_hundredths": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      84,
+      85,
+      86,
+      87,
+      88,
+      89,
+      90,
+      91,
+      92,
+      93,
+      94,
+      95
+    ],
+    "objective": "per-attribute F1",
+    "tie": "closest to 0.50, then smaller; reproduced against existing R18 results",
+    "comparison": ">=",
+    "model_specific_values": "saved and hash-bound for three seed0 models",
+    "reuse": "same values across all test conditions for each checkpoint"
+  },
+  "threshold_bindings": {
+    "r18_seed0": {
+      "path": "configs/thresholds/r18_seed0.json",
+      "file_sha256": "c58e792c37ab048db8a9cb446ede5d52a3b639a61a4421f520ccfbb9b59307f3",
+      "checkpoint": "epoch_03.pt",
+      "checkpoint_sha256": "b82aa1c9aa1d27ce17abcb09671cbf0831ee70c35e07a24f9312f32cbed8682a",
+      "thresholds": [
+        0.63,
+        0.46,
+        0.28,
+        0.29,
+        0.28,
+        0.12,
+        0.65,
+        0.4,
+        0.29,
+        0.35,
+        0.57,
+        0.25,
+        0.3,
+        0.15,
+        0.19,
+        0.39,
+        0.31,
+        0.53,
+        0.3,
+        0.51,
+        0.22,
+        0.39,
+        0.54,
+        0.42
+      ],
+      "fit_pipeline": "historical clean validation; original-image cache for M3"
+    },
+    "r50_seed0": {
+      "path": "configs/thresholds/r50_seed0.json",
+      "file_sha256": "6d1a2fd266bd67baae7a22f954952d1f1f1c6d63a0679ee36f1fe461407f8b8e",
+      "checkpoint": "epoch_03.pt",
+      "checkpoint_sha256": "b7e896e531807313b27096657ee807557db3fe98b955e8ddc55719fa7a430a07",
+      "thresholds": [
+        0.57,
+        0.38,
+        0.6,
+        0.33,
+        0.45,
+        0.19,
+        0.65,
+        0.41,
+        0.26,
+        0.43,
+        0.52,
+        0.25,
+        0.29,
+        0.15,
+        0.22,
+        0.29,
+        0.24,
+        0.52,
+        0.3,
+        0.41,
+        0.19,
+        0.34,
+        0.58,
+        0.39
+      ],
+      "fit_pipeline": "historical clean validation; original-image cache for M3"
+    },
+    "m3_seed0": {
+      "path": "configs/thresholds/m3_seed0.json",
+      "file_sha256": "cd5efb9f4233f684988253a004f4c3d606dc0119070c29378361a926086bc5eb",
+      "checkpoint": "epoch_02.pt",
+      "checkpoint_sha256": "a224fb6163a3d85362522622b5514cf84ee11e12d1021324298b2e0eec21ceb8",
+      "thresholds": [
+        0.49,
+        0.57,
+        0.49,
+        0.45,
+        0.55,
+        0.24,
+        0.38,
+        0.45,
+        0.33,
+        0.38,
+        0.42,
+        0.32,
+        0.38,
+        0.34,
+        0.28,
+        0.3,
+        0.41,
+        0.46,
+        0.24,
+        0.58,
+        0.49,
+        0.3,
+        0.46,
+        0.38
+      ],
+      "fit_pipeline": "historical clean validation; original-image cache for M3"
+    }
+  },
+  "m3_clean_reference": "fresh detection on final clean 224 RGB; historical thresholds fixed",
+  "m3_pipeline_change": "original-image cache versus final-canvas detection; report explicitly",
+  "f1_reports": [
+    "validation_selected_thresholds",
+    "fixed_0.5"
+  ],
+  "metric_implementation": "evaluation/benchmark_attributes.py",
+  "execution_errors": "record and resolve; do not count as no_face",
+  "actual_input_hashes": "record during cache generation; not available at freeze",
+  "test_evaluated": false
+}

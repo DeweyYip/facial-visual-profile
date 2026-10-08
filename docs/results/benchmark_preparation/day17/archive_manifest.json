@@ -1,0 +1,8 @@
+{
+  "scope": "Day 17 historical clean-validation thresholds",
+  "files": {
+    "r18_threshold_reproduction.json": "7720332edf14c9fe600854a74518b85de74ecbe2d5bda2e9c1622e0842a5c122",
+    "r50_seed0.json": "6d1a2fd266bd67baae7a22f954952d1f1f1c6d63a0679ee36f1fe461407f8b8e",
+    "m3_seed0.json": "cd5efb9f4233f684988253a004f4c3d606dc0119070c29378361a926086bc5eb"
+  }
+}

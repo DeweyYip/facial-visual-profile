@@ -1,251 +1,190 @@
 # Facial Visual Profile — Current State v1
 
-## Latest verified status — Day 15
+## Latest verified state
 
-- Day 13 training-protocol and three-model reload audits passed.
-- R18/R50/M3 seed-0 runs completed 10 epochs; best epochs: 3/3/2.
-- Day 12 remains the latest full clean-validation comparison.
-- Five corruptions implemented with four candidate severity levels each.
-- Existing preprocessing preserved; exact clean tensor/coordinate equality passed.
-- Synthetic checks and real-validation generation checks passed.
-- Four fixed validation samples produced 80 corrupted images.
-- Two preview montages reviewed; no obvious visual implementation issues.
-- Corruption settings remain draft, pending benchmark freeze.
-- Reports: docs/results/corruption_preparation/day14/.
-- Rules: docs/day14_implementation_draft.md.
-- Day 15 numeric GT audit passed across 100 conditions.
-- Two real-face overlays reviewed; both rotation directions aligned.
-- User comments preserved; computational AST equivalence verified.
-- Report: docs/results/corruption_preparation/day15/gt_overlay_audit.json.
-- Next: Day 16 detector status, NME, coverage, and end-to-end checks.
-- Corrupted-image MTCNN integration and model evaluation remain pending.
-- Test evaluation, Oracle training, and additional seeds remain pending.
-- Stable geometry performance gains have not been established.
+Day 16 completed and pushed as 09b41c51d43ddd63d76db10cdfea8bd604029030.
+Day 17 historical clean-validation thresholds were reproduced/fitted and
+archived locally. Benchmark protocol/manifest freeze is the next execution
+step; it is not complete merely because this document has been installed.
+Use the Day 17 freeze audit to confirm completion after running the script.
 
-## 1. Project Goal / Research Question
+## Goal and models
 
-Build a reproducible system for predicting 24 facial attributes from CelebA images, with image-only baselines and a subsequent image-plus-five-landmark model.
+Research whether explicit predicted five-point geometry improves facial
+attribute prediction and robustness compared with image-only depth.
+The project is an engineering/research portfolio, not evidence of established
+geometry gains. Demo/language features remain later work.
 
-The working research question is whether detected facial geometry improves attribute prediction and, in later experiments, robustness to image corruption. The baselines are established; geometry and robustness experiments are not yet implemented or validated. This project supports a master's application, so fair comparisons, provenance, and reproducible results matter more than isolated headline scores.
-
-## 2. Model Design: Implemented vs. Trained
-
-| Model | Design | Current status |
+| Model | Architecture | Seed-0 status |
 |---|---|---|
-| R18 baseline | ImageNet-pretrained ResNet18; FC 512 -> 24 | Seed-0 training and validation analysis complete |
-| R50 baseline | ImageNet-pretrained ResNet50; FC 2048 -> 24 | Seed-0 training complete |
-| Geometry model (M3) | R18 features (512) + geometry MLP 10 -> 32 -> 32 with ReLU; concat (544); Linear(544, 24) | Implemented and integration-checked; no formal training |
+| R18 | ImageNet ResNet18; 512 -> 24 | 10 epochs complete; epoch 3 selected |
+| R50 | ImageNet ResNet50; 2048 -> 24 | 10 epochs complete; epoch 3 selected |
+| M3 Predicted Geometry | R18 512 + MLP 10 -> 32 -> 32; concat 544 -> 24 | 10 epochs complete; epoch 2 selected |
+| Oracle Geometry | Same fusion design, independently trained using GT | Pending |
 
-Geometry class: ResNet18GeometryAttributes in models/resnet18_geometry.py.
-Backbone FC: Identity. Outputs: logits. Parameters: 11,191,000.
-Day 9 shape and backward checks passed with pretrained=False.
-Both branches and the classifier received finite, nonzero gradients.
+Outputs are logits; BCEWithLogitsLoss trains all model parameters.
+MTCNN is a fixed pretrained detector, not jointly trained with M3.
+Failure policy="mask" retains samples, replaces missing coordinate inputs
+with zeros and zeroes geometry features after the MLP. No GT substitution.
+Optional strict Dataset failure_policy="error" still raises on failures.
 
-MTCNN is a separate fixed pretrained detector, not jointly trained.
-The predicted Dataset currently raises LandmarkUnavailableError on failed
-detections. The final training-time failure policy remains pending.
+## Dataset, attributes and preprocessing
 
-## 3. Dataset and Attribute Order
+CelebA aligned RGB images and matching aligned five-point annotations.
+Official counts: train 162,770; validation 19,867; test 19,962.
+Validation IDs: 162771.jpg through 182637.jpg. Use official partition metadata
+as the membership authority. Targets convert -1/1 to 0/1.
 
-CelebA files: `img_align_celeba.zip`, `list_attr_celeba.txt`, `list_landmarks_align_celeba.txt`, and `list_eval_partition.txt`. Use aligned images and their aligned five-point annotations.
-
-| Split | Official code | Images |
-|---|---:|---:|
-| Train | 0 | 162,770 |
-| Validation | 1 | 19,867 |
-| Test | 2 | 19,962 |
-| Total | | 202,599 |
-
-All four filename sets matched exactly, with no duplicates. The archive integrity check passed. A checked original image was RGB, 178 × 218 pixels. Attribute labels are converted from `-1/1` to float32 `0/1`.
-
-The following order is mandatory across labels, output logits, checkpoints, and thresholds:
+Mandatory 24-attribute order:
 
 ```text
-Smiling, Mouth_Slightly_Open, Eyeglasses, Bangs,
-Wearing_Hat, Mustache, No_Beard, Black_Hair,
-Bushy_Eyebrows, Arched_Eyebrows, High_Cheekbones, Bags_Under_Eyes,
-Big_Lips, Big_Nose, Double_Chin, Oval_Face,
-Receding_Hairline, Blond_Hair, Brown_Hair, Gray_Hair,
-Bald, Straight_Hair, Wavy_Hair, Sideburns
+Smiling, Mouth_Slightly_Open, Eyeglasses, Bangs, Wearing_Hat, Mustache,
+No_Beard, Black_Hair, Bushy_Eyebrows, Arched_Eyebrows, High_Cheekbones,
+Bags_Under_Eyes, Big_Lips, Big_Nose, Double_Chin, Oval_Face,
+Receding_Hairline, Blond_Hair, Brown_Hair, Gray_Hair, Bald,
+Straight_Hair, Wavy_Hair, Sideburns
 ```
 
-Shared preprocessing preserves aspect ratio, resizes the longest side to 224, and centers the image on a black 224 × 224 canvas. Normalize RGB with ImageNet mean `(0.485, 0.456, 0.406)` and std `(0.229, 0.224, 0.225)`.
+Preserve aspect ratio, resize longest side to 224, centered black letterbox,
+PIL BILINEAR. Pixel-center mapping:
+`(coord + 0.5) * resized_dimension / original_dimension - 0.5 + padding`.
+Normalize coordinates `2*coord/223-1`, flatten five (x,y) pairs to 10 values.
+Point order: lefteye, righteye, nose, leftmouth, rightmouth.
+ImageNet RGB mean (.485,.456,.406), std (.229,.224,.225).
 
-Landmarks use the same resize and padding, including the pixel-center mapping `(coord + 0.5) * new_dimension / original_dimension - 0.5 + padding`. Normalize coordinates with `2 * coord / 223 - 1`, then flatten to 10 values. Point order: left eye, right eye, nose, left mouth, right mouth, each as `(x, y)`.
+## Training and clean-validation evidence
 
-## 4. Important Engineering Files
+Seed 0, 10 epochs, batch 64, Adam lr 0.0001, weight decay 0, FP32,
+two workers, no augmentation, all parameters trainable. Select highest
+validation mAP; exact ties choose earliest epoch. No checkpoint reselection.
 
-This is the verified important-file inventory, not an exhaustive repository listing.
+| Model | BCE | F1 at 0.5 | Validation-selected F1 | mAP |
+|---|---:|---:|---:|---:|
+| R18 | 0.190717 | 0.727259 | 0.762372 | 0.817737 |
+| R50 | 0.190218 | 0.731168 | 0.763569 | 0.818835 |
+| M3 | 0.188191 | 0.743926 | 0.764527 | 0.818564 |
 
-| Path | Role |
-|---|---|
-| `configs/attributes.yaml` | Ordered 24-attribute definition |
-| `datasets/celeba.py` | Official split loading; returns image, labels, GT points, filename |
-| `datasets/preprocessing.py` | Shared image and coordinate transformation |
-| `models/resnet18.py`, `models/resnet50.py` | Image-only classifiers |
-| `detectors/mtcnn.py` | MTCNN wrapper and face selection |
-| `scripts/cache_mtcnn.py` | Resumable SQLite detection cache |
-| `scripts/inspect_celeba.py` | GT landmark visual inspection |
-| `scripts/overfit_resnet18.py` | Eight-sample training check |
-| `evaluation/attributes.py` | Macro-F1 and per-attribute AP/mAP |
-| `training/__init__.py` | Package exists; reusable trainer implementation is unconfirmed |
-| `docs/data_inventory.md`, `docs/experiment_log.md` | Data verification and experiment record |
-| `docs/day7_r18_validation.md` | R18 validation analysis |
-| `configs/thresholds/r18_seed0.json` | R18 validation-tuned thresholds |
-| `docs/results/r18_seed0/`, `docs/results/r50_seed0/` | Imported small experiment artifacts |
-| `notebooks/day4_resnet18_benchmark.ipynb` | Initial GPU benchmark |
-| `notebooks/day5_mtcnn_inspection.ipynb` | Detector inspection and cache assessment |
-| `notebooks/day6_resnet18_seed0.ipynb` | Formal R18 run |
-| `notebooks/day7_resnet18_validation.ipynb` | Reproduction, thresholds, error analysis |
-| `notebooks/day8_resnet50_seed0.ipynb` | R50 run, recovery, and results |
+All three have complete, verified clean-validation predictions on identical
+filenames, targets and attribute order. M3 retains 32 validation failures.
+Fitted F1 uses the same validation data for fitting and scoring; it is not an
+independent estimate. One seed and small score differences do not establish
+stable gains. Do not compare tuned F1 with fixed-0.5 F1 without labeling.
 
-Large datasets, weights, and caches belong outside Git. `/data/` is ignored. Clean notebook outputs and execution metadata before committing.
+Thresholds: configs/thresholds/{r18_seed0,r50_seed0,m3_seed0}.json.
+Grid 0.05..0.95, step 0.01, maximize per-attribute F1; ties closest to 0.5,
+then lower. R18 existing thresholds and checkpoint SHA reproduced exactly;
+R50/M3 fitted from saved clean logits. Do not rerun threshold fitting merely
+because corruption is introduced. Reuse each checkpoint's threshold vector.
 
-## 5. Completed Work by Day
+Drive root: /content/drive/MyDrive/FacialVisualProfile.
+- runs/r18_seed0/epoch_03.pt; day7/validation_predictions.npz.
+- runs/r50_seed0/epoch_03.pt; day12/validation_predictions.npz.
+- runs/m3_seed0/epoch_02.pt; validation_predictions.npz.
+- runs/benchmark_preparation/day17/: threshold reproduction and new JSONs.
+- Historical clean cache: cache/mtcnn_clean.sqlite.
 
-| Day | Verified work |
-|---|---|
-| 1 | Repository/environment foundation exists; exact Day 1 tasks are not available in the visible record |
-| 2 | Downloaded and checked CelebA images, labels, aligned landmarks, and official partitions |
-| 3 | Dataset and preprocessing; batch checks; visually inspected 50 GT overlays |
-| 4 | R18 forward check, small-sample overfit check, and one-epoch T4 benchmark |
-| 5 | MTCNN inspection, full clean-image cache, train/validation landmark quality assessment |
-| 6 | R18 seed-0 training for 10 epochs; validation F1/mAP; checkpoint selection |
-| 7 | Reproduced selected R18 validation results; fitted thresholds; inspected attribute errors |
-| 8 | R50 seed-0 training for 10 epochs, including checkpoint/optimizer recovery; archived results |
-| 9 | Geometry model implemented; shape, gradient, and parameter checks passed |
-| 10 | Predicted cache/Dataset implemented; sampled real integration checks passed |
+## Verified development milestones
 
-## 6. Successful Verification
+- Days 1-3: environment, data inventory, official Dataset, shared preprocessing.
+- Day 4: R18 eight-image overfit and one-epoch T4 benchmark passed.
+- Days 5-7: clean MTCNN cache, R18 10-epoch training, full validation
+  reproduction and per-attribute threshold fitting.
+- Day 8: R50 10 epochs with optimizer recovery; epoch 3 selected.
+- Days 9-10: geometry model and predicted Dataset/cache integration passed.
+- Day 11: failure masking, gradient/NaN checks, eight-image overfit, formal
+  M3 10-epoch training and full validation reproduction passed.
+- Day 12: R50 full validation reproduction, M3 branch update checks, and
+  aligned three-model clean-validation comparison passed.
+- Day 13: shared training protocol and four-sample strict reload audit passed.
+- Day 14: five corruptions, four levels each; exact clean preprocessing
+  equality and synthetic checks; four real validation previews generated.
+- Day 15: 100 image/GT conditions checked, rotation alignment passed;
+  two montages manually reviewed; comments preserved by AST equivalence.
+- Day 16: 84 inputs from four validation images, 82 valid detections and two
+  no_face, zero runtime errors; all M3 outputs finite [84,24]; failed geometry
+  features exactly zero; invalid coordinate changes affected logits by 0.0.
+- Day 17: historical clean thresholds reproduced/added and archived; rule
+  freeze execution follows installation of the corrected bundle.
 
-- Dataset batches: images `[B, 3, 224, 224]`, labels `[B, 24]`, GT points `[B, 10]`; binary labels and correct split sizes.
-- All 50 sampled GT overlays appeared correctly placed; no sampled points outside the canvas.
-- R18: 11,188,824 parameters; finite forward/loss. Eight-sample overfit passed at step 20, evaluation BCE 0.003705 and exact match 100% on those same samples.
-- Day 4 T4 benchmark: 162,770 images in 9.00 minutes, mean training BCE 0.213719, throughput 301.3 images/s, peak allocated GPU memory 1.64 GiB.
-- R50: 23,557,208 parameters. GPU batch-64 forward, backward, and Adam update passed; peak allocated memory 5.30 GiB.
-- Metric perfect-prediction check returned macro-F1 = mAP = 1.0.
-- Cache rerun skipped all 50 existing smoke records, confirming resume behavior.
-- R50 resumed from epoch 8 with Adam step count 20,352 and completed epochs 9–10.
+## Corruption benchmark and pipeline distinction
 
-## 7. Training, Checkpoints, and Evaluation
+After letterbox and before normalization: blur sigma 1/2/3/4; brightness
+.8/.6/.4/.2; rotation +/-5/10/15/20 degrees; lower-face occlusion side
+fractions .1/.2/.3/.4; JPEG qualities 75/50/25/10. One corruption at a time.
+Rotate GT with image; other corruptions preserve GT even under occlusion.
+Oracle is privileged input. Preserve VERSION=day14_draft_v1 because it is
+part of the deterministic rotation-sign hash; renaming changes directions.
 
-Shared baseline configuration: seed 0; 10 epochs; batch 64; Adam; learning rate 0.0001; weight decay 0; FP32; two workers; epoch seed rule `seed + epoch`; all backbone parameters trainable; BCEWithLogitsLoss; no augmentation. No AMP, scheduler, or positive-class weighting was used.
+Historical training/validation geometry: detect original aligned RGB images,
+then map points with shared preprocessing. New benchmark geometry: detect
+the final 224x224 RGB canvas for BOTH clean and corrupted conditions.
+Keep historical thresholds fixed and report this inference pipeline change.
+Generate a matching new clean baseline; do not use historical clean metrics
+as the baseline for new-pipeline corruption degradation.
 
-Select the checkpoint by highest validation mAP; retain the earliest epoch on ties. Baseline F1 uses probability threshold 0.5.
+Planned main scope: full official test, 19,962 IDs crossed with 21 conditions
+(one clean + 20 corrupted), 419,202 planned inputs. Factorized sample CSV
+and condition config fix all pairs and rotation signs. Not yet generated
+merely by manifest creation. All models/seeds share identical RGB inputs.
+Report F1/AP per attribute, macro F1/mAP, sample counts, detection coverage,
+failure statuses and successful-only NME/counts. Retain failures in attribute
+metrics. Exceptions are execution errors, not ordinary no_face detections.
 
-| Selected result | R18 | R50 |
-|---|---:|---:|
-| Epoch | 3 | 3 |
-| Validation BCE | 0.190717 | 0.190218 |
-| Macro-F1 at 0.5 | 0.727259 | 0.731168 |
-| mAP | 0.817737 | 0.818835 |
-| Epoch-10 training BCE | 0.0416 | 0.046406 |
-| Epoch-10 validation BCE | 0.3669 | 0.364135 |
-| Epoch-10 mAP | 0.7698 | 0.777675 |
+Earlier MTCNN cache includes test detections (19,950 ok / 12 no_face).
+Therefore test images HAVE been accessed for clean detection. Archived
+evidence reports no test attribute evaluation or test NME evaluation.
+Do not claim test images were never accessed. Do not tune using test scores.
 
-Both runs overfit after approximately epoch 3. R50's selected mAP gain is about 0.11 percentage points; one seed does not establish a reliable advantage.
+## Important files and current next steps
 
-R18 selected-checkpoint validation was independently reproduced on all 19,867 images, with zero reported differences in BCE, F1, and mAP. Per-attribute validation threshold tuning increased macro-F1 to 0.762372; mAP remained unchanged. This is an in-sample validation tuning score, not an independent generalization estimate. R50's independent full-validation reproduction and threshold tuning are not yet completed. Neither model has been evaluated on the test split.
+- configs/attributes.yaml; configs/thresholds/: label order and saved decisions.
+- datasets/preprocessing.py: historical shared preprocessing, unchanged.
+- datasets/benchmark_preprocessing.py, corruptions.py: reviewed transforms.
+- datasets/celeba_predicted.py, landmark_cache.py: historical predicted inputs.
+- detectors/mtcnn.py: frozen detector/selection wrapper.
+- evaluation/attributes.py: unchanged historical scalar-threshold metrics.
+- evaluation/benchmark_attributes.py: supplied-vector benchmark metrics only.
+- docs/training_protocol_v1.md: historical training rules.
+- docs/benchmark_protocol_v1.md: corrected formal benchmark rules.
+- scripts/day17_freeze_benchmark.py: bind metadata, thresholds and source hashes.
+- docs/results/: small provenance artifacts; experiment_log.md: chronology.
 
-Persistent Drive root: `/content/drive/MyDrive/FacialVisualProfile/`.
+Next: run corrected Day 17 freeze; verify audit and commit explicit files.
+Then independently train/select Oracle and fit its clean-validation thresholds;
+prepare final-canvas clean/corrupted detector caches and RGB provenance;
+evaluate selected models under frozen rules; additional seeds/controls follow.
+No full corrupted attribute evaluation, Oracle training or stable-gain claim
+has been completed in the currently verified record.
 
-- `runs/r18_seed0/`: checkpoints, config, source snapshot, history, selected-checkpoint summary, and curves; selected `epoch_03.pt`.
-- `runs/r18_seed0/day7/`: validation predictions, reproduction report, thresholds, and attribute CSV.
-- `runs/r50_seed0/`: `epoch_00.pt` through `epoch_10.pt`, config, source snapshot, history, `best.json`, metrics CSV, curves, and recovery check. Selected `epoch_03.pt`; training checkpoints approximately 270 MiB each.
-- `cache/mtcnn_clean.sqlite` and `cache/mtcnn_clean_quality.json`: persistent detector results.
-- `data/`: original image archive and three annotation files.
+## Handoff discipline
 
-## 8. Important Decisions and Rationale
+Mac: /Users/deweye/Desktop/Facial Visual Profile.
+GitHub: DeweyYip/facial-visual-profile. Drive checkpoints/source snapshots
+are authoritative; preserve mixed-source experiment provenance and hashes.
+Colab /content is temporary. Do not restart completed training.
+Preserve user comments and preexisting worktree changes, especially
+models/resnet50.py and older notebooks. Do not git add everything.
+Never commit CelebA images, caches or weights. Keep them under data/runs/Drive.
+Before proposing work, check logs/artifacts for prior completion. Distinguish
+unconfirmed from unfinished. Explain each block, location, inputs, outputs,
+expected runtime and whether training starts; proceed one logical step at a time.
+English code/docs/comments, Chinese user explanations. Validate evidence
+before replacing old state; do not infer execution from schedules or filenames.
 
-- Preserve official splits and attribute order to prevent leakage and output mismatches.
-- Keep identical preprocessing and training settings for baseline comparisons. R50 used the saved R18 shared-source snapshot because current GitHub dataset/metric files differed from that run.
-- Treat saved source bytes and SHA-256 hashes as authoritative experiment provenance. A Git commit alone does not describe the mixed-source R50 workspace.
-- Save Adam state and history with training checkpoints to support epoch-boundary recovery.
-- Cache MTCNN predictions on original aligned images in native pixel coordinates. Select the highest-confidence face without using GT landmarks.
-- Transform cached points together with geometric augmentation. For future corruption experiments, rerun the detector on corrupted images; clean predictions cannot represent detector behavior under corruption.
-- Never silently substitute GT coordinates when detection fails. A concrete failure-handling policy is still pending.
-- Keep official labels during error analysis. `Bags_Under_Eyes` means under-eye bags, not simply dark circles; apparent disagreements are not automatically annotation errors.
+<!-- day17-benchmark-freeze -->
+## Day 17 — Benchmark protocol v1 frozen
 
-## 9. Unfinished Work
-
-Final detection-failure policy; full-data preparation for M3;
-comparison with saved baseline source snapshots before training;
-small-sample overfit checks; M3 seed-0 training; additional seeds;
-corruption evaluation; final test evaluation; reusable trainer if needed.
-R50 independent validation reproduction and threshold tuning remain pending.
-No geometric augmentation has been implemented or checked.
-
-MTCNN cache: 202,599 records; 202,306 ok; 293 no_face.
-Train: 162,521 ok / 249 no_face.
-Validation: 19,835 ok / 32 no_face.
-Test: 19,950 ok / 12 no_face.
-
-Earlier quality assessment reported 3,754 multiple-face images.
-Train NME mean/median/95th percentile: 6.41% / 5.40% / 11.34%.
-Validation: 6.21% / 5.37% / 10.78%.
-NME uses GT eye distance and excludes failed detections.
-Test landmark quality and attribute performance remain unevaluated.
-
-## 10. Next Development Order
-
-Day 11 is in progress. Failure masking, source compatibility, and the
-eight-image overfit check passed. Formal M3 seed-0 training is pending.
-
-1. Continue Day 11: prepare the complete local image dataset and check
-   official split membership, cache coverage, and masked batches.
-2. Initialize a fresh ImageNet-pretrained M3; never reuse overfit weights.
-3. Train seed 0 using the established baseline protocol: 10 epochs,
-   batch 64, Adam, learning rate 0.0001, weight decay 0, FP32,
-   two workers, no augmentation, and all backbone parameters trainable.
-4. Record source hashes and environment; save optimizer state and history.
-   Select by highest validation mAP, keeping the earliest epoch on ties.
-5. Reproduce selected-checkpoint validation results and compare baselines.
-   Additional seeds, corruption checks, and final test evaluation follow.
-
-Training/inference Dataset mode: failure_policy="mask".
-Returns image, labels, points, filename, geometry_valid.
-Pass geometry_valid to the model. Failed detections are retained;
-their geometry features are zeroed after the MLP. No GT substitution.
-Default failure_policy="error" remains available for strict checks.
-
-Verified preparation source: a6722d6.
-Notebook: notebooks/day11_geometry_failure_and_overfit.ipynb.
-Local reports: docs/results/m3_preparation/day11/.
-Drive archive: runs/m3_preparation/day11/, including source/ and
-overfit_smoke.pt. The overfit checkpoint is only a smoke-check artifact.
-
-Colab workspace: /content/day11_geometry_workspace.
-Temporary raw data: /content/day11_geometry_data/raw.
-Only eight images were extracted there; full training requires full data.
-
-## 11. Most Important Files to Read First
-
-Read `docs/experiment_log.md`, `configs/attributes.yaml`, `datasets/preprocessing.py`, `datasets/celeba.py`, both baseline model files, and `evaluation/attributes.py`. For geometry integration, also read `detectors/mtcnn.py` and `scripts/cache_mtcnn.py`. For exact baseline provenance, consult each Drive run's `config.json`, `source/`, `history.json`, and `best.json`.
-
-## 12. New Chatbox Handoff Notes
-
-Mac repository: `/Users/deweye/Desktop/Facial Visual Profile`; GitHub: `DeweyYip/facial-visual-profile`. Latest confirmed code commit: `41d36c4`, synchronized with `origin/main`.
-
-The worktree is not clean: modified `models/resnet50.py` and untracked `notebooks/day8_resnet50_seed0(upper_half).ipynb` were deliberately excluded from the results commit. Inspect and preserve them; do not overwrite or delete automatically.
-
-Colab `/content` files are temporary. Restore from Drive source snapshots and data after runtime replacement; do not restart completed baseline training. The previous R50 workspace was `/content/r50_seed0_workspace`. The user has Colab Pro; last confirmed GPU was Tesla T4. Runtime availability must be checked afresh.
-
-Working style: explain each code block in Chinese before giving it, including Mac/Colab location, purpose, outputs, expected duration, and whether training starts. Code, comments, logs, and project documents use English. Proceed one logical step at a time and inspect results. Avoid bare shell comments in pasted Mac zsh commands; use Python comments inside heredocs. Use `python3` or the active virtual environment.
-
-Do not infer implementation from schedules, confuse cached detection with model training, claim checkpoint existence proves evaluation, or compare validation-tuned F1 against fixed-threshold F1 without labeling the difference.
-
-<!-- day16-pipeline-smoke -->
-## Day 16 status update
-
-Detector and M3 pipeline smoke passed on 84 inputs from four fixed
-validation images. MTCNN returned 82 valid results and two no_face results,
-with zero runtime errors. M3 epoch 2 produced finite [84, 24] logits;
-both failed samples were retained with zero geometry features.
-Invalid-coordinate invariance checks had maximum error 0.0.
-
-Evidence: docs/results/corruption_preparation/day16/ and
-notebooks/day16_detector_quality_and_pipeline_smoke.ipynb.
-
-Next: Day 17 benchmark protocol freeze, including condition manifest,
-metrics, failure handling, threshold policy, and test isolation.
-Attribute performance evaluation and Oracle training remain pending.
+- Official test manifest: 19,962 unique IDs; 21 conditions; 419,202 planned inputs.
+- CSV fixes test IDs/order and deterministic rotation signs; config fixes conditions.
+- Saved R18/R50/M3 thresholds are hash-bound; grid 0.05..0.95;
+  closest to 0.50 then smaller on ties. Existing R18 values reproduced.
+- Also report fixed-0.5 F1; preserve historical training records.
+- M3 benchmark clean baseline uses fresh final-canvas detection, matching
+  corruption. Historical thresholds remain fixed; pipeline change is explicit.
+- M3 retains failed detections with masked geometry; no GT substitution or deletion.
+- This freeze accessed partition metadata only. Earlier clean MTCNN test cache
+  exists; test attribute evaluation remains pending.
+- Evidence: docs/results/benchmark_freeze/day17/freeze_audit.json.
+- Rules: docs/benchmark_protocol_v1.md; configs/benchmark_v1.json.
+- Next: independent Oracle training/validation thresholds, final-canvas landmark
+  caches, then evaluation under the frozen protocol.

@@ -420,3 +420,21 @@ Next: oracle geometry and planned control/multiple-seed experiments.
 - This is a four-image validation pipeline smoke, not an attribute
   performance evaluation. Benchmark remains unfrozen; test not evaluated.
 - CelebA images and the input-image ZIP remain under runs/ outside Git.
+
+<!-- day17-benchmark-freeze -->
+## Day 17 — Benchmark protocol v1 frozen
+
+- Official test manifest: 19,962 unique IDs; 21 conditions; 419,202 planned inputs.
+- CSV fixes test IDs/order and deterministic rotation signs; config fixes conditions.
+- Saved R18/R50/M3 thresholds are hash-bound; grid 0.05..0.95;
+  closest to 0.50 then smaller on ties. Existing R18 values reproduced.
+- Also report fixed-0.5 F1; preserve historical training records.
+- M3 benchmark clean baseline uses fresh final-canvas detection, matching
+  corruption. Historical thresholds remain fixed; pipeline change is explicit.
+- M3 retains failed detections with masked geometry; no GT substitution or deletion.
+- This freeze accessed partition metadata only. Earlier clean MTCNN test cache
+  exists; test attribute evaluation remains pending.
+- Evidence: docs/results/benchmark_freeze/day17/freeze_audit.json.
+- Rules: docs/benchmark_protocol_v1.md; configs/benchmark_v1.json.
+- Next: independent Oracle training/validation thresholds, final-canvas landmark
+  caches, then evaluation under the frozen protocol.

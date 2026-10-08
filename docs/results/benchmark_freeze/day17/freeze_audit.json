@@ -1,0 +1,62 @@
+{
+  "protocol_id": "benchmark_v1",
+  "parent_git_commit": "09b41c51d43ddd63d76db10cdfea8bd604029030",
+  "partition_sha256": "fc955bcb3ef8fbdf7d5640d9a8693a8431b5f2ee291a5c1449a1549e7e073fe7",
+  "official_split_counts": {
+    "train": 162770,
+    "validation": 19867,
+    "test": 19962
+  },
+  "test_sample_count": 19962,
+  "condition_count": 21,
+  "planned_input_count": 419202,
+  "rotation_sign_counts": {
+    "positive": 9991,
+    "negative": 9971
+  },
+  "source_and_artifact_sha256": {
+    "detectors/mtcnn.py": "7297a11539212d622c368972029ba8738eea77ae54518bc4189b686b1c0d4119",
+    "datasets/preprocessing.py": "895e3e93641878068072043ff1dfd16a5fb32adcd270617a2890694962fd966f",
+    "datasets/benchmark_preprocessing.py": "d1bc4ef99fde74b8b4525948a8c85d40314399a4187cf7ea4512988a73f2920a",
+    "datasets/corruptions.py": "84ce9404f2843d4ed6c29bc4b3bf2ad0cd2cb4cacc861a7e6be94554a361a520",
+    "configs/corruptions_draft_v1.json": "4ac13c47696d39bb78f982e5e01ea7ccd462415b7764cb6df8863984d9541183",
+    "evaluation/attributes.py": "d45ebd6e28b94dad0af46547f8da04130f0f193289f4684b1c8540e46f1026bd",
+    "evaluation/benchmark_attributes.py": "92e9ae3184d6a77925ffda8e004b129a5e21dc45ce5669f3e4fe7f99f2f6deba",
+    "configs/attributes.yaml": "33acae803c307686d45b6fd2c5d64749074de8e81481c533f20fede416d0528b",
+    "configs/benchmark_v1.json": "681e96151ed193d578a450fb314e3f08bc076945c3d124ab56866a95ff23378e",
+    "scripts/day17_freeze_benchmark.py": "077f7033102da17b38a6bb077393d3a99390ae446016c534a9232339a12776c9",
+    "scripts/day17_metrics_smoke.py": "5fb07998463f91c0d557d9e12f9dc5887739cb841cef1a5d7d48c45cd89d840e",
+    "docs/benchmark_protocol_v1.md": "a193899866e59c1e8a15de16655473fb9370d03c63a58d241cfba5678b73849e",
+    "docs/training_protocol_v1.md": "c86c9f07968550797afd16fd665559e24d009535aff1a6e4dabaeb4a8a763eec",
+    "docs/results/benchmark_freeze/day17/test_samples.csv": "b24fcfcae297e81dad15cd30fb40e7156c0c7c2672695ebc8f1e6513f1363e22",
+    "docs/results/corruption_preparation/day16/detector_quality_report.json": "97c76c9cda6f85c61178b90862e82529a1132ecdef0f6f66cfc0beb97d64778e",
+    "docs/results/corruption_preparation/day16/m3_pipeline_smoke_report.json": "4a5f7d2adeb64c24aeed4a101585a06f7c44218156fb62fba7886267f712ba2e",
+    "configs/thresholds/r18_seed0.json": "c58e792c37ab048db8a9cb446ede5d52a3b639a61a4421f520ccfbb9b59307f3",
+    "configs/thresholds/r50_seed0.json": "6d1a2fd266bd67baae7a22f954952d1f1f1c6d63a0679ee36f1fe461407f8b8e",
+    "configs/thresholds/m3_seed0.json": "cd5efb9f4233f684988253a004f4c3d606dc0119070c29378361a926086bc5eb",
+    "docs/results/benchmark_preparation/day17/r18_threshold_reproduction.json": "7720332edf14c9fe600854a74518b85de74ecbe2d5bda2e9c1622e0842a5c122",
+    "docs/results/benchmark_preparation/day17/r50_seed0.json": "6d1a2fd266bd67baae7a22f954952d1f1f1c6d63a0679ee36f1fe461407f8b8e",
+    "docs/results/benchmark_preparation/day17/m3_seed0.json": "cd5efb9f4233f684988253a004f4c3d606dc0119070c29378361a926086bc5eb"
+  },
+  "day16_sources_unchanged": true,
+  "historical_metrics_unchanged": true,
+  "synthetic_metrics_smoke_stdout": "Independent F1/AP and extreme-logit sigmoid: PASS\nNo threshold fitting performed\nHistorical threshold-0.5 metric equivalence: PASS\nDay 17 synthetic metrics smoke: PASS\n",
+  "test_access_this_script": "official partition metadata only",
+  "test_images_opened": false,
+  "test_labels_read": false,
+  "detector_run": false,
+  "model_inference_run": false,
+  "test_evaluated": false,
+  "threshold_rule_frozen": true,
+  "model_specific_threshold_values_frozen": true,
+  "thresholds_frozen_for": [
+    "r18_seed0",
+    "r50_seed0",
+    "m3_seed0"
+  ],
+  "oracle_thresholds_frozen": false,
+  "historical_test_access": "clean original-image MTCNN test cache exists; no test attribute evaluation reported",
+  "oracle_trained": false,
+  "actual_test_inputs_generated": false,
+  "passed": true
+}
