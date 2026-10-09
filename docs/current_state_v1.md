@@ -5,7 +5,7 @@
 Day 17 benchmark protocol/manifest freeze passed; archived audit verified.
 Day 18 Oracle seed-0 training, selected-checkpoint validation, clean-validation
 threshold fitting and local archive verification passed.
-Oracle benchmark binding and final-canvas detector caches remain pending.
+Day 19 Oracle benchmark binding passed; final-canvas detector caches and benchmark evaluation remain pending.
 Git commit/push status must be checked separately from execution status.
 
 ## Goal and models
@@ -156,13 +156,7 @@ Do not claim test images were never accessed. Do not tune using test scores.
 - scripts/day17_freeze_benchmark.py: bind metadata, thresholds and source hashes.
 - docs/results/: small provenance artifacts; experiment_log.md: chronology.
 
-Next: review current Day 17 script changes and archive explicit Day 18 files.
-Bind the selected Oracle checkpoint and thresholds in a separate, traceable
-benchmark update while preserving the original Day 17 freeze evidence.
-Prepare final-canvas clean/corrupted detector caches and RGB provenance;
-then evaluate selected models under frozen rules. Additional seeds/controls follow.
-Full corrupted attribute evaluation remains pending. Clean seed-0 results
-do not establish stable geometry gains. Do not repeat completed Oracle training.
+Next: prepare and verify final-canvas clean/corrupted inputs and M3 detector results, then evaluate the selected models under the frozen rules. Additional seeds/controls follow. Full corrupted attribute evaluation remains pending. Clean seed-0 results do not establish stable geometry gains. Do not repeat completed Oracle training.
 
 ## Handoff discipline
 
@@ -216,3 +210,19 @@ before replacing old state; do not infer execution from schedules or filenames.
 - Notebook: notebooks/day18_oracle_seed0.ipynb.
 - Checkpoints and prediction NPZ remain in Drive; no test evaluation performed.
 - Original Day 17 benchmark freeze preserved; Oracle binding remains pending.
+
+<!-- day19-oracle-binding -->
+## Day 19 — Oracle added to benchmark binding
+
+- Added an Oracle extension referencing the Day 17 benchmark config, freeze
+  audit, and test manifest by SHA256; the original Day 17 freeze files remain
+  unchanged.
+- Bound Oracle seed 0 epoch 3 and its clean-validation threshold vector by
+  checkpoint and threshold-file SHA256.
+- Oracle geometry uses aligned CelebA GT for every sample; it does not use
+  MTCNN. Rotation transforms GT with the image according to the validated rule.
+- Verified all 22 committed Day 17 freeze inputs against their recorded hashes.
+- No test images were evaluated and no model inference was run.
+- Evidence: configs/oracle_benchmark_binding_v1.json and
+  docs/results/benchmark_freeze/day19/oracle_binding_audit.json.
+- Remaining: final-canvas detector/input preparation and benchmark evaluation.

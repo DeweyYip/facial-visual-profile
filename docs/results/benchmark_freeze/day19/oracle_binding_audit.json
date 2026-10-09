@@ -1,0 +1,12 @@
+{
+  "extension_id": "day19_oracle_seed0_binding_v1",
+  "passed": true,
+  "base_config_sha256": "681e96151ed193d578a450fb314e3f08bc076945c3d124ab56866a95ff23378e",
+  "base_freeze_audit_sha256": "2c7c78e012dc85bbf8b554eb43ff4ee9eea6c5e6f28d991d20f5ca5eca195a0a",
+  "test_manifest_sha256": "b24fcfcae297e81dad15cd30fb40e7156c0c7c2672695ebc8f1e6513f1363e22",
+  "oracle_checkpoint_sha256": "7552cb135a10d0ae72ee6faab7a5feb31c86ff9933165f96006f699656a06ab8",
+  "oracle_threshold_file_sha256": "71d7caed02170ac5a02ac0faf846748c465107ea2decb3faabdfe16922647ad3",
+  "test_evaluated": false,
+  "day17_freeze_modified": false,
+  "verified_committed_freeze_files": 22
+}

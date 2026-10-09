@@ -458,3 +458,19 @@ Next: oracle geometry and planned control/multiple-seed experiments.
 - Notebook: notebooks/day18_oracle_seed0.ipynb.
 - Checkpoints and prediction NPZ remain in Drive; no test evaluation performed.
 - Original Day 17 benchmark freeze preserved; Oracle binding remains pending.
+
+<!-- day19-oracle-binding -->
+## Day 19 — Oracle added to benchmark binding
+
+- Added an Oracle extension referencing the Day 17 benchmark config, freeze
+  audit, and test manifest by SHA256; the original Day 17 freeze files remain
+  unchanged.
+- Bound Oracle seed 0 epoch 3 and its clean-validation threshold vector by
+  checkpoint and threshold-file SHA256.
+- Oracle geometry uses aligned CelebA GT for every sample; it does not use
+  MTCNN. Rotation transforms GT with the image according to the validated rule.
+- Verified all 22 committed Day 17 freeze inputs against their recorded hashes.
+- No test images were evaluated and no model inference was run.
+- Evidence: configs/oracle_benchmark_binding_v1.json and
+  docs/results/benchmark_freeze/day19/oracle_binding_audit.json.
+- Remaining: final-canvas detector/input preparation and benchmark evaluation.
