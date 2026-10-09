@@ -226,3 +226,25 @@ before replacing old state; do not infer execution from schedules or filenames.
 - Evidence: configs/oracle_benchmark_binding_v1.json and
   docs/results/benchmark_freeze/day19/oracle_binding_audit.json.
 - Remaining: final-canvas detector/input preparation and benchmark evaluation.
+
+## Day 19 — Formal clean/blur/brightness test evaluation completed
+
+- R18 epoch 3, R50 epoch 3 and M3 epoch 2 evaluated with frozen checkpoints
+  and historical clean-validation thresholds; no test-time threshold fitting.
+- All 19,962 official test samples evaluated under clean, blur s1–s4 and
+  brightness s1–s4: 179,658 image-condition inputs and 538,974 model evaluations.
+- Original execution environment, detector weights and test JPEG hashes matched
+  after Colab runtime loss; verified saved shards reused successfully.
+- 702 prediction shards saved on Drive; zero runtime errors and invalid outputs.
+- Detector no_face counts: clean 21; blur 25/32/73/190;
+  brightness 22/35/77/418. All failed samples retained with M3 geometry masking.
+- Frozen-threshold macro F1 (R18/R50/M3):
+  clean 0.757701/0.756015/0.757834;
+  blur s4 0.159067/0.176152/0.122907;
+  brightness s4 0.577975/0.648401/0.600987.
+- Reports: docs/results/benchmark/day19/.
+- Scripts: scripts/day19_evaluate_benchmark.py and scripts/day19_resume.py.
+- Notebook: notebooks/day19_clean_blur_brightness_benchmark.ipynb.
+- Prediction shards remain on Drive under runs/benchmark/day19/shards/.
+- Day 19 scope complete. Next: Day 20 rotation/occlusion/JPEG.
+  Oracle formal evaluation remains for Day 21.
