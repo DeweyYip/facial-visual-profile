@@ -521,3 +521,25 @@ Next: oracle geometry and planned control/multiple-seed experiments.
 - Prediction shards remain on Drive under runs/benchmark/day20/shards/.
 - R18/R50/M3 evaluation across all 21 conditions is complete.
   Oracle formal evaluation and comparative analysis remain for Day 21.
+
+## Day 21 — Oracle evaluation and four-model comparison completed
+
+- Oracle epoch_03.pt evaluated on all 19,962 official test images
+  across the 21 frozen conditions: 419,202 model-sample evaluations.
+- Historical clean-validation thresholds reused; no threshold refitting.
+- F1(frozen), F1@0.5 and mAP preserved as separate metrics.
+- All 1,638 Oracle/reference shard pairs verified, including image hashes,
+  targets, transformed GT and detector NME reconstruction.
+- Maximum paired GT difference and NME reconstruction difference: zero.
+- Four-model overall and per-attribute comparisons archived.
+- Exploratory NME subgroup comparisons retain both F1 rules and use
+  identical samples across all four models within each group.
+- M3 leads rotation s2–s4 in both F1 rules and mAP for this seed.
+- Oracle is an independently trained GT-reference model, not a guaranteed
+  performance upper bound. Subgroup associations do not establish causality;
+  small groups and differences in attribute prevalence require care.
+- Evidence: docs/results/benchmark/day21/.
+- Runner: scripts/day21_evaluate_oracle.py.
+- Notebook: notebooks/day21_oracle_benchmark_and_comparison.ipynb.
+- Prediction shards and checkpoints remain on Drive.
+- Four-model evaluation across all 21 conditions is complete.

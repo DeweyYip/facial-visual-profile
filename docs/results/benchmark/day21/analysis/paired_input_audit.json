@@ -1,0 +1,396 @@
+{
+  "oracle_report_sha256": "cdc8279f843338892a1732ecdd4f76c82b80cbd47991a5e162f3d345734270c0",
+  "base_report_sha256": {
+    "day19": "79e36c3725d10c2319206023f2b859854108fc7f1fc176e6998f0d96331b3e1b",
+    "day20": "33dbef0b2585be9a83fbd281121042c199a45efd4ef514bdbc5fae9e5a6c696a"
+  },
+  "oracle_shards_verified": 1638,
+  "reference_shards_verified": 1638,
+  "sample_count_per_condition": 19962,
+  "condition_count": 21,
+  "maximum_gt_difference_px": 0.0,
+  "maximum_nme_reconstruction_difference": 0.0,
+  "conditions": [
+    {
+      "condition": {
+        "condition": "clean",
+        "implementation_kind": "blur",
+        "level": null,
+        "severity": 0
+      },
+      "samples": 19962,
+      "paired_shards_verified": 78,
+      "detector_status_counts": {
+        "ok": 19941,
+        "no_face": 21,
+        "invalid_output": 0
+      },
+      "nme_count": 19941,
+      "mean_nme": 0.06405152788980104,
+      "median_nme": 0.053828222132916444
+    },
+    {
+      "condition": {
+        "condition": "blur",
+        "implementation_kind": "blur",
+        "level": 1.0,
+        "severity": 1
+      },
+      "samples": 19962,
+      "paired_shards_verified": 78,
+      "detector_status_counts": {
+        "ok": 19937,
+        "no_face": 25,
+        "invalid_output": 0
+      },
+      "nme_count": 19937,
+      "mean_nme": 0.06527971402539212,
+      "median_nme": 0.05522985310951765
+    },
+    {
+      "condition": {
+        "condition": "blur",
+        "implementation_kind": "blur",
+        "level": 2.0,
+        "severity": 2
+      },
+      "samples": 19962,
+      "paired_shards_verified": 78,
+      "detector_status_counts": {
+        "ok": 19930,
+        "no_face": 32,
+        "invalid_output": 0
+      },
+      "nme_count": 19930,
+      "mean_nme": 0.07193366854600794,
+      "median_nme": 0.06131427166794767
+    },
+    {
+      "condition": {
+        "condition": "blur",
+        "implementation_kind": "blur",
+        "level": 3.0,
+        "severity": 3
+      },
+      "samples": 19962,
+      "paired_shards_verified": 78,
+      "detector_status_counts": {
+        "ok": 19889,
+        "no_face": 73,
+        "invalid_output": 0
+      },
+      "nme_count": 19889,
+      "mean_nme": 0.08531782549100092,
+      "median_nme": 0.07201993067615935
+    },
+    {
+      "condition": {
+        "condition": "blur",
+        "implementation_kind": "blur",
+        "level": 4.0,
+        "severity": 4
+      },
+      "samples": 19962,
+      "paired_shards_verified": 78,
+      "detector_status_counts": {
+        "ok": 19772,
+        "no_face": 190,
+        "invalid_output": 0
+      },
+      "nme_count": 19772,
+      "mean_nme": 0.10580976106847918,
+      "median_nme": 0.0875261830195769
+    },
+    {
+      "condition": {
+        "condition": "brightness",
+        "implementation_kind": "brightness",
+        "level": 0.8,
+        "severity": 1
+      },
+      "samples": 19962,
+      "paired_shards_verified": 78,
+      "detector_status_counts": {
+        "ok": 19940,
+        "no_face": 22,
+        "invalid_output": 0
+      },
+      "nme_count": 19940,
+      "mean_nme": 0.06450659591754987,
+      "median_nme": 0.0543240615568873
+    },
+    {
+      "condition": {
+        "condition": "brightness",
+        "implementation_kind": "brightness",
+        "level": 0.6,
+        "severity": 2
+      },
+      "samples": 19962,
+      "paired_shards_verified": 78,
+      "detector_status_counts": {
+        "ok": 19927,
+        "no_face": 35,
+        "invalid_output": 0
+      },
+      "nme_count": 19927,
+      "mean_nme": 0.06673544731783497,
+      "median_nme": 0.05593610399477648
+    },
+    {
+      "condition": {
+        "condition": "brightness",
+        "implementation_kind": "brightness",
+        "level": 0.4,
+        "severity": 3
+      },
+      "samples": 19962,
+      "paired_shards_verified": 78,
+      "detector_status_counts": {
+        "ok": 19885,
+        "no_face": 77,
+        "invalid_output": 0
+      },
+      "nme_count": 19885,
+      "mean_nme": 0.07187598321743256,
+      "median_nme": 0.061267082274119894
+    },
+    {
+      "condition": {
+        "condition": "brightness",
+        "implementation_kind": "brightness",
+        "level": 0.2,
+        "severity": 4
+      },
+      "samples": 19962,
+      "paired_shards_verified": 78,
+      "detector_status_counts": {
+        "ok": 19544,
+        "no_face": 418,
+        "invalid_output": 0
+      },
+      "nme_count": 19544,
+      "mean_nme": 0.09550823976870902,
+      "median_nme": 0.08208385054371539
+    },
+    {
+      "condition": {
+        "condition": "rotation",
+        "implementation_kind": "rotation",
+        "level": 5.0,
+        "severity": 1
+      },
+      "samples": 19962,
+      "paired_shards_verified": 78,
+      "detector_status_counts": {
+        "ok": 19940,
+        "no_face": 22,
+        "invalid_output": 0
+      },
+      "nme_count": 19940,
+      "mean_nme": 0.06453041366107728,
+      "median_nme": 0.05387793785318205
+    },
+    {
+      "condition": {
+        "condition": "rotation",
+        "implementation_kind": "rotation",
+        "level": 10.0,
+        "severity": 2
+      },
+      "samples": 19962,
+      "paired_shards_verified": 78,
+      "detector_status_counts": {
+        "ok": 19936,
+        "no_face": 26,
+        "invalid_output": 0
+      },
+      "nme_count": 19936,
+      "mean_nme": 0.06585346332722025,
+      "median_nme": 0.054708039230988686
+    },
+    {
+      "condition": {
+        "condition": "rotation",
+        "implementation_kind": "rotation",
+        "level": 15.0,
+        "severity": 3
+      },
+      "samples": 19962,
+      "paired_shards_verified": 78,
+      "detector_status_counts": {
+        "ok": 19926,
+        "no_face": 36,
+        "invalid_output": 0
+      },
+      "nme_count": 19926,
+      "mean_nme": 0.06885207560850407,
+      "median_nme": 0.05621582295669858
+    },
+    {
+      "condition": {
+        "condition": "rotation",
+        "implementation_kind": "rotation",
+        "level": 20.0,
+        "severity": 4
+      },
+      "samples": 19962,
+      "paired_shards_verified": 78,
+      "detector_status_counts": {
+        "ok": 19913,
+        "no_face": 49,
+        "invalid_output": 0
+      },
+      "nme_count": 19913,
+      "mean_nme": 0.07444552453941333,
+      "median_nme": 0.05996799099900774
+    },
+    {
+      "condition": {
+        "condition": "occlusion",
+        "implementation_kind": "occlusion",
+        "level": 0.1,
+        "severity": 1
+      },
+      "samples": 19962,
+      "paired_shards_verified": 78,
+      "detector_status_counts": {
+        "ok": 19804,
+        "no_face": 158,
+        "invalid_output": 0
+      },
+      "nme_count": 19804,
+      "mean_nme": 0.13854889307755433,
+      "median_nme": 0.11422369361475342
+    },
+    {
+      "condition": {
+        "condition": "occlusion",
+        "implementation_kind": "occlusion",
+        "level": 0.2,
+        "severity": 2
+      },
+      "samples": 19962,
+      "paired_shards_verified": 78,
+      "detector_status_counts": {
+        "ok": 18948,
+        "no_face": 1014,
+        "invalid_output": 0
+      },
+      "nme_count": 18948,
+      "mean_nme": 0.16358055427958293,
+      "median_nme": 0.14379023410409925
+    },
+    {
+      "condition": {
+        "condition": "occlusion",
+        "implementation_kind": "occlusion",
+        "level": 0.3,
+        "severity": 3
+      },
+      "samples": 19962,
+      "paired_shards_verified": 78,
+      "detector_status_counts": {
+        "ok": 17944,
+        "no_face": 2018,
+        "invalid_output": 0
+      },
+      "nme_count": 17944,
+      "mean_nme": 0.16008329057179885,
+      "median_nme": 0.12932801499753274
+    },
+    {
+      "condition": {
+        "condition": "occlusion",
+        "implementation_kind": "occlusion",
+        "level": 0.4,
+        "severity": 4
+      },
+      "samples": 19962,
+      "paired_shards_verified": 78,
+      "detector_status_counts": {
+        "ok": 15808,
+        "no_face": 4154,
+        "invalid_output": 0
+      },
+      "nme_count": 15808,
+      "mean_nme": 0.23487563263209607,
+      "median_nme": 0.18459442434802864
+    },
+    {
+      "condition": {
+        "condition": "jpeg",
+        "implementation_kind": "jpeg",
+        "level": 75,
+        "severity": 1
+      },
+      "samples": 19962,
+      "paired_shards_verified": 78,
+      "detector_status_counts": {
+        "ok": 19943,
+        "no_face": 19,
+        "invalid_output": 0
+      },
+      "nme_count": 19943,
+      "mean_nme": 0.06383525310398619,
+      "median_nme": 0.054070859085034485
+    },
+    {
+      "condition": {
+        "condition": "jpeg",
+        "implementation_kind": "jpeg",
+        "level": 50,
+        "severity": 2
+      },
+      "samples": 19962,
+      "paired_shards_verified": 78,
+      "detector_status_counts": {
+        "ok": 19941,
+        "no_face": 21,
+        "invalid_output": 0
+      },
+      "nme_count": 19941,
+      "mean_nme": 0.06372295166869617,
+      "median_nme": 0.05412242598107906
+    },
+    {
+      "condition": {
+        "condition": "jpeg",
+        "implementation_kind": "jpeg",
+        "level": 25,
+        "severity": 3
+      },
+      "samples": 19962,
+      "paired_shards_verified": 78,
+      "detector_status_counts": {
+        "ok": 19939,
+        "no_face": 23,
+        "invalid_output": 0
+      },
+      "nme_count": 19939,
+      "mean_nme": 0.0642180647884609,
+      "median_nme": 0.05426955689742493
+    },
+    {
+      "condition": {
+        "condition": "jpeg",
+        "implementation_kind": "jpeg",
+        "level": 10,
+        "severity": 4
+      },
+      "samples": 19962,
+      "paired_shards_verified": 78,
+      "detector_status_counts": {
+        "ok": 19932,
+        "no_face": 30,
+        "invalid_output": 0
+      },
+      "nme_count": 19932,
+      "mean_nme": 0.06698901981892957,
+      "median_nme": 0.057330089894423494
+    }
+  ],
+  "passed": true,
+  "new_model_inference_performed": false,
+  "threshold_fitting_performed": false
+}

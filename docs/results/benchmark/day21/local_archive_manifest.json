@@ -1,0 +1,14 @@
+{
+  "archive_sha256": "726b2ef444877cc2ed4dba51a80b9c5e535de17cc18e10c8ca11b146e0b7985c",
+  "notebook_sha256": "5600febb83a946a31ad29e84a502ce1cc785791f91844566847ecf549a9fe80b",
+  "input_report_sha256": {
+    "day21": "cdc8279f843338892a1732ecdd4f76c82b80cbd47991a5e162f3d345734270c0",
+    "day19": "79e36c3725d10c2319206023f2b859854108fc7f1fc176e6998f0d96331b3e1b",
+    "day20": "33dbef0b2585be9a83fbd281121042c199a45efd4ef514bdbc5fae9e5a6c696a"
+  },
+  "oracle_prediction_shards_verified": 1638,
+  "reference_prediction_shards_verified": 1638,
+  "comparison_analysis_complete": true,
+  "threshold_fitting_performed": false,
+  "passed": true
+}

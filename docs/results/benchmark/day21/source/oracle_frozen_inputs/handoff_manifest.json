@@ -1,0 +1,8 @@
+{
+  "source_commit": "9241b9bb8301bcbf08917ceb9d882e668b63d4e5",
+  "files": {
+    "configs/oracle_benchmark_binding_v1.json": "ec0e755f8804575220eef6aeec0f6cec23e813af0f4eeeb10c4d29940d00af3c",
+    "docs/results/benchmark_freeze/day19/oracle_binding_audit.json": "db61a3b392b4ec624e0889b35605e2b84c8ac82f42426e3f02414183b471fc23",
+    "configs/thresholds/oracle_seed0.json": "71d7caed02170ac5a02ac0faf846748c465107ea2decb3faabdfe16922647ad3"
+  }
+}
