@@ -1,0 +1,23 @@
+{
+  "downloaded_archive_sha256": "03e13995d72caf77a1576796564a9687139419c9b300ecfe3ff81472486ce313",
+  "repo_file_sha256": {
+    "docs/results/benchmark/day20/archive_manifest.json": "50aacc45935613e47ce000c8642f3ffcfdbb7eff0edff7ca509328cf1069bc55",
+    "docs/results/benchmark/day20/condition_reports/jpeg_s1.json": "c6666a6663a50316424e5c80e4954597ebd157f9f2c254051e2d260fe7d4a3cc",
+    "docs/results/benchmark/day20/condition_reports/jpeg_s2.json": "04dd624e509ae2f3f6f9175dab8ef2e79bcac4e9c16e80fb0396e46a64f3f230",
+    "docs/results/benchmark/day20/condition_reports/jpeg_s3.json": "40458d0f41a40317f94065af64a3fc87eb55943ba688b5ca1aff1a818b7b95d8",
+    "docs/results/benchmark/day20/condition_reports/jpeg_s4.json": "ff0be287bfcdcc9bb6587f19cdfc30eb8c294cb6ef3a47c88a71d4ffd83335ed",
+    "docs/results/benchmark/day20/condition_reports/occlusion_s1.json": "163d33618640c18869362f91a559db520a088a6f50b72aa5dbe1295c430cb901",
+    "docs/results/benchmark/day20/condition_reports/occlusion_s2.json": "b07799e1548c5d6618c0765ec3d9e6e6d2fecacd6e3d59bdfcabc9d8e3f19262",
+    "docs/results/benchmark/day20/condition_reports/occlusion_s3.json": "22c2a065b2c5daf2d52737346563f4c912bf52c1eeca8e544e5a9c88a5e97df5",
+    "docs/results/benchmark/day20/condition_reports/occlusion_s4.json": "6d68c221d978f6884033d69366d3c2045153bb9a50c7955343939bb7f2d425b0",
+    "docs/results/benchmark/day20/condition_reports/rotation_s1.json": "1060ace2d7be5351fcfb360ee50ef7f1c844ed0604cbc12b18158e9a9d13ae0e",
+    "docs/results/benchmark/day20/condition_reports/rotation_s2.json": "bb429a6e171c8b66ece04384120eeda20ee5d84dc547082d79123111a1c3273b",
+    "docs/results/benchmark/day20/condition_reports/rotation_s3.json": "06ef9d970586c76ef017a0fbf512efcbd8b1a8565cfac41d5981589061bfb686",
+    "docs/results/benchmark/day20/condition_reports/rotation_s4.json": "ed3d4342f5f2db945d8262221804a4d0d7d9eb896cc62fe1121b771800e7146d",
+    "docs/results/benchmark/day20/day20_benchmark_report.json": "33dbef0b2585be9a83fbd281121042c199a45efd4ef514bdbc5fae9e5a6c696a",
+    "docs/results/benchmark/day20/execution_binding.json": "6c2f8d7724715baa354b499697d3e948a7dc1fefbc2f214aa2ce40faaeea8cca",
+    "docs/results/benchmark/day20/test_jpeg_sha256.json": "3948ce5877a5d7a9b83513eeb562f53d6c86aa98e0975b46156e2f8559c120a4",
+    "notebooks/day20_rotation_occlusion_jpeg_benchmark.ipynb": "635817404249ad5631112a7ad23eddc414d766060111f3de9838b1a1aeb79ab9",
+    "scripts/day20_evaluate_benchmark.py": "26b1c71de8e10ac9f137f1bf7db5b236e98ff4f1909a50827385bbc97ddd95ef"
+  }
+}

@@ -248,3 +248,28 @@ before replacing old state; do not infer execution from schedules or filenames.
 - Prediction shards remain on Drive under runs/benchmark/day19/shards/.
 - Day 19 scope complete. Next: Day 20 rotation/occlusion/JPEG.
   Oracle formal evaluation remains for Day 21.
+
+## Day 20 — Formal rotation/occlusion/JPEG test evaluation completed
+
+- R18 epoch 3, R50 epoch 3 and M3 epoch 2 evaluated using the frozen
+  checkpoints and historical clean-validation thresholds; no threshold fitting.
+- All 19,962 official test samples evaluated under rotation, occlusion
+  and JPEG s1–s4: 12 conditions, 239,544 image-condition inputs,
+  and 718,632 model evaluations.
+- Shared environment, models, detector weights, data and benchmark rules
+  verified against Day 19. Clean results reused as the degradation reference.
+- All 936 prediction shards rechecked against the final report SHA256 records.
+- Zero runtime errors and invalid detector outputs. Failed detections retained
+  with M3 geometry masking; no ground-truth fallback.
+- Detector no_face counts: rotation 22/26/36/49;
+  occlusion 158/1014/2018/4154; JPEG 19/21/23/30.
+- Frozen-threshold macro F1 (R18/R50/M3):
+  rotation s4 0.641866/0.641634/0.665834;
+  occlusion s4 0.441348/0.422453/0.409276;
+  JPEG s4 0.613221/0.612502/0.591405.
+- Reports: docs/results/benchmark/day20/.
+- Runner: scripts/day20_evaluate_benchmark.py.
+- Notebook: notebooks/day20_rotation_occlusion_jpeg_benchmark.ipynb.
+- Prediction shards remain on Drive under runs/benchmark/day20/shards/.
+- R18/R50/M3 evaluation across all 21 conditions is complete.
+  Oracle formal evaluation and comparative analysis remain for Day 21.

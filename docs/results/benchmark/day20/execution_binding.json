@@ -1,0 +1,158 @@
+{
+  "annotation_sha256": {
+    "list_attr_celeba.txt": "f0e5da289d5ccf75ffe8811132694922b60f2af59256ed362afa03fefba324d0",
+    "list_eval_partition.txt": "fc955bcb3ef8fbdf7d5640d9a8693a8431b5f2ee291a5c1449a1549e7e073fe7",
+    "list_landmarks_align_celeba.txt": "6c02a87569907f6db2ba99019085697596730e8129f67a3d61659f198c48d43b"
+  },
+  "attribute_names": [
+    "Smiling",
+    "Mouth_Slightly_Open",
+    "Eyeglasses",
+    "Bangs",
+    "Wearing_Hat",
+    "Mustache",
+    "No_Beard",
+    "Black_Hair",
+    "Bushy_Eyebrows",
+    "Arched_Eyebrows",
+    "High_Cheekbones",
+    "Bags_Under_Eyes",
+    "Big_Lips",
+    "Big_Nose",
+    "Double_Chin",
+    "Oval_Face",
+    "Receding_Hairline",
+    "Blond_Hair",
+    "Brown_Hair",
+    "Gray_Hair",
+    "Bald",
+    "Straight_Hair",
+    "Wavy_Hair",
+    "Sideburns"
+  ],
+  "batch_size": 16,
+  "conditions": [
+    {
+      "condition": "rotation",
+      "implementation_kind": "rotation",
+      "level": 5.0,
+      "severity": 1
+    },
+    {
+      "condition": "rotation",
+      "implementation_kind": "rotation",
+      "level": 10.0,
+      "severity": 2
+    },
+    {
+      "condition": "rotation",
+      "implementation_kind": "rotation",
+      "level": 15.0,
+      "severity": 3
+    },
+    {
+      "condition": "rotation",
+      "implementation_kind": "rotation",
+      "level": 20.0,
+      "severity": 4
+    },
+    {
+      "condition": "occlusion",
+      "implementation_kind": "occlusion",
+      "level": 0.1,
+      "severity": 1
+    },
+    {
+      "condition": "occlusion",
+      "implementation_kind": "occlusion",
+      "level": 0.2,
+      "severity": 2
+    },
+    {
+      "condition": "occlusion",
+      "implementation_kind": "occlusion",
+      "level": 0.3,
+      "severity": 3
+    },
+    {
+      "condition": "occlusion",
+      "implementation_kind": "occlusion",
+      "level": 0.4,
+      "severity": 4
+    },
+    {
+      "condition": "jpeg",
+      "implementation_kind": "jpeg",
+      "level": 75,
+      "severity": 1
+    },
+    {
+      "condition": "jpeg",
+      "implementation_kind": "jpeg",
+      "level": 50,
+      "severity": 2
+    },
+    {
+      "condition": "jpeg",
+      "implementation_kind": "jpeg",
+      "level": 25,
+      "severity": 3
+    },
+    {
+      "condition": "jpeg",
+      "implementation_kind": "jpeg",
+      "level": 10,
+      "severity": 4
+    }
+  ],
+  "config_sha256": "681e96151ed193d578a450fb314e3f08bc076945c3d124ab56866a95ff23378e",
+  "cuda_runtime": "13.0",
+  "cudnn_benchmark": false,
+  "cudnn_deterministic": true,
+  "cudnn_version": 92700,
+  "dataset_source_sha256": "1d599c0e074a75f8a9bae645989681e7f93a3a3c8f8566b9530f8a69c34ddb02",
+  "day19_execution_binding_sha256": "6e3088cdb07e6e6bc3edc966e19189a0c8ffed7c80ab9469c56a3dc78b6df065",
+  "day19_report_sha256": "79e36c3725d10c2319206023f2b859854108fc7f1fc176e6998f0d96331b3e1b",
+  "detector_device": "cpu",
+  "detector_weights_sha256": "e9c982616b8d07b3674643a76ce2facd79a2d64fb02b316a827163af2a63d8c0",
+  "environment": {
+    "Pillow": "11.3.0",
+    "facenet-pytorch": "2.6.0",
+    "numpy": "2.1.3",
+    "scikit-learn": "1.6.1",
+    "torch": "2.11.0+cu130",
+    "torchvision": "0.26.0+cu130"
+  },
+  "failure_policy": "retain sample; zero coordinates and mask geometry after MLP",
+  "freeze_audit_sha256": "2c7c78e012dc85bbf8b554eb43ff4ee9eea6c5e6f28d991d20f5ca5eca195a0a",
+  "gpu": "Tesla T4",
+  "image_zip_sha256": "46fb89443c578308acf364d7d379fe1b9efb793042c0af734b6112e4fd3a8c74",
+  "manifest_sha256": "b24fcfcae297e81dad15cd30fb40e7156c0c7c2672695ebc8f1e6513f1363e22",
+  "model_device": "cuda",
+  "models": {
+    "m3_seed0": {
+      "checkpoint_sha256": "a224fb6163a3d85362522622b5514cf84ee11e12d1021324298b2e0eec21ceb8",
+      "model_source_sha256": "14786dc26945214a856495a367c7adab45eb4dd9ff486fd8a12720fec0fb501b",
+      "state_key": "model_state_dict"
+    },
+    "r18_seed0": {
+      "checkpoint_sha256": "b82aa1c9aa1d27ce17abcb09671cbf0831ee70c35e07a24f9312f32cbed8682a",
+      "model_source_sha256": "2940ca0c096a8f22fffacea54cae8dc508c6cc95297fd083f684ec8e31d8aeef",
+      "state_key": "model_state"
+    },
+    "r50_seed0": {
+      "checkpoint_sha256": "b7e896e531807313b27096657ee807557db3fe98b955e8ddc55719fa7a430a07",
+      "model_source_sha256": "773a49a8c1c5cec1c3ed4367622162c6d18d45b0554b6579dd73b03319bcb030",
+      "state_key": "model_state"
+    }
+  },
+  "platform": "Linux-6.6.122+-x86_64-with-glibc2.39",
+  "precision": "FP32",
+  "python": "3.13.15",
+  "runner_sha256": "26b1c71de8e10ac9f137f1bf7db5b236e98ff4f1909a50827385bbc97ddd95ef",
+  "shard_size": 256,
+  "test_jpeg_manifest_sha256": "3948ce5877a5d7a9b83513eeb562f53d6c86aa98e0975b46156e2f8559c120a4",
+  "tf32": false,
+  "threshold_fitting_performed": false,
+  "torch_threads": 2
+}
