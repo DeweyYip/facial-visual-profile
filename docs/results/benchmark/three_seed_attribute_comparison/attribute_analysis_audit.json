@@ -1,0 +1,24 @@
+{
+  "complete": true,
+  "overall_attribute_rows": 6048,
+  "attribute_summary_rows": 6048,
+  "paired_attribute_rows": 3024,
+  "family_comparison_rows": 1008,
+  "source_hashes": {
+    "docs/results/benchmark/multiseed_seed1_seed2/multiseed_benchmark_report.json": "d267bfde7ab48e56012ea88ecf700a88c376afe1ca6bf7386a9c74e730dab1b3",
+    "docs/results/benchmark/multiseed_seed1_seed2/source/seed0_oracle_report.json": "cdc8279f843338892a1732ecdd4f76c82b80cbd47991a5e162f3d345734270c0",
+    "docs/results/benchmark/day19/day19_benchmark_report.json": "79e36c3725d10c2319206023f2b859854108fc7f1fc176e6998f0d96331b3e1b",
+    "docs/results/benchmark/day19/execution_binding.json": "6e3088cdb07e6e6bc3edc966e19189a0c8ffed7c80ab9469c56a3dc78b6df065",
+    "docs/results/benchmark/day19/test_jpeg_sha256.json": "3948ce5877a5d7a9b83513eeb562f53d6c86aa98e0975b46156e2f8559c120a4",
+    "docs/results/benchmark/day20/day20_benchmark_report.json": "33dbef0b2585be9a83fbd281121042c199a45efd4ef514bdbc5fae9e5a6c696a",
+    "docs/results/benchmark/day20/execution_binding.json": "6c2f8d7724715baa354b499697d3e948a7dc1fefbc2f214aa2ce40faaeea8cca",
+    "docs/results/benchmark/day20/test_jpeg_sha256.json": "3948ce5877a5d7a9b83513eeb562f53d6c86aa98e0975b46156e2f8559c120a4"
+  },
+  "macro_metric_reproduction": true,
+  "positive_counts_aligned": true,
+  "thresholds_fixed_across_conditions": true,
+  "training": false,
+  "inference": false,
+  "threshold_fitting": false,
+  "attribute_confidence_intervals_computed": false
+}
