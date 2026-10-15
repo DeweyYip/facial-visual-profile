@@ -1,0 +1,15 @@
+{
+  "archive_sha256": "4c0cece5d688bbe87bb490c7f4c2429059a6ab40dae9c84b5cfd19ecb4baf45c",
+  "archive_member_hashes_verified": 31,
+  "overall_rows": 252,
+  "seed1_seed2_csv_json_crosscheck": true,
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "training_performed": false,
+  "inference_performed": false,
+  "threshold_fitting_performed": false,
+  "significance_analysis_performed": false
+}
