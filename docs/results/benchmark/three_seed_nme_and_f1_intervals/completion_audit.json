@@ -1,0 +1,14 @@
+{
+  "analysis_binding_sha256": "3265fd95eab0978a7f4e17c58b3520d381901bc4030ce6ec64664e8f495c9f4e",
+  "complete": true,
+  "conditions": 21,
+  "group_attribute_rows": 60480,
+  "group_metric_rows": 2520,
+  "individual_shards_verified": 4914,
+  "inference": false,
+  "interval_rows": 672,
+  "overall_rule_rows": 504,
+  "paired_shard_sets_verified": 1638,
+  "threshold_fitting": false,
+  "training": false
+}

@@ -1,0 +1,46 @@
+{
+  "analysis_source_sha256": "eaf71ddaa7f95cbff65f343417c300d530b102863476027ef753a92abb946a60",
+  "archive_sha256": "4c0cece5d688bbe87bb490c7f4c2429059a6ab40dae9c84b5cfd19ecb4baf45c",
+  "bootstrap_seed": 20261015,
+  "bootstrap_unit": "test image; same sampled image IDs across all models and seeds within a condition",
+  "interval": "95% pointwise paired image-bootstrap percentile; no multiplicity adjustment",
+  "map_confidence_intervals_computed": false,
+  "mean_interval_scope": "mean across these three fixed trained seeds; excludes training-seed uncertainty",
+  "model_inference_performed": false,
+  "models": [
+    "r18_seed0",
+    "r50_seed0",
+    "m3_seed0",
+    "oracle_seed0",
+    "r18_seed1",
+    "r50_seed1",
+    "m3_seed1",
+    "oracle_seed1",
+    "r18_seed2",
+    "r50_seed2",
+    "m3_seed2",
+    "oracle_seed2"
+  ],
+  "nme_groups": [
+    "nme_le_5_percent",
+    "nme_5_to_10_percent",
+    "nme_10_to_20_percent",
+    "nme_gt_20_percent",
+    "detection_failure"
+  ],
+  "numpy_version": "2.1.3",
+  "oracle_shard_schema": "Day21 two members; oracle_logits and paired GT/RGB in NPZ",
+  "python_version": "3.13.16",
+  "repetitions": 1000,
+  "seed_resampling_performed": false,
+  "sklearn_version": "1.6.1",
+  "source_report_hashes": {
+    "day19/day19_benchmark_report.json": "79e36c3725d10c2319206023f2b859854108fc7f1fc176e6998f0d96331b3e1b",
+    "day19/execution_binding.json": "6e3088cdb07e6e6bc3edc966e19189a0c8ffed7c80ab9469c56a3dc78b6df065",
+    "day19/test_jpeg_sha256.json": "3948ce5877a5d7a9b83513eeb562f53d6c86aa98e0975b46156e2f8559c120a4",
+    "day20/day20_benchmark_report.json": "33dbef0b2585be9a83fbd281121042c199a45efd4ef514bdbc5fae9e5a6c696a",
+    "day20/execution_binding.json": "6c2f8d7724715baa354b499697d3e948a7dc1fefbc2f214aa2ce40faaeea8cca",
+    "day20/test_jpeg_sha256.json": "3948ce5877a5d7a9b83513eeb562f53d6c86aa98e0975b46156e2f8559c120a4"
+  },
+  "threshold_fitting_performed": false
+}

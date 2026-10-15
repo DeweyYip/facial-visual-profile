@@ -1,0 +1,7 @@
+{
+  "archive_sha256": "27c4b930ed425a092a18f93298661006c7f99b862b419e1ac4d568d6cced7a25",
+  "archive_files": 15,
+  "notebook": "notebooks/three_seed_nme_and_f1_intervals.ipynb",
+  "notebook_sha256": "834ce00d64c9813589094f3e99433282874ee2721eab58f29255957e0aa849e1",
+  "interval_scope": "Paired test-image bootstrap conditional on saved trained models; training-seed uncertainty excluded; pointwise and unadjusted."
+}
