@@ -1,0 +1,9 @@
+{
+  "archive_filename": "seed1_seed2_test_results_archive.zip",
+  "archive_sha256": "4c0cece5d688bbe87bb490c7f4c2429059a6ab40dae9c84b5cfd19ecb4baf45c",
+  "archive_files": 32,
+  "notebook": "notebooks/multiseed_frozen_test_benchmark.ipynb",
+  "notebook_sha256": "30f94bb4bef538033ae73d2479b1ae97ee48dc849168c96d79797c7995046c81",
+  "prediction_shards_location": "Drive: runs/benchmark/multiseed_seed1_seed2/shards/",
+  "three_seed_comparative_analysis_complete": false
+}
