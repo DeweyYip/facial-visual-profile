@@ -1,0 +1,420 @@
+{
+  "attribute_comparison_rows": 3072,
+  "detector_rerun": false,
+  "execution_complete": true,
+  "input_reproduction_passed": true,
+  "limitation": "Small fixed subset with batch-size and hardware changes; not a rerun of the full benchmark or detector pipeline.",
+  "model_sample_evaluations": 128,
+  "reproduction_passed": true,
+  "resources": {
+    "checkpoint_bytes": 686431514,
+    "inference_seconds": 13.352187559999948,
+    "monetary_cost": null,
+    "monetary_cost_note": "Not measured automatically; use actual Colab billing or compute-unit records. No cost estimate is inferred.",
+    "wall_seconds": 77.68310040899996
+  },
+  "results": [
+    {
+      "condition": "clean_s0",
+      "decisions": {
+        "at_0_5": {
+          "changed_decisions": 0,
+          "changed_images": 0,
+          "changed_indices": []
+        },
+        "frozen": {
+          "changed_decisions": 0,
+          "changed_images": 0,
+          "changed_indices": []
+        }
+      },
+      "inference_seconds": 0.8558360179999909,
+      "load_seconds": 0.5890417040000102,
+      "logits_within_tolerance": true,
+      "max_absolute_logit_error": 1.1444091796875e-05,
+      "max_absolute_score_error": 1.4560179421030384e-06,
+      "mean_absolute_logit_error": 2.7932110242545605e-06,
+      "replay_passed": true,
+      "run": "r18_seed1",
+      "samples": 8,
+      "scores_within_tolerance": true
+    },
+    {
+      "condition": "blur_s4",
+      "decisions": {
+        "at_0_5": {
+          "changed_decisions": 0,
+          "changed_images": 0,
+          "changed_indices": []
+        },
+        "frozen": {
+          "changed_decisions": 0,
+          "changed_images": 0,
+          "changed_indices": []
+        }
+      },
+      "inference_seconds": 0.6337033759998576,
+      "load_seconds": 0.5890417040000102,
+      "logits_within_tolerance": true,
+      "max_absolute_logit_error": 7.867813110351562e-06,
+      "max_absolute_score_error": 1.2560208679790463e-06,
+      "mean_absolute_logit_error": 2.1421680382142463e-06,
+      "replay_passed": true,
+      "run": "r18_seed1",
+      "samples": 8,
+      "scores_within_tolerance": true
+    },
+    {
+      "condition": "rotation_s4",
+      "decisions": {
+        "at_0_5": {
+          "changed_decisions": 0,
+          "changed_images": 0,
+          "changed_indices": []
+        },
+        "frozen": {
+          "changed_decisions": 0,
+          "changed_images": 0,
+          "changed_indices": []
+        }
+      },
+      "inference_seconds": 0.6437095030000819,
+      "load_seconds": 0.5890417040000102,
+      "logits_within_tolerance": true,
+      "max_absolute_logit_error": 1.1205673217773438e-05,
+      "max_absolute_score_error": 1.7551400899318281e-06,
+      "mean_absolute_logit_error": 3.0099181458353996e-06,
+      "replay_passed": true,
+      "run": "r18_seed1",
+      "samples": 8,
+      "scores_within_tolerance": true
+    },
+    {
+      "condition": "occlusion_s4",
+      "decisions": {
+        "at_0_5": {
+          "changed_decisions": 0,
+          "changed_images": 0,
+          "changed_indices": []
+        },
+        "frozen": {
+          "changed_decisions": 0,
+          "changed_images": 0,
+          "changed_indices": []
+        }
+      },
+      "inference_seconds": 0.6367179459998624,
+      "load_seconds": 0.5890417040000102,
+      "logits_within_tolerance": true,
+      "max_absolute_logit_error": 8.58306884765625e-06,
+      "max_absolute_score_error": 1.1880789381191192e-06,
+      "mean_absolute_logit_error": 2.4463127677639327e-06,
+      "replay_passed": true,
+      "run": "r18_seed1",
+      "samples": 8,
+      "scores_within_tolerance": true
+    },
+    {
+      "condition": "clean_s0",
+      "decisions": {
+        "at_0_5": {
+          "changed_decisions": 0,
+          "changed_images": 0,
+          "changed_indices": []
+        },
+        "frozen": {
+          "changed_decisions": 0,
+          "changed_images": 0,
+          "changed_indices": []
+        }
+      },
+      "inference_seconds": 1.5479738009998982,
+      "load_seconds": 1.1441001199998482,
+      "logits_within_tolerance": true,
+      "max_absolute_logit_error": 5.9604644775390625e-06,
+      "max_absolute_score_error": 1.0137903589946262e-06,
+      "mean_absolute_logit_error": 1.7147200802961986e-06,
+      "replay_passed": true,
+      "run": "r50_seed1",
+      "samples": 8,
+      "scores_within_tolerance": true
+    },
+    {
+      "condition": "blur_s4",
+      "decisions": {
+        "at_0_5": {
+          "changed_decisions": 0,
+          "changed_images": 0,
+          "changed_indices": []
+        },
+        "frozen": {
+          "changed_decisions": 0,
+          "changed_images": 0,
+          "changed_indices": []
+        }
+      },
+      "inference_seconds": 1.4035085810000965,
+      "load_seconds": 1.1441001199998482,
+      "logits_within_tolerance": true,
+      "max_absolute_logit_error": 8.58306884765625e-06,
+      "max_absolute_score_error": 1.5576422318641647e-06,
+      "mean_absolute_logit_error": 1.768426348765691e-06,
+      "replay_passed": true,
+      "run": "r50_seed1",
+      "samples": 8,
+      "scores_within_tolerance": true
+    },
+    {
+      "condition": "rotation_s4",
+      "decisions": {
+        "at_0_5": {
+          "changed_decisions": 0,
+          "changed_images": 0,
+          "changed_indices": []
+        },
+        "frozen": {
+          "changed_decisions": 0,
+          "changed_images": 0,
+          "changed_indices": []
+        }
+      },
+      "inference_seconds": 1.4155089460000454,
+      "load_seconds": 1.1441001199998482,
+      "logits_within_tolerance": true,
+      "max_absolute_logit_error": 6.4373016357421875e-06,
+      "max_absolute_score_error": 7.847729764642875e-07,
+      "mean_absolute_logit_error": 1.7874408513307571e-06,
+      "replay_passed": true,
+      "run": "r50_seed1",
+      "samples": 8,
+      "scores_within_tolerance": true
+    },
+    {
+      "condition": "occlusion_s4",
+      "decisions": {
+        "at_0_5": {
+          "changed_decisions": 0,
+          "changed_images": 0,
+          "changed_indices": []
+        },
+        "frozen": {
+          "changed_decisions": 0,
+          "changed_images": 0,
+          "changed_indices": []
+        }
+      },
+      "inference_seconds": 1.40487843599999,
+      "load_seconds": 1.1441001199998482,
+      "logits_within_tolerance": true,
+      "max_absolute_logit_error": 4.76837158203125e-06,
+      "max_absolute_score_error": 8.291455071418596e-07,
+      "mean_absolute_logit_error": 1.334430028994878e-06,
+      "replay_passed": true,
+      "run": "r50_seed1",
+      "samples": 8,
+      "scores_within_tolerance": true
+    },
+    {
+      "condition": "clean_s0",
+      "decisions": {
+        "at_0_5": {
+          "changed_decisions": 0,
+          "changed_images": 0,
+          "changed_indices": []
+        },
+        "frozen": {
+          "changed_decisions": 0,
+          "changed_images": 0,
+          "changed_indices": []
+        }
+      },
+      "inference_seconds": 0.5976843099999769,
+      "load_seconds": 0.5005812139997943,
+      "logits_within_tolerance": true,
+      "max_absolute_logit_error": 1.0013580322265625e-05,
+      "max_absolute_score_error": 1.3250317817681267e-06,
+      "mean_absolute_logit_error": 2.4725741241127253e-06,
+      "replay_passed": true,
+      "run": "m3_seed1",
+      "samples": 8,
+      "scores_within_tolerance": true
+    },
+    {
+      "condition": "blur_s4",
+      "decisions": {
+        "at_0_5": {
+          "changed_decisions": 0,
+          "changed_images": 0,
+          "changed_indices": []
+        },
+        "frozen": {
+          "changed_decisions": 0,
+          "changed_images": 0,
+          "changed_indices": []
+        }
+      },
+      "inference_seconds": 0.6087432439999247,
+      "load_seconds": 0.5005812139997943,
+      "logits_within_tolerance": true,
+      "max_absolute_logit_error": 7.867813110351562e-06,
+      "max_absolute_score_error": 1.2134315613421265e-06,
+      "mean_absolute_logit_error": 1.884492424627145e-06,
+      "replay_passed": true,
+      "run": "m3_seed1",
+      "samples": 8,
+      "scores_within_tolerance": true
+    },
+    {
+      "condition": "rotation_s4",
+      "decisions": {
+        "at_0_5": {
+          "changed_decisions": 0,
+          "changed_images": 0,
+          "changed_indices": []
+        },
+        "frozen": {
+          "changed_decisions": 0,
+          "changed_images": 0,
+          "changed_indices": []
+        }
+      },
+      "inference_seconds": 0.6012741800000185,
+      "load_seconds": 0.5005812139997943,
+      "logits_within_tolerance": true,
+      "max_absolute_logit_error": 1.1682510375976562e-05,
+      "max_absolute_score_error": 2.10659021249171e-06,
+      "mean_absolute_logit_error": 3.2960573056091866e-06,
+      "replay_passed": true,
+      "run": "m3_seed1",
+      "samples": 8,
+      "scores_within_tolerance": true
+    },
+    {
+      "condition": "occlusion_s4",
+      "decisions": {
+        "at_0_5": {
+          "changed_decisions": 0,
+          "changed_images": 0,
+          "changed_indices": []
+        },
+        "frozen": {
+          "changed_decisions": 0,
+          "changed_images": 0,
+          "changed_indices": []
+        }
+      },
+      "inference_seconds": 0.6111577900001066,
+      "load_seconds": 0.5005812139997943,
+      "logits_within_tolerance": true,
+      "max_absolute_logit_error": 1.0848045349121094e-05,
+      "max_absolute_score_error": 1.6589803863986674e-06,
+      "mean_absolute_logit_error": 2.4220595757166543e-06,
+      "replay_passed": true,
+      "run": "m3_seed1",
+      "samples": 8,
+      "scores_within_tolerance": true
+    },
+    {
+      "condition": "clean_s0",
+      "decisions": {
+        "at_0_5": {
+          "changed_decisions": 0,
+          "changed_images": 0,
+          "changed_indices": []
+        },
+        "frozen": {
+          "changed_decisions": 0,
+          "changed_images": 0,
+          "changed_indices": []
+        }
+      },
+      "inference_seconds": 0.6094621830000051,
+      "load_seconds": 0.46226585499994144,
+      "logits_within_tolerance": true,
+      "max_absolute_logit_error": 1.3113021850585938e-05,
+      "max_absolute_score_error": 1.4426663390576522e-06,
+      "mean_absolute_logit_error": 2.7659504363934198e-06,
+      "replay_passed": true,
+      "run": "oracle_seed1",
+      "samples": 8,
+      "scores_within_tolerance": true
+    },
+    {
+      "condition": "blur_s4",
+      "decisions": {
+        "at_0_5": {
+          "changed_decisions": 0,
+          "changed_images": 0,
+          "changed_indices": []
+        },
+        "frozen": {
+          "changed_decisions": 0,
+          "changed_images": 0,
+          "changed_indices": []
+        }
+      },
+      "inference_seconds": 0.580617145000133,
+      "load_seconds": 0.46226585499994144,
+      "logits_within_tolerance": true,
+      "max_absolute_logit_error": 9.5367431640625e-06,
+      "max_absolute_score_error": 1.189140832580371e-06,
+      "mean_absolute_logit_error": 2.0858521262804666e-06,
+      "replay_passed": true,
+      "run": "oracle_seed1",
+      "samples": 8,
+      "scores_within_tolerance": true
+    },
+    {
+      "condition": "rotation_s4",
+      "decisions": {
+        "at_0_5": {
+          "changed_decisions": 0,
+          "changed_images": 0,
+          "changed_indices": []
+        },
+        "frozen": {
+          "changed_decisions": 0,
+          "changed_images": 0,
+          "changed_indices": []
+        }
+      },
+      "inference_seconds": 0.6044092219999584,
+      "load_seconds": 0.46226585499994144,
+      "logits_within_tolerance": true,
+      "max_absolute_logit_error": 9.5367431640625e-06,
+      "max_absolute_score_error": 1.1246143996612723e-06,
+      "mean_absolute_logit_error": 2.723633466909329e-06,
+      "replay_passed": true,
+      "run": "oracle_seed1",
+      "samples": 8,
+      "scores_within_tolerance": true
+    },
+    {
+      "condition": "occlusion_s4",
+      "decisions": {
+        "at_0_5": {
+          "changed_decisions": 0,
+          "changed_images": 0,
+          "changed_indices": []
+        },
+        "frozen": {
+          "changed_decisions": 0,
+          "changed_images": 0,
+          "changed_indices": []
+        }
+      },
+      "inference_seconds": 0.5970028790000015,
+      "load_seconds": 0.46226585499994144,
+      "logits_within_tolerance": true,
+      "max_absolute_logit_error": 1.0669231414794922e-05,
+      "max_absolute_score_error": 2.1484565603246963e-06,
+      "mean_absolute_logit_error": 2.371729351580143e-06,
+      "replay_passed": true,
+      "run": "oracle_seed1",
+      "samples": 8,
+      "scores_within_tolerance": true
+    }
+  ],
+  "threshold_fitting": false,
+  "training": false
+}

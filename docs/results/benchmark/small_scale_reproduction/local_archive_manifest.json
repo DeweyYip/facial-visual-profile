@@ -1,0 +1,10 @@
+{
+  "archive_member_count": 7,
+  "archive_sha256": "3d7d51df00a1fd43b20ea6c2fc70ce69b9ca0c63e42a51b1e346b092ea651fc3",
+  "attribute_comparison_rows": 3072,
+  "model_sample_evaluations": 128,
+  "monetary_cost": null,
+  "notebook_sha256": "183c53cebdb2001434e8a71554a69b6536429caaab106674bf7714bf83b124cf",
+  "reproduction_passed": true,
+  "scope": "Seed1 attribute-model replay with cached detector inputs"
+}

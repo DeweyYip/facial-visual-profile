@@ -1,0 +1,98 @@
+{
+  "attribute_names": [
+    "Smiling",
+    "Mouth_Slightly_Open",
+    "Eyeglasses",
+    "Bangs",
+    "Wearing_Hat",
+    "Mustache",
+    "No_Beard",
+    "Black_Hair",
+    "Bushy_Eyebrows",
+    "Arched_Eyebrows",
+    "High_Cheekbones",
+    "Bags_Under_Eyes",
+    "Big_Lips",
+    "Big_Nose",
+    "Double_Chin",
+    "Oval_Face",
+    "Receding_Hairline",
+    "Blond_Hair",
+    "Brown_Hair",
+    "Gray_Hair",
+    "Bald",
+    "Straight_Hair",
+    "Wavy_Hair",
+    "Sideburns"
+  ],
+  "conditions": [
+    "clean_s0",
+    "blur_s4",
+    "rotation_s4",
+    "occlusion_s4"
+  ],
+  "decision_requirement": "zero changed decisions under each frozen vector and fixed 0.5",
+  "environment": {
+    "Pillow": "11.3.0",
+    "cpu_threads": 1,
+    "cuda": null,
+    "cudnn": null,
+    "device": "cpu",
+    "gpu": null,
+    "numpy": "2.1.3",
+    "python": "3.13.16",
+    "torch": "2.11.0+cpu",
+    "torchvision": "0.26.0+cpu"
+  },
+  "filenames": [
+    "182638.jpg",
+    "182639.jpg",
+    "182640.jpg",
+    "182641.jpg",
+    "182642.jpg",
+    "182643.jpg",
+    "182644.jpg",
+    "182645.jpg"
+  ],
+  "logit_atol": 0.0001,
+  "logit_rtol": 0.0001,
+  "model_sample_evaluations": 128,
+  "models": [
+    "r18",
+    "r50",
+    "m3",
+    "oracle"
+  ],
+  "original_shards": {
+    "shards/blur_s4/000000_000256.zip": "7b7c65845c8c6d92cac828176e92ed842f7edf2fc54f2376067b1da780660b72",
+    "shards/clean_s0/000000_000256.zip": "25921e65736d0243878770e30f7c3a5c50f5e447defd620cdc2d63798826a070",
+    "shards/occlusion_s4/000000_000256.zip": "a5b76f6f2d4283f450c2a573c9225f4532bd91e90f0816a6e485ada1df1bb01f",
+    "shards/rotation_s4/000000_000256.zip": "7018b221bc89d907f44b1acfa2f7e286ac3fd413c8b3b915d039886bd0633754"
+  },
+  "precision": "FP32",
+  "reference_archive_sha256": "4c0cece5d688bbe87bb490c7f4c2429059a6ab40dae9c84b5cfd19ecb4baf45c",
+  "reference_batch_size": 16,
+  "reference_environment": {
+    "Pillow": "11.3.0",
+    "numpy": "2.1.3",
+    "scikit-learn": "1.6.1",
+    "torch": "2.11.0+cu130",
+    "torchvision": "0.26.0+cu130"
+  },
+  "reference_execution_binding_sha256": "13d6971228498a804cc16bae6b376edd31689c553a8a30353bd24fea340114de",
+  "reference_runtime": {
+    "cuda": "13.0",
+    "cudnn": 92700,
+    "gpu": "Tesla T4",
+    "python": "3.13.15"
+  },
+  "replay_batch_size": 8,
+  "sample_selection": "first eight official test IDs in partition-file order; no outcome selection",
+  "scope": "attribute-model inference with archived MTCNN inputs; detector is not rerun",
+  "score_atol": 1e-05,
+  "score_rtol": 1e-05,
+  "seed": 1,
+  "source_sha256": "fc4109ad6ce55bbb2c136b65ce90beb3cecf59bf15b26149a71034228b46335a",
+  "threshold_fitting": false,
+  "training": false
+}

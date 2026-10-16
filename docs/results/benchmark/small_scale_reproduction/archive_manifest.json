@@ -1,0 +1,10 @@
+{
+  "files": {
+    "README.md": "e912a31b6a8a4bc86d1411b7175177d71afe66259c0b36bda8c270a42593a794",
+    "attribute_comparisons.csv": "3a5a1045d42ce1ca47e62560f15bdba4dfbf1aa4d07decc55de330d266a69606",
+    "execution_binding.json": "f8123376337d1beae12d806254d095232ab9a05f384660ed103acda06d274fc4",
+    "replayed_logits.npz": "223024c4ce9252ee171a339724e8bc94ef125cb84fab0027ffefa41e974c86d5",
+    "reproduction_report.json": "21b903f35d1415017a93de556ab58ec371fb291ce8512175b3d7b3b9d62c0ec7",
+    "source/reproduce_small_inference.py": "fc4109ad6ce55bbb2c136b65ce90beb3cecf59bf15b26149a71034228b46335a"
+  }
+}
