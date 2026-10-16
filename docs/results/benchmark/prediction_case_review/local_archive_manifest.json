@@ -1,0 +1,16 @@
+{
+  "actual_conditions": [
+    "clean_s0",
+    "blur_s4",
+    "rotation_s4",
+    "occlusion_s4"
+  ],
+  "archive_member_count": 133,
+  "archive_sha256": "a857d441d91617f083139f2918a8fee2a8de15b1c8c2939ca6426e3017171246",
+  "cases": 24,
+  "metadata_note": "The original analysis_binding.json conditions field contains 19962 official test image IDs because the setup function reused the labels variable. Actual reviewed conditions are recorded in completion_audit.json, condition caches and selected_cases.json. The original binding is preserved.",
+  "notebook_sha256": "73c81e529f1738b319e3470399fbdc9eba69cd975012682bf77005d63c994c9a",
+  "original_archive_files_preserved": true,
+  "prediction_rows": 288,
+  "unique_original_images": 24
+}

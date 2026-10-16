@@ -1,0 +1,1311 @@
+{
+  "payload": {
+    "binding_sha256": "5ed4242e8e334fadc21337cec672cf0b4111d6457fe6ecb6ce1cbb60f988856e",
+    "both_f1_rules_and_map_reproduced": true,
+    "coverage": [
+      {
+        "category": "m3_right_r18_wrong",
+        "eligible_images": 4783,
+        "eligible_negative_pairs": 3017,
+        "eligible_pairs": 5479,
+        "eligible_positive_pairs": 2462,
+        "selected": true,
+        "selection_status": "selected"
+      },
+      {
+        "category": "m3_wrong_r18_right",
+        "eligible_images": 5357,
+        "eligible_negative_pairs": 2782,
+        "eligible_pairs": 6259,
+        "eligible_positive_pairs": 3477,
+        "selected": true,
+        "selection_status": "selected"
+      },
+      {
+        "category": "all_four_wrong",
+        "eligible_images": 16099,
+        "eligible_negative_pairs": 7782,
+        "eligible_pairs": 32235,
+        "eligible_positive_pairs": 24453,
+        "selected": true,
+        "selection_status": "selected"
+      },
+      {
+        "category": "all_four_correct",
+        "eligible_images": 19962,
+        "eligible_negative_pairs": 340622,
+        "eligible_pairs": 402744,
+        "eligible_positive_pairs": 62122,
+        "selected": true,
+        "selection_status": "selected"
+      },
+      {
+        "category": "high_nme_disagreement",
+        "eligible_images": 164,
+        "eligible_negative_pairs": 104,
+        "eligible_pairs": 211,
+        "eligible_positive_pairs": 107,
+        "selected": true,
+        "selection_status": "selected"
+      },
+      {
+        "category": "detection_failure",
+        "eligible_images": 49,
+        "eligible_negative_pairs": 1000,
+        "eligible_pairs": 1176,
+        "eligible_positive_pairs": 176,
+        "selected": true,
+        "selection_status": "selected"
+      }
+    ],
+    "label": "rotation_s4",
+    "selected": [
+      {
+        "attribute": "Brown_Hair",
+        "attribute_index": 18,
+        "category": "m3_right_r18_wrong",
+        "condition": "rotation_s4",
+        "filename": "201999.jpg",
+        "index": 19361,
+        "m3_right_r18_wrong_votes": 2,
+        "m3_wrong_r18_right_votes": 0,
+        "nme_group": "nme_5_to_10_percent",
+        "predictions": [
+          {
+            "frozen_threshold": 0.3,
+            "predicted_at_0_5": 1,
+            "predicted_frozen": 1,
+            "probability": 0.5716590176134978,
+            "run": "r18_seed0",
+            "target": 0
+          },
+          {
+            "frozen_threshold": 0.3,
+            "predicted_at_0_5": 1,
+            "predicted_frozen": 1,
+            "probability": 0.7361505881383832,
+            "run": "r50_seed0",
+            "target": 0
+          },
+          {
+            "frozen_threshold": 0.24,
+            "predicted_at_0_5": 0,
+            "predicted_frozen": 0,
+            "probability": 0.16900029597503063,
+            "run": "m3_seed0",
+            "target": 0
+          },
+          {
+            "frozen_threshold": 0.31,
+            "predicted_at_0_5": 1,
+            "predicted_frozen": 1,
+            "probability": 0.5776863276714038,
+            "run": "oracle_seed0",
+            "target": 0
+          },
+          {
+            "frozen_threshold": 0.45,
+            "predicted_at_0_5": 1,
+            "predicted_frozen": 1,
+            "probability": 0.7588804907163401,
+            "run": "r18_seed1",
+            "target": 0
+          },
+          {
+            "frozen_threshold": 0.3,
+            "predicted_at_0_5": 1,
+            "predicted_frozen": 1,
+            "probability": 0.567312796890326,
+            "run": "r50_seed1",
+            "target": 0
+          },
+          {
+            "frozen_threshold": 0.35,
+            "predicted_at_0_5": 0,
+            "predicted_frozen": 0,
+            "probability": 0.29289673758512935,
+            "run": "m3_seed1",
+            "target": 0
+          },
+          {
+            "frozen_threshold": 0.38,
+            "predicted_at_0_5": 0,
+            "predicted_frozen": 1,
+            "probability": 0.4087723101286622,
+            "run": "oracle_seed1",
+            "target": 0
+          },
+          {
+            "frozen_threshold": 0.38,
+            "predicted_at_0_5": 1,
+            "predicted_frozen": 1,
+            "probability": 0.5942043591800451,
+            "run": "r18_seed2",
+            "target": 0
+          },
+          {
+            "frozen_threshold": 0.35,
+            "predicted_at_0_5": 1,
+            "predicted_frozen": 1,
+            "probability": 0.5366734236815557,
+            "run": "r50_seed2",
+            "target": 0
+          },
+          {
+            "frozen_threshold": 0.25,
+            "predicted_at_0_5": 1,
+            "predicted_frozen": 1,
+            "probability": 0.6238647572399277,
+            "run": "m3_seed2",
+            "target": 0
+          },
+          {
+            "frozen_threshold": 0.4,
+            "predicted_at_0_5": 0,
+            "predicted_frozen": 1,
+            "probability": 0.48855342514783046,
+            "run": "oracle_seed2",
+            "target": 0
+          }
+        ],
+        "record": {
+          "condition": "rotation",
+          "corruption_parameters": {
+            "angle_degrees_ccw": -20.0,
+            "direction_sha256": "f8730771a0ea7ca0f741286dd3315ef8cde5cd0ccc93b6252300f9282aed14e3",
+            "expand": false,
+            "fill_rgb": [
+              0,
+              0,
+              0
+            ],
+            "forward_matrix_pixel_coordinates": [
+              [
+                0.9396926207859084,
+                -0.3420201433256687,
+                44.859518763183274
+              ],
+              [
+                0.3420201433256687,
+                0.9396926207859084,
+                -31.410973198440843
+              ]
+            ],
+            "gt_center_pixel_coordinates": [
+              111.5,
+              111.5
+            ],
+            "pillow_center_edge_coordinates": [
+              112.0,
+              112.0
+            ],
+            "resampling": "BILINEAR"
+          },
+          "detection": {
+            "box": [
+              67.14445495605469,
+              72.4007339477539,
+              146.41143798828125,
+              172.55174255371094
+            ],
+            "face_count": 1,
+            "image_size": [
+              224,
+              224
+            ],
+            "landmarks": [
+              [
+                91.24140930175781,
+                109.2469711303711
+              ],
+              [
+                129.44691467285156,
+                120.3751220703125
+              ],
+              [
+                105.5919418334961,
+                142.35108947753906
+              ],
+              [
+                84.26651000976562,
+                150.37493896484375
+              ],
+              [
+                111.09359741210938,
+                158.7353973388672
+              ]
+            ],
+            "probability": 0.9999971389770508,
+            "selected_index": 0,
+            "status": "ok"
+          },
+          "final_rgb_sha256": "3a7be766bce80789f979e509e4a0df466eba46d3e3d2c3fbefc3d717076c8569",
+          "gt_eye_distance_px": 38.03931427001953,
+          "gt_pixels": [
+            [
+              92.27893404877807,
+              107.23777410438535
+            ],
+            [
+              128.02419696807152,
+              120.24798582302759
+            ],
+            [
+              103.69273911639488,
+              142.009132349167
+            ],
+            [
+              84.63277384644893,
+              149.28694973332148
+            ],
+            [
+              107.46746145895975,
+              158.69156757325453
+            ]
+          ],
+          "nme": 0.05464758164347277,
+          "sample_id": "201999.jpg",
+          "severity": 4
+        },
+        "source_shard": "day20/shards/rotation_s4/019200_019456.zip",
+        "source_shard_sha256": "2263368a5880c5ac8ca0946331b0653f74c4d71633593d55ef5345dc4bdc6e2a",
+        "target": 0
+      },
+      {
+        "attribute": "Brown_Hair",
+        "attribute_index": 18,
+        "category": "m3_wrong_r18_right",
+        "condition": "rotation_s4",
+        "filename": "187003.jpg",
+        "index": 4365,
+        "m3_right_r18_wrong_votes": 0,
+        "m3_wrong_r18_right_votes": 2,
+        "nme_group": "nme_5_to_10_percent",
+        "predictions": [
+          {
+            "frozen_threshold": 0.3,
+            "predicted_at_0_5": 0,
+            "predicted_frozen": 0,
+            "probability": 0.2556096102112558,
+            "run": "r18_seed0",
+            "target": 0
+          },
+          {
+            "frozen_threshold": 0.3,
+            "predicted_at_0_5": 0,
+            "predicted_frozen": 0,
+            "probability": 0.19904892339838362,
+            "run": "r50_seed0",
+            "target": 0
+          },
+          {
+            "frozen_threshold": 0.24,
+            "predicted_at_0_5": 0,
+            "predicted_frozen": 1,
+            "probability": 0.3236769389913327,
+            "run": "m3_seed0",
+            "target": 0
+          },
+          {
+            "frozen_threshold": 0.31,
+            "predicted_at_0_5": 1,
+            "predicted_frozen": 1,
+            "probability": 0.6775903344536975,
+            "run": "oracle_seed0",
+            "target": 0
+          },
+          {
+            "frozen_threshold": 0.45,
+            "predicted_at_0_5": 0,
+            "predicted_frozen": 0,
+            "probability": 0.306327401582316,
+            "run": "r18_seed1",
+            "target": 0
+          },
+          {
+            "frozen_threshold": 0.3,
+            "predicted_at_0_5": 0,
+            "predicted_frozen": 0,
+            "probability": 0.22932846397015344,
+            "run": "r50_seed1",
+            "target": 0
+          },
+          {
+            "frozen_threshold": 0.35,
+            "predicted_at_0_5": 0,
+            "predicted_frozen": 0,
+            "probability": 0.2964319002608242,
+            "run": "m3_seed1",
+            "target": 0
+          },
+          {
+            "frozen_threshold": 0.38,
+            "predicted_at_0_5": 0,
+            "predicted_frozen": 1,
+            "probability": 0.4293687258846289,
+            "run": "oracle_seed1",
+            "target": 0
+          },
+          {
+            "frozen_threshold": 0.38,
+            "predicted_at_0_5": 0,
+            "predicted_frozen": 0,
+            "probability": 0.23456171873915302,
+            "run": "r18_seed2",
+            "target": 0
+          },
+          {
+            "frozen_threshold": 0.35,
+            "predicted_at_0_5": 0,
+            "predicted_frozen": 0,
+            "probability": 0.1654962187036238,
+            "run": "r50_seed2",
+            "target": 0
+          },
+          {
+            "frozen_threshold": 0.25,
+            "predicted_at_0_5": 0,
+            "predicted_frozen": 1,
+            "probability": 0.4225692152340737,
+            "run": "m3_seed2",
+            "target": 0
+          },
+          {
+            "frozen_threshold": 0.4,
+            "predicted_at_0_5": 0,
+            "predicted_frozen": 0,
+            "probability": 0.3342226827723314,
+            "run": "oracle_seed2",
+            "target": 0
+          }
+        ],
+        "record": {
+          "condition": "rotation",
+          "corruption_parameters": {
+            "angle_degrees_ccw": -20.0,
+            "direction_sha256": "348ef815b4dfe606bc5512f77fc4c562bfa324f70dcc69fd9002bbec1778b14a",
+            "expand": false,
+            "fill_rgb": [
+              0,
+              0,
+              0
+            ],
+            "forward_matrix_pixel_coordinates": [
+              [
+                0.9396926207859084,
+                -0.3420201433256687,
+                44.859518763183274
+              ],
+              [
+                0.3420201433256687,
+                0.9396926207859084,
+                -31.410973198440843
+              ]
+            ],
+            "gt_center_pixel_coordinates": [
+              111.5,
+              111.5
+            ],
+            "pillow_center_edge_coordinates": [
+              112.0,
+              112.0
+            ],
+            "resampling": "BILINEAR"
+          },
+          "detection": {
+            "box": [
+              56.013824462890625,
+              67.78838348388672,
+              149.02149963378906,
+              185.29066467285156
+            ],
+            "face_count": 1,
+            "image_size": [
+              224,
+              224
+            ],
+            "landmarks": [
+              [
+                90.96875,
+                111.86563873291016
+              ],
+              [
+                130.82237243652344,
+                121.74172973632812
+              ],
+              [
+                108.41647338867188,
+                146.58352661132812
+              ],
+              [
+                77.06175231933594,
+                151.92453002929688
+              ],
+              [
+                113.27940368652344,
+                160.68710327148438
+              ]
+            ],
+            "probability": 0.9996793270111084,
+            "selected_index": 0,
+            "status": "ok"
+          },
+          "final_rgb_sha256": "e6cc2a1d538fe4acb71d676a474bf644b8adfea15ce78be0b4a6507a674068a2",
+          "gt_eye_distance_px": 41.23895963927337,
+          "gt_pixels": [
+            [
+              90.60997696253965,
+              108.81725776411866
+            ],
+            [
+              130.30781171222642,
+              119.98568237621947
+            ],
+            [
+              105.27348409579298,
+              143.67794770984557
+            ],
+            [
+              77.87015866880269,
+              146.8255591028614
+            ],
+            [
+              111.68325606489114,
+              159.13252008338165
+            ]
+          ],
+          "nme": 0.08036252916480542,
+          "sample_id": "187003.jpg",
+          "severity": 4
+        },
+        "source_shard": "day20/shards/rotation_s4/004352_004608.zip",
+        "source_shard_sha256": "7435b5316e3de80e07944d3f8b1862936b4eb41a5ead455392100a35f4dded78",
+        "target": 0
+      },
+      {
+        "attribute": "Receding_Hairline",
+        "attribute_index": 16,
+        "category": "all_four_wrong",
+        "condition": "rotation_s4",
+        "filename": "200269.jpg",
+        "index": 17631,
+        "m3_right_r18_wrong_votes": 0,
+        "m3_wrong_r18_right_votes": 0,
+        "nme_group": "nme_gt_20_percent",
+        "predictions": [
+          {
+            "frozen_threshold": 0.31,
+            "predicted_at_0_5": 0,
+            "predicted_frozen": 0,
+            "probability": 0.03779491093966845,
+            "run": "r18_seed0",
+            "target": 1
+          },
+          {
+            "frozen_threshold": 0.24,
+            "predicted_at_0_5": 0,
+            "predicted_frozen": 0,
+            "probability": 0.046847906360170034,
+            "run": "r50_seed0",
+            "target": 1
+          },
+          {
+            "frozen_threshold": 0.41,
+            "predicted_at_0_5": 0,
+            "predicted_frozen": 0,
+            "probability": 0.09891213410527709,
+            "run": "m3_seed0",
+            "target": 1
+          },
+          {
+            "frozen_threshold": 0.39,
+            "predicted_at_0_5": 0,
+            "predicted_frozen": 0,
+            "probability": 0.0550781173258751,
+            "run": "oracle_seed0",
+            "target": 1
+          },
+          {
+            "frozen_threshold": 0.24,
+            "predicted_at_0_5": 0,
+            "predicted_frozen": 0,
+            "probability": 0.011479213560843303,
+            "run": "r18_seed1",
+            "target": 1
+          },
+          {
+            "frozen_threshold": 0.33,
+            "predicted_at_0_5": 0,
+            "predicted_frozen": 0,
+            "probability": 0.04596423223147549,
+            "run": "r50_seed1",
+            "target": 1
+          },
+          {
+            "frozen_threshold": 0.36,
+            "predicted_at_0_5": 0,
+            "predicted_frozen": 0,
+            "probability": 0.04714555234863186,
+            "run": "m3_seed1",
+            "target": 1
+          },
+          {
+            "frozen_threshold": 0.32,
+            "predicted_at_0_5": 0,
+            "predicted_frozen": 0,
+            "probability": 0.03767914917255885,
+            "run": "oracle_seed1",
+            "target": 1
+          },
+          {
+            "frozen_threshold": 0.24,
+            "predicted_at_0_5": 0,
+            "predicted_frozen": 0,
+            "probability": 0.04529796456152731,
+            "run": "r18_seed2",
+            "target": 1
+          },
+          {
+            "frozen_threshold": 0.25,
+            "predicted_at_0_5": 0,
+            "predicted_frozen": 0,
+            "probability": 0.02126429605861753,
+            "run": "r50_seed2",
+            "target": 1
+          },
+          {
+            "frozen_threshold": 0.35,
+            "predicted_at_0_5": 0,
+            "predicted_frozen": 0,
+            "probability": 0.032832708478172386,
+            "run": "m3_seed2",
+            "target": 1
+          },
+          {
+            "frozen_threshold": 0.3,
+            "predicted_at_0_5": 0,
+            "predicted_frozen": 0,
+            "probability": 0.03636358007244566,
+            "run": "oracle_seed2",
+            "target": 1
+          }
+        ],
+        "record": {
+          "condition": "rotation",
+          "corruption_parameters": {
+            "angle_degrees_ccw": 20.0,
+            "direction_sha256": "2f8994773cc86aa61723aec3dd10db0b4a2590670273b76e081086682e443ace",
+            "expand": false,
+            "fill_rgb": [
+              0,
+              0,
+              0
+            ],
+            "forward_matrix_pixel_coordinates": [
+              [
+                0.9396926207859084,
+                0.3420201433256687,
+                -31.410973198440843
+              ],
+              [
+                -0.3420201433256687,
+                0.9396926207859084,
+                44.859518763183274
+              ]
+            ],
+            "gt_center_pixel_coordinates": [
+              111.5,
+              111.5
+            ],
+            "pillow_center_edge_coordinates": [
+              112.0,
+              112.0
+            ],
+            "resampling": "BILINEAR"
+          },
+          "detection": {
+            "box": [
+              56.32113265991211,
+              78.26982879638672,
+              154.04029846191406,
+              195.77696228027344
+            ],
+            "face_count": 1,
+            "image_size": [
+              224,
+              224
+            ],
+            "landmarks": [
+              [
+                96.08619689941406,
+                123.69654846191406
+              ],
+              [
+                130.659423828125,
+                112.15735626220703
+              ],
+              [
+                131.61378479003906,
+                135.31585693359375
+              ],
+              [
+                116.29090881347656,
+                175.26210021972656
+              ],
+              [
+                144.17076110839844,
+                165.7310791015625
+              ]
+            ],
+            "probability": 0.9683294296264648,
+            "selected_index": 0,
+            "status": "ok"
+          },
+          "final_rgb_sha256": "f09a6fd5b27851a3857706fa24d8efc0e62246d43b80eaf75875c1f5bd01ded2",
+          "gt_eye_distance_px": 25.722771078449416,
+          "gt_pixels": [
+            [
+              99.12976850255038,
+              116.54913167615986
+            ],
+            [
+              122.93053887666372,
+              106.79288846716582
+            ],
+            [
+              134.08679553866318,
+              122.41476048792181
+            ],
+            [
+              117.05287965927667,
+              165.79247486564054
+            ],
+            [
+              139.79935060506804,
+              153.139567783988
+            ]
+          ],
+          "nme": 0.41318688155270167,
+          "sample_id": "200269.jpg",
+          "severity": 4
+        },
+        "source_shard": "day20/shards/rotation_s4/017408_017664.zip",
+        "source_shard_sha256": "cae1bd90b5f397bb6a60270383a21c7d1ff8ec82f71290fcddd4330c25dcc27e",
+        "target": 1
+      },
+      {
+        "attribute": "Smiling",
+        "attribute_index": 0,
+        "category": "all_four_correct",
+        "condition": "rotation_s4",
+        "filename": "195497.jpg",
+        "index": 12859,
+        "m3_right_r18_wrong_votes": 0,
+        "m3_wrong_r18_right_votes": 0,
+        "nme_group": "nme_5_to_10_percent",
+        "predictions": [
+          {
+            "frozen_threshold": 0.63,
+            "predicted_at_0_5": 1,
+            "predicted_frozen": 1,
+            "probability": 0.9312907710540358,
+            "run": "r18_seed0",
+            "target": 1
+          },
+          {
+            "frozen_threshold": 0.57,
+            "predicted_at_0_5": 1,
+            "predicted_frozen": 1,
+            "probability": 0.8984570462596582,
+            "run": "r50_seed0",
+            "target": 1
+          },
+          {
+            "frozen_threshold": 0.49,
+            "predicted_at_0_5": 1,
+            "predicted_frozen": 1,
+            "probability": 0.9368216107643415,
+            "run": "m3_seed0",
+            "target": 1
+          },
+          {
+            "frozen_threshold": 0.56,
+            "predicted_at_0_5": 1,
+            "predicted_frozen": 1,
+            "probability": 0.7118960547576635,
+            "run": "oracle_seed0",
+            "target": 1
+          },
+          {
+            "frozen_threshold": 0.46,
+            "predicted_at_0_5": 1,
+            "predicted_frozen": 1,
+            "probability": 0.9765578354500395,
+            "run": "r18_seed1",
+            "target": 1
+          },
+          {
+            "frozen_threshold": 0.7,
+            "predicted_at_0_5": 1,
+            "predicted_frozen": 1,
+            "probability": 0.9310529311360632,
+            "run": "r50_seed1",
+            "target": 1
+          },
+          {
+            "frozen_threshold": 0.43,
+            "predicted_at_0_5": 1,
+            "predicted_frozen": 1,
+            "probability": 0.9749574931829539,
+            "run": "m3_seed1",
+            "target": 1
+          },
+          {
+            "frozen_threshold": 0.44,
+            "predicted_at_0_5": 1,
+            "predicted_frozen": 1,
+            "probability": 0.9431315081662481,
+            "run": "oracle_seed1",
+            "target": 1
+          },
+          {
+            "frozen_threshold": 0.47,
+            "predicted_at_0_5": 1,
+            "predicted_frozen": 1,
+            "probability": 0.9382982048820753,
+            "run": "r18_seed2",
+            "target": 1
+          },
+          {
+            "frozen_threshold": 0.66,
+            "predicted_at_0_5": 1,
+            "predicted_frozen": 1,
+            "probability": 0.9561780659052662,
+            "run": "r50_seed2",
+            "target": 1
+          },
+          {
+            "frozen_threshold": 0.43,
+            "predicted_at_0_5": 1,
+            "predicted_frozen": 1,
+            "probability": 0.8625510250965522,
+            "run": "m3_seed2",
+            "target": 1
+          },
+          {
+            "frozen_threshold": 0.48,
+            "predicted_at_0_5": 1,
+            "predicted_frozen": 1,
+            "probability": 0.8308498300304521,
+            "run": "oracle_seed2",
+            "target": 1
+          }
+        ],
+        "record": {
+          "condition": "rotation",
+          "corruption_parameters": {
+            "angle_degrees_ccw": 20.0,
+            "direction_sha256": "23b4b98a742f1ffc62965ad5a636b7b0f33eb61c99767ba5702973af8b01b960",
+            "expand": false,
+            "fill_rgb": [
+              0,
+              0,
+              0
+            ],
+            "forward_matrix_pixel_coordinates": [
+              [
+                0.9396926207859084,
+                0.3420201433256687,
+                -31.410973198440843
+              ],
+              [
+                -0.3420201433256687,
+                0.9396926207859084,
+                44.859518763183274
+              ]
+            ],
+            "gt_center_pixel_coordinates": [
+              111.5,
+              111.5
+            ],
+            "pillow_center_edge_coordinates": [
+              112.0,
+              112.0
+            ],
+            "resampling": "BILINEAR"
+          },
+          "detection": {
+            "box": [
+              64.13301849365234,
+              65.2715072631836,
+              157.6231231689453,
+              182.22079467773438
+            ],
+            "face_count": 1,
+            "image_size": [
+              224,
+              224
+            ],
+            "landmarks": [
+              [
+                92.95280456542969,
+                124.85033416748047
+              ],
+              [
+                134.58242797851562,
+                107.54295349121094
+              ],
+              [
+                128.33856201171875,
+                141.09751892089844
+              ],
+              [
+                106.781005859375,
+                160.84658813476562
+              ],
+              [
+                147.22593688964844,
+                144.04922485351562
+              ]
+            ],
+            "probability": 0.9917819499969482,
+            "selected_index": 0,
+            "status": "ok"
+          },
+          "final_rgb_sha256": "b262fa1b1d06aae41fc63c60fa28dafc51837c9e644844d0a5e840c4bf153530",
+          "gt_eye_distance_px": 45.24763045430359,
+          "gt_pixels": [
+            [
+              90.52318296056137,
+              122.96207011468128
+            ],
+            [
+              133.3825174477367,
+              108.45601934110248
+            ],
+            [
+              122.84657586559632,
+              139.62745580581787
+            ],
+            [
+              105.80982899529894,
+              158.94993072368447
+            ],
+            [
+              145.0680219745802,
+              143.56766202599994
+            ]
+          ],
+          "nme": 0.06458718024786156,
+          "sample_id": "195497.jpg",
+          "severity": 4
+        },
+        "source_shard": "day20/shards/rotation_s4/012800_013056.zip",
+        "source_shard_sha256": "83784341eb2ee5c13e028ebc5504b5b4ca586d277f84a80d656b2d646bbfe4dd",
+        "target": 1
+      },
+      {
+        "attribute": "Bags_Under_Eyes",
+        "attribute_index": 11,
+        "category": "high_nme_disagreement",
+        "condition": "rotation_s4",
+        "filename": "198712.jpg",
+        "index": 16074,
+        "m3_right_r18_wrong_votes": 2,
+        "m3_wrong_r18_right_votes": 0,
+        "nme_group": "nme_gt_20_percent",
+        "predictions": [
+          {
+            "frozen_threshold": 0.25,
+            "predicted_at_0_5": 0,
+            "predicted_frozen": 1,
+            "probability": 0.4410607893673499,
+            "run": "r18_seed0",
+            "target": 0
+          },
+          {
+            "frozen_threshold": 0.25,
+            "predicted_at_0_5": 0,
+            "predicted_frozen": 1,
+            "probability": 0.29649133701947117,
+            "run": "r50_seed0",
+            "target": 0
+          },
+          {
+            "frozen_threshold": 0.32,
+            "predicted_at_0_5": 0,
+            "predicted_frozen": 0,
+            "probability": 0.30820785388709493,
+            "run": "m3_seed0",
+            "target": 0
+          },
+          {
+            "frozen_threshold": 0.26,
+            "predicted_at_0_5": 0,
+            "predicted_frozen": 0,
+            "probability": 0.18206846039800575,
+            "run": "oracle_seed0",
+            "target": 0
+          },
+          {
+            "frozen_threshold": 0.36,
+            "predicted_at_0_5": 0,
+            "predicted_frozen": 0,
+            "probability": 0.2764479281640117,
+            "run": "r18_seed1",
+            "target": 0
+          },
+          {
+            "frozen_threshold": 0.21,
+            "predicted_at_0_5": 0,
+            "predicted_frozen": 0,
+            "probability": 0.1750706420877995,
+            "run": "r50_seed1",
+            "target": 0
+          },
+          {
+            "frozen_threshold": 0.21,
+            "predicted_at_0_5": 0,
+            "predicted_frozen": 0,
+            "probability": 0.17859741635866094,
+            "run": "m3_seed1",
+            "target": 0
+          },
+          {
+            "frozen_threshold": 0.18,
+            "predicted_at_0_5": 0,
+            "predicted_frozen": 1,
+            "probability": 0.2569849695159374,
+            "run": "oracle_seed1",
+            "target": 0
+          },
+          {
+            "frozen_threshold": 0.26,
+            "predicted_at_0_5": 0,
+            "predicted_frozen": 1,
+            "probability": 0.320908687363834,
+            "run": "r18_seed2",
+            "target": 0
+          },
+          {
+            "frozen_threshold": 0.21,
+            "predicted_at_0_5": 0,
+            "predicted_frozen": 0,
+            "probability": 0.19317173662195655,
+            "run": "r50_seed2",
+            "target": 0
+          },
+          {
+            "frozen_threshold": 0.24,
+            "predicted_at_0_5": 0,
+            "predicted_frozen": 0,
+            "probability": 0.13861493095527466,
+            "run": "m3_seed2",
+            "target": 0
+          },
+          {
+            "frozen_threshold": 0.2,
+            "predicted_at_0_5": 0,
+            "predicted_frozen": 0,
+            "probability": 0.1354847066586206,
+            "run": "oracle_seed2",
+            "target": 0
+          }
+        ],
+        "record": {
+          "condition": "rotation",
+          "corruption_parameters": {
+            "angle_degrees_ccw": -20.0,
+            "direction_sha256": "f85f9da9f86b4d1079f4f1ef83ef619c4801849c0e2f3343dcb6327a58129572",
+            "expand": false,
+            "fill_rgb": [
+              0,
+              0,
+              0
+            ],
+            "forward_matrix_pixel_coordinates": [
+              [
+                0.9396926207859084,
+                -0.3420201433256687,
+                44.859518763183274
+              ],
+              [
+                0.3420201433256687,
+                0.9396926207859084,
+                -31.410973198440843
+              ]
+            ],
+            "gt_center_pixel_coordinates": [
+              111.5,
+              111.5
+            ],
+            "pillow_center_edge_coordinates": [
+              112.0,
+              112.0
+            ],
+            "resampling": "BILINEAR"
+          },
+          "detection": {
+            "box": [
+              84.48210144042969,
+              79.85442352294922,
+              173.27072143554688,
+              182.46022033691406
+            ],
+            "face_count": 1,
+            "image_size": [
+              224,
+              224
+            ],
+            "landmarks": [
+              [
+                103.07347106933594,
+                113.41806030273438
+              ],
+              [
+                130.1455535888672,
+                122.90478515625
+              ],
+              [
+                94.36161041259766,
+                135.62269592285156
+              ],
+              [
+                90.54061126708984,
+                156.3395233154297
+              ],
+              [
+                112.23443603515625,
+                164.87533569335938
+              ]
+            ],
+            "probability": 0.9999972581863403,
+            "selected_index": 0,
+            "status": "ok"
+          },
+          "final_rgb_sha256": "65eb2d781c3cf92e446bc8630ce21fc3864ed1ce8fddda343643af6ec080b9db",
+          "gt_eye_distance_px": 29.814605712890607,
+          "gt_pixels": [
+            [
+              96.8461537583955,
+              106.71317177064827
+            ],
+            [
+              124.8627187384402,
+              116.91036748976941
+            ],
+            [
+              86.39135853498313,
+              132.43154732325024
+            ],
+            [
+              84.1931294666368,
+              153.50080098819095
+            ],
+            [
+              104.12955445576864,
+              161.85053750212774
+            ]
+          ],
+          "nme": 0.2772492213099516,
+          "sample_id": "198712.jpg",
+          "severity": 4
+        },
+        "source_shard": "day20/shards/rotation_s4/015872_016128.zip",
+        "source_shard_sha256": "2e51db28a85b77fa13869ff80dea4d766c1fa5f58ba0f8f2af95942d8a66540c",
+        "target": 0
+      },
+      {
+        "attribute": "Smiling",
+        "attribute_index": 0,
+        "category": "detection_failure",
+        "condition": "rotation_s4",
+        "filename": "200472.jpg",
+        "index": 17834,
+        "m3_right_r18_wrong_votes": 0,
+        "m3_wrong_r18_right_votes": 0,
+        "nme_group": "detection_failure",
+        "predictions": [
+          {
+            "frozen_threshold": 0.63,
+            "predicted_at_0_5": 0,
+            "predicted_frozen": 0,
+            "probability": 0.22464837047718259,
+            "run": "r18_seed0",
+            "target": 0
+          },
+          {
+            "frozen_threshold": 0.57,
+            "predicted_at_0_5": 0,
+            "predicted_frozen": 0,
+            "probability": 0.2964631655481268,
+            "run": "r50_seed0",
+            "target": 0
+          },
+          {
+            "frozen_threshold": 0.49,
+            "predicted_at_0_5": 0,
+            "predicted_frozen": 0,
+            "probability": 0.050934734103752224,
+            "run": "m3_seed0",
+            "target": 0
+          },
+          {
+            "frozen_threshold": 0.56,
+            "predicted_at_0_5": 0,
+            "predicted_frozen": 0,
+            "probability": 0.09256496390804186,
+            "run": "oracle_seed0",
+            "target": 0
+          },
+          {
+            "frozen_threshold": 0.46,
+            "predicted_at_0_5": 0,
+            "predicted_frozen": 0,
+            "probability": 0.08674912302572839,
+            "run": "r18_seed1",
+            "target": 0
+          },
+          {
+            "frozen_threshold": 0.7,
+            "predicted_at_0_5": 0,
+            "predicted_frozen": 0,
+            "probability": 0.047930494222669574,
+            "run": "r50_seed1",
+            "target": 0
+          },
+          {
+            "frozen_threshold": 0.43,
+            "predicted_at_0_5": 0,
+            "predicted_frozen": 0,
+            "probability": 0.05931221117820821,
+            "run": "m3_seed1",
+            "target": 0
+          },
+          {
+            "frozen_threshold": 0.44,
+            "predicted_at_0_5": 0,
+            "predicted_frozen": 0,
+            "probability": 0.04954883367268199,
+            "run": "oracle_seed1",
+            "target": 0
+          },
+          {
+            "frozen_threshold": 0.47,
+            "predicted_at_0_5": 0,
+            "predicted_frozen": 0,
+            "probability": 0.05591444270736473,
+            "run": "r18_seed2",
+            "target": 0
+          },
+          {
+            "frozen_threshold": 0.66,
+            "predicted_at_0_5": 0,
+            "predicted_frozen": 0,
+            "probability": 0.07881492675856179,
+            "run": "r50_seed2",
+            "target": 0
+          },
+          {
+            "frozen_threshold": 0.43,
+            "predicted_at_0_5": 0,
+            "predicted_frozen": 0,
+            "probability": 0.020596143081139558,
+            "run": "m3_seed2",
+            "target": 0
+          },
+          {
+            "frozen_threshold": 0.48,
+            "predicted_at_0_5": 0,
+            "predicted_frozen": 0,
+            "probability": 0.04058083886106056,
+            "run": "oracle_seed2",
+            "target": 0
+          }
+        ],
+        "record": {
+          "condition": "rotation",
+          "corruption_parameters": {
+            "angle_degrees_ccw": 20.0,
+            "direction_sha256": "d12bac522a99e0a8e795b77cbdeddad53dbfd6169c9a1eeedd74e2e98426a822",
+            "expand": false,
+            "fill_rgb": [
+              0,
+              0,
+              0
+            ],
+            "forward_matrix_pixel_coordinates": [
+              [
+                0.9396926207859084,
+                0.3420201433256687,
+                -31.410973198440843
+              ],
+              [
+                -0.3420201433256687,
+                0.9396926207859084,
+                44.859518763183274
+              ]
+            ],
+            "gt_center_pixel_coordinates": [
+              111.5,
+              111.5
+            ],
+            "pillow_center_edge_coordinates": [
+              112.0,
+              112.0
+            ],
+            "resampling": "BILINEAR"
+          },
+          "detection": {
+            "box": null,
+            "face_count": 0,
+            "image_size": [
+              224,
+              224
+            ],
+            "landmarks": null,
+            "probability": null,
+            "selected_index": null,
+            "status": "no_face"
+          },
+          "final_rgb_sha256": "644ef23c07f966814be08b891cecfa8f896abc2b222169566daa9f505b734703",
+          "gt_eye_distance_px": 13.003708994854863,
+          "gt_pixels": [
+            [
+              105.18951652484645,
+              112.15662940749885
+            ],
+            [
+              115.37684704623356,
+              104.07487560829884
+            ],
+            [
+              138.83043880302716,
+              129.43593674521878
+            ],
+            [
+              123.02583107018785,
+              170.17929330649372
+            ],
+            [
+              134.1792443531775,
+              161.7459141382327
+            ]
+          ],
+          "nme": null,
+          "sample_id": "200472.jpg",
+          "severity": 4
+        },
+        "source_shard": "day20/shards/rotation_s4/017664_017920.zip",
+        "source_shard_sha256": "4ee6938c33530e375583de8188ef89791abb8f79b1b44bd7b40f430aabced6b7",
+        "target": 0
+      }
+    ],
+    "shard_audit": {
+      "individual_shards": 234,
+      "maximum_nme_difference": 1.1102230246251565e-16,
+      "paired_shard_sets": 78
+    }
+  },
+  "payload_sha256": "a140dbc2382797af74d31615134cdaf48978708eef83834e6627cc9de3bb49f3"
+}

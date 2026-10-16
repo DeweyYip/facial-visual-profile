@@ -1,0 +1,1131 @@
+{
+  "payload": {
+    "binding_sha256": "5ed4242e8e334fadc21337cec672cf0b4111d6457fe6ecb6ce1cbb60f988856e",
+    "both_f1_rules_and_map_reproduced": true,
+    "coverage": [
+      {
+        "category": "m3_right_r18_wrong",
+        "eligible_images": 5203,
+        "eligible_negative_pairs": 3396,
+        "eligible_pairs": 6027,
+        "eligible_positive_pairs": 2631,
+        "selected": true,
+        "selection_status": "selected"
+      },
+      {
+        "category": "m3_wrong_r18_right",
+        "eligible_images": 5073,
+        "eligible_negative_pairs": 3852,
+        "eligible_pairs": 5868,
+        "eligible_positive_pairs": 2016,
+        "selected": true,
+        "selection_status": "selected"
+      },
+      {
+        "category": "all_four_wrong",
+        "eligible_images": 14955,
+        "eligible_negative_pairs": 15005,
+        "eligible_pairs": 27086,
+        "eligible_positive_pairs": 12081,
+        "selected": true,
+        "selection_status": "selected"
+      },
+      {
+        "category": "all_four_correct",
+        "eligible_images": 19962,
+        "eligible_negative_pairs": 330961,
+        "eligible_pairs": 413282,
+        "eligible_positive_pairs": 82321,
+        "selected": true,
+        "selection_status": "selected"
+      },
+      {
+        "category": "high_nme_disagreement",
+        "eligible_images": 104,
+        "eligible_negative_pairs": 90,
+        "eligible_pairs": 134,
+        "eligible_positive_pairs": 44,
+        "selected": true,
+        "selection_status": "selected"
+      },
+      {
+        "category": "detection_failure",
+        "eligible_images": 21,
+        "eligible_negative_pairs": 457,
+        "eligible_pairs": 504,
+        "eligible_positive_pairs": 47,
+        "selected": true,
+        "selection_status": "selected"
+      }
+    ],
+    "label": "clean_s0",
+    "selected": [
+      {
+        "attribute": "Bushy_Eyebrows",
+        "attribute_index": 8,
+        "category": "m3_right_r18_wrong",
+        "condition": "clean_s0",
+        "filename": "200761.jpg",
+        "index": 18123,
+        "m3_right_r18_wrong_votes": 2,
+        "m3_wrong_r18_right_votes": 1,
+        "nme_group": "nme_5_to_10_percent",
+        "predictions": [
+          {
+            "frozen_threshold": 0.29,
+            "predicted_at_0_5": 0,
+            "predicted_frozen": 1,
+            "probability": 0.30105688266326425,
+            "run": "r18_seed0",
+            "target": 0
+          },
+          {
+            "frozen_threshold": 0.26,
+            "predicted_at_0_5": 0,
+            "predicted_frozen": 0,
+            "probability": 0.07280130048469892,
+            "run": "r50_seed0",
+            "target": 0
+          },
+          {
+            "frozen_threshold": 0.33,
+            "predicted_at_0_5": 0,
+            "predicted_frozen": 0,
+            "probability": 0.18062677887537287,
+            "run": "m3_seed0",
+            "target": 0
+          },
+          {
+            "frozen_threshold": 0.41,
+            "predicted_at_0_5": 1,
+            "predicted_frozen": 1,
+            "probability": 0.5219731497135629,
+            "run": "oracle_seed0",
+            "target": 0
+          },
+          {
+            "frozen_threshold": 0.44,
+            "predicted_at_0_5": 0,
+            "predicted_frozen": 0,
+            "probability": 0.3714614622422475,
+            "run": "r18_seed1",
+            "target": 0
+          },
+          {
+            "frozen_threshold": 0.39,
+            "predicted_at_0_5": 1,
+            "predicted_frozen": 1,
+            "probability": 0.6191156498731463,
+            "run": "r50_seed1",
+            "target": 0
+          },
+          {
+            "frozen_threshold": 0.43,
+            "predicted_at_0_5": 1,
+            "predicted_frozen": 1,
+            "probability": 0.656695036938374,
+            "run": "m3_seed1",
+            "target": 0
+          },
+          {
+            "frozen_threshold": 0.45,
+            "predicted_at_0_5": 1,
+            "predicted_frozen": 1,
+            "probability": 0.613323138427986,
+            "run": "oracle_seed1",
+            "target": 0
+          },
+          {
+            "frozen_threshold": 0.42,
+            "predicted_at_0_5": 1,
+            "predicted_frozen": 1,
+            "probability": 0.542321898984913,
+            "run": "r18_seed2",
+            "target": 0
+          },
+          {
+            "frozen_threshold": 0.31,
+            "predicted_at_0_5": 0,
+            "predicted_frozen": 0,
+            "probability": 0.2753901408015375,
+            "run": "r50_seed2",
+            "target": 0
+          },
+          {
+            "frozen_threshold": 0.38,
+            "predicted_at_0_5": 0,
+            "predicted_frozen": 0,
+            "probability": 0.33754650046282314,
+            "run": "m3_seed2",
+            "target": 0
+          },
+          {
+            "frozen_threshold": 0.53,
+            "predicted_at_0_5": 1,
+            "predicted_frozen": 1,
+            "probability": 0.6041469779756115,
+            "run": "oracle_seed2",
+            "target": 0
+          }
+        ],
+        "record": {
+          "condition": "clean",
+          "corruption_parameters": {},
+          "detection": {
+            "box": [
+              73.49781036376953,
+              78.54827117919922,
+              151.0106964111328,
+              187.18751525878906
+            ],
+            "face_count": 1,
+            "image_size": [
+              224,
+              224
+            ],
+            "landmarks": [
+              [
+                93.18617248535156,
+                115.93229675292969
+              ],
+              [
+                131.61061096191406,
+                115.75761413574219
+              ],
+              [
+                112.22154235839844,
+                136.36251831054688
+              ],
+              [
+                97.70433044433594,
+                158.75767517089844
+              ],
+              [
+                127.23548889160156,
+                158.83543395996094
+              ]
+            ],
+            "probability": 0.9999988079071045,
+            "selected_index": 0,
+            "status": "ok"
+          },
+          "final_rgb_sha256": "bcebe9f87a0d3d06faabf2e4930c4765edaeb7f50aefe785758e2be1551f8c5a",
+          "gt_eye_distance_px": 38.03931427001953,
+          "gt_pixels": [
+            [
+              91.98033905029297,
+              114.06880950927734
+            ],
+            [
+              130.0196533203125,
+              114.06880950927734
+            ],
+            [
+              109.4578628540039,
+              133.59173583984375
+            ],
+            [
+              96.09269714355469,
+              156.19725036621094
+            ],
+            [
+              125.90730285644531,
+              157.2247772216797
+            ]
+          ],
+          "nme": 0.07132778101734547,
+          "sample_id": "200761.jpg",
+          "severity": 0
+        },
+        "source_shard": "day19/shards/clean_s0/017920_018176.zip",
+        "source_shard_sha256": "b7d0bcbd46c1b6011cb45484cdc0655c0775fba978b715da8b6f267547cec972",
+        "target": 0
+      },
+      {
+        "attribute": "Big_Nose",
+        "attribute_index": 13,
+        "category": "m3_wrong_r18_right",
+        "condition": "clean_s0",
+        "filename": "187973.jpg",
+        "index": 5335,
+        "m3_right_r18_wrong_votes": 0,
+        "m3_wrong_r18_right_votes": 2,
+        "nme_group": "nme_5_to_10_percent",
+        "predictions": [
+          {
+            "frozen_threshold": 0.15,
+            "predicted_at_0_5": 0,
+            "predicted_frozen": 0,
+            "probability": 0.03843615059000942,
+            "run": "r18_seed0",
+            "target": 1
+          },
+          {
+            "frozen_threshold": 0.15,
+            "predicted_at_0_5": 0,
+            "predicted_frozen": 0,
+            "probability": 0.035746582757441935,
+            "run": "r50_seed0",
+            "target": 1
+          },
+          {
+            "frozen_threshold": 0.34,
+            "predicted_at_0_5": 0,
+            "predicted_frozen": 0,
+            "probability": 0.17349239834347127,
+            "run": "m3_seed0",
+            "target": 1
+          },
+          {
+            "frozen_threshold": 0.27,
+            "predicted_at_0_5": 0,
+            "predicted_frozen": 0,
+            "probability": 0.11808334144089258,
+            "run": "oracle_seed0",
+            "target": 1
+          },
+          {
+            "frozen_threshold": 0.25,
+            "predicted_at_0_5": 0,
+            "predicted_frozen": 1,
+            "probability": 0.25235059940906535,
+            "run": "r18_seed1",
+            "target": 1
+          },
+          {
+            "frozen_threshold": 0.24,
+            "predicted_at_0_5": 0,
+            "predicted_frozen": 0,
+            "probability": 0.10969392164035095,
+            "run": "r50_seed1",
+            "target": 1
+          },
+          {
+            "frozen_threshold": 0.18,
+            "predicted_at_0_5": 0,
+            "predicted_frozen": 0,
+            "probability": 0.046969816915310325,
+            "run": "m3_seed1",
+            "target": 1
+          },
+          {
+            "frozen_threshold": 0.18,
+            "predicted_at_0_5": 0,
+            "predicted_frozen": 0,
+            "probability": 0.04672279228001897,
+            "run": "oracle_seed1",
+            "target": 1
+          },
+          {
+            "frozen_threshold": 0.29,
+            "predicted_at_0_5": 0,
+            "predicted_frozen": 1,
+            "probability": 0.3145291040305558,
+            "run": "r18_seed2",
+            "target": 1
+          },
+          {
+            "frozen_threshold": 0.28,
+            "predicted_at_0_5": 0,
+            "predicted_frozen": 0,
+            "probability": 0.27971943834189056,
+            "run": "r50_seed2",
+            "target": 1
+          },
+          {
+            "frozen_threshold": 0.27,
+            "predicted_at_0_5": 0,
+            "predicted_frozen": 0,
+            "probability": 0.03799881997713324,
+            "run": "m3_seed2",
+            "target": 1
+          },
+          {
+            "frozen_threshold": 0.23,
+            "predicted_at_0_5": 0,
+            "predicted_frozen": 0,
+            "probability": 0.04816773989307537,
+            "run": "oracle_seed2",
+            "target": 1
+          }
+        ],
+        "record": {
+          "condition": "clean",
+          "corruption_parameters": {},
+          "detection": {
+            "box": [
+              59.27417755126953,
+              67.62027740478516,
+              148.67233276367188,
+              183.9773406982422
+            ],
+            "face_count": 1,
+            "image_size": [
+              224,
+              224
+            ],
+            "landmarks": [
+              [
+                89.92949676513672,
+                115.01734924316406
+              ],
+              [
+                131.763671875,
+                115.37936401367188
+              ],
+              [
+                113.4253158569336,
+                140.44656372070312
+              ],
+              [
+                94.3433837890625,
+                158.96005249023438
+              ],
+              [
+                126.19285583496094,
+                159.8751220703125
+              ]
+            ],
+            "probability": 0.9998377561569214,
+            "selected_index": 0,
+            "status": "ok"
+          },
+          "final_rgb_sha256": "87ef91dad6a77cac7f0019fa530bdcd20fcef1ccc6036ae9bea4d4db0e92e2d9",
+          "gt_eye_distance_px": 40.09551239013672,
+          "gt_pixels": [
+            [
+              90.9522476196289,
+              114.06880950927734
+            ],
+            [
+              131.04776000976562,
+              114.06880950927734
+            ],
+            [
+              114.59831237792969,
+              136.67431640625
+            ],
+            [
+              90.9522476196289,
+              154.14219665527344
+            ],
+            [
+              130.0196533203125,
+              158.25228881835938
+            ]
+          ],
+          "nme": 0.08423380503349827,
+          "sample_id": "187973.jpg",
+          "severity": 0
+        },
+        "source_shard": "day19/shards/clean_s0/005120_005376.zip",
+        "source_shard_sha256": "3ebe807d436cdfb484eeee8b0eca19a4b27f933a8b864105ad164d405e4ceb90",
+        "target": 1
+      },
+      {
+        "attribute": "Big_Nose",
+        "attribute_index": 13,
+        "category": "all_four_wrong",
+        "condition": "clean_s0",
+        "filename": "201768.jpg",
+        "index": 19130,
+        "m3_right_r18_wrong_votes": 0,
+        "m3_wrong_r18_right_votes": 0,
+        "nme_group": "nme_5_to_10_percent",
+        "predictions": [
+          {
+            "frozen_threshold": 0.15,
+            "predicted_at_0_5": 0,
+            "predicted_frozen": 0,
+            "probability": 0.03337516129504361,
+            "run": "r18_seed0",
+            "target": 1
+          },
+          {
+            "frozen_threshold": 0.15,
+            "predicted_at_0_5": 0,
+            "predicted_frozen": 0,
+            "probability": 0.020922496120928696,
+            "run": "r50_seed0",
+            "target": 1
+          },
+          {
+            "frozen_threshold": 0.34,
+            "predicted_at_0_5": 0,
+            "predicted_frozen": 0,
+            "probability": 0.03643322034985747,
+            "run": "m3_seed0",
+            "target": 1
+          },
+          {
+            "frozen_threshold": 0.27,
+            "predicted_at_0_5": 0,
+            "predicted_frozen": 0,
+            "probability": 0.06233581561501667,
+            "run": "oracle_seed0",
+            "target": 1
+          },
+          {
+            "frozen_threshold": 0.25,
+            "predicted_at_0_5": 0,
+            "predicted_frozen": 0,
+            "probability": 0.022367507627782182,
+            "run": "r18_seed1",
+            "target": 1
+          },
+          {
+            "frozen_threshold": 0.24,
+            "predicted_at_0_5": 0,
+            "predicted_frozen": 0,
+            "probability": 0.010405937245410923,
+            "run": "r50_seed1",
+            "target": 1
+          },
+          {
+            "frozen_threshold": 0.18,
+            "predicted_at_0_5": 0,
+            "predicted_frozen": 0,
+            "probability": 0.03589696349753077,
+            "run": "m3_seed1",
+            "target": 1
+          },
+          {
+            "frozen_threshold": 0.18,
+            "predicted_at_0_5": 0,
+            "predicted_frozen": 0,
+            "probability": 0.02143364530172598,
+            "run": "oracle_seed1",
+            "target": 1
+          },
+          {
+            "frozen_threshold": 0.29,
+            "predicted_at_0_5": 0,
+            "predicted_frozen": 0,
+            "probability": 0.04189392278167139,
+            "run": "r18_seed2",
+            "target": 1
+          },
+          {
+            "frozen_threshold": 0.28,
+            "predicted_at_0_5": 0,
+            "predicted_frozen": 0,
+            "probability": 0.009299560097439732,
+            "run": "r50_seed2",
+            "target": 1
+          },
+          {
+            "frozen_threshold": 0.27,
+            "predicted_at_0_5": 0,
+            "predicted_frozen": 0,
+            "probability": 0.021774019944489045,
+            "run": "m3_seed2",
+            "target": 1
+          },
+          {
+            "frozen_threshold": 0.23,
+            "predicted_at_0_5": 0,
+            "predicted_frozen": 0,
+            "probability": 0.03221901092440396,
+            "run": "oracle_seed2",
+            "target": 1
+          }
+        ],
+        "record": {
+          "condition": "clean",
+          "corruption_parameters": {},
+          "detection": {
+            "box": [
+              44.03765106201172,
+              63.684173583984375,
+              137.09825134277344,
+              194.7568359375
+            ],
+            "face_count": 1,
+            "image_size": [
+              224,
+              224
+            ],
+            "landmarks": [
+              [
+                96.04349517822266,
+                112.90924072265625
+              ],
+              [
+                130.243896484375,
+                114.81397247314453
+              ],
+              [
+                129.70274353027344,
+                135.14657592773438
+              ],
+              [
+                95.94233703613281,
+                159.7782745361328
+              ],
+              [
+                129.17477416992188,
+                160.7852783203125
+              ]
+            ],
+            "probability": 0.9999182224273682,
+            "selected_index": 0,
+            "status": "ok"
+          },
+          "final_rgb_sha256": "706216b432c30c29ef0c074589c2d09042245378ea4d12ebb1e83cbf5ba4aa9e",
+          "gt_eye_distance_px": 33.042980517617885,
+          "gt_pixels": [
+            [
+              94.03651428222656,
+              110.98623657226562
+            ],
+            [
+              126.93539428710938,
+              114.06880950927734
+            ],
+            [
+              132.07583618164062,
+              135.64678955078125
+            ],
+            [
+              95.06460571289062,
+              160.30734252929688
+            ],
+            [
+              128.9915771484375,
+              159.27981567382812
+            ]
+          ],
+          "nme": 0.06741276506616642,
+          "sample_id": "201768.jpg",
+          "severity": 0
+        },
+        "source_shard": "day19/shards/clean_s0/018944_019200.zip",
+        "source_shard_sha256": "7459b49b63a49ff948574eb306bf4a4b31f87ba42ccb277cc6d3df6be65f1e6e",
+        "target": 1
+      },
+      {
+        "attribute": "Receding_Hairline",
+        "attribute_index": 16,
+        "category": "all_four_correct",
+        "condition": "clean_s0",
+        "filename": "196502.jpg",
+        "index": 13864,
+        "m3_right_r18_wrong_votes": 0,
+        "m3_wrong_r18_right_votes": 0,
+        "nme_group": "nme_5_to_10_percent",
+        "predictions": [
+          {
+            "frozen_threshold": 0.31,
+            "predicted_at_0_5": 0,
+            "predicted_frozen": 0,
+            "probability": 0.0021413115157196475,
+            "run": "r18_seed0",
+            "target": 0
+          },
+          {
+            "frozen_threshold": 0.24,
+            "predicted_at_0_5": 0,
+            "predicted_frozen": 0,
+            "probability": 0.001558990193312761,
+            "run": "r50_seed0",
+            "target": 0
+          },
+          {
+            "frozen_threshold": 0.41,
+            "predicted_at_0_5": 0,
+            "predicted_frozen": 0,
+            "probability": 0.0027602541082214715,
+            "run": "m3_seed0",
+            "target": 0
+          },
+          {
+            "frozen_threshold": 0.39,
+            "predicted_at_0_5": 0,
+            "predicted_frozen": 0,
+            "probability": 0.0014882243459201575,
+            "run": "oracle_seed0",
+            "target": 0
+          },
+          {
+            "frozen_threshold": 0.24,
+            "predicted_at_0_5": 0,
+            "predicted_frozen": 0,
+            "probability": 0.000563061588109368,
+            "run": "r18_seed1",
+            "target": 0
+          },
+          {
+            "frozen_threshold": 0.33,
+            "predicted_at_0_5": 0,
+            "predicted_frozen": 0,
+            "probability": 0.000992352150698458,
+            "run": "r50_seed1",
+            "target": 0
+          },
+          {
+            "frozen_threshold": 0.36,
+            "predicted_at_0_5": 0,
+            "predicted_frozen": 0,
+            "probability": 0.003605918588233027,
+            "run": "m3_seed1",
+            "target": 0
+          },
+          {
+            "frozen_threshold": 0.32,
+            "predicted_at_0_5": 0,
+            "predicted_frozen": 0,
+            "probability": 0.0016706341499288908,
+            "run": "oracle_seed1",
+            "target": 0
+          },
+          {
+            "frozen_threshold": 0.24,
+            "predicted_at_0_5": 0,
+            "predicted_frozen": 0,
+            "probability": 0.0014985136262620493,
+            "run": "r18_seed2",
+            "target": 0
+          },
+          {
+            "frozen_threshold": 0.25,
+            "predicted_at_0_5": 0,
+            "predicted_frozen": 0,
+            "probability": 0.0007954088799259242,
+            "run": "r50_seed2",
+            "target": 0
+          },
+          {
+            "frozen_threshold": 0.35,
+            "predicted_at_0_5": 0,
+            "predicted_frozen": 0,
+            "probability": 0.0015662392138392797,
+            "run": "m3_seed2",
+            "target": 0
+          },
+          {
+            "frozen_threshold": 0.3,
+            "predicted_at_0_5": 0,
+            "predicted_frozen": 0,
+            "probability": 0.0014137283835467572,
+            "run": "oracle_seed2",
+            "target": 0
+          }
+        ],
+        "record": {
+          "condition": "clean",
+          "corruption_parameters": {},
+          "detection": {
+            "box": [
+              53.97616195678711,
+              63.343223571777344,
+              133.47000122070312,
+              183.9382781982422
+            ],
+            "face_count": 2,
+            "image_size": [
+              224,
+              224
+            ],
+            "landmarks": [
+              [
+                96.26972961425781,
+                113.9840087890625
+              ],
+              [
+                127.30671691894531,
+                113.19168853759766
+              ],
+              [
+                123.55160522460938,
+                138.7178955078125
+              ],
+              [
+                101.00355529785156,
+                161.99151611328125
+              ],
+              [
+                123.29505920410156,
+                160.4949951171875
+              ]
+            ],
+            "probability": 0.9998953342437744,
+            "selected_index": 0,
+            "status": "ok"
+          },
+          "final_rgb_sha256": "e7620e94e983f0e0e168fb5a596740bcdc4c4873ff21584240b2d514a3f26132",
+          "gt_eye_distance_px": 27.777434198371466,
+          "gt_pixels": [
+            [
+              97.12078857421875,
+              112.01376342773438
+            ],
+            [
+              124.87921142578125,
+              110.98623657226562
+            ],
+            [
+              122.82303619384766,
+              138.72935485839844
+            ],
+            [
+              100.2050552368164,
+              163.38990783691406
+            ],
+            [
+              120.76685333251953,
+              160.30734252929688
+            ]
+          ],
+          "nme": 0.07416153268216565,
+          "sample_id": "196502.jpg",
+          "severity": 0
+        },
+        "source_shard": "day19/shards/clean_s0/013824_014080.zip",
+        "source_shard_sha256": "387d39302eaa7f28f224fd86e862bd2c8ecd43fb3181d79f1ace37492737f48c",
+        "target": 0
+      },
+      {
+        "attribute": "Big_Lips",
+        "attribute_index": 12,
+        "category": "high_nme_disagreement",
+        "condition": "clean_s0",
+        "filename": "202188.jpg",
+        "index": 19550,
+        "m3_right_r18_wrong_votes": 2,
+        "m3_wrong_r18_right_votes": 0,
+        "nme_group": "nme_gt_20_percent",
+        "predictions": [
+          {
+            "frozen_threshold": 0.3,
+            "predicted_at_0_5": 0,
+            "predicted_frozen": 0,
+            "probability": 0.2868341038820614,
+            "run": "r18_seed0",
+            "target": 0
+          },
+          {
+            "frozen_threshold": 0.29,
+            "predicted_at_0_5": 0,
+            "predicted_frozen": 0,
+            "probability": 0.22353170655120735,
+            "run": "r50_seed0",
+            "target": 0
+          },
+          {
+            "frozen_threshold": 0.38,
+            "predicted_at_0_5": 0,
+            "predicted_frozen": 0,
+            "probability": 0.22313300406314593,
+            "run": "m3_seed0",
+            "target": 0
+          },
+          {
+            "frozen_threshold": 0.54,
+            "predicted_at_0_5": 0,
+            "predicted_frozen": 0,
+            "probability": 0.3513431760985223,
+            "run": "oracle_seed0",
+            "target": 0
+          },
+          {
+            "frozen_threshold": 0.35,
+            "predicted_at_0_5": 0,
+            "predicted_frozen": 1,
+            "probability": 0.40585064441903534,
+            "run": "r18_seed1",
+            "target": 0
+          },
+          {
+            "frozen_threshold": 0.29,
+            "predicted_at_0_5": 1,
+            "predicted_frozen": 1,
+            "probability": 0.5206715788963315,
+            "run": "r50_seed1",
+            "target": 0
+          },
+          {
+            "frozen_threshold": 0.3,
+            "predicted_at_0_5": 0,
+            "predicted_frozen": 0,
+            "probability": 0.14570441196626457,
+            "run": "m3_seed1",
+            "target": 0
+          },
+          {
+            "frozen_threshold": 0.35,
+            "predicted_at_0_5": 0,
+            "predicted_frozen": 0,
+            "probability": 0.2143779072591758,
+            "run": "oracle_seed1",
+            "target": 0
+          },
+          {
+            "frozen_threshold": 0.35,
+            "predicted_at_0_5": 0,
+            "predicted_frozen": 1,
+            "probability": 0.3951143489387817,
+            "run": "r18_seed2",
+            "target": 0
+          },
+          {
+            "frozen_threshold": 0.32,
+            "predicted_at_0_5": 0,
+            "predicted_frozen": 1,
+            "probability": 0.4721343362587643,
+            "run": "r50_seed2",
+            "target": 0
+          },
+          {
+            "frozen_threshold": 0.33,
+            "predicted_at_0_5": 0,
+            "predicted_frozen": 0,
+            "probability": 0.19203504981195607,
+            "run": "m3_seed2",
+            "target": 0
+          },
+          {
+            "frozen_threshold": 0.32,
+            "predicted_at_0_5": 0,
+            "predicted_frozen": 0,
+            "probability": 0.26022768452002293,
+            "run": "oracle_seed2",
+            "target": 0
+          }
+        ],
+        "record": {
+          "condition": "clean",
+          "corruption_parameters": {},
+          "detection": {
+            "box": [
+              69.66221618652344,
+              63.9594612121582,
+              157.7967071533203,
+              186.37545776367188
+            ],
+            "face_count": 1,
+            "image_size": [
+              224,
+              224
+            ],
+            "landmarks": [
+              [
+                88.44149017333984,
+                114.66439819335938
+              ],
+              [
+                130.308349609375,
+                111.07557678222656
+              ],
+              [
+                104.89527130126953,
+                149.03619384765625
+              ],
+              [
+                98.15007019042969,
+                174.32351684570312
+              ],
+              [
+                127.80392456054688,
+                168.78744506835938
+              ]
+            ],
+            "probability": 0.9999680519104004,
+            "selected_index": 0,
+            "status": "ok"
+          },
+          "final_rgb_sha256": "29a8c43aef3bdd95953a2e7523359a89a93d58230d03060e7c9bdce602289bbd",
+          "gt_eye_distance_px": 42.1642019011969,
+          "gt_pixels": [
+            [
+              89.92415618896484,
+              115.09632873535156
+            ],
+            [
+              132.07583618164062,
+              114.06880950927734
+            ],
+            [
+              107.40168762207031,
+              140.78440856933594
+            ],
+            [
+              93.00843048095703,
+              155.1697235107422
+            ],
+            [
+              127.96348571777344,
+              156.19725036621094
+            ]
+          ],
+          "nme": 0.21851509356590956,
+          "sample_id": "202188.jpg",
+          "severity": 0
+        },
+        "source_shard": "day19/shards/clean_s0/019456_019712.zip",
+        "source_shard_sha256": "7cd30c9cf8fe8145dbb9ca4a9ca75120653f937632e5187408ffaeb5cc00bda6",
+        "target": 0
+      },
+      {
+        "attribute": "Brown_Hair",
+        "attribute_index": 18,
+        "category": "detection_failure",
+        "condition": "clean_s0",
+        "filename": "202565.jpg",
+        "index": 19927,
+        "m3_right_r18_wrong_votes": 0,
+        "m3_wrong_r18_right_votes": 0,
+        "nme_group": "detection_failure",
+        "predictions": [
+          {
+            "frozen_threshold": 0.3,
+            "predicted_at_0_5": 0,
+            "predicted_frozen": 0,
+            "probability": 0.033561113768267196,
+            "run": "r18_seed0",
+            "target": 0
+          },
+          {
+            "frozen_threshold": 0.3,
+            "predicted_at_0_5": 0,
+            "predicted_frozen": 0,
+            "probability": 0.02320166810506598,
+            "run": "r50_seed0",
+            "target": 0
+          },
+          {
+            "frozen_threshold": 0.24,
+            "predicted_at_0_5": 0,
+            "predicted_frozen": 0,
+            "probability": 0.030765957125865412,
+            "run": "m3_seed0",
+            "target": 0
+          },
+          {
+            "frozen_threshold": 0.31,
+            "predicted_at_0_5": 0,
+            "predicted_frozen": 0,
+            "probability": 0.056447009086813736,
+            "run": "oracle_seed0",
+            "target": 0
+          },
+          {
+            "frozen_threshold": 0.45,
+            "predicted_at_0_5": 0,
+            "predicted_frozen": 0,
+            "probability": 0.07905061155409183,
+            "run": "r18_seed1",
+            "target": 0
+          },
+          {
+            "frozen_threshold": 0.3,
+            "predicted_at_0_5": 0,
+            "predicted_frozen": 0,
+            "probability": 0.008452585895800464,
+            "run": "r50_seed1",
+            "target": 0
+          },
+          {
+            "frozen_threshold": 0.35,
+            "predicted_at_0_5": 0,
+            "predicted_frozen": 0,
+            "probability": 0.03765671337570635,
+            "run": "m3_seed1",
+            "target": 0
+          },
+          {
+            "frozen_threshold": 0.38,
+            "predicted_at_0_5": 0,
+            "predicted_frozen": 0,
+            "probability": 0.04983398057913309,
+            "run": "oracle_seed1",
+            "target": 0
+          },
+          {
+            "frozen_threshold": 0.38,
+            "predicted_at_0_5": 0,
+            "predicted_frozen": 0,
+            "probability": 0.053196179672764556,
+            "run": "r18_seed2",
+            "target": 0
+          },
+          {
+            "frozen_threshold": 0.35,
+            "predicted_at_0_5": 0,
+            "predicted_frozen": 0,
+            "probability": 0.025495767486858067,
+            "run": "r50_seed2",
+            "target": 0
+          },
+          {
+            "frozen_threshold": 0.25,
+            "predicted_at_0_5": 0,
+            "predicted_frozen": 0,
+            "probability": 0.02396581607803466,
+            "run": "m3_seed2",
+            "target": 0
+          },
+          {
+            "frozen_threshold": 0.4,
+            "predicted_at_0_5": 0,
+            "predicted_frozen": 0,
+            "probability": 0.027723560658947523,
+            "run": "oracle_seed2",
+            "target": 0
+          }
+        ],
+        "record": {
+          "condition": "clean",
+          "corruption_parameters": {},
+          "detection": {
+            "box": null,
+            "face_count": 0,
+            "image_size": [
+              224,
+              224
+            ],
+            "landmarks": null,
+            "probability": null,
+            "selected_index": null,
+            "status": "no_face"
+          },
+          "final_rgb_sha256": "4156eca743b93b67dffc2447b652b1b982aa2e08ba6608947600d15c7a995c49",
+          "gt_eye_distance_px": 13.404613167265301,
+          "gt_pixels": [
+            [
+              104.31741333007812,
+              107.90367126464844
+            ],
+            [
+              117.68258666992188,
+              108.93119049072266
+            ],
+            [
+              86.83988952636719,
+              135.64678955078125
+            ],
+            [
+              108.42977905273438,
+              168.52752685546875
+            ],
+            [
+              113.57022094726562,
+              167.5
+            ]
+          ],
+          "nme": null,
+          "sample_id": "202565.jpg",
+          "severity": 0
+        },
+        "source_shard": "day19/shards/clean_s0/019712_019962.zip",
+        "source_shard_sha256": "2c78626641fcd0b72a1cdab8bb083189ec8514d1a8a948f0ac307ca07894ca0c",
+        "target": 0
+      }
+    ],
+    "shard_audit": {
+      "individual_shards": 234,
+      "maximum_nme_difference": 0.0,
+      "paired_shard_sets": 78
+    }
+  },
+  "payload_sha256": "0ed90017949a15fe5fad650b445fb7b541b7f8a329985b4e0ea78a9c8a21d845"
+}

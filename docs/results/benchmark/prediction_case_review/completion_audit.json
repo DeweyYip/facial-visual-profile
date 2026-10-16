@@ -1,0 +1,17 @@
+{
+  "all_rendered_inputs_verified": true,
+  "binding_sha256": "5ed4242e8e334fadc21337cec672cf0b4111d6457fe6ecb6ce1cbb60f988856e",
+  "cases": 24,
+  "complete": true,
+  "conditions": [
+    "clean_s0",
+    "blur_s4",
+    "rotation_s4",
+    "occlusion_s4"
+  ],
+  "detector_inference": false,
+  "model_inference": false,
+  "prediction_rows": 288,
+  "threshold_fitting": false,
+  "training": false
+}

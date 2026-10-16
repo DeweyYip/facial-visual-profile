@@ -1,0 +1,194 @@
+[
+  {
+    "final_rgb_sha256": "bcebe9f87a0d3d06faabf2e4930c4765edaeb7f50aefe785758e2be1551f8c5a",
+    "gt_reproduction_passed": true,
+    "nme_reproduction_passed": true,
+    "original_jpeg_sha256": "9787b1bf65fde6c2b7d76c0dcc6d9e09d428790cb0ff7900050995e9f4c21d13",
+    "rgb_reproduction_passed": true,
+    "stem": "clean_s0_m3_right_r18_wrong_200761_Bushy_Eyebrows"
+  },
+  {
+    "final_rgb_sha256": "87ef91dad6a77cac7f0019fa530bdcd20fcef1ccc6036ae9bea4d4db0e92e2d9",
+    "gt_reproduction_passed": true,
+    "nme_reproduction_passed": true,
+    "original_jpeg_sha256": "51e620e90d5c3b3c393b4d55862c0eadc84fe469d561f21711fe70ad1f810263",
+    "rgb_reproduction_passed": true,
+    "stem": "clean_s0_m3_wrong_r18_right_187973_Big_Nose"
+  },
+  {
+    "final_rgb_sha256": "706216b432c30c29ef0c074589c2d09042245378ea4d12ebb1e83cbf5ba4aa9e",
+    "gt_reproduction_passed": true,
+    "nme_reproduction_passed": true,
+    "original_jpeg_sha256": "7b0ddfd71b61e3173cfde5c17b7d3c8b5ee36f00ab2050edfd653db12e00bde7",
+    "rgb_reproduction_passed": true,
+    "stem": "clean_s0_all_four_wrong_201768_Big_Nose"
+  },
+  {
+    "final_rgb_sha256": "e7620e94e983f0e0e168fb5a596740bcdc4c4873ff21584240b2d514a3f26132",
+    "gt_reproduction_passed": true,
+    "nme_reproduction_passed": true,
+    "original_jpeg_sha256": "bfb8d2c1f57d10c64edb8bf4b36740d286aa144d4743feffc4ce28eebc2821cc",
+    "rgb_reproduction_passed": true,
+    "stem": "clean_s0_all_four_correct_196502_Receding_Hairline"
+  },
+  {
+    "final_rgb_sha256": "29a8c43aef3bdd95953a2e7523359a89a93d58230d03060e7c9bdce602289bbd",
+    "gt_reproduction_passed": true,
+    "nme_reproduction_passed": true,
+    "original_jpeg_sha256": "247f413465a2e351f74728791aea58d47a080bca52e1524b6a8442848012d83c",
+    "rgb_reproduction_passed": true,
+    "stem": "clean_s0_high_nme_disagreement_202188_Big_Lips"
+  },
+  {
+    "final_rgb_sha256": "4156eca743b93b67dffc2447b652b1b982aa2e08ba6608947600d15c7a995c49",
+    "gt_reproduction_passed": true,
+    "nme_reproduction_passed": true,
+    "original_jpeg_sha256": "89f58293052e21b324b02d404dace09a90de9c524c616c43b3111a89e7f4031b",
+    "rgb_reproduction_passed": true,
+    "stem": "clean_s0_detection_failure_202565_Brown_Hair"
+  },
+  {
+    "final_rgb_sha256": "194b0fda5c52780147455b831965b66429dfcd54d16c07e2873d8a70cd6b9f0a",
+    "gt_reproduction_passed": true,
+    "nme_reproduction_passed": true,
+    "original_jpeg_sha256": "4387fded2c827d679000c38b8227410dcbae293a775e739dd83ddb770bb6cf4f",
+    "rgb_reproduction_passed": true,
+    "stem": "blur_s4_m3_right_r18_wrong_191211_Smiling"
+  },
+  {
+    "final_rgb_sha256": "42914f25c9f2da27418be8290b13e32b587e6de5d3a481df16e6308a25122a89",
+    "gt_reproduction_passed": true,
+    "nme_reproduction_passed": true,
+    "original_jpeg_sha256": "97f8af54a1c98f2f4afc76c3bd1d79d435b8cbf62513160b06d24fe6ceb5c41f",
+    "rgb_reproduction_passed": true,
+    "stem": "blur_s4_m3_wrong_r18_right_185096_Mouth_Slightly_Open"
+  },
+  {
+    "final_rgb_sha256": "3803947451c5d439c0a8557ba94fa6f4f57b58eb75c204efc3e523f6b9e3ec39",
+    "gt_reproduction_passed": true,
+    "nme_reproduction_passed": true,
+    "original_jpeg_sha256": "29c2af78a5c7944ea854468cac0e59323c886b746662e05b8caccf18af1b21b9",
+    "rgb_reproduction_passed": true,
+    "stem": "blur_s4_all_four_wrong_193069_High_Cheekbones"
+  },
+  {
+    "final_rgb_sha256": "dbd88cd5be374461a964f0da014c6d72f0963436fd01abad2a91b364007a2003",
+    "gt_reproduction_passed": true,
+    "nme_reproduction_passed": true,
+    "original_jpeg_sha256": "7cef86f1d1c989ed3ca8318028ed0aeb471ca38bb40515bea3e27d1c86872637",
+    "rgb_reproduction_passed": true,
+    "stem": "blur_s4_all_four_correct_200024_Double_Chin"
+  },
+  {
+    "final_rgb_sha256": "2fc46af52a184c4b2f07f4654571033d004f37ed47c31fc757a94abbaf4ecc3d",
+    "gt_reproduction_passed": true,
+    "nme_reproduction_passed": true,
+    "original_jpeg_sha256": "47ca645ac1a35be4a6b0bd2028e48a2c795fedf15e4626b228527040689acfb8",
+    "rgb_reproduction_passed": true,
+    "stem": "blur_s4_high_nme_disagreement_199481_Black_Hair"
+  },
+  {
+    "final_rgb_sha256": "ed5121a094436337ec7dff2c35e9efc82f8a02f2916fe5a34ddc1c9e2b96e4db",
+    "gt_reproduction_passed": true,
+    "nme_reproduction_passed": true,
+    "original_jpeg_sha256": "b6dd0b68f14759395580c4f77b0f450a4e5dcdd58544b0baddf1bc40e8fa62af",
+    "rgb_reproduction_passed": true,
+    "stem": "blur_s4_detection_failure_202144_Receding_Hairline"
+  },
+  {
+    "final_rgb_sha256": "3a7be766bce80789f979e509e4a0df466eba46d3e3d2c3fbefc3d717076c8569",
+    "gt_reproduction_passed": true,
+    "nme_reproduction_passed": true,
+    "original_jpeg_sha256": "42a906ba9a2ef155a4ebe97ddcad0ead4a7b67bcd1346344d8ea6fbd0dd015ad",
+    "rgb_reproduction_passed": true,
+    "stem": "rotation_s4_m3_right_r18_wrong_201999_Brown_Hair"
+  },
+  {
+    "final_rgb_sha256": "e6cc2a1d538fe4acb71d676a474bf644b8adfea15ce78be0b4a6507a674068a2",
+    "gt_reproduction_passed": true,
+    "nme_reproduction_passed": true,
+    "original_jpeg_sha256": "6c0cff379e2ecb4235a176b4d5c4621d47c38ea0786a8df4c9a1c57b6d860d8f",
+    "rgb_reproduction_passed": true,
+    "stem": "rotation_s4_m3_wrong_r18_right_187003_Brown_Hair"
+  },
+  {
+    "final_rgb_sha256": "f09a6fd5b27851a3857706fa24d8efc0e62246d43b80eaf75875c1f5bd01ded2",
+    "gt_reproduction_passed": true,
+    "nme_reproduction_passed": true,
+    "original_jpeg_sha256": "8128e3923e9652e18f2caa0028e2339a2c17541959b17fbd6931c2c17761bbe2",
+    "rgb_reproduction_passed": true,
+    "stem": "rotation_s4_all_four_wrong_200269_Receding_Hairline"
+  },
+  {
+    "final_rgb_sha256": "b262fa1b1d06aae41fc63c60fa28dafc51837c9e644844d0a5e840c4bf153530",
+    "gt_reproduction_passed": true,
+    "nme_reproduction_passed": true,
+    "original_jpeg_sha256": "b5605e89802b8a47a15ebedbea1a0c5b28657a361bcb26d3d56ca5962daa3ae7",
+    "rgb_reproduction_passed": true,
+    "stem": "rotation_s4_all_four_correct_195497_Smiling"
+  },
+  {
+    "final_rgb_sha256": "65eb2d781c3cf92e446bc8630ce21fc3864ed1ce8fddda343643af6ec080b9db",
+    "gt_reproduction_passed": true,
+    "nme_reproduction_passed": true,
+    "original_jpeg_sha256": "a55a9b3b0217750fcde27858530abf26e5f778e2cd63a20f12255d4bcf27d4fc",
+    "rgb_reproduction_passed": true,
+    "stem": "rotation_s4_high_nme_disagreement_198712_Bags_Under_Eyes"
+  },
+  {
+    "final_rgb_sha256": "644ef23c07f966814be08b891cecfa8f896abc2b222169566daa9f505b734703",
+    "gt_reproduction_passed": true,
+    "nme_reproduction_passed": true,
+    "original_jpeg_sha256": "0aa475d0769e5c522d686b72a7f836d4588d45112cff1843890bd46cf891d663",
+    "rgb_reproduction_passed": true,
+    "stem": "rotation_s4_detection_failure_200472_Smiling"
+  },
+  {
+    "final_rgb_sha256": "9f3abc537c6f1d09dbb23a025c6615545103efa6246b9b64bb22b9d17db6255b",
+    "gt_reproduction_passed": true,
+    "nme_reproduction_passed": true,
+    "original_jpeg_sha256": "e252e06dd13ed195fd766aa742e2d1c60ba29a284eff123ac1a760c8aeaf66e9",
+    "rgb_reproduction_passed": true,
+    "stem": "occlusion_s4_m3_right_r18_wrong_194198_No_Beard"
+  },
+  {
+    "final_rgb_sha256": "3cce3ec42225f80d234c1da69baef6f8a6937bc9b989b13998a3c41045a20d4b",
+    "gt_reproduction_passed": true,
+    "nme_reproduction_passed": true,
+    "original_jpeg_sha256": "c9edb1d62582e65455b40f03f20d615d92445eb0cabe5a36dca400bf53707e35",
+    "rgb_reproduction_passed": true,
+    "stem": "occlusion_s4_m3_wrong_r18_right_194124_Black_Hair"
+  },
+  {
+    "final_rgb_sha256": "7bff33c7a440f85d434c14f4b0a7dc02a9c7e41aae220cecc3e21ebcf8afdc52",
+    "gt_reproduction_passed": true,
+    "nme_reproduction_passed": true,
+    "original_jpeg_sha256": "93cff9f46754638d0f9be1bebc2a630943840b0b176494552ab201ac0b69ab37",
+    "rgb_reproduction_passed": true,
+    "stem": "occlusion_s4_all_four_wrong_198631_Big_Lips"
+  },
+  {
+    "final_rgb_sha256": "d4d69f8b61bc548116799f1a559ca3223384151c69af776fe46e7d91f094c031",
+    "gt_reproduction_passed": true,
+    "nme_reproduction_passed": true,
+    "original_jpeg_sha256": "442940f2c8194b92a0772ac90c32317797041ba11a7f1f38f4befa9a640b5648",
+    "rgb_reproduction_passed": true,
+    "stem": "occlusion_s4_all_four_correct_184954_Bags_Under_Eyes"
+  },
+  {
+    "final_rgb_sha256": "9dfa745cc1176ea9e2fc8e57cad0cdec22dafdbfe7be39409176dfce9f8cc487",
+    "gt_reproduction_passed": true,
+    "nme_reproduction_passed": true,
+    "original_jpeg_sha256": "1518656688b1cdd77ab6ec2e4e5db9d628ca1daede208de8ed90a0cd362896a5",
+    "rgb_reproduction_passed": true,
+    "stem": "occlusion_s4_high_nme_disagreement_187463_Oval_Face"
+  },
+  {
+    "final_rgb_sha256": "99edd12d319b46f4a0cc58ee00c2c6397ed32310dcc9c230bf2543e1cea79cea",
+    "gt_reproduction_passed": true,
+    "nme_reproduction_passed": true,
+    "original_jpeg_sha256": "8ce2984f51cbf7e45d77f53bd16c471352a1d05c7512932666efb83053f43b43",
+    "rgb_reproduction_passed": true,
+    "stem": "occlusion_s4_detection_failure_193950_Receding_Hairline"
+  }
+]
