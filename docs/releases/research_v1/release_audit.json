@@ -1,0 +1,13 @@
+{
+  "complete": true,
+  "generated_files": {
+    "README.md": "b668d0054bad86ad12cd8e25ff9037099d87533d1e936cb03f417e2ba5cb924e",
+    "evidence_manifest.json": "5fd21d31b1f4f5a726e7cfb9536fd9639e4239f265fb8ee02de49ddb952de939",
+    "summary_metrics.csv": "c48b3cba0b466d86b6e35e7696d162fddcc098f0af1174664ef431d26234ac93"
+  },
+  "inference": false,
+  "scope": "release assembly and input verification only; not completion of all remaining research tasks",
+  "threshold_fitting": false,
+  "training": false,
+  "verified_input_files": 193
+}
