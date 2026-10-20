@@ -1,0 +1,36 @@
+{
+  "complete": true,
+  "independent_seeds": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "remake_variant": "seed0_remake",
+  "remake_in_mean_sd": false,
+  "overall_rows": 420,
+  "attribute_rows": 10080,
+  "sample_count": 19962,
+  "conditions": 21,
+  "source_sha256": {
+    "docs/results/benchmark/multiseed_seed1_seed2/archive_manifest.json": "9e9d206ffd4f42a71cf7b28da201cf2eea79094a640fb5e646769688eb29c8f2",
+    "docs/results/benchmark/multiseed_seed1_seed2/multiseed_benchmark_report.json": "d267bfde7ab48e56012ea88ecf700a88c376afe1ca6bf7386a9c74e730dab1b3",
+    "docs/results/benchmark/multiseed_seed1_seed2/execution_binding.json": "13d6971228498a804cc16bae6b376edd31689c553a8a30353bd24fea340114de",
+    "docs/results/benchmark/seed0_reproduction_v1_seed3/archive_manifest.json": "f5a6d048896fefae3514f1f7bdcc87934c55a336ebf972df4a793f7dd542b2f0",
+    "docs/results/benchmark/seed0_reproduction_v1_seed3/multiseed_benchmark_report.json": "4cfc67c9654cb4cbc233c476203d482ece4c44a54a5434d631c394ab3df85684",
+    "docs/results/benchmark/seed0_reproduction_v1_seed3/execution_binding.json": "fff4444bd6bc1e9a9075a5e4f72ac4d585c33351dc80aa83d0346fe014b9c4c8",
+    "docs/results/benchmark/day19/day19_benchmark_report.json": "79e36c3725d10c2319206023f2b859854108fc7f1fc176e6998f0d96331b3e1b",
+    "docs/results/benchmark/day19/execution_binding.json": "6e3088cdb07e6e6bc3edc966e19189a0c8ffed7c80ab9469c56a3dc78b6df065",
+    "docs/results/benchmark/day20/day20_benchmark_report.json": "33dbef0b2585be9a83fbd281121042c199a45efd4ef514bdbc5fae9e5a6c696a",
+    "docs/results/benchmark/day20/execution_binding.json": "6c2f8d7724715baa354b499697d3e948a7dc1fefbc2f214aa2ce40faaeea8cca",
+    "docs/results/benchmark/multiseed_seed1_seed2/source/seed0_oracle_report.json": "cdc8279f843338892a1732ecdd4f76c82b80cbd47991a5e162f3d345734270c0"
+  },
+  "per_attribute_macro_reconstruction": true,
+  "positive_counts_aligned": true,
+  "frozen_thresholds_constant": true,
+  "training": false,
+  "inference": false,
+  "threshold_fitting": false,
+  "statistical_confidence_intervals": false,
+  "max_m3_remake_difference_pp": 0.0
+}
