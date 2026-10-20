@@ -1,0 +1,82 @@
+[
+  {
+    "epoch": 1,
+    "train_bce": 0.21350673473499446,
+    "validation_bce": 0.19385906211045906,
+    "validation_macro_f1_at_0.5": 0.7211743118905455,
+    "validation_map": 0.8099427079516399,
+    "seconds": 648.6041416389999
+  },
+  {
+    "epoch": 2,
+    "train_bce": 0.18662096077363777,
+    "validation_bce": 0.19182955488249814,
+    "validation_macro_f1_at_0.5": 0.7296628491956793,
+    "validation_map": 0.8187898712167381,
+    "seconds": 692.8371567140002
+  },
+  {
+    "epoch": 3,
+    "train_bce": 0.1747669430582692,
+    "validation_bce": 0.18886681230470712,
+    "validation_macro_f1_at_0.5": 0.7451141096728063,
+    "validation_map": 0.8185915367393864,
+    "seconds": 688.9680255700005
+  },
+  {
+    "epoch": 4,
+    "train_bce": 0.16085226035472575,
+    "validation_bce": 0.19756737564205554,
+    "validation_macro_f1_at_0.5": 0.7375589948036559,
+    "validation_map": 0.8120128137759565,
+    "seconds": 716.0623346069988
+  },
+  {
+    "epoch": 5,
+    "train_bce": 0.14223836112602445,
+    "validation_bce": 0.2084989322393213,
+    "validation_macro_f1_at_0.5": 0.7389441216556811,
+    "validation_map": 0.804297641057364,
+    "seconds": 731.8004718699999
+  },
+  {
+    "epoch": 6,
+    "train_bce": 0.11889048919705125,
+    "validation_bce": 0.23093859806882602,
+    "validation_macro_f1_at_0.5": 0.7370673806856477,
+    "validation_map": 0.7968779191489311,
+    "seconds": 716.3067928089997
+  },
+  {
+    "epoch": 7,
+    "train_bce": 0.09389594733054085,
+    "validation_bce": 0.25723773230992475,
+    "validation_macro_f1_at_0.5": 0.7226249640260116,
+    "validation_map": 0.7865336176872946,
+    "seconds": 716.6841680840002
+  },
+  {
+    "epoch": 8,
+    "train_bce": 0.07101180091799641,
+    "validation_bce": 0.290460532588802,
+    "validation_macro_f1_at_0.5": 0.7184922972046923,
+    "validation_map": 0.7786643224845221,
+    "seconds": 716.7570049249998
+  },
+  {
+    "epoch": 9,
+    "train_bce": 0.05316819107019104,
+    "validation_bce": 0.3318399363248249,
+    "validation_macro_f1_at_0.5": 0.7158179688799775,
+    "validation_map": 0.7731769437798208,
+    "seconds": 725.80149226
+  },
+  {
+    "epoch": 10,
+    "train_bce": 0.0421328276386643,
+    "validation_bce": 0.35843557783460117,
+    "validation_macro_f1_at_0.5": 0.7133397152023643,
+    "validation_map": 0.7676306717230785,
+    "seconds": 734.8427537259995
+  }
+]

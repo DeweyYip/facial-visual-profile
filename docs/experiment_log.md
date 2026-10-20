@@ -543,3 +543,26 @@ Next: oracle geometry and planned control/multiple-seed experiments.
 - Notebook: notebooks/day21_oracle_benchmark_and_comparison.ipynb.
 - Prediction shards and checkpoints remain on Drive.
 - Four-model evaluation across all 21 conditions is complete.
+
+## 2026-10-20 — Seed 2 through seed-0 reproduction archive update
+
+- Verified and imported original Drive training archives for seed 2, seed 3 and
+  seed0_reproduction_v1. All twelve model histories contain ten complete epochs.
+- Archived per-run configs, histories, best summaries, data preparation and
+  validation-export audits. Exact source snapshots remain in the original ZIPs.
+- Preserved twelve clean-validation threshold reports and full-precision metrics.
+- Seed 3 selected epoch 2 for all models. The seed-0 reproduction selected epoch
+  3 for R18/R50 and epoch 2 for M3/Oracle. Original seed-0 runs remain unchanged.
+- Added clean seed-3 replay recipe, isolated seed-0 reproduction notebook and
+  frozen seed-0-reproduction/seed-3 test runner; notebook outputs are cleared.
+- Existing seed-1/2 test, NME subgroup, illustrative case-review and small-scale
+  reproduction reports match the Drive exports and were not duplicated.
+- Seed-0 reproduction/seed-3 test subsequently completed: eight models across
+  all 21 conditions, 19,962 test images, 1,638 shards, 168 overall metric rows
+  and 4,032 attribute rows. No test threshold fitting.
+- Imported the completed test archive, verified all payload hashes and eight
+  checkpoint/threshold bindings; original archive retained byte-for-byte.
+- Original/reproduced M3 aggregate F1 (both rules) and mAP match exactly across
+  all 21 conditions. This is metric agreement, not proof of identical weights.
+- Scope, metrics, caveats and next actions:
+  docs/seed2_to_seed0_reproduction_20261020.md.

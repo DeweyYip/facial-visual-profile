@@ -1,0 +1,22 @@
+{
+  "run_name": "oracle_seed3",
+  "seed": 3,
+  "shared": {
+    "image_zip_sha256": "46fb89443c578308acf364d7d379fe1b9efb793042c0af734b6112e4fd3a8c74",
+    "annotation_sha256": {
+      "list_attr_celeba.txt": "f0e5da289d5ccf75ffe8811132694922b60f2af59256ed362afa03fefba324d0",
+      "list_eval_partition.txt": "fc955bcb3ef8fbdf7d5640d9a8693a8431b5f2ee291a5c1449a1549e7e073fe7",
+      "list_landmarks_align_celeba.txt": "6c02a87569907f6db2ba99019085697596730e8129f67a3d61659f198c48d43b"
+    },
+    "reference_config_sha256": {
+      "r18": "d391bb4aec395de5d6e479218e793b86a4df8a0524bef2291c1a02507629d3ea",
+      "r50": "9ea57e9b4f3c03e012c21158ba91cf417822787e2ecefc8b55f96c08fd7236b7",
+      "m3": "d397bd54d4e785a254e9d06134fdd4503941bf880e9e902931185f7d8875cf81",
+      "oracle": "84574f8204d6b8a2439c3f42d55b580e0143dfa86fad823933358b0934409e4d"
+    },
+    "cache_sha256": "4b8e985a6be0a42252a54d5f7e0b66fcab5081989afd3d05f007c944cf384671",
+    "train_samples": 162770,
+    "validation_samples": 19867,
+    "test_evaluated": false
+  }
+}

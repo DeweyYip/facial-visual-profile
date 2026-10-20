@@ -1,0 +1,97 @@
+[
+  {
+    "archive": "seed1_seed2_test_results_archive.zip",
+    "existing_git_directory": "docs/results/benchmark/multiseed_seed1_seed2",
+    "byte_identical_files": [
+      "analysis/completion_summary.json",
+      "analysis/overall_metrics.csv",
+      "analysis/per_attribute_metrics.csv",
+      "analysis/seed0_rgb_m3_plus_seed1_seed2_metrics.csv",
+      "archive_manifest.json",
+      "condition_reports/blur_s1.json",
+      "condition_reports/blur_s2.json",
+      "condition_reports/blur_s3.json",
+      "condition_reports/blur_s4.json",
+      "condition_reports/brightness_s1.json",
+      "condition_reports/brightness_s2.json",
+      "condition_reports/brightness_s3.json",
+      "condition_reports/brightness_s4.json",
+      "condition_reports/clean_s0.json",
+      "condition_reports/jpeg_s1.json",
+      "condition_reports/jpeg_s2.json",
+      "condition_reports/jpeg_s3.json",
+      "condition_reports/jpeg_s4.json",
+      "condition_reports/occlusion_s1.json",
+      "condition_reports/occlusion_s2.json",
+      "condition_reports/occlusion_s3.json",
+      "condition_reports/occlusion_s4.json",
+      "condition_reports/rotation_s1.json",
+      "condition_reports/rotation_s2.json",
+      "condition_reports/rotation_s3.json",
+      "condition_reports/rotation_s4.json",
+      "execution_binding.json",
+      "multiseed_benchmark_report.json",
+      "source/day19_frozen_inputs.zip",
+      "source/inference_functions.py",
+      "source/seed0_oracle_report.json",
+      "test_jpeg_sha256.json"
+    ],
+    "different_files": [],
+    "missing_files": [],
+    "action": "Existing Git files preserved; no overwrite."
+  },
+  {
+    "archive": "three_seed_nme_and_f1_intervals_archive.zip",
+    "existing_git_directory": "docs/results/benchmark/three_seed_nme_and_f1_intervals",
+    "byte_identical_files": [
+      "README.md",
+      "analysis_binding.json",
+      "completion_audit.json",
+      "group_attribute_metrics.csv",
+      "group_metrics.csv",
+      "group_three_seed_summary.csv",
+      "intervals.csv",
+      "m3_r18_fixed_seed_image_intervals.pdf",
+      "m3_r18_fixed_seed_image_intervals.png",
+      "nme_groups_fixed_0_5.pdf",
+      "nme_groups_fixed_0_5.png",
+      "nme_groups_frozen_thresholds.pdf",
+      "nme_groups_frozen_thresholds.png",
+      "overall.csv",
+      "source/analyze_three_seed_predictions.py"
+    ],
+    "different_files": [],
+    "missing_files": [],
+    "action": "Existing Git files preserved; no overwrite."
+  },
+  {
+    "drive_folder": "prediction_case_review_v1",
+    "existing_git_directory": "docs/results/benchmark/prediction_case_review",
+    "byte_identical_files": [
+      "README.md",
+      "completion_audit.json",
+      "selection_coverage.csv",
+      "rendering_audit.json",
+      "case_predictions.csv",
+      "archive_manifest.json",
+      "analysis_binding.json",
+      "selected_cases.json"
+    ],
+    "different_files": [],
+    "missing_files": [],
+    "action": "Existing Git files preserved; no overwrite."
+  },
+  {
+    "drive_folder": "small_scale_reproduction",
+    "existing_git_directory": "docs/results/benchmark/small_scale_reproduction",
+    "byte_identical_files": [
+      "README.md",
+      "execution_binding.json",
+      "reproduction_report.json",
+      "attribute_comparisons.csv"
+    ],
+    "different_files": [],
+    "missing_files": [],
+    "action": "Existing Git files preserved; no overwrite."
+  }
+]

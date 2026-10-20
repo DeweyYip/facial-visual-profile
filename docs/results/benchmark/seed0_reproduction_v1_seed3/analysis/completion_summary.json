@@ -1,0 +1,13 @@
+{
+  "all_prediction_shards_verified": 1638,
+  "attribute_rows": 4032,
+  "historical_seed0_metrics": "Separate comparison CSV; original run names have no reproduction suffix",
+  "nme_subgroup_analysis": "not performed by this notebook",
+  "overall_rows": 168,
+  "run_tags": {
+    "0": "seed0_reproduction_v1",
+    "3": "seed3"
+  },
+  "seed0_reproduction_and_seed3_complete": true,
+  "threshold_fitting_performed": false
+}

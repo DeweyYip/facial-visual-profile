@@ -1,0 +1,33 @@
+{
+  "training_exports_verified": [
+    {
+      "tag": "seed2",
+      "archive_sha256": "1e0259f10bb956d41e1870023bf62e9eb6cd7704e6b4ce751fa4bd89ca95dc5b",
+      "archive_file": "docs/results/training_archives/seed2_training_results_archive.zip",
+      "archive_members_verified": 47,
+      "history_epochs_per_model": 10,
+      "source_snapshots": "Byte-exact source snapshots retained inside the original archive."
+    },
+    {
+      "tag": "seed3",
+      "archive_sha256": "5add4e42c0b42b5af80dffb7da8df56f75b8fe5ea865299f4ae2b0db3a1f6342",
+      "archive_file": "docs/results/training_archives/seed3_training_results_archive.zip",
+      "archive_members_verified": 47,
+      "history_epochs_per_model": 10,
+      "source_snapshots": "Byte-exact source snapshots retained inside the original archive."
+    },
+    {
+      "tag": "seed0_reproduction_v1",
+      "archive_sha256": "099c5e09fd2feed9b502070464f97b7e321ad62c30380c8bbaac8f96223b814b",
+      "archive_file": "docs/results/training_archives/seed0_reproduction_v1_training_results_archive.zip",
+      "archive_members_verified": 47,
+      "history_epochs_per_model": 10,
+      "source_snapshots": "Byte-exact source snapshots retained inside the original archive."
+    }
+  ],
+  "checkpoint_weights_included": false,
+  "validation_npz_included": false,
+  "new_runs_test_complete": true,
+  "test_archive_sha256": "8a76c4b572bc6cb9957a08990c2215ce57dbfab3142e5a11f7e66e167da7ef13",
+  "test_archive_evidence": "docs/results/benchmark/seed0_reproduction_v1_seed3/local_archive_manifest.json"
+}

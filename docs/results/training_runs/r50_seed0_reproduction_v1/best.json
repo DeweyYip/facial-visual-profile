@@ -1,0 +1,6 @@
+{
+  "epoch": 3,
+  "checkpoint": "epoch_03.pt",
+  "validation_map": 0.8197104020655699,
+  "validation_macro_f1": 0.729621380784092
+}

@@ -1,0 +1,8 @@
+{
+  "epoch": 2,
+  "checkpoint": "epoch_02.pt",
+  "validation_bce": 0.18899645772266863,
+  "validation_macro_f1": 0.7474937042022947,
+  "validation_mAP": 0.819444821942005,
+  "f1_threshold": 0.5
+}

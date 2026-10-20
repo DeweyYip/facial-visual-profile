@@ -1,5 +1,10 @@
 # Facial Visual Profile — Current State v1
 
+> Update checked 2026-10-20: see
+> [Seed 2 through seed-0 reproduction](seed2_to_seed0_reproduction_20261020.md)
+> for subsequent multi-seed work and current status. Sections below retain the
+> older baseline handoff; their pending-work statements are historical.
+
 ## Latest verified state
 
 Day 17 benchmark protocol/manifest freeze passed; archived audit verified.
