@@ -1,0 +1,10 @@
+comparison,description,seed,delta_mAP_pp,delta_F1_pp
+B-A,Geometry under clean training,0,-0.3958387763808413,0.6112067822972467
+B-A,Geometry under clean training,1,0.1372363819182265,0.6115910241651923
+B-A,Geometry under clean training,2,0.03823495658090703,0.40245844361971317
+D-C,Geometry under corruption-aware training,0,0.3174742768870198,0.10948426371654163
+D-C,Geometry under corruption-aware training,1,-0.1490198021815603,0.32463228791718146
+D-C,Geometry under corruption-aware training,2,-0.03741619581543176,-0.06094466340458293
+F-E,Geometry under RGB-branch masking,0,-0.09928034710640077,-0.6595762430220309
+F-E,Geometry under RGB-branch masking,1,0.2759297310096276,-0.05044157657333459
+F-E,Geometry under RGB-branch masking,2,0.3296282367629022,0.25912190226854426
