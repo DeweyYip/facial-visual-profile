@@ -46,7 +46,7 @@ Corruption-aware training improves **both** RGB and Oracle robustness markedly, 
 | [`docs/results/`](docs/results/) | Frozen research evidence, experimental reports, figures and audited outputs |
 | [`docs/releases/research_v1/`](docs/releases/research_v1/) | Preserved prior research snapshot and evidence manifest |
 | [`docs/hci/`](docs/hci/) | Research-to-HCI handoff notes; no public hosted demo is asserted here |
-| [`demo/`](demo/) | Placeholder for future checked-in demonstration code |
+
 
 ## Reproducibility and setup
 
