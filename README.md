@@ -4,6 +4,8 @@
 
 Facial Visual Profile investigates whether explicit **five-point facial geometry** provides consistent value beyond RGB features for multi-label facial attribute recognition, particularly when images are corrupted. It is an experimental research repository, **not** a claim that geometry fusion universally improves robustness.
 
+See the [paper figure and evidence index](docs/paper_figures.md) for manuscript-to-result mappings and the current manuscript availability status.
+
 ## Research at a glance
 
 - **Task:** 24-attribute multi-label prediction on the official [CelebA](https://mmlab.ie.cuhk.edu.hk/projects/CelebA.html) aligned-image splits: 162,770 train / 19,867 validation / 19,962 test.
@@ -16,6 +18,17 @@ Facial Visual Profile investigates whether explicit **five-point facial geometry
 ## Key findings
 
 **Original four-model study.** Explicit five-point fusion did **not** demonstrate a stable, universal robustness advantage over RGB-only models. Effects depend on the attribute, corruption, metric and run. The GT Oracle is a *separately trained diagnostic*, not a causal replacement of M3's detector output. See the [archived research release](docs/releases/research_v1/README.md) and [four-seed comparison](docs/results/benchmark/four_seed_and_remake_comparison/README.md). The research release describes its **three-seed snapshot**; later four-seed results must not be conflated with it.
+
+Original corruption averages across 20 conditions and original nominal seeds 0–3 (mean ± sample SD; %):
+
+| Model | Frozen macro-F1 | mAP |
+|---|---:|---:|
+| R18 | 61.94 ± 0.13 | 76.02 ± 0.32 |
+| R50 | 62.37 ± 0.20 | 76.31 ± 0.15 |
+| M3 | 61.28 ± 0.21 | 75.76 ± 0.32 |
+| Oracle | 61.31 ± 0.40 | 75.90 ± 0.33 |
+
+The separate seed-0 reproduction is excluded. Historical environment and loader differences remain documented limitations.
 
 **RQ4 extension, three paired seeds (0–2):** corrupted-test averages across 20 conditions:
 
@@ -59,6 +72,8 @@ python3 -m venv .venv
 source .venv/bin/activate
 python -m pip install -r requirements-local.txt
 ```
+
+The command above installs the base local environment. For attribute metrics, use `python -m pip install -r requirements-metrics.txt`; for MTCNN plus metrics, use `python -m pip install -r requirements-detector.txt`. See [local dependency scope](docs/local_dependencies.md). These are local convenience profiles, not replacements for archived training environments.
 
 The research input interface uses centered 224×224 letterboxing, ImageNet normalization and five GT/predicted facial points mapped to ten normalized coordinates. Attribute ordering lives in [`configs/attributes.yaml`](configs/attributes.yaml). Use the archived [training](docs/training_protocol_v1.md) and [benchmark](docs/benchmark_protocol_v1.md) protocols before claiming an exact reproduction. The local requirements file is **not** a complete frozen Colab training environment.
 

@@ -21,7 +21,7 @@ The study examines whether **training distribution** or **RGB feature masking** 
 | E | R18 RGB only | clean | yes (20% sample-level probability) |
 | F | R18 + GT geometry | clean | yes (20% sample-level probability) |
 
-Three nominal seeds (0, 1, 2) per group, 18 independent training runs. All six use the official CelebA train/valid/test split with 24 attributes, ImageNet-pretrained R18 initialization, batch size 64 and LR 1e-4. The recorded policy is maximum 10 epochs, minimum 4 epochs, early-stopping patience 2 on **clean-validation mAP**. Each run fits frozen F1 thresholds on clean validation only. The final test covers 19,962 images, one clean plus 20 corruption conditions; the corruption mean excludes clean.
+Three nominal seeds (0, 1, 2) per group, 18 independent training runs. All six use the official CelebA train/valid/test split with 24 attributes, ImageNet-pretrained R18 initialization, batch size 64 and LR 1e-4. The recorded policy is maximum 10 epochs, minimum 4 epochs, early-stopping patience 2 on **clean-validation mAP**. A_seed0 retains six epochs that had already been completed when the early-stopping policy was introduced; epoch 2 was selected. Each run fits frozen F1 thresholds on clean validation only. The final test covers 19,962 images, one clean plus 20 corruption conditions; the corruption mean excludes clean.
 
 The six models are *newly trained*. Original R18, R50, predicted-landmark M3 and historical GT Oracle checkpoints are not secretly substituted into any A–F contrast. GT geometry is privileged input.
 
@@ -53,7 +53,7 @@ The mAP effects are small and directionally inconsistent across seeds. Corruptio
 - Training-distribution interaction `(D−C)−(B−A)`: approximately **+0.117 pp mAP / −0.417 pp F1**.
 - RGB-masking interaction `(F−E)−(B−A)`: approximately **+0.242 pp mAP / −0.692 pp F1**.
 
-The three seed-specific interactions must be checked in `paired_interactions.csv`; signs are not consistently positive for mAP. Three-seed descriptive differences are not statistical significance tests.
+The training-distribution interaction changes sign across seeds in mAP, whereas the RGB-masking interaction is positive in all three seeds. However, the geometry effect under masking (F−E) still changes sign across seeds. Three-seed descriptive differences are not statistical significance tests.
 
 ## Files and how to use them
 

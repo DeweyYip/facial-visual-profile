@@ -1,0 +1,2 @@
+-r requirements-local.txt
+scikit-learn==1.6.1
