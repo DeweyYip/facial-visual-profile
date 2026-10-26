@@ -1,0 +1,2 @@
+-r requirements-metrics.txt
+facenet-pytorch==2.6.0
