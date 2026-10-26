@@ -1,0 +1,21 @@
+{
+  "python_syntax": "PASS",
+  "copied_rq4_function_ast_equivalence": "PASS",
+  "copied_functions": [
+    "prepare_canvas",
+    "direction_for",
+    "transform_corruption",
+    "normalize_geometry",
+    "set_seed",
+    "seed_worker",
+    "compute_metrics",
+    "fit_thresholds"
+  ],
+  "torch_runtime_tests": "PASS on local Mac: N0/N1/MTL synthetic checks, failure masking, MTL gradients, model/Adam continuation",
+  "real_data_tests": "PASS: N0/MTL train samples at indices 0/100/1000; batch size 2 forward checks",
+  "formal_training": "NOT RUN",
+  "lambda": "UNFROZEN",
+  "preprocessing_compatibility": "PASS on deterministic synthetic input: 21 conditions, exact RGB hashes, coordinate tolerance 2e-5 pixels",
+  "N1_real_cache_tests": "NOT RUN: pending Drive/Colab checks",
+  "CUDA_tests": "NOT RUN"
+}

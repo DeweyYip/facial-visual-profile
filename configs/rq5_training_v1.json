@@ -1,0 +1,28 @@
+{
+  "study": "rq5_training_v1",
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "models": [
+    "N0",
+    "N1",
+    "MTL"
+  ],
+  "epochs": 10,
+  "min_epochs": 4,
+  "patience": 2,
+  "batch_size": 64,
+  "eval_batch_size": 128,
+  "num_workers": 2,
+  "learning_rate": 0.0001,
+  "weight_decay": 0.0,
+  "precision": "FP32",
+  "augmentation": false,
+  "mask_rgb": false,
+  "mtl_lambda": null,
+  "lambda_basis": null,
+  "pretrained": "ResNet18_Weights.IMAGENET1K_V1",
+  "checkpoint_selection": "maximum clean-validation mAP; earliest exact tie"
+}

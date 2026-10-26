@@ -1,0 +1,9 @@
+{
+  "source_notebook": "notebooks/rq4_18run_earlystopping_resume_v2.ipynb",
+  "sha256": "a0f8ae706cec919550054c094c6fe1c182de48654277b9435145ece9b9a51030",
+  "shared_helper_cells": [
+    5,
+    7
+  ],
+  "note": "Pure preprocessing/metric/seeding definitions extracted; no notebook execution."
+}
