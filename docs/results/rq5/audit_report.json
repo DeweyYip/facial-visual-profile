@@ -1,0 +1,32 @@
+{
+  "status": "PASS",
+  "source_files": 109,
+  "new_runs": 9,
+  "baseline_runs": 3,
+  "condition_rows": 252,
+  "attribute_rows": 6048,
+  "condition_json_checks": 252,
+  "samples_per_condition": 19962,
+  "new_model_sample_evaluations": 3772818,
+  "actual_new_training_epochs": 40,
+  "lambda_value": 1.89811,
+  "checks": [
+    "Downloaded source byte hashes",
+    "All 12 x 21 conditions present",
+    "24 attribute values match raw per-run JSON",
+    "Macro metrics equal attribute means",
+    "Archive CSV summaries and paired contrasts independently reproduced",
+    "Nine completion, checkpoint-reference and threshold/test byte-hash chains match",
+    "Three old A JSON artifacts match baseline binding",
+    "Best epochs match all histories; nine new runs stop at the first eligible epoch",
+    "Frozen lambda reproduced from four train batches"
+  ],
+  "limits": [
+    "Historical A_seed0 ran 6 epochs although the current rule would stop after epoch 4; both select epoch 2. RQ4 early stopping was introduced after training began. This is a protocol-history difference, not a reason to retrain or discard the baseline.",
+    "Checkpoint binaries were not downloaded or independently rehashed; only their recorded SHA256 references were cross-checked.",
+    "Predictions/logits and sample-level labels were not downloaded/exported by these RQ5 summary artifacts. Metrics were reconciled, not recomputed from predictions.",
+    "Frozen-input preflight covers one image over 21 conditions; full runtime per-image checks are implementation-recorded, not rerun here.",
+    "Same nominal seeds do not guarantee identical RNG trajectories. Historical baseline environment includes a Python patch-version difference. Historical A_seed0 ran six epochs rather than the four required by the current stopping rule, with epoch 2 selected in either case.",
+    "Three seeds and correlated corruption conditions do not support treating conditions or attributes as independent replicates."
+  ]
+}

@@ -1,0 +1,141 @@
+{
+  "commit": "1788617b6271dbb1d9b075660c0398cd2782eaf5",
+  "execution_binding": {
+    "commit": "1788617b6271dbb1d9b075660c0398cd2782eaf5",
+    "notebook_revision": "rq5_colab_v1",
+    "sources": {
+      "models/rq5.py": "ceaf2df3d93b72ac5776c4fc63468d9424255f8a7b997f98d1972ca8fa89a54b",
+      "datasets/celeba_rq5.py": "c04c747fa6198df36e3a73ee253e6616f9f4e75d84b97a65e49cf5af919c3235",
+      "training/rq5.py": "d06fb2df6c3f90e74718cbe3cd0679c25835d464382e9265a41c7ada43865ccd",
+      "training/rq5_shared.py": "11df7e7a70449fe7dba7dcf9b57d104d4d539bfbeb7170b424a92253f3847729",
+      "scripts/evaluate_rq5.py": "e75fefa67e8dec3ee272f580ea546ffa896d19a1adbb865700234d29f7336cd1",
+      "datasets/landmark_cache.py": "9e8ed836c4ace3e84970d1e3e67baaf740b919553f656640d7a9b90e7eae6968",
+      "datasets/corruptions.py": "84ce9404f2843d4ed6c29bc4b3bf2ad0cd2cb4cacc861a7e6be94554a361a520",
+      "configs/rq5_training_v1.json": "d12569e9d1a8423f6f4d1792a78a60aa74789d65dacc79f78633df60ade37ef9"
+    },
+    "environment": {
+      "python": "3.13.16",
+      "torch": "2.11.0+cu130",
+      "torchvision": "0.26.0+cu130",
+      "numpy": "2.1.3",
+      "Pillow": "11.3.0",
+      "sklearn": "1.6.1",
+      "cuda": "13.0",
+      "gpu": "Tesla T4"
+    },
+    "tf32_matmul": false,
+    "tf32_cudnn": true
+  },
+  "lambda_value": 1.89811,
+  "runs": {
+    "N0_seed0": {
+      "training": {
+        "epochs": 4,
+        "best": {
+          "epoch": 2,
+          "mAP": 0.8182366749247211
+        }
+      },
+      "checkpoint_sha256": "4e1aade14051e9b504404589a7b4790ab99f8fdd481982951517988edbf8b830",
+      "thresholds_sha256": "ec4d3e83c39b62aeedf416146b0258325c406142110f06a5e7539afbbf1a0ac5",
+      "test_sha256": "e8fe98b3af7a87ba76ad4c933d917063723b7dd5cc8bad5cce32c2ff9d2b5230"
+    },
+    "N0_seed1": {
+      "training": {
+        "epochs": 4,
+        "best": {
+          "epoch": 2,
+          "mAP": 0.8176928477631383
+        }
+      },
+      "checkpoint_sha256": "ef6be67d3ab2f266609d6759d712ff3ba149d14fe9638bf67fa5f4521af8f152",
+      "thresholds_sha256": "c7187b0a516996e6e2620b0107aab6918c613dbb525bfc33b181202c163a2f0f",
+      "test_sha256": "a3259db66b6c381385ef739b15696af5fa8f5828194cf494cf7117626c6560f8"
+    },
+    "N0_seed2": {
+      "training": {
+        "epochs": 4,
+        "best": {
+          "epoch": 2,
+          "mAP": 0.817060553880113
+        }
+      },
+      "checkpoint_sha256": "b120ece23406e9805b36688b6bd0877d14f407549145d46d710de06227ca8038",
+      "thresholds_sha256": "791b6465bb0b968e60ecabb1ba2b3163e39ebb725f5bcc5caa86227c669e4587",
+      "test_sha256": "b01c66a79fc40a9b6a0190297d59e4ddfb0a968a7e38cef8273372f2c42c6b43"
+    },
+    "N1_seed0": {
+      "training": {
+        "epochs": 4,
+        "best": {
+          "epoch": 2,
+          "mAP": 0.8174672875595901
+        }
+      },
+      "checkpoint_sha256": "1f0feefbd9f43a1b24342e86ccb8356550d07f5d1db5461a2dee4ecfed92fc9e",
+      "thresholds_sha256": "5355b1d54a6031340f9d3a604aafdcefe7c7538697af91ae99c7407cc5557615",
+      "test_sha256": "043f8c3317b986f0bd988aa76dc7ae50e7875fdcc5bbaae7dc14bab9b3a88bf7"
+    },
+    "N1_seed1": {
+      "training": {
+        "epochs": 4,
+        "best": {
+          "epoch": 2,
+          "mAP": 0.8164394439177108
+        }
+      },
+      "checkpoint_sha256": "53b7653df4c75e093479a410eb6e5135d39e38d7b65a8b39c0d6df90ff88681b",
+      "thresholds_sha256": "6afd8b70185e588226a751376d6999bf2b80a60831b092842d512a879c264d63",
+      "test_sha256": "2bf5552a5a75ebaa882940fe157f8d7cf6874058c53d058feac209793d55eec5"
+    },
+    "N1_seed2": {
+      "training": {
+        "epochs": 4,
+        "best": {
+          "epoch": 2,
+          "mAP": 0.8171374714559442
+        }
+      },
+      "checkpoint_sha256": "33a370838bca81aa88945d796b1165783a3c56071f406a04a1edb3f29cf1b667",
+      "thresholds_sha256": "0e1f6826cbb6e0eb3abd6bf4910aa3298513609d2ae0d56d2499902f9426231f",
+      "test_sha256": "5f8509dcd522de473649157493b2485f0ad2e6d06980b762e9cea04912dc1f6d"
+    },
+    "MTL_seed0": {
+      "training": {
+        "epochs": 5,
+        "best": {
+          "epoch": 3,
+          "mAP": 0.8176586414721744
+        }
+      },
+      "checkpoint_sha256": "1076add2916545f1f858b42b4d8a63cad1b826cb5be8d459f06164b24fe84e6a",
+      "thresholds_sha256": "f71fb8ba3ebdd91bf9a3f69b1c51f34d907546a8339e4f22ee70fab335c39a02",
+      "test_sha256": "4b3ef9ad62348d67cc4aa8b0b54a1ca1667d26c20e5e574f440768343714e196"
+    },
+    "MTL_seed1": {
+      "training": {
+        "epochs": 5,
+        "best": {
+          "epoch": 3,
+          "mAP": 0.8184952819764774
+        }
+      },
+      "checkpoint_sha256": "12cf2e05325565201b2a1b0d76c8e64b1b1f1a39786b81ee28a7ff9223253462",
+      "thresholds_sha256": "c79e89a71f9fa867f75d8cbc2b425c82d378211aebe9dceccdcf9522d7d3dcf8",
+      "test_sha256": "f991a68551f2f1e89670a082cb8287310ec8187aff94ca4614d72752bbc47af9"
+    },
+    "MTL_seed2": {
+      "training": {
+        "epochs": 6,
+        "best": {
+          "epoch": 4,
+          "mAP": 0.8168049385758204
+        }
+      },
+      "checkpoint_sha256": "5be48d3a30bfa3e49560a09512c6bdd5cd2a7f679a2c551654e95e90e019ce1e",
+      "thresholds_sha256": "ab1f03335118855fbe39c03dfa65985fed4a515d498a7582a9d4343d9815711a",
+      "test_sha256": "a72b331ba4d6076512265492a41abc9abd8739ba88305c0cab867228d1f1d0ec"
+    }
+  },
+  "note": "Three seeds; sample SD is descriptive. Negative findings must be retained."
+}

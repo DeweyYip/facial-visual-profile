@@ -1,0 +1,34 @@
+[
+  {
+    "epoch": 1,
+    "training_loss": 0.2187361981433418,
+    "attribute_BCE": 0.2187361981433418,
+    "landmark_MSE": 0.0,
+    "clean_validation_mAP": 0.8111972262912372,
+    "clean_validation_F1_at_05": 0.7185100570974475
+  },
+  {
+    "epoch": 2,
+    "training_loss": 0.18799334183283123,
+    "attribute_BCE": 0.18799334183283123,
+    "landmark_MSE": 0.0,
+    "clean_validation_mAP": 0.817060553880113,
+    "clean_validation_F1_at_05": 0.7375194965964473
+  },
+  {
+    "epoch": 3,
+    "training_loss": 0.1765776514871529,
+    "attribute_BCE": 0.1765776514871529,
+    "landmark_MSE": 0.0,
+    "clean_validation_mAP": 0.8127579092476257,
+    "clean_validation_F1_at_05": 0.7326757843815793
+  },
+  {
+    "epoch": 4,
+    "training_loss": 0.1631303681457644,
+    "attribute_BCE": 0.1631303681457644,
+    "landmark_MSE": 0.0,
+    "clean_validation_mAP": 0.8151436551539827,
+    "clean_validation_F1_at_05": 0.7485287902924279
+  }
+]

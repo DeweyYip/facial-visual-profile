@@ -1,0 +1,15 @@
+{
+  "checkpoint": "b120ece23406e9805b36688b6bd0877d14f407549145d46d710de06227ca8038",
+  "thresholds": "791b6465bb0b968e60ecabb1ba2b3163e39ebb725f5bcc5caa86227c669e4587",
+  "sources": {
+    "models/rq5.py": "ceaf2df3d93b72ac5776c4fc63468d9424255f8a7b997f98d1972ca8fa89a54b",
+    "datasets/celeba_rq5.py": "c04c747fa6198df36e3a73ee253e6616f9f4e75d84b97a65e49cf5af919c3235",
+    "training/rq5.py": "d06fb2df6c3f90e74718cbe3cd0679c25835d464382e9265a41c7ada43865ccd",
+    "training/rq5_shared.py": "11df7e7a70449fe7dba7dcf9b57d104d4d539bfbeb7170b424a92253f3847729",
+    "datasets/landmark_cache.py": "9e8ed836c4ace3e84970d1e3e67baaf740b919553f656640d7a9b90e7eae6968",
+    "datasets/corruptions.py": "84ce9404f2843d4ed6c29bc4b3bf2ad0cd2cb4cacc861a7e6be94554a361a520"
+  },
+  "evaluation_script": "e75fefa67e8dec3ee272f580ea546ffa896d19a1adbb865700234d29f7336cd1",
+  "images": "/content/fvp_rq5_data/img_align_celeba",
+  "benchmark_roots": []
+}

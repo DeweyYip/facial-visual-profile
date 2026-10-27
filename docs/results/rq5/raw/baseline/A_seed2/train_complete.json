@@ -1,0 +1,20 @@
+{
+  "epochs": 4,
+  "max_epochs": 10,
+  "stop_reason": "early_stopping",
+  "best": {
+    "epoch": 2,
+    "mAP": 0.8183533756803362,
+    "F1_at_05": 0.7354010934665545
+  },
+  "early_stopping": {
+    "enabled": true,
+    "max_epochs": 10,
+    "min_epochs": 4,
+    "patience": 2,
+    "monitor": "clean_validation_mAP",
+    "improvement_rule": "strict > previous best (ties do not count)",
+    "on_existing_history": "read original best.json/latest.pt and use completed epochs",
+    "original_protocol_unchanged": true
+  }
+}

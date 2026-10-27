@@ -1,0 +1,86 @@
+{
+  "exp": "A",
+  "seed": 2,
+  "options": {
+    "geometry": false,
+    "augmentation": false,
+    "mask_rgb": false
+  },
+  "protocol": {
+    "study": "rq4_training_v1",
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "experiments": {
+      "A": {
+        "geometry": false,
+        "augmentation": false,
+        "mask_rgb": false
+      },
+      "B": {
+        "geometry": true,
+        "augmentation": false,
+        "mask_rgb": false
+      },
+      "C": {
+        "geometry": false,
+        "augmentation": true,
+        "mask_rgb": false
+      },
+      "D": {
+        "geometry": true,
+        "augmentation": true,
+        "mask_rgb": false
+      },
+      "E": {
+        "geometry": false,
+        "augmentation": false,
+        "mask_rgb": true
+      },
+      "F": {
+        "geometry": true,
+        "augmentation": false,
+        "mask_rgb": true
+      }
+    },
+    "epochs": 10,
+    "batch_size": 64,
+    "lr": 0.0001,
+    "weight_decay": 0.0,
+    "num_workers": 2,
+    "rgb_mask_prob": 0.2,
+    "aug_prob": 0.5,
+    "attributes": [
+      "Smiling",
+      "Mouth_Slightly_Open",
+      "Eyeglasses",
+      "Bangs",
+      "Wearing_Hat",
+      "Mustache",
+      "No_Beard",
+      "Black_Hair",
+      "Bushy_Eyebrows",
+      "Arched_Eyebrows",
+      "High_Cheekbones",
+      "Bags_Under_Eyes",
+      "Big_Lips",
+      "Big_Nose",
+      "Double_Chin",
+      "Oval_Face",
+      "Receding_Hairline",
+      "Blond_Hair",
+      "Brown_Hair",
+      "Gray_Hair",
+      "Bald",
+      "Straight_Hair",
+      "Wavy_Hair",
+      "Sideburns"
+    ],
+    "image_size": 224,
+    "corruption_policy": "five families x four levels, 50-percent-clean stochastic augmentation",
+    "pretrained": "ResNet18_Weights.IMAGENET1K_V1",
+    "checkpoint_selection": "maximum clean-validation mAP; earliest epoch on exact tie"
+  }
+}

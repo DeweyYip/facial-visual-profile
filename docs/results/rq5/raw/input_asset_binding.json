@@ -1,0 +1,7 @@
+{
+  "img_align_celeba.zip": "46fb89443c578308acf364d7d379fe1b9efb793042c0af734b6112e4fd3a8c74",
+  "list_eval_partition.txt": "fc955bcb3ef8fbdf7d5640d9a8693a8431b5f2ee291a5c1449a1549e7e073fe7",
+  "list_attr_celeba.txt": "f0e5da289d5ccf75ffe8811132694922b60f2af59256ed362afa03fefba324d0",
+  "list_landmarks_align_celeba.txt": "6c02a87569907f6db2ba99019085697596730e8129f67a3d61659f198c48d43b",
+  "mtcnn_clean.sqlite": "4b8e985a6be0a42252a54d5f7e0b66fcab5081989afd3d05f007c944cf384671"
+}

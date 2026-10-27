@@ -1,0 +1,30 @@
+[
+  {
+    "epoch": 1,
+    "training_loss": 0.2129630473076129,
+    "clean_validation_mAP": 0.8113264950773713,
+    "clean_validation_F1_at_05": 0.727243661882107,
+    "seconds": 612.8208210468292
+  },
+  {
+    "epoch": 2,
+    "training_loss": 0.18652231129867158,
+    "clean_validation_mAP": 0.8184559872746661,
+    "clean_validation_F1_at_05": 0.7327522364859416,
+    "seconds": 616.1448743343353
+  },
+  {
+    "epoch": 3,
+    "training_loss": 0.17490888178282626,
+    "clean_validation_mAP": 0.8178861872398078,
+    "clean_validation_F1_at_05": 0.7365783534491652,
+    "seconds": 617.2840502262115
+  },
+  {
+    "epoch": 4,
+    "training_loss": 0.1609303713073717,
+    "clean_validation_mAP": 0.8101586590685397,
+    "clean_validation_F1_at_05": 0.7334770975645751,
+    "seconds": 616.6290633678436
+  }
+]

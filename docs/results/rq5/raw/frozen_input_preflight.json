@@ -1,0 +1,107 @@
+[
+  {
+    "condition": "clean",
+    "name": "182638.jpg",
+    "rgb_sha256": "7a7110792e86ea570c7ccf15874d8902b250b79b61a0a0e8b49e3ca818ccc8ed"
+  },
+  {
+    "condition": "blur_s1",
+    "name": "182638.jpg",
+    "rgb_sha256": "9659605a198988d9acf65b19bad9138d8cff0a6a3ab8a3ce1d478dc55059b9e5"
+  },
+  {
+    "condition": "blur_s2",
+    "name": "182638.jpg",
+    "rgb_sha256": "bb828792111340f6731fcb4cc3ef358209017c40761aa01996404754d8d468a2"
+  },
+  {
+    "condition": "blur_s3",
+    "name": "182638.jpg",
+    "rgb_sha256": "65795a10fcd8b496e7c924995d966964525e04c2e1d3ba0a01a96fe2f885b91b"
+  },
+  {
+    "condition": "blur_s4",
+    "name": "182638.jpg",
+    "rgb_sha256": "908de2799877f9c1a37b81af24f521221f247a13d7b082b2ea4de5ae9cd2c64d"
+  },
+  {
+    "condition": "brightness_s1",
+    "name": "182638.jpg",
+    "rgb_sha256": "788c6cf5e5ebc0061a48e3af700cfa4f8b9fd338fa2473b36bf0c815614c445b"
+  },
+  {
+    "condition": "brightness_s2",
+    "name": "182638.jpg",
+    "rgb_sha256": "410a1bcc4999299f7222ddb0519bec55b39a4ee8fabad666958bfa431771d4c0"
+  },
+  {
+    "condition": "brightness_s3",
+    "name": "182638.jpg",
+    "rgb_sha256": "888e307606707c50632cd6a3375b7a898ecdd5d7610796b706f2750af2426da6"
+  },
+  {
+    "condition": "brightness_s4",
+    "name": "182638.jpg",
+    "rgb_sha256": "bf6e1fb5e897de80e3fb783c2e4d6173534048d36d97bffcd215923eb5bbcd3c"
+  },
+  {
+    "condition": "rotation_s1",
+    "name": "182638.jpg",
+    "rgb_sha256": "f369eace1860996bab3d390328836e90f46f7f567ba1ecb86d7f409a4292e3fe"
+  },
+  {
+    "condition": "rotation_s2",
+    "name": "182638.jpg",
+    "rgb_sha256": "67e5f150f1261da6cf06377c06283aa477baa60aa9177daaac0f57d5a9ba7855"
+  },
+  {
+    "condition": "rotation_s3",
+    "name": "182638.jpg",
+    "rgb_sha256": "2ab5a10de42bcc2fd20aeced3e5e4154269f7fb48d79040c7b98a469e3e08e51"
+  },
+  {
+    "condition": "rotation_s4",
+    "name": "182638.jpg",
+    "rgb_sha256": "f2bf1002378b9864ec61ecdb0b03d276f6c4f43fe5dd555ad75295c01ff04ac8"
+  },
+  {
+    "condition": "occlusion_s1",
+    "name": "182638.jpg",
+    "rgb_sha256": "1a2bf6000485a8b10fa1f5fb48f71986bacf9c8fcae9dace7e0fe82361281928"
+  },
+  {
+    "condition": "occlusion_s2",
+    "name": "182638.jpg",
+    "rgb_sha256": "5327f7ab677d2217349ceb65b18dc37adb97541ea951de215c4a83872e005731"
+  },
+  {
+    "condition": "occlusion_s3",
+    "name": "182638.jpg",
+    "rgb_sha256": "8b8a123e56ccc90cdacb75fc9cad84a5a04d1d4dd10d30fdde6c3d6a70ff3f8d"
+  },
+  {
+    "condition": "occlusion_s4",
+    "name": "182638.jpg",
+    "rgb_sha256": "36a407dd4efd9da13ae24e5045deab8208c173f33339279c63fcc97ba4c4b182"
+  },
+  {
+    "condition": "jpeg_s1",
+    "name": "182638.jpg",
+    "rgb_sha256": "7a7d6c8f730a9ff49687ebc3cd4391f927c7acc2b1b34857278c9ce0fa0fe903"
+  },
+  {
+    "condition": "jpeg_s2",
+    "name": "182638.jpg",
+    "rgb_sha256": "3f739d9d7dff3586d5d4a95b7714e74e23cbe366310f5d3015758fc80f25a40f"
+  },
+  {
+    "condition": "jpeg_s3",
+    "name": "182638.jpg",
+    "rgb_sha256": "81e7447897f397d693f46392c577dd5b870689a65dea3ccd57bd9d6f3634dcd1"
+  },
+  {
+    "condition": "jpeg_s4",
+    "name": "182638.jpg",
+    "rgb_sha256": "8ffca6edb20336d473f0d605ce10b40058494a6c479285ddb1624a31c234fda2"
+  }
+]

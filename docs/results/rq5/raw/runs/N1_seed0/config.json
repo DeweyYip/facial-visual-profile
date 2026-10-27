@@ -1,0 +1,76 @@
+{
+  "config": {
+    "study": "rq5_training_v1",
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "models": [
+      "N0",
+      "N1",
+      "MTL"
+    ],
+    "epochs": 10,
+    "min_epochs": 4,
+    "patience": 2,
+    "batch_size": 64,
+    "eval_batch_size": 128,
+    "num_workers": 2,
+    "learning_rate": 0.0001,
+    "weight_decay": 0.0,
+    "precision": "FP32",
+    "augmentation": false,
+    "mask_rgb": false,
+    "mtl_lambda": 1.89811,
+    "lambda_basis": "mean_BCE_over_mean_MSE_4_train_batches_6_significant_digits_v1; see lambda_scale_check.json",
+    "pretrained": "ResNet18_Weights.IMAGENET1K_V1",
+    "checkpoint_selection": "maximum clean-validation mAP; earliest exact tie"
+  },
+  "model": "N1",
+  "seed": 0,
+  "source_hashes": {
+    "models/rq5.py": "ceaf2df3d93b72ac5776c4fc63468d9424255f8a7b997f98d1972ca8fa89a54b",
+    "datasets/celeba_rq5.py": "c04c747fa6198df36e3a73ee253e6616f9f4e75d84b97a65e49cf5af919c3235",
+    "training/rq5.py": "d06fb2df6c3f90e74718cbe3cd0679c25835d464382e9265a41c7ada43865ccd",
+    "training/rq5_shared.py": "11df7e7a70449fe7dba7dcf9b57d104d4d539bfbeb7170b424a92253f3847729",
+    "datasets/landmark_cache.py": "9e8ed836c4ace3e84970d1e3e67baaf740b919553f656640d7a9b90e7eae6968",
+    "datasets/corruptions.py": "84ce9404f2843d4ed6c29bc4b3bf2ad0cd2cb4cacc861a7e6be94554a361a520"
+  },
+  "environment": {
+    "python": "3.13.16",
+    "torch": "2.11.0+cu130",
+    "torchvision": "0.26.0+cu130",
+    "Pillow": "11.3.0",
+    "cuda": "13.0",
+    "numpy": "2.1.3",
+    "sklearn": "1.6.1",
+    "gpu": "Tesla T4"
+  },
+  "attributes": [
+    "Smiling",
+    "Mouth_Slightly_Open",
+    "Eyeglasses",
+    "Bangs",
+    "Wearing_Hat",
+    "Mustache",
+    "No_Beard",
+    "Black_Hair",
+    "Bushy_Eyebrows",
+    "Arched_Eyebrows",
+    "High_Cheekbones",
+    "Bags_Under_Eyes",
+    "Big_Lips",
+    "Big_Nose",
+    "Double_Chin",
+    "Oval_Face",
+    "Receding_Hairline",
+    "Blond_Hair",
+    "Brown_Hair",
+    "Gray_Hair",
+    "Bald",
+    "Straight_Hair",
+    "Wavy_Hair",
+    "Sideburns"
+  ]
+}

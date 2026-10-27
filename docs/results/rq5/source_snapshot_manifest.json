@@ -1,0 +1,66 @@
+[
+  {
+    "path": "source_snapshot/configs/rq5_training_v1.json",
+    "drive_id": "1o55UrYEsNVFwLr6afY8JuF1rEJV7UvKu",
+    "drive_url": "https://drive.google.com/file/d/1o55UrYEsNVFwLr6afY8JuF1rEJV7UvKu/view?usp=drivesdk",
+    "modified_time": "2026-10-26T08:51:18.934Z",
+    "size": 531,
+    "sha256": "d12569e9d1a8423f6f4d1792a78a60aa74789d65dacc79f78633df60ade37ef9"
+  },
+  {
+    "path": "source_snapshot/scripts/evaluate_rq5.py",
+    "drive_id": "15i0wQ5dJm4oNPqLvQQefKf3qy4hEpLrJ",
+    "drive_url": "https://drive.google.com/file/d/15i0wQ5dJm4oNPqLvQQefKf3qy4hEpLrJ/view?usp=drivesdk",
+    "modified_time": "2026-10-26T08:51:18.895Z",
+    "size": 6133,
+    "sha256": "e75fefa67e8dec3ee272f580ea546ffa896d19a1adbb865700234d29f7336cd1"
+  },
+  {
+    "path": "source_snapshot/training/rq5_shared.py",
+    "drive_id": "1y_90OVAfgNB3GFFNPdsxEYciuiZSCxoN",
+    "drive_url": "https://drive.google.com/file/d/1y_90OVAfgNB3GFFNPdsxEYciuiZSCxoN/view?usp=drivesdk",
+    "modified_time": "2026-10-26T08:51:18.872Z",
+    "size": 4417,
+    "sha256": "11df7e7a70449fe7dba7dcf9b57d104d4d539bfbeb7170b424a92253f3847729"
+  },
+  {
+    "path": "source_snapshot/training/rq5.py",
+    "drive_id": "1D-BB_5moh58WdarnQR9KCJTsGmu6FHL1",
+    "drive_url": "https://drive.google.com/file/d/1D-BB_5moh58WdarnQR9KCJTsGmu6FHL1/view?usp=drivesdk",
+    "modified_time": "2026-10-26T08:51:18.864Z",
+    "size": 12999,
+    "sha256": "d06fb2df6c3f90e74718cbe3cd0679c25835d464382e9265a41c7ada43865ccd"
+  },
+  {
+    "path": "source_snapshot/datasets/corruptions.py",
+    "drive_id": "1rC-KxN9WOLRMqcq7n7HgEotAC_GJllO8",
+    "drive_url": "https://drive.google.com/file/d/1rC-KxN9WOLRMqcq7n7HgEotAC_GJllO8/view?usp=drivesdk",
+    "modified_time": "2026-10-26T08:51:18.908Z",
+    "size": 6666,
+    "sha256": "84ce9404f2843d4ed6c29bc4b3bf2ad0cd2cb4cacc861a7e6be94554a361a520"
+  },
+  {
+    "path": "source_snapshot/datasets/landmark_cache.py",
+    "drive_id": "1MXeUuS06-sGyTmJdrGgAUiuk5nbFv6Uq",
+    "drive_url": "https://drive.google.com/file/d/1MXeUuS06-sGyTmJdrGgAUiuk5nbFv6Uq/view?usp=drivesdk",
+    "modified_time": "2026-10-26T08:51:18.901Z",
+    "size": 3989,
+    "sha256": "9e8ed836c4ace3e84970d1e3e67baaf740b919553f656640d7a9b90e7eae6968"
+  },
+  {
+    "path": "source_snapshot/datasets/celeba_rq5.py",
+    "drive_id": "16bNLoIAgH0Wz00gVJ7pS3PsR_Rr7i1V8",
+    "drive_url": "https://drive.google.com/file/d/16bNLoIAgH0Wz00gVJ7pS3PsR_Rr7i1V8/view?usp=drivesdk",
+    "modified_time": "2026-10-26T08:51:18.855Z",
+    "size": 7414,
+    "sha256": "c04c747fa6198df36e3a73ee253e6616f9f4e75d84b97a65e49cf5af919c3235"
+  },
+  {
+    "path": "source_snapshot/models/rq5.py",
+    "drive_id": "17R94P8ugMnKUlH6VOBP9CEkEgXHcPRY6",
+    "drive_url": "https://drive.google.com/file/d/17R94P8ugMnKUlH6VOBP9CEkEgXHcPRY6/view?usp=drivesdk",
+    "modified_time": "2026-10-26T08:51:18.844Z",
+    "size": 3062,
+    "sha256": "ceaf2df3d93b72ac5776c4fc63468d9424255f8a7b997f98d1972ca8fa89a54b"
+  }
+]
