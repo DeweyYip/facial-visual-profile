@@ -14,6 +14,7 @@ See the [paper figure and evidence index](docs/paper_figures.md) for manuscript-
 - **Evaluation:** clean input and five corruption families (blur, darkening, rotation, lower-face occlusion, JPEG compression), four severity levels each; 21 conditions per run.
 - **Metrics:** mAP and macro-F1 with per-attribute thresholds fitted on clean validation and frozen for testing. F1 at a fixed 0.5 threshold is separately reported.
 - **Research extension (RQ4):** tests whether corruption-aware training or RGB feature masking changes the incremental utility of **accurate** geometry.
+- **Research extension (RQ5):** compares a nonlinear RGB-only head (N0) against predicted-landmark nonlinear fusion (N1), plus RGB-only attribute learning against auxiliary landmark supervision (MTL). Nine new runs use seeds 0–2; RQ4-A is reused as the linear RGB baseline.
 
 ## Key findings
 
@@ -45,6 +46,23 @@ Corruption-aware training improves **both** RGB and Oracle robustness markedly, 
 
 **[Read the complete RQ4 summary and download its five source CSVs](docs/results/rq4/README.md).**
 
+## RQ5 nonlinear fusion and auxiliary supervision
+
+The nine new RQ5 runs are **N0, N1 and MTL × seeds 0–2**. The linear RGB baseline **A** consists of three *reused* RQ4 runs, not additional RQ5 training. The primary paired comparisons are **N1−N0** (increment from predicted landmarks with matched nonlinear heads) and **MTL−A** (increment from auxiliary landmark supervision over the historical linear RGB baseline).
+
+Corrupted-test averages across 20 non-clean conditions (three-seed mean ± sample SD, %):
+
+| Model | Frozen macro-F1 | mAP |
+|---|---:|---:|
+| A — linear RGB control, reused RQ4 | 61.369 ± 0.047 | 76.048 ± 0.226 |
+| N0 — nonlinear RGB control | 61.375 ± 0.446 | 76.016 ± 0.122 |
+| N1 — predicted geometry, nonlinear fusion | 61.090 ± 0.092 | 76.022 ± 0.252 |
+| MTL — auxiliary landmark regression | 61.836 ± 0.648 | 75.565 ± 0.545 |
+
+Paired effects: **N1−N0 = +0.006 ± 0.226 pp mAP / −0.286 ± 0.442 pp frozen F1**; **MTL−A = −0.484 ± 0.358 pp mAP / +0.467 ± 0.627 pp frozen F1**. Neither intervention establishes an improvement consistent across both metrics and all seeds. MTL−A uses an explicitly identified historical control, and later-stage results are exploratory follow-ups on a previously inspected test benchmark.
+
+**[RQ5 results, scripts, figure source records and verification limits](docs/results/rq5/README.md)** · **[Figure-to-paper index](docs/paper_figures.md)**
+
 ## Repository guide
 
 | Directory | Purpose |
@@ -54,7 +72,7 @@ Corruption-aware training improves **both** RGB and Oracle robustness markedly, 
 | [`detectors/`](detectors/) | MTCNN detector wrapper |
 | [`evaluation/`](evaluation/) | Attribute and benchmark metrics |
 | [`configs/`](configs/) | Attribute ordering, benchmark protocols and per-run thresholds |
-| [`notebooks/`](notebooks/) | Development records, multi-seed experiments, RQ4 runner; [start at notebook index](notebooks/README.md) |
+| [`notebooks/`](notebooks/) | Development records, multi-seed experiments and RQ4 runner; RQ5 evidence has its [own archive](docs/results/rq5/README.md); [start at notebook index](notebooks/README.md) |
 | [`scripts/`](scripts/) | Evaluation, reproduction, comparison and release utilities |
 | [`docs/results/`](docs/results/) | Frozen research evidence, experimental reports, figures and audited outputs |
 | [`docs/releases/research_v1/`](docs/releases/research_v1/) | Preserved prior research snapshot and evidence manifest |
@@ -77,7 +95,7 @@ The command above installs the base local environment. For attribute metrics, us
 
 The research input interface uses centered 224×224 letterboxing, ImageNet normalization and five GT/predicted facial points mapped to ten normalized coordinates. Attribute ordering lives in [`configs/attributes.yaml`](configs/attributes.yaml). Use the archived [training](docs/training_protocol_v1.md) and [benchmark](docs/benchmark_protocol_v1.md) protocols before claiming an exact reproduction. The local requirements file is **not** a complete frozen Colab training environment.
 
-For historical, raw experiment evidence and provenance, see [experiment log](docs/experiment_log.md), [prior release](docs/releases/research_v1/README.md), [four-seed analyses](docs/results/benchmark/four_seed_and_remake_comparison/README.md) and [RQ4](docs/results/rq4/README.md).
+For historical, raw experiment evidence and provenance, see [experiment log](docs/experiment_log.md), [prior release](docs/releases/research_v1/README.md), [four-seed analyses](docs/results/benchmark/four_seed_and_remake_comparison/README.md) [RQ4](docs/results/rq4/README.md) and [RQ5](docs/results/rq5/README.md).
 
 ## Interpretation and scope
 
@@ -86,6 +104,7 @@ For historical, raw experiment evidence and provenance, see [experiment log](doc
 - **NME associations:** low localization error alone does not imply better attribute F1 or identify a causal failure mechanism.
 - **Uncertainty:** seed sample standard deviations are not confidence intervals; historical execution environments are not identical.
 - **RQ4:** interventions test training distribution and RGB masking, but do not isolate the information content of all possible geometry representations.
+- **RQ5:** N1−N0 tests adding predicted geometry under matched nonlinear classifier dimensions; MTL−A uses a reused RQ4 control. These experiments do not isolate error-free fusion capacity or establish equivalence.
 - **Artifacts:** preserve source and hash-linked experiment snapshots; avoid casually deleting apparent duplicates under `docs/results/`.
 
 This README is a navigation entrypoint to research evidence, not a replacement for the frozen protocols and recorded experiment limitations.
