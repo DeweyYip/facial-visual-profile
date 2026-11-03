@@ -1,6 +1,6 @@
 # Notebook index
 
-Use this index to distinguish **historical development notebooks**, **completed research benchmarks** and the **new RQ4 intervention study**. No archived notebook has been removed or renamed. Run status must be verified against its experiment reports, not inferred from a filename alone.
+Use this index to distinguish **historical development notebooks**, **completed research benchmarks** and the **RQ4 intervention study** and **RQ5 follow-up**. No archived notebook has been removed or renamed. Run status must be verified against its experiment reports, not inferred from a filename alone.
 
 ## Start here
 
@@ -12,6 +12,10 @@ Use this index to distinguish **historical development notebooks**, **completed 
 | [Three-seed NME and F1 intervals](three_seed_nme_and_f1_intervals.ipynb) | Landmark reliability subgroups and paired image bootstrap intervals, not causal identification. |
 | [Three-seed case review](three_seed_prediction_case_review.ipynb) | Selected qualitative examples; examples do not estimate dataset-level error prevalence. |
 | [Small-scale inference reproduction](small_scale_inference_reproduction.ipynb) | Fixed-image inference replay; see the archived reproduction report for exact checks. |
+
+## RQ5 evidence (separate from notebook index)
+
+[RQ5 nonlinear fusion and auxiliary landmark supervision](../docs/results/rq5/README.md) contains the nine new N0/N1/MTL runs, the three reused RQ4-A baseline records, source-provenance binding, reported tables, figure captions and the [audit report](../docs/results/rq5/audit_report.json). The archive's [source snapshot](../docs/results/rq5/README.md#execution-source-provenance) records the files executed in Colab and must not be confused with whichever model files are currently at repository root. This section links the verified result archive, **not an unverified notebook filename**.
 
 ## Development notebooks
 
@@ -27,4 +31,4 @@ Additional archived notebooks in this directory (e.g. overfit/failure checks, se
 
 - Notebooks and lightweight reproducibility metadata are tracked in Git; CelebA images, GPU checkpoints and large prediction shards stay outside this repository.
 - Source snapshots in `docs/results/` may be deliberately duplicated for archival binding. Do not deduplicate without reviewing evidence manifests.
-- RQ4 final results are in [`docs/results/rq4/`](../docs/results/rq4/README.md), while original model comparisons remain in [`docs/results/benchmark/`](../docs/results/benchmark/).
+- RQ4 final results are in [`docs/results/rq4/`](../docs/results/rq4/README.md), RQ5 results are in [`docs/results/rq5/`](../docs/results/rq5/README.md), and original model comparisons remain in [`docs/results/benchmark/`](../docs/results/benchmark/).
